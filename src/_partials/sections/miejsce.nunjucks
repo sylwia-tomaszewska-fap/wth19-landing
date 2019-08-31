@@ -1,0 +1,30 @@
+<section class="miejsce" id="lokalizacja">
+  <div class="container">
+    <div class="text-center">
+      <h1 class="section-heading" data-aos="headerbg">
+				<span>Miejsce</span>
+			</h1>
+
+    </div>
+    <div class="pcwindow">
+      <div class="pcwindow-header">
+        <p>II EDYCJA WTH &gt; Miejsce</p>
+        <span class="pcwindow-close">&times;</span>
+      </div>
+
+      <div class="pcwindow-body">
+        <div class="map">
+          <a href="https://goo.gl/maps/2TweSLvTc9WnbTxZ8" target="_blank" rel="noopener" class="map-link">
+            <img src="images/mapa.png" alt="" class="img-fluid w-100">
+          </a>
+          <div class="map-box">
+            <h3>Stadion Narodowy</h3>
+            <p>al. Księcia Józefa<br/>Poniatowskiego 1<br/ >03-901 Warszawa</p>
+              <a href="https://goo.gl/maps/2TweSLvTc9WnbTxZ8" target="_blank" rel="noopener" class="btn btn-primary">Zobacz na Google Maps</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,676 @@
+<section class="site-section">
+	<p class="wdi-title">User account</p>
+	<div class="wdi-box wdi-box--purple" ng-if="!userSummary.isOrgPackage">
+		<div class="wdi-box__row">
+			<div class="wdi-box__column wdi-box__column--centered">
+				<img class="wdi-box__envelope" src="images/envelope.svg" alt="Envelope">
+				<div class="circle-counter wdi-box__envelope-counter">
+					<div class="circle-counter__container">
+						<span class="circle-counter__value">
+						{{((!userSummary.isOrgPackage && (userSummary.isFreePackage || !userSummary.isVipPackage)) ? 1 : 0)+(!userSummary.isCvFormFulfilled? 1:0)+(userSummary.cvFileName == null?1:0)+(userSummary.noOfRecommendations == 0?1:0)}}
+						
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="wdi-box__column">
+				<ul class="check-list">
+					<li class="check-list__item check-list-item check-list-item--red" ng-if="!userSummary.isOrgPackage && !(!userSummary.isFreePackage && userSummary.packageCode != null && (userSummary.packageCode.indexOf('PRO') > -1 || userSummary.packageCode.indexOf('VIP') > -1))">
+						<span class="check-list-item__icon wdi-font wdi-font-close"></span>
+						Switch to the PRO / VIP package. Increase the comfort of your participation.
+					</li>
+					<li class="check-list__item check-list-item check-list-item--green" ng-if="!userSummary.isFreePackage && userSummary.packageCode != null && (userSummary.packageCode.indexOf('PRO') > -1 || userSummary.packageCode.indexOf('VIP') > -1)">
+						<span class="check-list-item__icon wdi-font wdi-font-tick"></span>
+						Your PRO / VIP package is already active.
+					</li>
+					<li class="check-list__item check-list-item check-list-item--red" ng-if="!userSummary.isCvFormFulfilled">
+						<span class="check-list-item__icon wdi-font wdi-font-close"></span>
+						CV form: Submit your CV to the event's Partners and find a better job.
+					</li>
+					<li class="check-list__item check-list-item check-list-item--green" ng-if="userSummary.isCvFormFulfilled">
+						<span class="check-list-item__icon wdi-font wdi-font-tick"></span>
+						Completed CV form. Thank you.
+					</li>
+					<li class="check-list__item check-list-item check-list-item--red" ng-if="userSummary.cvFileName == null">
+						<span class="check-list-item__icon wdi-font wdi-font-close"></span>
+						CV file: Send your CV to the event's Partners and find a better job.
+					</li>
+					<li class="check-list__item check-list-item check-list-item--green" ng-if="userSummary.cvFileName != null">
+						<span class="check-list-item__icon wdi-font wdi-font-tick"></span>
+						The CV file has been uploaded. Thank you.
+					</li>
+					<li class="check-list__item check-list-item check-list-item--red" ng-if="userSummary.noOfRecommendations == 0">
+						<span class="check-list-item__icon wdi-font wdi-font-close"></span>
+						Recommendations: 0 recommendations have been sent.
+					</li>
+					<li class="check-list__item check-list-item check-list-item--green" ng-if="userSummary.noOfRecommendations > 0">
+						<span class="check-list-item__icon wdi-font wdi-font-tick"></span>
+						Recommendations: You sent {{userSummary.noOfRecommendations}} recommendations.
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Podnieś komfort -->
+<section class="site-section" ng-if="!userSummary.isOrgPackage && (userSummary.isFreePackage || !userSummary.isVipPackage)">
+	<div class="wdi-box wdi-box--blue-ghost">
+		<div class="wdi-box__spacer"></div>
+		<div class="wdi-box__row">
+			<div class="wdi-box__column wdi-box__column--65">
+				<div class="box-content">
+					<span class="box-content__header"> Increase the comfort of your participation<br>- Switch to the PRO / VIP package</span>
+					<ul class="box-content__list box-content-list">
+						<li class="box-content-list__item">
+							<span>The PRO / VIP package offers a number of benefits that are really worth using</span>
+						</li>
+						<li class="box-content-list__item">
+							<span class="box-content-list__icon wdi-font wdi-font-seat"></span>
+							<span>Access to most comfortable, dedicated place in the conference rooms</span>
+						</li>
+						<li class="box-content-list__item">
+							<span class="box-content-list__icon wdi-font wdi-font-person"></span>
+							<span>Ability to choose speeches for which standard tickets are sold out</span>
+						</li>
+						<li class="box-content-list__item">
+							<span class="box-content-list__icon wdi-font wdi-font-food"></span>
+							<span>Tastefull, two-meal lunch</span>
+						</li>
+						<li class="box-content-list__item">
+							<span class="box-content-list__icon wdi-font wdi-font-star"></span>
+							<span>Access to VIP area</span>
+						</li>
+						<li class="box-content-list__item">
+							<span class="box-content-list__icon wdi-font wdi-font-parking"></span>
+							<span>Supervised parking space (VIP package)</span>
+						</li>
+					</ul>
+				</div>
+				<div class="wdi-box__buttons">
+					<button class="wdi-button" data-ng-click='$event.preventDefault();redirectToConvertToVIP()'>
+						<span class="wdi-button__text">Convert into PRO/VIP</span>
+						<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+					</button>
+				</div>
+			</div>
+			<div class="wdi-box__column">
+				<img class="wdi-box__cup" src="images/cup.svg" alt="Cup">
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Plik CV -->
+<section class="site-section" ng-if="!userSummary.isOrgPackage">
+	<div class="wdi-box" ng-class="{'wdi-box--red': userSummary.cvFileName == null, 'wdi-box--green': userSummary.cvFileName != null}">
+		<div class="wdi-box__row">
+			<div class="wdi-box__column wdi-box__column--65" ng-if="userSummary.cvFileName == null">
+				<form role="form" name="uploadCvForm">
+					<div class="box-content">
+						<span class="box-content__header">CV File: Submit your CV to the event's Partners and find a better job</span>
+						<p class="box-content__text box-content__text--justified">Submit your CV to all recruiters participating in our event. To maximize your reach to recruiters - we encourage you to submit both forms of the CV (file and online form)</p>
+						<div class="cv-uploader">
+							<!--
+							<div class="cv-uploader__input">
+								Przenieś CV tutaj
+							</div>
+							<div class="cv-uploader__file cv-file">
+								<span class="cv-file__button">Wybierz plik</span>
+								<span class="cv-file__file-name">żaden plik nie został wybrany</span>
+							</div>
+							-->
+							<input id="userCV" name="userCV" type="file" required>
+						</div>
+						<p class="box-content__text box-content__text--small"> 
+						I agree to submit my application and attached documents to all Exhibitors participating in the Data Science Summit Conference and to process my personal data for recruitment purposes<br>
+							<a href="#" data-ng-click='$event.preventDefault();'>More ></a>
+						</p>
+						<div class="box-content__text box-content__text--small">
+							Information obligation: The data controller is the organizer - Academic Partners Foundation (01-926 Warsaw, Kwitnąca 6/46 street).<br /> Partners of the event:
+							<label ng-repeat="exh in exhList">&nbsp;{{exh}}{{$last ? '' : ', '}}</label><br/>
+							Withdrawal of consent is possible by sending an email to the address info@fundacjaap.org.pl, withdrawal of consent to the processing of personal data is synonymous with the resignation from participation in the conference. The data administrator will delete all personal data after completion of work related to the project.
+						</div>
+					</div>
+					<div ng-if="loading">
+						<img src="images/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+					</div>
+					<div class="wdi-box__buttons">
+						<button class="wdi-button" ng-model="loading" ng-disabled="loading" data-ng-click="$event.preventDefault();uploadCvForm.$valid && uploadUserCV()">
+							<span class="wdi-button__text">
+								<span class="wdi-font wdi-font-cv"></span>
+								Add CV (file)
+							</span>
+							<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+						</button>
+					</div>
+					<div class="box-content" data-ng-hide="uploadMessage == ''">{{uploadMessage}}</div>
+				</form>
+			</div>
+			<div class="wdi-box__column wdi-box__column--65" ng-if="userSummary.cvFileName != null">
+				<div class="box-content">
+					<span class="box-content__header">CV File: Submit your CV to the event's Partners and find a better job</span>
+					<div class="cv-uploader">
+						<div class="cv-uploader__row">
+							<div class="cv-uploader__column cv-uploader__column--icon cv-uploader__column--green">
+								<span class="wdi-font wdi-font-tick"></span>
+							</div>
+							<div class="cv-uploader__column cv-uploader__column--green">Thank you. Your CV has been sent to our database</div>
+						</div>
+						<div class="cv-uploader__row">
+							<div class="cv-uploader__column cv-uploader__column--icon cv-uploader__column--gray">
+								<span class="">***</span>
+							</div>
+							<div class="cv-uploader__column cv-uploader__column--gray">You can delete your CV at any time or replace it with a new one</div>
+						</div>
+						<div class="cv-uploader__row">
+							<a href="#" data-ng-click="$event.preventDefault();removeUserCVFile()" class="cv-uploader__column cv-uploader__column--icon cv-uploader__column--green">
+								<span class="wdi-font wdi-font-thrash"></span>
+							</a>
+							<div class="cv-uploader__column cv-uploader__column--bold cv-uploader__column--wide">{{userSummary.cvFileName}}</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="wdi-box__column">
+				<img class="wdi-box__cv-file" src="images/cv-file.svg" alt="CV file">
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Formularz CV -->
+<section class="site-section" ng-if="!userSummary.isOrgPackage">
+	<div class="wdi-box" ng-class="{'wdi-box--red': !userSummary.isCvFormFulfilled, 'wdi-box--green': userSummary.isCvFormFulfilled}">
+		<div class="wdi-box__row">
+			<div class="wdi-box__column wdi-box__column--65">
+				<div class="box-content">
+					<span class="box-content__header">CV Form: Submit your CV to the event's Partners and find a better job</span>
+					<div class="box-content-check" ng-class="{'box-content-check--red': !userSummary.isCvFormFulfilled, 'box-content-check--green': userSummary.isCvFormFulfilled}">
+						<span class="box-content-check__icon wdi-font wdi-font-close"></span>{{userSummary.isCvFormFulfilled ? "[filled, thank you]" : "[nie wypełniony]"}}
+					</div>
+					<p class="box-content__text">Send your CV directly to all Recruiters of the Data Science Fair. If you do not have an idea for your CV, fill out our form, we will generate it for you.</p>
+				</div>
+				<div class="wdi-box__buttons">
+					<button class="wdi-button" data-ng-click='$event.preventDefault();redirectToCvFormEdit()'>
+						<span class="wdi-button__text">
+							<span class="wdi-font wdi-font-document"></span>
+							{{eventSettings.allowSendCV ? "Fill the form" : "Show form"}}
+						</span>
+						<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+					</button>
+				</div>
+			</div>
+			<div class="wdi-box__column">
+				<img class="wdi-box__cv-computer" src="images/cv-computer.svg" alt="CV file">
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Rekomendacje -->
+<section class="site-section" ng-if="!userSummary.isOrgPackage">
+	<div class="wdi-box" ng-class="{'wdi-box--red': userSummary.noOfRecommendations == 0, 'wdi-box--green': userSummary.noOfRecommendations > 0}">
+		<div class="wdi-box__row">
+			<div class="wdi-box__column wdi-box__column--65">
+				<div class="box-content">
+					<span class="box-content__header">Inform your friends about #DSS19</span>
+					<div class="box-content__recommendations box-content-recommendations">
+						You sent 
+						<div class="box-content-recommendations__container" ng-class="{'box-content-recommendations__container--red': userSummary.noOfRecommendations == 0, 'box-content-recommendations__container--green': userSummary.noOfRecommendations > 0}">
+							<span class="box-content-recommendations__value">{{userSummary.noOfRecommendations}}</span>
+						</div>
+						recommendations so far.
+					</div>
+					<p class="box-content__text">People, whose friends register and participate in the event have a chance to win an <b> Xbox, 3 sets of VR glasses, 10 powerbanks and a Tesla ride</b></p>
+					<ul class="box-content-list-inline">
+						<li class="box-content-list-inline__item">
+							<span class="wdi-font wdi-font-pad"></span>
+						</li>
+						<li class="box-content-list-inline__item">
+							<span class="wdi-font wdi-font-vr"></span>
+						</li>
+						<li class="box-content-list-inline__item">
+							<span class="wdi-font wdi-font-powerbank"></span>
+						</li>
+						<li class="box-content-list-inline__item">
+							<span class="wdi-font wdi-font-car"></span>
+						</li>
+					</ul>
+					<form class="wdi-form" name="informForm">
+						<div class="wdi-form__text">
+							Enter here your friends' e-mails separated by a comma, space or semicolon (only e-mails in the correct format will be accepted)
+						</div>
+						<div class="wdi-form__group">
+							<textarea class="wdi-form__textarea" type="text" ng-model="registerUserData.emails" required></textarea>
+						</div>
+						<div class="wdi-form__group" data-ng-hide="informMessage == ''">
+							<div ng-bind-html="informMessage"></div>
+						</div>
+						<div class="wdi-form__buttons-container">
+							<button class="wdi-button" data-ng-click='$event.preventDefault();informForm.$valid && sendRecommendations()'>
+								<span class="wdi-button__text">
+									<span class="wdi-font wdi-font-env"></span>
+									Recommend to your friends
+								</span>
+								<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="wdi-box__column">
+				<img class="wdi-box__cup" src="images/speaker.svg" alt="CV file">
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Bilet i agenda -->
+<section class="site-section" ng-if="!userSummary.isOrgPackage">
+	<div class="wdi-box wdi-box--green">
+		<div class="wdi-box__row">
+			<div class="wdi-box__column wdi-box__column--65">
+				<div class="box-content">
+					<span class="box-content__header">Your ticket and agenda</span>
+					<p class="box-content__text">Until the event day you can change your entries to all speeches during the event.</p>
+					<div class="warning-box">
+						<span class="warning-box__icon wdi-font wdi-font-warning"></span>
+						<span class="warning-box__text">Note: By selecting lectures you reserve a place in the room. Mark only those events in which you want to participate.</span>
+					</div>
+				</div>
+				<div class="wdi-box__buttons">
+					<button class="wdi-button" ng-if="!userSummary.isOrgPackage && !userSummary.skipAgenda" data-ng-click="$event.preventDefault();redirectToLectures()">
+						<span class="wdi-button__text">
+							<span class="wdi-font wdi-font-pen"></span>
+							{{eventSettings.allowRegistration?"Change your agenda":" Show records for instances"}}
+						</span>
+						<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+					</button>
+					<button class="wdi-button" ng-if="!userSummary.isOrgPackage && userSummary.packageCode != null" data-ng-click="$event.preventDefault();getInvitation()">
+						<span class="wdi-button__text">
+							<span class="wdi-font wdi-font-tickets"></span>
+							Download your invitation
+						</span>
+						<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+					</button>
+					<button class="wdi-button" ng-if="!userSummary.isOrgPackage && userSummary.packageCode != null" data-ng-click="$event.preventDefault();sendInvitation()">
+						<span class="wdi-button__text">
+							<span class="wdi-font wdi-font-download"></span>
+							Send an invitation to your e-mail
+						</span>
+						<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+					</button>
+					<button class="wdi-button" ng-if="!userSummary.isOrgPackage && !userSummary.skipAgenda" data-ng-click="$event.preventDefault();getCalendar()">
+						<span class="wdi-button__text">
+							<span class="wdi-font wdi-font-calendar"></span>
+							Download ICS calendar 
+						</span>
+						<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+					</button>
+				</div>
+			</div>
+			<div class="wdi-box__column">
+				<img class="wdi-box__cup" src="images/agenda.svg" alt="Agenda">
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Materiały -->
+<section class="site-section" ng-if="!userSummary.isOrgPackage && userSummary.packageCode!='GPIT'">
+	<div class="wdi-box wdi-box--green">
+		<div class="wdi-box__row">
+			<div class="wdi-box__column wdi-box__column--65">
+				<div class="box-content">
+					<span class="box-content__header">Presentations</span>
+					<p class="box-content__text">Below you will find presentations shared by the speakers.</p>
+					<a href="https://dssconf.pl/prezentations">
+						<button class="wdi-button">
+							<span class="wdi-button__text">
+								Go to the directory
+							</span>
+							<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+						</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Dane użytkownika -->
+<section class="site-section">
+	<div class="wdi-box wdi-box--green">
+		<div class="wdi-box__row">
+			<div class="wdi-box__column wdi-box__column--65">
+				<div class="box-content">
+					<span class="box-content__header">Your details, invoices and payments</span>
+					<div class="wdi-table">
+						<div class="wdi-table__row">
+							<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+								First and last name
+							</div>
+							<div class="wdi-table__column">
+								{{userSummary.firstName}} {{userSummary.lastName}}
+							</div>
+						</div>
+						<div class="wdi-table__row">
+							<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+								Job position / Department
+							</div>
+							<div class="wdi-table__column">
+								{{userSummary.departmentJobPosition}}
+							</div>
+						</div>
+						<div class="wdi-table__row">
+							<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+								Company / College name
+							</div>
+							<div class="wdi-table__column">
+								{{userSummary.schoolCompany}}
+							</div>
+						</div>
+						<div class="wdi-table__row">
+							<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+								E-mail
+							</div>
+							<div class="wdi-table__column">
+								{{userSummary.email}}
+							</div>
+						</div>
+						<div class="wdi-table__row">
+							<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+								Phone number
+							</div>
+							<div class="wdi-table__column">
+								{{userSummary.phoneNo}}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="wdi-box__buttons">
+					<button class="wdi-button wdi-button--purple" data-ng-click='$event.preventDefault();redirectToUserEdit()'>
+						<span class="wdi-button__text">
+							<span class="wdi-font wdi-font-pen"></span>
+							Change your details
+						</span>
+						<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+					</button>
+					<button class="wdi-button wdi-button--purple" data-ng-click='$event.preventDefault();redirectToChangePassword()'>
+						<span class="wdi-button__text">
+							<span class="wdi-font wdi-font-pen"></span>
+							Change password
+						</span>
+						<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+					</button>
+					<button class="wdi-button wdi-button--purple" data-ng-click='$event.preventDefault();sendVouchers()' ng-if="userSummary.isSetPackage">
+						<span class="wdi-button__text">
+							<span class="wdi-font wdi-font-pen"></span>
+							Send vouchers
+						</span>
+						<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+					</button>
+				</div>
+			</div>
+			<div class="wdi-box__column">
+				<img class="wdi-box__robot-2" src="images/robot2.svg" alt="Robot 2">
+			</div>
+		</div>
+		<div class="wdi-box__row">
+			<div class="wdi-box__column wdi-box__column--65">
+				<div class="box-content">
+					<div class="wdi-table">
+						<div class="wdi-table__row">
+							<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+								Current package
+							</div>
+							<div class="wdi-table__column">
+								{{userSummary.packageName}}
+							</div>
+						</div>
+						<div class="wdi-table__row">
+							<div class="wdi-table__column wdi-table__column--left wdi-table__column--green" ng-if="userSummary.newPackageName != null">
+								Choosen package
+							</div>
+							<div class="wdi-table__column">
+								{{userSummary.newPackageName}}
+							</div>
+						</div>
+						<div class="wdi-table__row">
+							<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+								Payment status
+							</div>
+							<div class="wdi-table__column">
+								{{userSummary.paymentStatus}}
+							</div>
+						</div>
+						<div class="wdi-table__row" ng-if="userSummary.newPackageName != null && userSummary.paymentLink == null">
+							<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+								Payment link
+							</div>
+							<div class="wdi-table__column">
+								We generate a payment, please refresh the page in a moment to get a payment link
+							</div>
+						</div>
+						<div class="wdi-table__row" ng-if="userSummary.paymentLink != null">
+							<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+								Payment link
+							</div>
+							<div class="wdi-table__column">
+								<a href="{{userSummary.paymentLink}}" target="_blank">Payment link</a>
+							</div>
+						</div>
+					</div>
+					<div class="wdi-box__buttons" ng-if="!userSummary.isFreePackage && !userSummary.isOrgPackage">
+						<button class="wdi-button wdi-button--purple" data-ng-click='$event.preventDefault();redirectToConvertToVIP()'>
+							<span class="wdi-button__text">
+								<span class="wdi-font wdi-font-pen"></span>
+								Change package
+							</span>
+							<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wdi-box__row" ng-if="packagesOpt.length > 0">
+			<div class="wdi-box__column wdi-box__column--65">
+				<div class="box-content">
+					<div class="wdi-table">
+						<div class="wdi-table__row">
+							<div class="table-list">
+								<span class="table-list__item table-list__item--green">
+									Choosen additional package
+								</span>
+							</div>
+						</div>
+						<div class="wdi-table__row">
+							<table>
+								<thead>
+								<tr>
+									<th>Name</th>
+									<th>Gross value</th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr data-ng-repeat="packageOpt in packagesOpt">
+										<td>{{ packageOpt.name }}</td>
+										<td>{{ packageOpt.quantity * packageOpt.priceGrossPLN | currency : '' }} zł</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wdi-box__row" ng-if="!userSummary.isFreePackage && !userSummary.wantInvoice && userSummary.isInvoiceAllowed">
+			<div class="wdi-box__column wdi-box__column--65">
+				<div class="box-content">
+					<div class="wdi-table">
+						<div class="wdi-table__row">
+							<div class="table-list">
+								<span class="table-list__item table-list__item--green">
+									Invoices 
+								</span>
+								<span class="table-list__item">
+									No invoice to download, because you did not select the option "I want an invoice". To get an invoice, go to options
+								</span>
+								<span class="table-list__item table-list__item--green">
+									<a href="#" data-ng-click='$event.preventDefault();redirectToUserEdit()'>
+										Change your details
+									</a>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wdi-box__row" ng-if="!userSummary.isFreePackage && !userSummary.wantInvoice && !userSummary.isInvoiceAllowed">
+			<div class="wdi-box__column wdi-box__column--65">
+				<div class="box-content">
+					<div class="wdi-table">
+						<div class="wdi-table__row">
+							<div class="table-list">
+								<span class="table-list__item table-list__item--green">
+									Invoices
+								</span>
+								<span class="table-list__item">
+									The sales document may be issued in this package only to the buyer, which may only be a natural person not conducting business activity.
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wdi-box__row" ng-if="userSummary.wantInvoice">
+			<div class="wdi-box__column">
+				<div class="box-content">
+					<div class="wdi-table">
+						<div class="wdi-table__row">
+							<div class="table-list">
+								<span class="table-list__item table-list__item--green">
+									Invoices
+								</span>
+							</div>
+						</div>
+						<div class="wdi-table__row">
+							<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+								Company name
+							</div>
+							<div class="wdi-table__column">
+								{{userSummary.payerName}}
+							</div>
+						</div>
+						<div class="wdi-table__row">
+							<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+								Address
+							</div>
+							<div class="wdi-table__column">
+								{{userSummary.payerStreet}}<br ng-if="userSummary.payerStreet != null"/>
+								{{userSummary.payerPostCode}} {{userSummary.payerCity}}<br ng-if="userSummary.payerCountry != null"/>
+								{{userSummary.payerCountry}}
+							</div>
+						</div>
+						<div class="wdi-table__row" ng-if="userSummary.payerNIP != null">
+							<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+								VAT ID
+							</div>
+							<div class="wdi-table__column">
+								{{userSummary.payerNIP}}
+							</div>
+						</div>
+						<div class="wdi-table__row" ng-if="invoices.length > 0">
+							<table>
+								<thead>
+								<tr>
+									<th>Invoice number</th>
+									<th>Invoice date</th>
+									<th>Net value</th>
+									<th>Gross value</th>
+									<th>Actions</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr data-ng-repeat="invoice in invoices">
+									<td class="table-list__item--green">{{ invoice.invoiceNumber }}</td>
+									<td>{{ invoice.invoiceDate.substring(0, 10) }}</td>
+									<td>{{ invoice.netWorth + invoice.netWorthOpt | currency : '' }} zł</td>
+									<td>{{ invoice.grossWorth + invoice.grossWorthOpt | currency : '' }} zł</td>
+									<td>
+										<button class="wdi-button" data="{{invoice.objectId}}" data-ng-click='getInvoice(invoice.objectId)'>
+											<span class="wdi-button__text">
+												<span class="wdi-font wdi-font-invoice"></span>
+												Download
+											</span>
+											<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+										</button>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="wdi-table__row" ng-if="invoices.length == 0">
+							<span class="table-list__item">
+								No invoice to download. The package has probably not been paid yet or has been released from the fee.
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wdi-box__row" ng-if="userSummary.packageCode != null">
+			<div class="wdi-box__buttons">
+				<button class="wdi-button" data-ng-click="$event.preventDefault();sendInvitation()">
+					<span class="wdi-button__text" ng-if="invoices.length > 0">
+						<span class="wdi-font wdi-font-download"></span>
+						{{userSummary.isOrgPackage ? "Send an invoice" : "Send an invitation (and an invoice)"}}
+					</span>
+					<span class="wdi-button__text" ng-if="!userSummary.isOrgPackage && invoices.length == 0">
+						<span class="wdi-font wdi-font-download"></span>
+						Send an invitation
+					</span>
+					<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+				</button>
+			</div>
+		</div>
+		<div class="wdi-box__row" data-ng-click="$event.preventDefault();removeAccount()">
+			<div class="wdi-box__buttons wdi-box__buttons--pull-right">
+				<a class="wdi-box__link" href="#">Delete your account</a>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="modal"> <!-- modal--visible"> -->
+	<div class="modal__content">
+		<div class="wdi-box wdi-box--milka">
+			<div class="wdi-box__row">
+				<div class="wdi-box__column">
+					<div class="box-content">
+						<p class="box-content__text">In accordance with the Personal Data Protection Act and the RODO, you have the right to delete your account along with all your data (including sending CVs and photos). Deleting data is irreversible! </p>
+<p class = "box-content__text"> ATTENTION: The invoice with your data will not be deleted, because it is a fiscal document that we must store on the basis of applicable law.</p>
+					</div>
+					<div class="wdi-box__buttons">
+						<button class="wdi-button" data-ng-click="$event.preventDefault();removeAccount()">
+							<span class="wdi-button__text">
+								<span class="wdi-font wdi-font-thrash"></span>
+								Delete your account
+							</span>
+							<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+						</button>
+					</div>
+				</div>
+				<div class="wdi-box__column">
+					<img class="wdi-box__cup" src="images/thrash.svg" alt="Thrash">
+				</div>
+			</div>
+		</div>
+		<button class="modal__close-button">
+			<span class="wdi-font wdi-font-close"></span>
+		</button>
+	</div>
+</div>

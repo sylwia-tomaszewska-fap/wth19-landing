@@ -1,0 +1,58 @@
+
+<section class="prelegenci" id="prelegenci">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="section-heading" data-aos="headerbg"><span>PRELEGENCI</span></h1>
+                <p class="lead">Na wydarzeniu spotkasz najlepszych prelegentów z&nbsp;Polski i&nbsp;zagranicy,
+z&nbsp;różnych środowisk i&nbsp;branż: od praktyków z biznesu, poprzez naukę,
+aż&nbsp;po&nbsp;dostawców technologii lub rozwiązań. W zeszłym roku byli to:</p>
+            </div>
+
+            <div class="prelegenci-carousel slick">
+{# {% for i in range(0, 6) -%}
+            <div class="prelegent" ng-repeat="p in prelegenci">
+                    <div class="prelegenci__photo p1" data-toggle="modal" data-target="#speaker-modal" ng-click="changePrelegent(p)">
+                        <div class="img-container" style="background-image: url(images/hacker.png)"></div>
+                        <div class="square"></div>
+                        
+                        <div class="overlay"></div>
+                    </div>
+                    <p>Adam Haertle</p>
+                    <p class="job">Chief Editor</p>
+                </div>
+{% endfor %} #}
+
+                
+                {% raw %}
+                <div class="prelegent" ng-repeat="p in prelegenci">
+                    <div class="prelegenci__photo p1" data-toggle="modal" data-target="#speaker-modal" ng-click="changePrelegent(p)">
+                        <div class="img-container" style="background-image: url({{p.imageUrl!=null ? p.imageUrl : 'https://brandsome.it/content/img/brak_zdjecia.png'}})"></div>
+                        <div class="square"></div>
+                        
+                        <div class="overlay"></div>
+                    </div>
+                    <p>{{p.firstName}} {{p.lastName}}</p>
+                    <p class="job">{{p.jobPosition}}<span ng-if="p.jobPosition && p.organization">, </span>{{p.organization}}</p>
+                </div>
+
+				<div class="prelegent">
+                    <div class="prelegenci__photo p1" data-toggle="modal" data-target="#allspeakers-modal" ng-click="loadAllLecturers()">
+                        <div class="img-container" style="background-image: url('https://brandsome.it/content/img/brak_zdjecia.png')"></div>
+                        <div class="square"></div>
+                        
+                        <div class="overlay"></div>
+                    </div>
+                    <p>Pokaż wszystkich prelegentów</p>
+                    <!-- <p class="job">{{p.jobPosition}}<span ng-if="p.jobPosition && p.organization">, </span>{{p.organization}}</p> -->
+                </div> 
+                {% endraw %}
+               
+                
+            </div>
+
+        </div>
+        <div class="text-center">
+            <a class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#allspeakers-modal" ng-click="loadAllLecturers()">Poznaj wszystkich prelegentów</a>
+        </div>
+
+    </section>

@@ -1,0 +1,92 @@
+<section class="konkursy" id="konkursy">
+    <div class="container">
+
+            <div class="text-center mb-lg-5">
+                <h1 class="section-heading mb-lg-5" data-aos="headerbg"><span>KONKURSY</span></h1>
+
+                <div class="row justify-content-center"><div class="col-md-8">
+                <p class="lead">
+                W WTH najważniejsza jest merytoryka, <br />ale dla urozmaicenia przygotowaliśmy kilka konkursów:
+                </p>
+                </div></div>
+            </div>
+
+        <div class="row align-items-end justify-content-center mb-5">
+            <div class="col-2 col-md-1 col-lg-auto">
+                <img src="images/flag.svg" width="45" alt="">
+            </div>
+            <div class="col-8 col-md-9 pl-md-0">
+                <p class="text-primary mb-0">Odwiedź stoiska naszych Sponsorów i Partnerów, <br />porozmawiaj z nimi, odbierz formularze konkursowe i wygraj:</p>
+            </div>
+            <div class="col-10">
+                <div class="row">
+                    <div class="col-md-4 d-flex">
+                        <div class="konkurs brackets brackets-red text-center w-100">
+                            <img src="images/dslr.png" class="img-fluid" width="112" alt="">
+                            <p class="konkurs-title">
+                                Lustrzanka cyfrowa
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex">
+                        <div class="konkurs brackets brackets-red text-center w-100">
+                            <img src="images/xbox.png" class="img-fluid" width="193" alt="">
+                            <p class="konkurs-title">
+                                Xbox
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex">
+                        <div class="konkurs brackets brackets-red text-center w-100">
+                            <img src="images/vr.png" class="img-fluid" width="140" alt="">
+                            <p class="konkurs-title">
+                                Google Home
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+
+        <div class="row align-items-end justify-content-center">
+            <div class="col-2 col-md-1 col-lg-auto">
+                <img src="images/flag.svg" width="45" alt="">
+            </div>
+            <div class="col-8 col-md-9 pl-md-0">
+                <p class="text-secondary mb-0">Zostaw CV podczas rejestracji i wygraj:</p>
+            </div>
+
+            <div class="col-10">
+                <div class="row">
+                    <div class="col-md-4 d-flex">
+                        <div class="konkurs brackets brackets-blue text-center w-100">
+                            <img src="images/dslr.png" class="img-fluid" width="112" alt="">
+                            <p class="konkurs-title">
+                                Lustrzanka cyfrowa
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex">
+                        <div class="konkurs brackets brackets-blue text-center w-100">
+                            <img src="images/xbox.png" class="img-fluid" width="193" alt="">
+                            <p class="konkurs-title">
+                                Xbox
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex">
+                        <div class="konkurs brackets brackets-blue text-center w-100">
+                            <img src="images/tesla.png" class="img-fluid" width="180" alt="">
+                            <p class="konkurs-title">
+                                Przejazd Ferrari<Br /> po torze wyścigowym
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</section>

@@ -1,0 +1,95 @@
+<section class="agenda" id="agenda">
+	<div class="container">
+		<div class="text-center">
+			<h1 class="section-heading" data-aos="headerbg"><span>AGENDA</span></h1>
+			<p class="lead">Przygotowujemy dla Was kilkunaście równoległych ścieżek tematycznych adresujących większość zainteresowań IT Sec. Oprócz prezentacji, damy Wam również przestrzeń do dyskusji i networkingu –&nbsp;roundtables, sesje consult the expert i spotkania kadry kierowniczej.</p>
+
+            <div class="brackets brackets-red">
+                <h3>Chcesz zostać prelegentem tegorocznej edycji?</h3>
+                <a href="#" class="btn btn-primary btn-lg">Weź udział w Call for Papers</a>
+            </div>
+
+            <p class="lead mt-4">
+                W zeszłym roku było to 10 ścieżek, blisko 100 wystąpień: 
+            </p>
+
+        <div class="agenda-past">
+            <div class="row">
+                {% set data = [
+    {
+        icon: 'vip',
+        text: 'Main stage',
+        text2: '10 wystąpień'
+    },
+    {
+        icon: 'attack',
+        text: 'Red & Blue Teaming (Attack & Defence)',
+        text2: '9 wystąpień'
+    },
+    {
+        icon: 'atombomb',
+        text: 'Cybercrime & Cyberwar powered by WCY WAT ',
+        text2: '9 wystąpień'
+    },
+    {
+        icon: 'audit',
+        text: 'Risk, audit, privacy &&nbsp;compliance',
+        text2: '5 wystąpień'
+    },
+    {
+        icon: 'save-lock',
+        text: 'Secure Software Development & Architecture',
+        text2: '4 wystąpienia'
+    },
+    {
+        icon: 'cpu',
+        text: 'Hardware hacking /&nbsp;IoT&nbsp;/&nbsp;ICS powered by&nbsp;WEiTI PW',
+        text2: '9 wystąpień'
+    },
+    {
+        icon: 'banking',
+        text: 'Banking &&nbsp;Blockchain Security',
+        text2: '4 wystąpienia'
+    },
+    {
+        icon: 'cloud',
+        text: 'Cloud Security',
+        text2: '5 wystąpień'
+    },
+    {
+        icon: 'bug2',
+        text: 'Malware',
+        text2: '9 wystąpień'
+    }] %}
+    {% for item in data %}
+            <div class="col-md-4 py-4 dashes-bottom d-flex">
+                <div class="row dashes-right flex-grow-1">
+                    <div class="col-auto">
+                        <i class="wth-{{item.icon}}"></i>
+                    </div>
+                    <div class="col text-left">
+                        <p>{{item.text}}</p>
+                        <p class="count">[&nbsp;{{item.text2}}&nbsp;]</p>
+                    </div>
+                </div>
+            </div>
+    {%endfor %}
+    <div class="col-md-12 pt-4  d-flex">
+                <div class="row align-items-center flex-grow-1">
+                    <div class="col-auto">
+                        <i class="wth-lightning"></i>
+                    </div>
+                    <div class="col text-left">
+                        <p>Lightning talks: Fuckups, Use cases, How to get into security <span class="count"> [&nbsp;15-minutowe sesje&nbsp;]</span></p>
+                        
+                    </div>
+                </div>
+            </div>
+            </div>
+
+</div>
+
+{# {% include '_partials/sections/agendamain.nunjucks' %} #}
+		</div>
+	</div>
+</section>

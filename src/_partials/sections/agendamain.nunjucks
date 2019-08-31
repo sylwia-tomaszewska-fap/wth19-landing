@@ -1,0 +1,190 @@
+{%raw%}
+<div class="selector">
+
+                <label class="radio-container tematyczny">widok tematyczny
+                        <input type="radio" name="widok"  checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+
+                <label class="radio-container godzinowy">widok godzinowy
+                        <input type="radio" name="widok">
+                        <span class="checkmark"></span>
+                      </label>
+
+                <!-- <div class="button">widok zaawansowany</div> -->
+                <div class="pdf-link">
+                    <img src="images/agenda/files.svg">
+                    <a href="https://wthconf.pl/mailing/wth18-agenda.pdf" target="_blank">pobierz wersję pdf</a>
+                </div>
+            </div>
+
+            <div id="agenda-tematyczna">
+
+               
+
+
+                <div ng-repeat="d in prelekcje">
+                    <!-- Day -->
+                    <div ng-repeat="p in d.categories">
+                        <!-- Categories -->
+                        <a class="theme__container" data-toggle="collapse" href="#{{d.calendarCode}}-{{p.objectId}}" role="button" aria-expanded="true" aria-controls="#{{d.calendarCode}}-{{p.objectId}}">
+                            <div class="theme">
+                                <div class="landscape" style="background-image: url({{p.categoryIcon}})"></div>
+                                <div class="title">{{p.categoryName}}</div>
+                                <div class="chevron"></div>
+                            </div>
+                        </a>
+
+                        <div class="hourslist collapse show" id="{{d.calendarCode}}-{{p.objectId}}">
+
+                            <a class="hourslist__item" ng-repeat="ps in p.lectures">
+
+                                <div class="hourslist__item__header" id="bar-{{ps.objectId}}" data-toggle="collapse" href="#{{ps.objectId}}" role="button" aria-expanded="false" aria-controls="#{{ps.objectId}}">
+                                    <div class="time"><span>{{ps.startDate}}</span><span> - </span><span>{{ps.endDate}}</span></div>
+                                    <div class="name">{{ps.subject}}
+                                        <div class="stars rating{{ps.difficultyLevel}}" ng-if="ps.difficultyLevel"><i></i><i></i><i></i></div>
+
+                                        <p ng-repeat="plg in ps.lecturers">
+                                            <span class="p-name">{{plg.firstName}} {{plg.lastName}}</span><span ng-if="((plg.firstName || plg.lastName) && (plg.jobPosition || plg.organization))">, </span> {{plg.jobPosition}}
+                                            <span ng-if="plg.jobPosition && plg.organization">, </span>{{plg.organization}}
+                                        </p>
+
+                                    </div>
+                                    <div class="chevron"></div>
+                                </div>
+
+                                <div class="details collapse" id="{{ps.objectId}}">
+
+                                    <div class="details__body">
+
+                                        <div class="person">
+
+                                            <div ng-repeat="plg in ps.lecturers" data-toggle="modal" data-target="#speaker-modal" ng-click="changePrelegent(plg)">
+                                                <div class="photo">
+                                                    <img ng-if="plg.imageUrl!=null" src="{{plg.imageUrl}}">
+                                                    <img ng-if="!plg.imageUrl" src="https://brandsome.it/content/images/brak_zdjecia.png">
+                                                </div>
+                                                <div class="name">{{plg.firstName}} {{plg.lastName}}</div>
+                                                <div class="function">{{plg.jobPosition}}<span ng-if="plg.jobPosition && plg.organization">, </span>{{plg.organization}}</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="details__description">
+                                            <div class="details__description__header">
+                                                Opis prezentacji
+                                            </div>
+                                            <div class="details__description__body">
+                                                <p ng-bind-html="ps.shortDescription"></p>
+                                                <div class="info">
+                                                    <p ng-if="ps.difficultyLevel"><span><strong>rekomendowany poziom wiedzy:</strong></span> <span class="stars rating{{ps.difficultyLevel}}"><i></i><i></i><i></i></span></p>
+                                                    <p><span><strong>język prezentacji:</strong></span> {{ps.isInEnglish?"angielski":"polski"}}</p>
+                                                    <p><span><strong>numer sali:</strong></span> {{ps.place}}</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="agenda-godzinowa">
+
+               
+
+                <div>
+                    <div ng-repeat="ts in prelekcjeByTimeSlot track by $index">
+                        <!-- Categories -->
+                        <a class="theme__container" data-toggle="collapse" href="#hi_{{$index}}" role="button" aria-expanded="true" aria-controls="#hi_{{$index}}">
+                            <div class="theme">
+                                <div class="landscape"></div>
+                                <div class="title">{{ts.startDate}} - {{ts.endDate}}</div>
+                                <div class="chevron"></div>
+                            </div>
+                        </a>
+
+                        <div class="hourslist collapse show" id="hi_{{$index}}">
+
+                            <a class="hourslist__item" ng-repeat="ps in ts.lectures">
+
+                                <div class="hourslist__item__header" id="bar-{{ps.objectId}}" data-toggle="collapse" href="#ts_{{ps.objectId}}" role="button" aria-expanded="false" aria-controls="#{{ps.objectId}}">
+                                    <div class="time">{{ps.startDate}} - {{ps.endDate}}</div>
+                                    <div class="name">{{ps.subject}}
+                                        <div class="stars rating{{ps.difficultyLevel}}" ng-if="ps.difficultyLevel"><i></i><i></i><i></i></div>
+
+                                        <p ng-repeat="plg in ps.lecturers">
+                                            <span class="p-name">{{plg.firstName}} {{plg.lastName}}</span>
+                                            <span ng-if="((plg.firstName || plg.lastName) && (plg.jobPosition || plg.organization))">, </span> {{plg.jobPosition}}
+                                            <span ng-if="plg.jobPosition && plg.organization">, </span>{{plg.organization}}
+                                        </p>
+                                        <p ng-if="ps.subject!='Obiad'"><img src="{{ps.categoryIcon}}">{{ps.categoryName}}</p>
+                                    </div>
+                                    <div class="chevron"></div>
+                                </div>
+
+                                <div class="details collapse" id="ts_{{ps.objectId}}">
+
+                                    <div class="details__body">
+
+                                        <div class="person">
+
+                                            <div ng-repeat="plg in ps.lecturers" data-toggle="modal" data-target="#speaker-modal" ng-click="changePrelegent(plg)">
+                                                <div class="photo">
+                                                    <img ng-if="plg.imageUrl!=null" src="{{plg.imageUrl}}">
+                                                    <img ng-if="!plg.imageUrl" src="https://brandsome.it/content/images/brak_zdjecia.png">
+                                                </div>
+                                                <div class="name">{{plg.firstName}} {{plg.lastName}}</div>
+                                                <div class="function">{{plg.jobPosition}}<span ng-if="plg.jobPosition && plg.organization">, </span>{{plg.organization}}</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="details__description">
+                                            <div class="details__description__header">
+                                                Opis prezentacji
+                                            </div>
+                                            <div class="details__description__body">
+                                                <p ng-bind-html="ps.shortDescription"></p>
+                                                <div class="info">
+                                                    <p ng-if="ps.difficultyLevel"><span><strong>rekomendowany poziom wiedzy:</strong></span> <span class="stars rating{{ps.difficultyLevel}}"><i></i><i></i><i></i></span></p>
+                                                    <p><span><strong>język prezentacji:</strong></span> {{ps.isInEnglish?"angielski":"polski"}}</p>
+                                                    <p><span><strong>numer sali:</strong></span> {{ps.place}}</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <!-- <div class="bottom"> -->
+            <!-- <img src="images/agenda/journal.svg">
+                <a href="#">zaawasowany widok agendy</a> -->
+            <!-- <img src="images/agenda/files.svg"> -->
+            <!-- <a href="#">pobierz wersję pdf</a> -->
+            <!-- </div> -->
+            <div class="selector dolny">
+                <div class="pdf-link">
+                    <img src="images/agenda/files.svg">
+                    <a href="https://wthconf.pl/mailing/wth18-agenda.pdf" target="_blank">pobierz wersję pdf</a>
+                </div>
+            </div>
+
+
+        
+{%endraw%}

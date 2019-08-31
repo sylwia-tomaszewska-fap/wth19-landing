@@ -1,0 +1,117 @@
+<section class="radaprogramowa" id="rada">
+
+        <div class="container">
+            <div class="text-center">
+                <h1 class="section-heading" data-aos="headerbg"><span>RADA</span><span> PROGRAMOWA</span></h1>
+                <p class="lead">
+                Radę programową wydarzenia tworzą przedstawiciele liczących się organizacji akademickich, technologicznych, biznesowych i społeczności.
+                </p>
+            </div>
+
+            <div class="row">
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p1">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/AdamHaertle.jpg)"></div>
+                        
+                    </div>
+                    <p>Adam <br/>HAERTLE</p>
+                    <p class="af">Chief Editor,<br>Zaufana Trzecia Strona</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p2">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/MiroslawMaj.jpg)"></div>
+                        
+                    </div>
+                    <p>Mirosław <br/>MAJ</p>
+                    <p class="af">CEO,<br>Cybersecurity Foundation</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p3">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/CezaryPiekarski.jpg)"></div>
+                        
+                    </div>
+                    <p>Cezary <br/>PIEKARSKI</p>
+                    <p class="af">Head of Security,<br>Bank Millennium</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p2">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/ArturJozefiak.jpeg)"></div>
+                        
+                    </div>
+                    <p>Artur <br/>JÓZEFIAK</p>
+                    <p class="af">Security Services Director<br>Senior Manager, Accenture</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p1">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/ArturByszko.jpg)"></div>
+                        
+                    </div>
+                    <p>Artur <br/>BYSZKO</p>
+                    <p class="af">CEO,<br>AFINE</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p2">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/MichalKurek.jpg)"></div>
+                        
+                    </div>
+                    <p>Michał <br/>KUREK</p>
+                    <p class="af">Partner, KPMG Poland,<br>Head of Cyber Security,<br>OWASP Poland Chapter Leader</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p3">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/MariuszChmielewski.jpg)"></div>
+                        
+                    </div>
+                    <p>Mariusz <br/>CHMIELEWSKI</p>
+                    <p class="af">Zastępca Dziekana <br>Wydziału Cybernetyki WAT</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p4">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/MarcinLudwiszewski.jpg)"></div>
+                        
+                    </div>
+                    <p>Marcin <br/>LUDWISZEWSKI</p>
+                    <p class="af">Cyber Security Director,<br>Deloitte Poland</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p4">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/MichalBijata.jpg)"></div>
+                        
+                    </div>
+                    <p>Michał <br/>BIJATA</p>
+                    <p class="af">Fundacja Academic Partners</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p1">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/MichalBoruta.jpg)"></div>
+                        
+                    </div>
+                    <p>Michał <br/>BORUTA</p>
+                    <p class="af">Fundacja Academic Partners</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p2">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/PawelKordos.jpg)"></div>
+                        
+                    </div>
+                    <p>Paweł <br/>KORDOS</p>
+                    <p class="af">Fundacja Academic Partners</p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>

@@ -1,0 +1,35 @@
+<section class="social">
+
+  <div class="container">
+    <div class="text-center">
+      <h1 class="section-heading" data-aos="headerbg">
+                    <span>SOCIAL</span><span> MEDIA</span>
+                </h1>
+      <p class="lead">
+                    Dołącz do wydarzenia na Facebooku / Meetupie. Dodaj swoich znajomych i twórz z nami społeczność WTH.
+                </p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-9 mx-auto">
+
+        <div class="row mt-4">
+          <div class="col-md-7">
+            <a href="https://www.facebook.com/events/496643384179297/" class="social-post-fb" target="_blank">
+              <img src="images/FB_CONF.png" class="img-fluid" alt="">
+              <img src="images/robot-social-2.svg" class="robot-fb img-fluid mb-2" width="357" alt="">
+            </a>
+          </div>
+          <div class="col-md-5 text-right text-md-left">
+            <img src="images/robot-social-1.svg" class="img-fluid mb-2 mt-5 mt-md-0" width="296" alt="">
+            <a href="https://www.meetup.com/pl-PL/What-The-Hack-IT-Security/events/" target="_blank">
+              <img src="images/MEET_CONF.png" class="img-fluid" alt="">
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

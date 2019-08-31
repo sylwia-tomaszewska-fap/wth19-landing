@@ -1,0 +1,274 @@
+﻿<!-- intro -->
+<section id="start" class="section section--intro">
+	<!-- container -->
+	<div class="container container--wrapper">
+		<div class="top">
+			<div class="top__reg">@rejestracja</div>
+			<div class="top__steps list" data-step="4">
+				<div class="top__steps__element"></div>
+			</div>
+		</div>
+	</div>
+	<!-- /container -->
+</section>
+<!-- /intro -->
+
+<!-- otargach -->
+<section id="otargach" class="section section--agenda">
+	<!-- container -->
+	<div class="container container--wrapper">
+	    <form role="form" name="cvForm">
+			<fieldset>
+				<div class="section__heading">Znajdź lepszą pracę <br/><span>zostaw CV w postaci formularza CV online</span></div>
+				<!--<p class="section__subheading">zostaw CV w postaci formularza CV online</p>-->
+
+				<div class="joinDatabase">
+					<img src="src/img/cv1.svg" alt="">
+					<img src="src/img/cv2.svg" alt="">
+					<img src="src/img/cv3.svg" alt="">
+				</div>
+				<div class="steps">
+					<div class="agenda__header">
+						<p class="agenda__title">What the h<span>@</span>ck</p>
+						<span class="agenda__close"><img src="src/img/agenda-close.png" alt="" /></span>
+					</div>
+					<div class="steps__content">
+						<div id="step-4" class="steps__step steps__step--4 steps__step--active">
+							<div class="uploadCV uploadCV--online">
+								<div class="inputList inputList--checkbox">
+									<h3 class="inputList__heading">Jestem zainteresowany/a:</h3>
+									<div class="input input--checkbox">
+										<input class="input__element" data-ng-model="userCvData.interPractice" name="zainteresowany" id="zainteresowany-0" type="checkbox">
+										<label class="input__label" for="zainteresowany-0">Praktykami</label>
+									</div>
+									<div class="input input--checkbox">
+										<input class="input__element" data-ng-model="userCvData.interInternship" name="zainteresowany" id="zainteresowany-1" type="checkbox">
+										<label class="input__label" for="zainteresowany-1">Stażem</label>
+									</div>
+									<div class="input input--checkbox">
+										<input class="input__element" data-ng-model="userCvData.interNonFTE" name="zainteresowany" id="zainteresowany-2" type="checkbox">
+										<label class="input__label" for="zainteresowany-2">Pracą w niepełnym wymiarze godzin</label>
+									</div>
+									<div class="input input--checkbox">
+										<input class="input__element" data-ng-model="userCvData.interRemote" name="zainteresowany" id="zainteresowany-4" type="checkbox">
+										<label class="input__label" for="zainteresowany-4">Pracą w wymiarze godzin do uzgodnienia pod warunkiem elastycznych godzin pracy lub pracy zdalnej</label>
+									</div>
+									<div class="input input--checkbox">
+										<input class="input__element" data-ng-model="userCvData.interRemote2" name="zainteresowany" id="zainteresowany-5" type="checkbox">
+										<label class="input__label" for="zainteresowany-5">Pracą zdalną</label>
+									</div>
+									<div class="input input--checkbox">
+										<input class="input__element" data-ng-model="userCvData.interFTE" name="zainteresowany" id="zainteresowany-3" type="checkbox">
+										<label class="input__label" for="zainteresowany-3">Pracą na pełen etat</label>
+									</div>
+								</div>
+								<div class="inputList inputList--checkbox inputList--dropdown">
+									<h3 class="inputList__heading">Chciałbym/ałabym pracować w:</h3>
+									<div class="input input--checkbox">
+										<input class="input__element" data-ng-model="workOption" required name="miejsce_pracy" id="miejsce-pracy-3" value="3" type="radio">
+										<label class="input__label" for="miejsce-pracy-3">Cała Polska i zagranica - jestem elastyczny(a)</label>
+									</div>
+									<div class="input input--checkbox">
+										<input class="input__element" data-ng-model="workOption" required name="miejsce_pracy" id="miejsce-pracy-0" value="0" type="radio">
+										<label class="input__label" for="miejsce-pracy-0">Cała Polska - jestem elastyczny</label>
+									</div>
+									<div class="input input--checkbox">
+										<input class="input__element" data-ng-model="workOption" required name="miejsce_pracy" id="miejsce-pracy-1" value="1" type="radio">
+										<label class="input__label" for="miejsce-pracy-1">Tylko województwo</label>
+									</div>
+									<div class="input input--select" ng-if="workOption == '1'">
+										<div class="input__label">&nbsp;</div>
+										<select id="wojewodztwo" name="wojewodztwo" class="input__select" data-ng-model="userCvData.workDistrictName" required>
+											<option selected="selected" value="">&lt;wybierz&gt;</option>
+											<option value="Dolnośląskie">Dolnośląskie</option>
+											<option value="Kujawsko-pomorskie">Kujawsko-pomorskie</option>
+											<option value="Lubelskie">Lubelskie</option>
+											<option value="Lubuskie">Lubuskie</option>
+											<option value="Łódzkie">Ł&#243;dzkie</option>
+											<option value="Małopolskie">Małopolskie</option>
+											<option value="Mazowieckie">Mazowieckie</option>
+											<option value="Opolskie">Opolskie</option>
+											<option value="Podkarpackie">Podkarpackie</option>
+											<option value="Podlaskie">Podlaskie</option>
+											<option value="Pomorskie">Pomorskie</option>
+											<option value="Śląskie">Śląskie</option>
+											<option value="Świętokrzyskie">Świętokrzyskie</option>
+											<option value="Warmińsko-mazurskie">Warmińsko-mazurskie</option>
+											<option value="Wielkopolskie">Wielkopolskie</option>
+											<option value="Zachodniopomorskie">Zachodniopomorskie</option>
+										</select>
+									</div>
+									<div class="input input--checkbox">
+										<input class="input__element" data-ng-model="workOption" required name="miejsce_pracy" id="miejsce-pracy-2" value="2" type="radio">
+										<label class="input__label" for="miejsce-pracy-2">Tylko miasto (i okolice)</label>
+									</div>
+									<div class="input input--select" ng-if="workOption == '2'">
+										<div class="input__label">Tylko miasto i okolice:</div>
+										<input class="input__select" type="text" data-ng-model="userCvData.workCityName" required maxlength="40" placeholder="Miasto">
+									</div>
+								</div>
+								<div class="inputList inputList--checkbox inputList--dropdown">
+									<h3 class="inputList__heading">Posiadam wyksztacenie</h3>
+									<div class="input input--checkbox">
+										<input class="input__element" name="wyksztalcenie" data-ng-model="userCvData.educationLevel" required id="wyksztalcenie-0" value="0" type="radio">
+										<label class="input__label" for="wyksztalcenie-0">Średnie</label>
+									</div>
+									<div class="input input--checkbox">
+										<input class="input__element" name="wyksztalcenie" data-ng-model="userCvData.educationLevel" required id="wyksztalcenie-1" value="1" type="radio">
+										<label class="input__label" for="wyksztalcenie-1">Wyższe (w trakcie studiów)</label>
+									</div>
+									<div class="input input--checkbox">
+										<input class="input__element" name="wyksztalcenie" data-ng-model="userCvData.educationLevel" required id="wyksztalcenie-2" value="2" type="radio">
+										<label class="input__label" for="wyksztalcenie-2">Wyższe (ukończone studia)</label>
+									</div>
+									<div ng-if="userCvData.educationLevel == '1' || userCvData.educationLevel == '2'">
+										<div class="input input--select">
+											<div class="input__label">Uczelnia:</div>
+											<select class="input__select" ng-model="selectedSchool" ng-change="getDepartments(selectedSchool)" ng-options="school.name for school in schools" placeholder="Uczelnia" required id="select" name="select"></select>
+										</div>
+										<div class="input input--select" ng-if="selectedSchool.name == 'Inna'">
+											<div class="input__label">Nazwa Uczelni:</div>
+											<input data-ng-model="userCvData.otherSchool" maxlength="150" class="input__select" id="school_name" placeholder="Uczelnia" required="" type="text">
+										</div>
+										<div class="input input--select" ng-if="selectedSchool.name != 'Inna'">
+											<div class="input__label">Wydział:</div>
+											<select ng-model="selectedDepartment" ng-change="changeDepartment(selectedDepartment)" ng-options="department.name for department in departments" placeholder="Wydział" required class="input__select" id="selectW" name="selectW"></select>
+										</div>
+										<div class="input input--select" ng-if="selectedSchool.name == 'Inna' || deptOtherShow">
+											<div class="input__label">Nazwa wydziału:</div>
+											<input class="input__select" data-ng-model="userCvData.otherDepartment" maxlength="150" id="wydzial" placeholder="Nazwa wydziału" required="" type="text">
+										</div>
+									</div>
+								</div>
+								<div class="inputList inputList--textarea">
+									<h3 class="inputList__heading">Interesuje mnie następujący obszar merytoryczny*:</h3>
+									<div class="input input--textarea">
+										<div class="input__label">Podaj technologie lub nazwy stanowisk,<br/> lub obszary zatrudnienia, które cię interesowały:</div>
+										<textarea data-ng-model="userCvData.interestedIn" name="zainteresowany" class="input__textarea" maxlength='2000'></textarea>
+									</div>
+									<div class="input input--textarea">
+										<div class="input__label">Posiadam doświadczenie zawodowe:</div>
+										<textarea data-ng-model="userCvData.experience" name="doswiadczenie" class="input__textarea" maxlength='2000'></textarea>
+									</div>
+									<div class="input input--textarea">
+										<div class="input__label">Moje umiejętności (języki programowania i inne):</div>
+										<textarea data-ng-model="userCvData.skills" name="umiejetnosci" class="input__textarea" maxlength='2000'></textarea>
+									</div>
+								</div>
+								<div class="inputList inputList--checkbox">
+									<h3 class="inputList__heading">Znajomość języków:</h3>
+								</div>
+								<div class="inputList inputList--checkbox">
+									<h3 class="inputList__heading">Angielski:</h3>
+									<div class="input input--checkbox">
+										<input type="radio" data-ng-model="userCvData.languageEnglish" id="ang0" name="angielski" value="0" checked class="input__element">
+										<label class="input__label" for="ang0">Brak</label>
+									</div>
+									<div class="input input--checkbox">
+										<input type="radio" data-ng-model="userCvData.languageEnglish" id="ang1" name="angielski" value="1" checked class="input__element">
+										<label class="input__label" for="ang1">Podstawowy</label>
+									</div>
+									<div class="input input--checkbox">
+										<input type="radio" data-ng-model="userCvData.languageEnglish" id="ang2" name="angielski" value="2" checked class="input__element">
+										<label class="input__label" for="ang2">Średnio Zaawansowany</label>
+									</div>
+									<div class="input input--checkbox">
+										<input type="radio" data-ng-model="userCvData.languageEnglish" id="ang3" name="angielski" value="3" checked class="input__element">
+										<label class="input__label" for="ang3">Zaawansowany</label>
+									</div>
+								</div>
+								<div class="inputList inputList--checkbox">
+									<h3 class="inputList__heading">Niemiecki:</h3>
+									<div class="input input--checkbox">
+										<input type="radio" data-ng-model="userCvData.languageGerman" id="nie0" name="niemiecki" value="0" checked class="input__element">
+										<label class="input__label" for="nie0">Brak</label>
+									</div>
+									<div class="input input--checkbox">
+										<input type="radio" data-ng-model="userCvData.languageGerman" id="nie1" name="niemiecki" value="1" checked class="input__element">
+										<label class="input__label" for="nie1">Podstawowy</label>
+									</div>
+									<div class="input input--checkbox">
+										<input type="radio" data-ng-model="userCvData.languageGerman" id="nie2" name="niemiecki" value="2" checked class="input__element">
+										<label class="input__label" for="nie2">Średnio Zaawansowany</label>
+									</div>
+									<div class="input input--checkbox">
+										<input type="radio" data-ng-model="userCvData.languageGerman" id="nie3" name="niemiecki" value="3" checked class="input__element">
+										<label class="input__label" for="nie3">Zaawansowany</label>
+									</div>
+								</div>
+								<div class="inputList inputList--checkbox">
+									<h3 class="inputList__heading">Francuski:</h3>
+									<div class="input input--checkbox">
+										<input type="radio" data-ng-model="userCvData.languageFrench" id="fr0" name="francuski" value="0" checked class="input__element">
+										<label class="input__label" for="fr0">Brak</label>
+									</div>
+									<div class="input input--checkbox">
+										<input type="radio" data-ng-model="userCvData.languageFrench" id="fr1" name="francuski" value="1" checked class="input__element">
+										<label class="input__label" for="fr1">Podstawowy</label>
+									</div>
+									<div class="input input--checkbox">
+										<input type="radio" data-ng-model="userCvData.languageFrench" id="fr2" name="francuski" value="2" checked class="input__element">
+										<label class="input__label" for="fr2">Średnio Zaawansowany</label>
+									</div>
+									<div class="input input--checkbox">
+										<input type="radio" data-ng-model="userCvData.languageFrench" id="fr3" name="francuski" value="3" checked class="input__element">
+										<label class="input__label" for="fr3">Zaawansowany</label>
+									</div>
+								</div>			
+								<div class="inputList inputList--textarea">
+									<h3 class="inputList__heading">Dodatkowo znam następujące języki (wpisz jakie i jaki jest Twój poziom):</h3>
+									<div class="input input--textarea">
+										<textarea data-ng-model="userCvData.languageAdditional" name="zainteresowany" class="input__textarea" maxlength='2000'></textarea>
+									</div>
+								</div>
+								<div class="inputList inputList--textarea">
+									<h3 class="inputList__heading">Dodatkowe informacje:</h3>
+									<div class="input input--textarea">
+										<textarea data-ng-model="userCvData.additionalInfo" name="informacje" class="input__textarea" maxlength='2000'></textarea>
+									</div>
+									<p class="uploadCV__info">Wszystkie pola oznaczone * są wymagane</p><br/><br/>
+				                    <div>
+										Wyrażam zgodę na przekazanie mojego zgłoszenia i dołączonych dokumentów wszystkim Wystawcom uczestniczącym w konferencji What The Hack oraz przetwarzanie moich danych osobowych w celach rekrutacyjnych. <a href="#" class="jsShowMore" data-ng-click="$event.preventDefault();">rozwiń</a>
+										<div class="input__hidden jsShowMoreTekst">Obowiązek informacyjny: Administratorem danych jest organizator - Fundacja Academic Partners (01-926 Warszawa, ul. Kwitnąca 6/46), dane zostaną przekazane organizacjom biorącym udział w Giełdzie Pracy IT oraz sponsorom wydarzenia.<br /> Partnerami wydarzenia są:
+										<label ng-repeat="exh in exhList">&nbsp;{{exh}}{{$last ? '' : ', '}}</label><br />
+										Wycofanie zgody jest możliwe poprzez wysłanie emaila na adres info@fundacjaap.org.pl, wycofanie zgody na przetwarzanie danych osobowych jest jednoznaczne z rezygnacją z udziału w rekrutacjach - jeśli zgody zostaną wycofane po przekazaniu danych Wystawcom, zostaną oni o tym automatycznie powiadomieni. Fundacja Academic Partners usunie wszystkie dane osobowe po zakończeniu prac związanych z projektem, zaś Wystawcy po zakończeniu procesów rekrutacji.</div>
+									</div>
+									<div class="uploadCV__info" data-ng-hide="message == ''" style="color:Red">
+										{{message}}
+									</div>
+									<div class="uploadCV__info" data-ng-hide="messageOk == ''" style="color:Green">
+										{{messageOk}}
+									</div>
+									<div class="uploadCV__info" class="uploadCV__extra" ng-show="loading">
+										<img src="img/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+									</div><br/><br/>
+									<div class="section__submit">
+										<button type="submit" class="bttn bttn--bigRed" data-ng-click="uploadCvForm()">Zapisz</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="zwieksz" ng-if="!eventSettings.isUserUploadCV">
+					<div class="agenda__header">
+						<p class="agenda__title">What the h<span>@</span>ck</p>
+						<span class="agenda__close"><img src="src/img/agenda-close.png" alt="" /></span>
+					</div>
+					<div class="zwieksz__content">
+						<div class="zwieksz__heading">Zwiększ swoje szanse</div>
+						<div class="zwieksz__subheading">prześlij dodatkowo plik cv</div>
+						<a href="#" class="bttn bttn--bigRed" data-ng-click='$event.preventDefault();redirectToUpload()'>Dodaj plik CV</a>
+					</div>
+				</div>
+				<div class="section__submit">
+					<button href="#" data-ng-click='$event.preventDefault();redirectToInform()' class="section__submit__button">Przejdź dalej</button>
+				</div>
+				<div class="section__submit">
+					<a href="#" data-ng-click='$event.preventDefault();skipThisPage()' ng-model="loading" ng-disabled="loading">Pomiń</button>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</section>
+<!-- /otargach -->

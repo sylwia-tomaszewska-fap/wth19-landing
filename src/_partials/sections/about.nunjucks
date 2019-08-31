@@ -1,0 +1,32 @@
+<section class="about">
+    <div class="container">
+        <div class="text-center">
+            <img src="images/about-wth19.svg" class="img-fluid mx-auto" alt="" width="800">
+        </div>
+
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+            <div class="about-text-outer">
+                <img src="images/about-ornament-1.svg" class="d-none d-md-block" alt="">
+                <div class="about-text">
+                    <p>
+                    What The Hack to czołowa, niezależna,
+                    <strong>
+                        konferencja z szeroko pojętego obszaru
+                        bezpieczeństwa IT,
+                    </strong> przygotowana w taki sposób,
+                    aby wynieść z niej maksymalnie wiele.
+                    Wydarzeniu dodatkowo towarzyszą <strong>
+                        imprezy
+                        networkingowe, część ze standami
+                    </strong> Partnerów
+                    (dostawców technologii i rozwiązań) oraz jedyne
+                    w Polsce <strong>Targi Pracy IT Security.</strong>
+                    </p>
+                </div>
+                <img src="images/about-ornament-2.svg" class="d-none d-md-block" alt="">
+            </div>
+            </div>
+        </div>
+    </div>
+</section>

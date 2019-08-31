@@ -1,0 +1,42 @@
+<section class="sponsorzy" id="sponsorzy">
+    <div class="container">
+
+            <div class="text-center mb-5">
+                <h1 class="section-heading" data-aos="headerbg"><span>SPONSORZY</span></h1>
+
+                
+                <p class="lead">
+                Sponsorami wydarzenia, tak jak poprzednio, będą liderzy obszaru IT Security.
+                </p>
+                
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6 pl-md-0 pr-md-5 mb-3 mb-md-5">
+                    <div class="sponsor sponsor1">
+                        <p>Pakiet Sponsora Głównego niedostępny</p>
+                        <a href="#pakiet-niedostepny-modal" data-toggle="modal" class="sponsor-modal link arrow arrow--right">więcej <span></span></a>
+                    </div>
+                </div>
+                <div class="col-md-6 pl-md-5 pr-md-0 mb-3 mb-md-5">
+                    <div class="sponsor sponsor1">
+                        <p>Pakiet Sponsora Głównego niedostępny</p>
+                        <a href="#pakiet-niedostepny-modal" data-toggle="modal" class="sponsor-modal link arrow arrow--right">więcej <span></span></a>
+                    </div>
+                </div>
+                <div class="col-md-5 mb-3 mb-md-5">
+                    <div class="sponsor sponsor2">
+                        <p>Call for Sponsors <br />Zostań Sponsorem</p>
+                        <a href="#collaboration-modal" data-toggle="modal" class="sponsor-modal link arrow arrow--right">wyślij zgłoszenie <span></span></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="sponsor sponsor3">
+                        <p>Call for Sponsors <br />Zostań Sponsorem</p>
+                        <a href="#collaboration-modal" data-toggle="modal" class="sponsor-modal link arrow arrow--right">wyślij zgłoszenie <span></span></a>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</section>

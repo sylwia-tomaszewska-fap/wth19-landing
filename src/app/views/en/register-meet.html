@@ -1,0 +1,665 @@
+﻿<div class="steps">
+    <ul>
+        <li><a href="#" data-ng-click='$event.preventDefault();'>Krok 1<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+        <li><a href="#" data-ng-click='$event.preventDefault();'>Krok 2<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+        <li><a href="#" data-ng-click='$event.preventDefault();'>Krok 3<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+        <li><a href="#" data-ng-click='$event.preventDefault();'>Krok 4<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+        <li class="active"><a href="#" data-ng-click='$event.preventDefault();'>Krok 5<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+    </ul>
+</div>
+<div class="container">
+    <form class="form-horizontal">
+        <fieldset>
+            <div class="container-sm container">
+                <h3 class="text-center">Chcesz umówić się na spotkanie z pracodawcą podczas trwania Giełdy Pracy DS? Podczas spotkania będziesz mieć szansę porozmawiać o możliwościach rekrutacyjnych a nawet odbyć wstępny etap rekrutacji!</h3>
+                <h2 class="text-center">Ten krok jest opcjonalny i możesz go pominąć.</h2>
+                <h2 class="text-center">Wybierz interesującą Cię organizację i termin:</h2>
+            </div>
+            <div class="row gutter-50 spotkanie">
+                <div class="col-sm-3">
+                    <img src="images/partnerzy/asseco.svg" class="img-responsive">
+                    <a class="btn btn-more" href="#modal_asseco" data-toggle="modal" data-target="#modal_asseco" data-ng-click='$event.preventDefault();'>więcej informacji <i class="ion-chevron-right"></i></a>
+                </div>
+                <div class="col-sm-3">
+                    <label for="28a">28.03</label>
+                    <select ng-model="selected1_1" ng-options="meet.slotName for meet in meetings1_1" class="select form-control" id="28a" name="">
+                        <option value="">wybierz godzinę</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <label for="29a">29.03</label>
+                    <select ng-model="selected1_2" ng-options="meet.slotName for meet in meetings1_2" class="select form-control" id="29a" name="">
+                        <option value="">wybierz godzinę</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-primary btn-blue btn-lg btn-block" type="submit" ng-model="loading" ng-disabled="loading" data-ng-click="saveReservation1()">Zapisz</button>
+                </div>
+            </div>
+            <div class="row gutter-50 spotkanie">
+                <div class="col-sm-3">
+                    <img src="images/partnerzy/accenture.svg" class="img-responsive">
+                    <a class="btn btn-more" href="#modal_accenture" data-toggle="modal" data-target="#modal_accenture" data-ng-click='$event.preventDefault();'>więcej informacji <i class="ion-chevron-right"></i></a>
+                </div>
+                <div class="col-sm-3">
+                    <label for="28b">28.03</label>
+                    <select ng-model="selected2_1" ng-options="meet.slotName for meet in meetings2_1" class="select form-control" id="28b" name="">
+                        <option value="">wybierz godzinę</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <label for="29b">29.03</label>
+                    <select ng-model="selected2_2" ng-options="meet.slotName for meet in meetings2_2" class="select form-control" id="29b" name="">
+                        <option value="">wybierz godzinę</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-primary btn-blue btn-lg btn-block" type="submit" ng-model="loading" ng-disabled="loading" data-ng-click="saveReservation2()">Zapisz</button>
+                </div>
+            </div>
+            <div class="row gutter-50 spotkanie">
+                <div class="col-sm-3">
+                    <img src="images/partnerzy/pracuj-pl.svg" class="img-responsive">
+                    <a class="btn btn-more" href="#modal_pracuj" data-toggle="modal" data-target="#modal_pracuj" data-ng-click='$event.preventDefault();'>więcej informacji <i class="ion-chevron-right"></i></a>
+                </div>
+                <div class="col-sm-3">
+                    <label for="28c">28.03</label>
+                    <select ng-model="selected3_1" ng-options="meet.slotName for meet in meetings3_1" class="select form-control" id="28c" name="">
+                        <option value="">wybierz godzinę</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <label for="29c">29.03</label>
+                    <select ng-model="selected3_2" ng-options="meet.slotName for meet in meetings3_2" class="select form-control" id="29c" name="">
+                        <option value="">wybierz godzinę</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-primary btn-blue btn-lg btn-block" type="submit" ng-model="loading" ng-disabled="loading" data-ng-click="saveReservation3()">Zapisz</button>
+                </div>
+            </div>
+            <div class="row gutter-50 spotkanie">
+                <div class="col-sm-3">
+                    <img src="images/partnerzy/goldmansachs.svg" class="img-responsive">
+                    <a class="btn btn-more" href="#modal_goldmansachs" data-toggle="modal" data-target="#modal_goldmansachs" data-ng-click='$event.preventDefault();'>więcej informacji <i class="ion-chevron-right"></i></a>
+                </div>
+                <div class="col-sm-3">
+                    <label for="28d">28.03</label>
+                    <select ng-model="selected4_1" ng-options="meet.slotName for meet in meetings4_1" class="select form-control" id="28d" name="">
+                        <option value="">wybierz godzinę</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <label for="29d">29.03</label>
+                    <select ng-model="selected4_2" ng-options="meet.slotName for meet in meetings4_2" class="select form-control" id="29d" name="">
+                        <option value="">wybierz godzinę</option>
+                    </select>
+                </div>
+                <div class="col-sm-3 text-center">
+                    <button class="btn btn-primary btn-blue btn-lg btn-block" type="submit" ng-model="loading" ng-disabled="loading" data-ng-click="saveReservation4()">Zapisz</button>
+                </div>
+            </div>
+            <div class="text-center" ng-show="loading">
+                <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+            </div>
+            <div class="text-center">
+                <button data-ng-click='redirectToConfirm()' class="btn btn-primary btn-blue btn-lg">Przejdź dalej</button>
+            </div>
+            <div class="text-center">
+                <a href="#" data-ng-click='$event.preventDefault();redirectToConfirm()' class="btn btn-skip">Pomiń ten krok</a>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+<div class="modal fade" id="modal_pracuj" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-wystawca modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img class="modal-top-right" src="images/modal-wystawca-top.svg">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="row row-flex">
+                    <div class="col-sm-4">
+                        <img ng-src="https://brandsome.it/UserContent/WDI2017/Exhibitors/4057194f-1deb-4810-b01b-e0b1a6bf215f.png" width="auto" height="60px" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h2>Grupa Pracuj sp. z o.o.</h2>
+                    </div>
+                </div>
+
+                <h2><strong>Dane firmy<strong></h2>
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Adres siedziby głównej w Polsce:</h2>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>Prosta 68, 00-838 Warszawa</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Miasta, w których organizacja działa w Polsce:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Warszawa, Kraków, Wrocław, Lublin, Poznań, Katowice, Sopot, Szczecin, Bydgoszcz, Łódź, Rzeszów, Bielsko - Biała</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Liczba osób zatrudnionych w Polsce:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>520 osób</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Liczba osób zatrudnionych poza Polską, na świecie (jeśli dotyczy):</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>0 osób</p>
+                    </div>
+                </div>
+
+                <h2>Kontakt w sprawie rekrutacji</h2>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Adres strony WWW rekrutacji:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p><a href="www.grupapracuj.pl">www.grupapracuj.pl</a></p>
+                    </div>
+                </div>
+
+                <h2>Opis firmy</h2>
+
+
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Główne branże, w których organizacja działa:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Nowe technologie, Mobile, Internet, Ecommerce</p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Krótki opis organizacji, jej osiągnieć itp.:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Jesteśmy jedną z najszybciej rozwijających się firm technologicznych w Europie Środkowej oraz właścicielem serwisów pracuj.pl i rabota.ua, a także innych biznesów związanych z nowoczesnymi technologiami oraz rozwiązaniami „software as a service” (SAAS) np. eRecruiter czy emplo.</p>
+                    </div>
+                </div>
+
+                <h2>Oferta rekrutacyjna</h2>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Dlaczego warto rekrutować się do tej organizacji</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Naszą firmę tworzą pasjonaci innowacji, którzy zajmują się rozwijaniem pracuj.pl, platformy eRecruiter oraz systemów wewnętrznych, korzystając z najlepszych narzędzi i technologii do rozwoju innowacyjnych produktów dla branży HR. Nasze projekty koncentrują się na adaptacji nowoczesnych rozwiązań internetowych i mobilnych. <br /><br /> Siedmiokrotnie zdobyliśmy tytuł Najlepszego Pracodawcy w badaniu Aon Hewitt. Wyróżnia nas świetna atmosferę i ludzie, dzięki którym zerwiesz się z łóżka nawet w poniedziałkowy poranek.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Oferta rekrutacyjna obejmuje:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p><input type="checkbox" disabled checked="checked"> Staże / praktyki</p>
+                        <p><input type="checkbox" disabled checked="checked"> Zatrudnienie na część etatu</p>
+                        <p><input type="checkbox" disabled checked="checked"> Zatrudnienie na pełen etat</p>
+                        <p><input type="checkbox" disabled checked="checked"> Możliwość pełnej pracy zdalnej</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Technologie / Specjalności w jakich poszukiwani są kandydaci:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>C/C#, JavaScript, MS SQL, AngularJS, GIT, Visual Studio, TeamCity, SonarQube, React, Sprak, Phyton, Selenium, Hadoop</p>
+                    </div>
+                </div>
+
+                <h2>Inne</h2>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Komentarze / uwagi / dodatkowe informacje:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p></p>
+                    </div>
+                </div>
+
+                <img class="modal-bottom" src="images/modal-bottom-sponsor-2.svg">
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="modal_asseco" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-wystawca modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img class="modal-top-right" src="images/modal-wystawca-top.svg">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="row row-flex">
+                    <div class="col-sm-4">
+                        <img ng-src="https://brandsome.it/UserContent/WDI2017/Exhibitors/7089f655-60aa-4b35-8607-732f79988245.png" width="auto" height="45px" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h2>Asseco Poland S.A.</h2>
+                    </div>
+                </div>
+
+                <h2><strong>Dane firmy<strong></h2>
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Adres siedziby głównej w Polsce:</h2>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>Rzeszów</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Miasta, w których organizacja działa w Polsce:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Warszawa, Kraków, Gdańsk, Łódź, Wrocław, Katowice, Gliwice, Poznań</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Liczba osób zatrudnionych w Polsce:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Ok. 3000 tys. osób</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Liczba osób zatrudnionych poza Polską, na świecie (jeśli dotyczy):</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Ok. 21 tys. osób</p>
+                    </div>
+                </div>
+
+                <h2>Kontakt w sprawie rekrutacji</h2>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Adres strony WWW rekrutacji:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p><a href="https://pl.asseco.com/">https://pl.asseco.com/</a></p>
+                    </div>
+                </div>
+
+                <h2>Opis firmy</h2>
+
+
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Główne branże, w których organizacja działa:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>IT</p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Krótki opis organizacji, jej osiągnieć itp.:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Ponad 25 lat temu w Rzeszowie powstał startup, który obecnie jest największą polską spółką informatyczną i producentem oprogramowania w Europie. Asseco dostarcza i rozwija systemy IT dla prawie wszystkich sektorów gospodarki. Tworzymy rzeczywistość, która Cię otacza.</p>
+                    </div>
+                </div>
+
+                <h2>Oferta rekrutacyjna</h2>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Dlaczego warto rekrutować się do tej organizacji</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Duże projekty, różnorodne technologie, samodzielne zadania, szkolenia techniczne i wsparcie kolegów z zespołu – wszystko w atmosferze współpracy i ciągłego doskonalenia swoich umiejętności.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Oferta rekrutacyjna obejmuje:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p><input type="checkbox" disabled checked="checked"> Staże / praktyki</p>
+                        <p><input type="checkbox" disabled checked="checked"> Zatrudnienie na część etatu</p>
+                        <p><input type="checkbox" disabled checked="checked"> Zatrudnienie na pełen etat</p>
+                        <p><input type="checkbox" disabled checked="checked"> Możliwość pełnej pracy zdalnej</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Technologie / Specjalności w jakich poszukiwani są kandydaci:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Programowanie Java – Staże/osoby z doświadczeniem (wszystkie poziomy doświadczenia)<br /> Programowanie C# – Staże/osoby z doświadczeniem (wszystkie poziomy doświadczenia)<br /> Programowanie C++ – Staże/osoby z doświadczeniem (wszystkie poziomy doświadczenia)<br /> Programowanie Cobol – Staże/osoby z doświadczeniem (wszystkie poziomy doświadczenia)<br /> Analityk systemowo – biznesowy – Staże/osoby z doświadczeniem (wszystkie poziomy doświadczenia)<br /> Testowanie manualne/ automatyczne – Staże/osoby z doświadczeniem (wszystkie poziomy doświadczenia)</p>
+                    </div>
+                </div>
+
+                <h2>Inne</h2>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Komentarze / uwagi / dodatkowe informacje:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Asseco STARTER to program dla studentów i absolwentów stworzony przez Asseco Poland.<br /> W ramach 3 miesięcznego stażu zapewniamy Ci zdobycie pierwszych profesjonalnych doświadczeń zawodowych i rozwój w wybranym prze Ciebie kierunku.<br /> Po trzech miesiącach przedłużymy naszą współpracę podczas 9 miesięcznego Programu Absolwenckiego, gdzie będziesz szlifował zdobyte umiejętności.<br /> Dowiedz się więcej na starter.asseco.com</p>
+                    </div>
+                </div>
+
+                <img class="modal-bottom" src="images/modal-bottom-sponsor-2.svg">
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade" id="modal_goldmansachs" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-wystawca modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img class="modal-top-right" src="images/modal-wystawca-top.svg">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="row row-flex">
+                    <div class="col-sm-4">
+                        <img ng-src="https://brandsome.it/UserContent/WDI2017/Exhibitors/732e8078-5997-4d21-8bda-2d6326b59348.jpg" width="auto" height="65px" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h2>Goldman Sachs</h2>
+                    </div>
+                </div>
+
+                <h2><strong>Dane firmy<strong></h2>
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Adres siedziby głównej w Polsce:</h2>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>Plac Europejski 1 00-844 Warszawa</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Miasta, w których organizacja działa w Polsce:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Warszawa</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Liczba osób zatrudnionych w Polsce:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>osób</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Liczba osób zatrudnionych poza Polską, na świecie (jeśli dotyczy):</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>osób</p>
+                    </div>
+                </div>
+
+                <h2>Kontakt w sprawie rekrutacji</h2>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Adres strony WWW rekrutacji:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p><a href="http://www.goldmansachs.com/">http://www.goldmansachs.com/</a></p>
+                    </div>
+                </div>
+
+                <h2>Opis firmy</h2>
+
+
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Główne branże, w których organizacja działa:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Technology</p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Krótki opis organizacji, jej osiągnieć itp.:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Goldman Sachs jest światowym liderem w zakresie bankowości inwestycyjnej, papierów wartościowych i zarządzania inwestycjami. Oferuje szeroką gamę usług finansowych skierowanych do znacznej i zróżnicowanej bazy klientów, która obejmuje korporacje, instytucje finansowe, rządy i osoby prywatne.</p>
+                    </div>
+                </div>
+
+                <h2>Oferta rekrutacyjna</h2>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Dlaczego warto rekrutować się do tej organizacji</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Pracując w naszym biurze w Warszawie będziesz: <br /> * mieć realny wpływ na swoją pracę, możliwość przedstawienia własnego punku widzenia oraz objęcia roli lidera w Dziale Technologii;<br /> * należeć do globalnego zespołu inżynierów, pracujących w sześćdziesięciu biurach w trzydziestu pięciu krajach i mówiących ponad setką różnych języków;<br /> * tworzyć rozwiązania dla najbardziej złożonych problemów w branży, z ponad 1,5 miliarda linii kodu napisanych do tej pory;<br /> * pracować z szerokim spektrum technologii w tym Java, C++, Hadoop, Scala, Docker, Linux, Windows, bazy danych SQL i NoSQL;<br /> * rozwijać swoje umiejętności, uczyć się od najlepszych i uczestniczyć w światowej klasy programach szkoleniowych.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Oferta rekrutacyjna obejmuje:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p><input type="checkbox" disabled checked="checked"> Staże / praktyki</p>
+                        <p><input type="checkbox" disabled checked="checked"> Zatrudnienie na część etatu</p>
+                        <p><input type="checkbox" disabled checked="checked"> Zatrudnienie na pełen etat</p>
+                        <p><input type="checkbox" disabled checked="checked"> Możliwość pełnej pracy zdalnej</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Technologie / Specjalności w jakich poszukiwani są kandydaci:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Szukamy osób innowacyjnych i potrafiących rozwiązywać problemy, które będą mogły wnieść swój wkład w trzech głównych dziedzinach: <br /><br /> Tworzenie Aplikacji Biznesowych<br /> Będziesz: Implementować rozwiązania techniczne na potrzeby wewnętrzne oraz dla naszych klientów<br /> Technologie: HTML, CSS, JavaScript, AngularJS, ReactJS, Java, bazy danych SQL i NoSQL, Hadoop, Scala<br /><br /> Utrzymanie i Rozwój Infrastruktury<br /> Będziesz: Pracować jako programista lub inżynier systemowy przy rozwoju i utrzymaniu naszej infrastruktury technicznej oraz kluczowych komponentów systemowych<br /> Technologie: Java, JavaScript, Python, .NET, Cloud, Docker, Linux, Windows, bazy danych SQL i NoSQL, Hadoop, Scala<br /><br /> Inżynieria DevOps <br /> Będziesz: Odpowiadać za wykrywanie, zarządzanie i ograniczanie ryzyka występującego w środowisku operacyjnym firmy, w tym wdrażać rozwiązania poprawiające jakość tworzonych przez nas technologii<br /> Technologie: PowerShell, Ruby, Python, Groovy, JavaScript</p>
+                    </div>
+                </div>
+
+                <h2>Inne</h2>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Komentarze / uwagi / dodatkowe informacje:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Aby zaaplikować, odwiedź www.GSkariera.pl. Zgłoś swoją kandydaturę w sekcji ‘Students and Graduates’– wybierz odpowiednie stanowisko, oddział oraz lokalizację. Lub wyślij swoje CV w języku angielskim na adres recruitment-poland@gs.com. Zgłoszenia są rozpatrywane na bieżąco. Aplikuj już teraz!</p>
+                    </div>
+                </div>
+
+                <img class="modal-bottom" src="images/modal-bottom-sponsor-2.svg">
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade" id="modal_accenture" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-wystawca modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img class="modal-top-right" src="images/modal-wystawca-top.svg">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="row row-flex">
+                    <div class="col-sm-4">
+                        <img ng-src="https://brandsome.it/UserContent/WDI2017/Exhibitors/f6ab3828-2618-4530-b163-f32fa98953d9.jpg" width="auto" height="65px" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h2>Accenture</h2>
+                    </div>
+                </div>
+
+                <h2><strong>Dane firmy<strong></h2>
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Adres siedziby głównej w Polsce:</h2>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>Ul. Sienna 39, 00-121 Warszawa</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Miasta, w których organizacja działa w Polsce:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Warszawa, Łódź, Kraków, Wrocław</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Liczba osób zatrudnionych w Polsce:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>3700 specjalistów osób</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Liczba osób zatrudnionych poza Polską, na świecie (jeśli dotyczy):</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>394000 specjalistów osób</p>
+                    </div>
+                </div>
+
+                <h2>Kontakt w sprawie rekrutacji</h2>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Adres strony WWW rekrutacji:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p><a href="https://www.accenture.com/pl-pl/">https://www.accenture.com/pl-pl/</a></p>
+                    </div>
+                </div>
+
+                <h2>Opis firmy</h2>
+
+
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Główne branże, w których organizacja działa:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Konsulting, IT, Finanse, Bankowość, Ubezpieczenia, Telekomunikacja, Energetyka, Produkcja, Handel/p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Krótki opis organizacji, jej osiągnieć itp.:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Jesteśmy firmą świadczącą usługi z zakresu konsultingu,<br /> nowoczesnych technologii i outsourcingu.<br /><br /> W Accenture współpracujemy z największymi i najbardziej rozpoznawalnymi firmami, wspierając je w procesie transformacji biznesowej i technologicznej poprzez piec filarów naszej działalności: Strategy, Consulting, Digital, Technology oraz Operations. <br /><br /> Jesteśmy jedyną firmą, która dostarcza swoim Klientom rozwiązania w tzw. modelu end to end. Dzięki temu pracujemy z najlepszymi. Nasi Klienci to 89 firm z rankingu FORTUNE® Global 100 i ponad 3 z FORTUNE® Global 500 oraz instytucje rządowe z całego świata.</p>
+                    </div>
+                </div>
+
+                <h2>Oferta rekrutacyjna</h2>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Dlaczego warto rekrutować się do tej organizacji</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>* Jasno zdefiniowana ścieżka kariery i rozwój zawodowy w międzynarodowym środowisku<br /> * Opieka Career Cancelor’a i wsparcie w osiąganiu zawodowych celów<br /> * Szkolenia, certyfikacje (Oracle, Microsoft, Java, IBM, SAP, Prince2, ITIL)<br /> * Szkolenia techniczne, dostęp do bazy zaawansowanej wiedzy oraz możliwość kontaktu z ekspertami z różnych krajów<br /> * Możliwość współpracy z globalnymi klientami w dużych, międzynarodowych projektach</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Oferta rekrutacyjna obejmuje:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p><input type="checkbox" disabled checked="checked"> Staże / praktyki</p>
+                        <p><input type="checkbox" disabled checked="checked"> Zatrudnienie na część etatu</p>
+                        <p><input type="checkbox" disabled checked="checked"> Zatrudnienie na pełen etat</p>
+                        <p><input type="checkbox" disabled checked="checked"> Możliwość pełnej pracy zdalnej</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Technologie / Specjalności w jakich poszukiwani są kandydaci:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>1. Wdrażanie, konfiguracja i rozszerzanie gotowych pakietów oprogramowania (Packaged software)<br /> 2. Integracja i budowanie rozwiązań dedykowanych (Custom development)<br /> 3. Projektowanie, planowanie i budowa infrastruktury technicznej (Infrastructure)<br /> 4. Bezpieczeństwo systemów, usług, produktów i procesów (Security)</p>
+                    </div>
+                </div>
+
+                <h2>Inne</h2>
+                <div class="row">
+                    <div class="col-sm-4 text-right">
+                        <h2>Komentarze / uwagi / dodatkowe informacje:</h2>
+                    </div>
+                    <div class="col-sm-8">
+                    </div>
+                </div>
+
+                <img class="modal-bottom" src="images/modal-bottom-sponsor-2.svg">
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<style>
+    p {
+        font-weight: 300 !important;
+        font-size: 14px !important;
+    }
+
+    h2 {
+        font-size: 20px !important;
+    }
+</style>

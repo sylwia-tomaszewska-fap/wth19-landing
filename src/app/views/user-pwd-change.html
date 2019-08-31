@@ -1,0 +1,54 @@
+﻿<!-- intro -->
+<section id="start" class="section section--logowanie">
+	<!-- container -->
+	<div class="container container--wrapper">
+		<div class="top top--column">
+			<div class="top__reg">@zmiana hasła</div>
+			<div class="loginForm">
+				<div class="sectionBar">
+					<p class="sectionBar__title">What the h@ck</p>
+					<a href="#" class="sectionBar__close" data-ng-click="$event.preventDefault();">
+						<img class="sectionBar__close__image" src="src/img/close-white.png" alt="">
+					</a>
+				</div>
+				<div class="loginForm__content">
+					<div class="loginForm__logo logo logo--robot">
+						<img src="src/img/robot.png" alt="" />
+					</div>
+					<form role="form" name="usrForm">
+						<div class="loginForm__form">
+							<div class="input input--block">
+								<div class="input__label">Obecne hasło</div>
+								<div class="input__element">
+									<input class="input__target" type="password" placeholder="Obecne hasło" data-ng-model="loginData.invitationCode" required autofocus>
+								</div>
+							</div>
+							<div class="input input--block">
+								<div class="input__label">Nowe hasło</div>
+								<div class="input__element">
+									<input class="input__target" type="password" placeholder="Nowe hasło" data-ng-model="loginData.password" required>
+								</div>
+							</div>
+							<div class="input input--block">
+								<div class="input__label">Powtórz nowe hasło</div>
+								<div class="input__element">
+									<input class="input__target" type="password" placeholder="Powtórz nowe hasło" data-ng-model="loginData.confirmPassword" required>
+								</div>
+							</div>
+							<div ng-if="loading">
+								<img src="img/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+							</div>
+		                    <div data-ng-hide="message == ''" class="input input--block">
+								{{message}}
+							</div>
+							<button type="submit" class="bttn bttn--arrow loginForm__submit" ng-model="loading" ng-disabled="loading" data-ng-click="usrForm.$valid && changePassword()">Zmień</button>
+							<a href="#" data-ng-click="$event.preventDefault();redirectToAccount();" class="loginForm__forgotten">Wróć bez zmiany hasła</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /container -->
+</section>
+<!-- /intro -->

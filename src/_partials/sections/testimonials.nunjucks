@@ -1,0 +1,77 @@
+<section class="testimonials" id="opinieinnych">
+	<div class="container">
+		<div class="text-center">
+			<h1 class="section-heading" data-aos="headerbg">
+				<span>Opinie</span><span> innych</span>
+			</h1>
+		</div>
+		<div class="pcwindow">
+			<div class="pcwindow-header">
+				<p>II EDYCJA WTH &gt; OPINIE</p>
+				<span class="pcwindow-close">&times;</span>
+			</div>
+
+			<div class="pcwindow-body">
+                <div class="slick testimonials-carousel">
+                {% set data = [
+    {
+        image: 'Paula',
+        text: '„Be a type that suffers, when doing nothing interesting!“',
+        text2: 'Paulina Januszkiewicz',
+        text3: 'CEO and Founder, CQURE'
+    },
+    {
+        image: 'Michal',
+        text: '„Dziel się wiedzą, możesz na tym tylko zyskać.“',
+        text2: 'Michał Sajdak',
+        text3: 'IT Security Consultant, Securitum'
+    },
+    {
+        image: 'Adam',
+        text: '„Wysłuchałem setek wykładów by znaleźć najlepszych prelegentów i zebrać ich na WTH.“',
+        text2: 'Adam Haertle',
+        text3: 'Chief Editor, ZaufanaTrzeciaStrona.pl'
+    },
+    {
+        image: 'Piotr',
+        text: '„a0b2a4af306136c8<br>ddf3e75cba286d54.“',
+        text2: 'Piotr Konieczny',
+        text3: 'Chief Information Security Officer, Niebezpiecznik.pl'
+    },
+    {
+        image: 'Gynvael-02',
+        text: '„&lt;@Gynvael&gt; huh, Adam z z3s ma niezły rozmach<br>
+                                            &lt;@Gynvael&gt; dziewięć tracków, tego w Polsce jeszcze nie widziałem<br>
+                                                &lt;@Gynvael&gt; do tego tematy wyglądają solidnie“',
+        text2: 'Gynvael',
+        text3: 'gynvael.coldwind//vx'
+    },
+    {
+        image: 'kot',
+        text: '„Dobra pizza, jeszcze fajniejszy giftbag, a nagrody w konkursach najfajniejsze :) Dobra karma.“',
+        text2: 'Hacker Białowłosy',
+        text3: 'II życie, tym razem jako programista'
+    }] %}
+    {% for item in data %}
+
+                    <div class="item px-2">
+                        <div class="row">
+                            <div class="col-7 px-md-5 d-flex flex-column justify-content-center">
+                                <h2>{{item.text}}</h2>
+                                <p class="name">{{item.text2}}</p>
+                                <p class="position">{{item.text3}}</p>
+                            </div>
+                            <div class="col-5">
+                                <img src="images/opinie/{{item.image}}.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+        {% endfor %}
+
+
+                </div>
+                
+			</div>
+		</div>
+	</div>
+</section>

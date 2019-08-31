@@ -1,0 +1,127 @@
+<section class="patroni" id="patroni">
+	<div class="container">
+		<div class="text-center">
+			<h1 class="section-heading" data-aos="headerbg">
+				<span>Patroni</span>
+			</h1>
+
+            <p class="lead">W zeszłym roku Patronami Honorowymi byli:</p>
+			
+		</div>
+		<div class="pcwindow">
+			<div class="pcwindow-header">
+				<p>II EDYCJA WTH &gt; Patroni Honorowi</p>
+				<span class="pcwindow-close">&times;</span>
+			</div>
+
+			<div class="pcwindow-body"> 
+                
+                {# <div class="logoGrid row">
+        {% for i in range(0, 8) -%}
+
+                    <div class="col-6 col-sm-4 col-md-3" ng-repeat="partner in partners | filter: { partnerTypeName: 'Honorowi' }">
+                        <div class="item">
+                        <a href="#" target="_blank">
+                            <img src="images/partner-temp.jpg" class="logoGrid__image" alt="partner">
+                        </a>
+                        </div>
+                    </div>
+        {% endfor %}
+                </div> #}
+
+            {% raw %}
+                <div class="logoGrid row">
+                    <div class="col-6 col-sm-4 col-md-3 d-flex" ng-repeat="partner in partners | filter: { partnerTypeName: 'Honorowi' }">
+                    <div class="item w-100">
+                        <a href="{{partner.webSite}}" target="_blank">
+                            <img ng-src="{{partner.logoUrl}}" class="logoGrid__image img-fluid " alt="partner">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            {% endraw %}
+
+                
+			</div>
+		</div>
+
+            <p class="lead">W zeszłym roku Patronami Honorowymi byli:</p>
+
+<div class="pcwindow">
+			<div class="pcwindow-header">
+				<p>II EDYCJA WTH &gt; Patroni Społecznościowi</p>
+				<span class="pcwindow-close">&times;</span>
+			</div>
+
+			<div class="pcwindow-body"> 
+                
+                {# <div class="logoGrid row">
+        {% for i in range(0, 8) -%}
+
+                    <div class="col-6 col-sm-4 col-md-3" ng-repeat="partner in partners | filter: { partnerTypeName: 'Spolecznosciowi' }">
+                        <div class="item">
+                        <a href="#" target="_blank">
+                            <img src="images/partner-temp.jpg" class="logoGrid__image" alt="partner">
+                        </a>
+                        </div>
+                    </div>
+        {% endfor %}
+                </div> #}
+
+            {% raw %}
+                <div class="logoGrid row">
+                    <div class="col-6 col-sm-4 col-md-3 d-flex" ng-repeat="partner in partners | filter: { partnerTypeName: 'Spolecznosciowi' }">
+                    <div class="item w-100">
+                        <a href="{{partner.webSite}}" target="_blank">
+                            <img ng-src="{{partner.logoUrl}}" class="logoGrid__image img-fluid" alt="partner">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            {% endraw %}
+
+                
+			</div>
+		</div>
+
+        <p class="lead">W zeszłym roku Patronami Medialnymi byli:</p>
+
+<div class="pcwindow">
+			<div class="pcwindow-header">
+				<p>II EDYCJA WTH &gt; Patroni Medialni</p>
+				<span class="pcwindow-close">&times;</span>
+			</div>
+
+			<div class="pcwindow-body"> 
+                
+                {# <div class="logoGrid row">
+        {% for i in range(0, 8) -%}
+
+                    <div class="col-6 col-sm-4 col-md-3" ng-repeat="partner in partners | filter: { partnerTypeName: 'Medialni' }">
+                        <div class="item">
+                        <a href="#" target="_blank">
+                            <img src="images/partner-temp.jpg" class="logoGrid__image" alt="partner">
+                        </a>
+                        </div>
+                    </div>
+        {% endfor %}
+                </div> #}
+
+            {% raw %}
+                <div class="logoGrid row">
+                    <div class="col-6 col-sm-4 col-md-3 d-flex" ng-repeat="partner in partners | filter: { partnerTypeName: 'Medialni' }">
+                    <div class="item w-100">
+                        <a href="{{partner.webSite}}" target="_blank">
+                            <img ng-src="{{partner.logoUrl}}" class="logoGrid__image img-fluid" alt="partner">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            {% endraw %}
+
+                
+			</div>
+		</div>
+
+	</div>
+</section>

@@ -1,0 +1,34 @@
+
+<section class="imprezy" id="imprezy">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1 class="section-heading imprezy"><span data-aos="headerbg">IMPREZY</span> <br /> <span data-aos="headerbg">TOWARZYSZĄCE</span></h1>
+                
+            </div>
+
+
+        <div class="row align-items-center impreza">
+            <div class="col-md-6">
+                <h2 class="subheading">PRE I AFTER-PARTY</h2>
+                <p>Wieczorne preparty i afterparty będzie dobrą okazją do poznania prelegentów i innych osób ze środowiska</p>
+            </div>
+            <div class="col-md-6">
+                <img src="images/robot-party.svg" class="img-fluid w-100" alt="">
+            </div>
+        </div>
+
+        <div class="row align-items-center impreza">
+            <div class="col-md-7 order-md-2">
+                <h2 class="subheading">EXECUTIVES MEETUP</h2>
+                <p>Wydarzenie dedykowane liderom, kadrze kierowniczej, architektom i gościom specjalnym. Luźna atmosfera, wspierana wysokiej jakości koktajlami, pozwoli na kontynuowanie dyskusji i budowanie relacji.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="images/robot-executive-meetup.svg" class="img-fluid w-100" alt="">
+            </div>
+        </div>
+
+
+        </div>
+        
+
+    </section>

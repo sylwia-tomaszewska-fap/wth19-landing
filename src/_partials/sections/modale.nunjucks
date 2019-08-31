@@ -1,0 +1,668 @@
+<div id="collaboration-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+            <div class="modal-content pcwindow">
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+                    <div class="form">
+                        <h2>Zapraszamy<br>do współpracy</h2>
+                        <p>Osobiście skontaktujemy się z Państwem w sprawie współpracy. Prosimy o wypełnienie danych.</p>
+                        <form id="partnerForm" name="partnerForm">
+                            <div class="form-group col-12 ">
+                            <input type="text" class="form-control" id="coopName" placeholder="Imię i nazwisko*" maxlength="200" data-ng-model="modalData.fullname" autofocus required>
+                            </div>
+                            <div class="form-group col-12 ">
+                            <input type="text" class="form-control" id="coopCompany" placeholder="Nazwa Firmy*" maxlength="150" data-ng-model="modalData.companyName" required>
+                            </div>
+                            <div class="form-group col-12 ">
+                            <input type="text" class="form-control" id="coopEmail" placeholder="Email*" maxlength="200" data-ng-model="modalData.email" required>
+                            </div>
+                            <div class="form-group col-12 ">
+                            <input type="text" class="form-control" id="coopPhone" placeholder="Telefon" maxlength="9" data-ng-model="modalData.phoneNo">
+                            </div>
+                            <div class="btn btn-primary" type="submit" id="modal_coop_submit" name="submit" data-ng-click="partnerForm.$valid && sendBecomeExhibitor()" data-toggle="modal" data-target="#thankyouplural-modal"> <!--data-dismiss="modal">-->
+                                Wyślij zgłoszenie
+                            </div>
+                        </form>
+                    </div>
+
+                    <p>
+                    Kontakt do organizatorów:<br />
+                    FUNDACJA ACADEMIC PARTNERS<br />
+                    tel: +48 660 409 142<br />
+                    email: hello@wthconf.pl<br />
+                    www.fundacjaap.org.pl
+                    </p>
+                </div>
+                <img src="images/modal-bg2.svg"  class="w-100 modal-img" />
+            </div>
+        </div>
+    </div>
+
+    <div id="volunteering-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+            <div class="modal-content pcwindow">
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+                    <div class="form">
+                        <h2>ZOSTAŃ WOLONTARIUSZEM<br /> PODCZAS WTH19</h2>
+                        <p class="text-center px-5">Zdobądź ciekawe doświadczenia, rozwijaj się, poznaj prelegentów, uczestnicz bezpłatnie w całym wydarzeniu i pomóż nam w przygotowaniu i / lub w  trakcie wydarzenia. Jeśli brzmi interesująco, zostaw swoje dane:</p>
+                        <form id="volForm" name="volForm">
+                        <div class="form-group col-12">
+                            <input type="text" class="form-control" id="volName" placeholder="Imię i nazwisko*" maxlength="200" data-ng-model="modalData.fullname" autofocus required>
+                        </div>
+                        <div class="form-group col-12">
+                            <input type="text" class="form-control" id="volEmail" placeholder="Email*" maxlength="200" data-ng-model="modalData.email" required>
+                        </div>
+                        <div class="form-group col-12">
+                            <input type="text" class="form-control" id="volPhone" placeholder="Telefon" maxlength="9" data-ng-model="modalData.phoneNo">
+                        </div>
+                        <p><small>Informujemy, że w przypadku wypełnienia i przesłania niniejszego formularza zgadzasz się na przetwarzanie Twoich danych osobowych jedynie w celach realizacji procesu zgłoszeń na wolontariusza konferencji. W pełni szanujemy Twoje prawa wynikające z właściwych ustaw o przetwarzaniu danych osobowych. Głównym organizatorem instytucjonalnym konferencji jest Fundacja Academic Partners, Aleje Jerozolimskie 181B, 02-222 Warszawa, email: info@fundacjaap.org.pl</small></p>
+                        
+
+                            <div class="btn btn-primary" type="submit" id="modal_vol_submit" name="submit" data-ng-click="volForm.$valid && sendBecomeVolounteer()" data-toggle="modal" data-target="#thankyousingle-modal"> <!-- data-dismiss="modal"> -->
+                                Wyślij zgłoszenie
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <img src="images/modal-bg2.svg"  class="w-100 modal-img" />
+            </div>
+        </div>
+    </div>
+
+    <div id="callforpapers-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+            <div class="modal-content pcwindow">
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+                    <div class="form">
+                        <h2>What The Hack 2019 Call for Papers</h2>
+                        <p>Jeśli chcesz wygłosić prezentację podczas WTH19 - zostaw nam swoje dane, skontaktujemy się z Tobą gdy otworzymy proces Call for Papers.</p>
+                        <form id="cfpForm" name="cfpForm">
+                        <div class="form-group col-12">
+                            <input type="text" class="form-control" id="cfpName" placeholder="Imię i nazwisko*" maxlength="200" data-ng-model="modalData.fullname" autofocus required>
+                        </div>
+                        <div class="form-group col-12">
+                            <input type="text" class="form-control" id="cfpEmail" placeholder="Email*" maxlength="200" data-ng-model="modalData.email" required>
+                        </div>
+                        <div class="form-group col-12">
+                            <input type="text" class="form-control" id="cfpPhone" placeholder="Telefon" maxlength="9" data-ng-model="modalData.phoneNo">
+                        </div>
+                        
+
+                            <div class="btn btn-primary" type="submit" id="modal_cfp_submit" name="submit" data-ng-click="cfpForm.$valid && sendBecomeLecturer()" data-toggle="modal" data-target="#thankyousingle-modal"> <!-- data-dismiss="modal"> -->
+                                Wyślij zgłoszenie
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="thankyouplural-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                    <div class="form">
+
+                        
+
+                        <h2>Dziękujemy!</h2>
+                        <div class="text-center">
+                        <p>Osobiście się z Państwem<br>skontaktujemy.</p>
+                            <div>
+                            <img src="images/happy.png" class="img-fluid" alt="Happy robot">
+                            </div>
+
+                        <a href="#" data-dismiss="modal" class="btn btn-secondary">OK</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="pakiet-niedostepny-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p></p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                    <div class="form">
+
+                        
+
+                        
+                        <div class="text-center">
+                        <p>Pakiet Sponsora Głównego jest już niedostępny</p>
+                            <div>
+                            <img src="images/sad.png" class="img-fluid" alt="Happy robot">
+                            </div>
+
+                        <a href="#" data-dismiss="modal" class="btn btn-secondary">OK</a>
+
+                        <img src="images/modal-bg2.svg"  class="w-100 modal-img" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="thankyousingle-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                    <img src="img/happyrobot.png" alt="Happy robot" class="happyrobot">
+
+                    <div class="form">
+                        <h2>Dziękujemy!</h2>
+                        <p>Osobiście się z Tobą<br>skontaktujemy.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="speaker-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+
+                <div class="pcwindow__body">
+{%raw%}
+                    <div class="person">
+
+                        <div class="person__photo">
+                            <!-- <img ng-src="{{activePrelegent.imageUrl}}" alt="{{activePrelegent.firstName}} {{activePrelegent.lastName}}"> -->
+                            <div class="img-container" style="background-image:url({{activePrelegent.imageUrl}})"></div>
+                            <div class="square"></div>
+                        
+                        <div class="overlay"></div>
+                            <div class="overlay"></div>
+                        </div>
+
+                        <div class="person__data">
+                            <div class="name">{{activePrelegent.firstName}} {{activePrelegent.lastName}}</div>
+                            <div class="title">{{activePrelegent.jobPosition}}<span ng-if="activePrelegent.jobPosition && activePrelegent.organization">, </span> {{activePrelegent.organization}}</div>
+                        </div>
+
+                    </div>
+
+                    <p class="description">{{activePrelegent.biography}}</p>
+{% endraw %}
+
+                </div>
+                    <img src="images/modal-bg1.svg"  class="w-100 modal-img" />
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="allspeakers-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-xl">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                    <p class="lead text-center col-md-8 mx-auto mt-3 mb-4">
+                        Na naszym wydarzeniu spotkasz blisko 80 prelegentów, czołowych ekspertów i autorytetów środowiska ITSec.
+                    </p>
+{%raw%}
+                    <div class="row">
+                        <div class="prelegent column col-sm-6 col-md-3" ng-repeat="p in prelegenciAll">
+                            <div class="prelegenci__photo p1" data-toggle="modal" data-target="#speaker-modal" ng-click="changePrelegent(p)">
+                                <div class="img-container" style="background-image:url({{p.imageUrl}})"></div>
+
+                                <div class="square"></div>
+                        
+                        <div class="overlay"></div>
+                            </div>
+                            <p>{{p.firstName}} {{p.lastName}}</p>
+                            <p class="job">{{p.jobPosition}} {{p.organization}}</p>
+                        </div>
+
+                    </div>
+{% endraw %}
+
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sponsor-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-lg modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                    <div class="img-container">
+                        <img src="img/logotypy/accenture.svg">
+                    </div>
+
+                    <h2>Główny Sponsor</h2>
+
+                    <p>
+                        Accenture jest globalną firmą świadczącą profesjonalne usługi i rozwiązania w obszarach: Strategy, Consulting, Digital, Technology i Operations. Wspieramy transformacje biznesowe i technologiczne naszych klientów. To co nas wyróżnia to fakt, że dostarczamy rozwiązania w tzw. modelu end to end. Dzięki temu pracujemy z najlepszymi. Nasi Klienci to 89 firm z rankingu FORTUNE® Global 100 i ponad 3/4 z FORTUNE® Global 500 oraz instytucje rządowe z całego świata
+                    </p>
+
+                    <p>
+                        Więcej na:<br>
+                        <a href="http://pracaaccenture.pl" target="_blank">pracaaccenture.pl</a>
+                    </p>
+                    <div class="social-buttons">
+                        <!-- <img src="img/modals/meetup.svg" alt="Meetup">
+                        <img src="img/modals/fb.svg" alt="Facebook">
+                        <img src="img/modals/in.svg" alt="LinkedIn">
+                        <img src="img/modals/yt.svg" alt="YouTube"> -->
+
+                        <a href="https://www.facebook.com/AccentureKariera/" target="_blank">
+                            <img src="img/modals/fb.svg" alt="Facebook"></a>
+
+                        <a href="https://www.linkedin.com/company/accenture/" target="_blank">
+                            <img src="img/modals/in.svg" alt="LinkedIn"></a>
+                    </div>
+                </div>
+
+                <img src="images/modal-bg1.svg"  class="w-100 modal-img" />
+                <div class="bkg2"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="partner-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+{%raw%}
+                <div class="modal-header pcwindow__header">
+                    <!--p>What the h<span class="atsign">@</span>ck - Company name</p-->
+                    <p></p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+                    <div class="img-container">
+                        <img ng-src="{{activeExhibitor.logoUrl}}">
+                    </div>
+                    <div class="partner-group" ng-repeat="gr in activeExhibitor.groups">
+                    
+                        <h2>{{gr.name}}</h2>
+                        <div ng-repeat="fl in gr.fields">
+                            <h3>
+                            <img src="./images/partner-icons/employees.svg" style="height:18px;width:19px;" alt="" ng-if="fl.objectId == '6e3a1c9f-bad5-4aa6-be43-7d37b2fe01a1'" />
+                            <img src="./images/partner-icons/branze.svg" style="height:20px;width:20px;" alt="" ng-if="fl.objectId == '41b87cdd-f875-4b11-96e7-da6d39296eac'" />
+                            <img src="./images/partner-icons/opis.svg" style="height:20px;width:17px;" alt="" ng-if="fl.objectId == 'e38eeab8-9dde-4d4d-a9ef-1ccd14023ace'" />
+                            <!--img src="./images/partner-icons/dlaczego.svg" style="height:22px;width:22px;" alt="" ng-if="fl.objectId == '6e3a1c9f-bad5-4aa6-be43-7d37b2fe01a1'" /-->
+                            <img src="./images/partner-icons/etat.svg" style="height:22px;width:22px;" alt="" ng-if="fl.objectId == '32d3184d-2b3b-49bb-81f7-41e6d7da6ed9'" />
+                            <img src="./images/partner-icons/miasta.svg" style="height:24px;width:16px;margin-left:2px;" alt="" ng-if="fl.objectId == 'a4e4b6b0-5686-40d6-8239-3718c4c2f7eb'" />
+                            <img src="./images/partner-icons/profile.svg" style="height:22px;width:16px;" alt="" ng-if="fl.objectId == '3091d6d2-5464-47e3-9aed-47cd389c2f77'" />
+                            <img src="./images/partner-icons/oferta.svg" style="height:22px;width:22px;" alt="" ng-if="fl.objectId == '54007e70-6075-4258-abd6-72dd4e41723d'" />
+                            <img src="./images/partner-icons/dodatki.svg" style="height:22px;width:22px;" alt="" ng-if="fl.objectId == 'b0d6d1c1-bb8d-4b67-ae16-5d2c76b2172f'" />
+                            {{fl.name}}:</h3>
+                            <p ng-if="fl.typeId == 0">{{fl.valueStr}}</p>
+                            <p ng-if="fl.typeId == 1 || fl.typeId == 2" ng-bind-html="fl.valueStr"></p>
+                            <p ng-if="fl.typeId == 3">{{fl.valueInt}}</p>
+                            <p ng-if="fl.typeId == 4">{{fl.valueBool ? 'Tak' : 'Nie'}}</p>
+                            <p ng-if="fl.typeId == 5 || fl.typeId == 6"><a href="{{fl.typeId == 5 ? ('mailto:' + fl.valueStr) : fl.valueStr}}" target="_blank">{{fl.valueStr}}</a></p>
+                        </div>
+                    </div>
+
+
+                    <div class="btn btn-primary">
+                        Dowiedz się więcej
+                    </div>
+
+                    
+                </div>
+    {%endraw%}
+    <img src="images/modal-left.svg"  class="modal-left-img" />
+    <img src="images/modal-right.svg"  class="modal-right-img" />
+            </div>
+        </div>
+    </div>
+
+    <div id="recomend-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+                <form name="recForm" id="recForm">
+                    <div class="modal-header pcwindow__header">
+                        <p>What the h<span class="atsign">@</span>ck - poleć znajomym</p>
+                        <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                    </div>
+                    <div class="pcwindow__body">
+                        <p>Podaj adresy email lub telefony (9 cyfr) do osób, którym Chcesz nas zarekomendować. Oddziel je przecinkiem lub średnikiem.</p>
+                        <div class="form-group col-12">
+                            <textarea class="form-control" placeholder="e-maile" data-ng-model="recData.emails"></textarea>
+                        </div>
+                        <div class="form-group col-12">
+                            <textarea class="form-control" placeholder="numery telefonów" data-ng-model="recData.phoneNumbers"></textarea>
+                        </div>
+                        
+                        <div class="btn btn-primary" data-ng-click="recForm.$valid && recommendEvent()">
+                            Zatwierdź
+                        </div>
+                    </div>
+
+                    <div class="heads-left"></div>
+                    <div class="heads-right"></div>
+                    <div class="bkg-img"></div>
+
+                    <div class="confirmation" ng-if="recMessage != null">
+                        <div ng-bind-html="recMessage"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-modal" class="modal fade" role="dialog" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-md  modal-dialog-centered" id="recomend-modal">
+
+            <div class="modal-content pcwindow">
+                <form name="recForm"  class="ng-pristine ng-valid">
+                    <div class="modal-header pcwindow__header">
+                        <p>What the h<span class="atsign">@</span>ck - poleć znajomym</p>
+                        <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                    </div>
+                    <div class="pcwindow__body">
+                        {# <img src="img/newModal.svg" alt=""> #}
+                        <p>Dzięki za zainteresowanie naszym wydarzeniem:)
+                            Czy chcesz zarekomendować je komuś albo abyśmy
+                            przypomnieli Ci o nim w późniejszym terminie?
+                        </p>
+                        <div class="mdn-bttns">
+                            <a class="btn btn-primary" style="padding: 5px;" data-toggle="modal" data-target="#recomend-modal">Zarekomenduj znajomym</a>
+                            <a class="btn btn-primary" style="padding: 5px;" data-toggle="modal" data-target="#remind-modal">Przypomnij mi później</a></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <p id="toggleMobile" data-toggle="modal" data-target="#mobile-modal" style="display: none;"></p>
+    <div id="remind-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+                <form name="remindForm" id="remindForm">
+                    <div class="modal-header pcwindow__header">
+                        <p>What the h<span class="atsign">@</span>ck - przypomnij</p>
+                        <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                    </div>
+                    <div class="pcwindow__body">
+                        <p>Podaj swój adres email lub numer telefonu i wybierz kiedy powinniśmy Ci przypomnieć:</p>
+                        <div class="form-group col-12">
+                            <input type="text" class="form-control" name="email" placeholder="e-mail lub numer telefonu" required data-ng-model="reminderData.email">
+                        </div>
+                        {# <input type="date" name="date" placeholder="yy-mm-dd" required data-ng-model="reminderData.date">
+                        <input type="time" name="time" placeholder="hh:mm" required data-ng-model="reminderData.time"> #}
+
+                        <div class="btn btn-secondary" data-ng-click="remindForm.$valid && remaindMeLater()">
+                            Wyślij
+                        </div>
+                        <div class="bkg-img"></div>
+                    </div>
+
+                    <div class="crazy-left"></div>
+                    <div class="crazy-right"></div>
+
+                    <!-- <div class="confirmation">
+                    <div class="bkg-img"></div>
+                    Wysłano pomyślnie
+                </div> -->
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="reservationinfo-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-lg modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                    <div class="section-title">
+                        @rezerwacja
+                    </div>
+
+                    <h2>
+                        Wybierając prelekcje rezerwujesz miejsce na&nbsp;sali.*<br> Zaznacz tylko te prezentacje, w których chcesz wziąć udział.
+                    </h2>
+
+                    <p>*Osoby z rezerwacją będą miały pierwszeństwo wejścia na salę. W przypadku wolnych miejsc również osoby bez rezerwacji mogą uczestniczyć w prelekcji.</p>
+
+                </div>
+                <!-- <div class="resinfo-bkg-img"></div>    -->
+                <img src="img/modals/reservation-info-bkg.png" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+
+    <div id="codeofconduct-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-lg modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                    <h2>Code of conduct</h2>
+
+                    <p>
+                        <strong> What the H@ck - Kodeks postępowania dla konferencji </strong> </br></br>
+                        Konferencja What the H@ck jest przeznaczona i dostępna dla każdego bez względu na płeć, tożsamość, wygląd fizyczny. Jako organizatorzy nie zgadzamy się na nękanie uczestników wydarzeń w żadnej formie. </br></br>
+
+                        Bądź miły dla innych. Nie obrażaj innych uczestników. Zachowuj się profesjonalnie. Pamiętaj, że nękanie i seksistowskie, rasistowskie lub wykluczające dowcipy nie są właściwe i stosowne.</br></br>
+
+                        Uczestnicy wydarzenia naruszający te zasady mogą zostać ukarani lub wydaleni z imprezy według uznania organizatora imprezy.</br></br>
+
+                        Jeśli uczestnik jest nękany, organizatorzy wydarzenia mogą podjąć wszelkie działania, które uznają za stosowne, w tym ostrzec sprawcę a nawet wydalić go z konferencji. Jeśli jesteś prześladowany lub zauważysz, że ktoś jest prześladowany, natychmiast skontaktuj się z przedstawicielami organizatora.</br></br>
+
+                        Zabronione jest jakiekolkwiek rejestrowanie obrazu i dźwięku.</br>
+
+                        Personel wydarzenia zawsze służy wszelką pomocą.</br>
+
+                        Oczekujemy, że uczestnicy będą przestrzegać tych zasad na wszystkich imprezach w ramach konferencji.</br>
+
+                        Konktakt do organizatorów konferencji:hello@WTHconf.pl.
+                              </p>
+                </div>
+
+                <img src="images/modal-bg1.svg"  class="w-100 modal-img" />
+                <div class="bkg2"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="cookies-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-lg modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                    <h2>Polityka Cookies</h2>
+
+                    <p>
+                        Informujemy, iż w celu optymalizacji treści dostępnych w naszej stronie, dostosowania ich do indywidualnych potrzeb korzystamy z informacji zapisanych za pomocą plików cookies na urządzeniach końcowych użytkowników. Pliki cookies użytkownik może kontrolować
+                        za pomocą ustawień swojej przeglądarki internetowej. Dalsze korzystanie z naszej strony, bez zmiany ustawień przeglądarki internetowej oznacza, iż użytkownik akceptuje stosowanie plików cookies.
+                    </p>
+                </div>
+
+                <img src="images/modal-bg1.svg"  class="w-100 modal-img" />
+                <div class="bkg2"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="privacypolicy-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-lg modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                    <h2>Polityka prywatności</h2>
+
+                    <p>
+                        Accenture jest globalną firmą świadczącą profesjonalne usługi i rozwiązania w obszarach: Strategy, Consulting, Digital, Technology i Operations. Wspieramy transformacje biznesowe i technologiczne naszych klientów. To co nas wyróżnia to fakt, że dostarczamy
+                        rozwiązania w tzw. modelu end to end. Dzięki temu pracujemy z najlepszymi. Nasi Klienci to 89 firm z rankingu FORTUNE® Global 100 i ponad 3/4 z FORTUNE® Global 500 oraz instytucje rządowe z całego świata. Accenture jest globalną
+                        firmą świadczącą profesjonalne usługi i rozwiązania w obszarach: Strategy, Consulting, Digital, Technology i Operations. Wspieramy transformacje biznesowe i technologiczne naszych klientów.
+                    </p>
+                </div>
+
+                <img src="images/modal-bg1.svg"  class="w-100 modal-img" />
+                <div class="bkg2"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+     <div id="contact-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - contact</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                <h2>Kontakt</h2>
+                <p>
+                W przypadku chęci współpracy:<br />
+                    <address>
+                    Aleksandra PRYCHITKO<br>
+                    Koordynator PR<br>
+                    Aleksandra.PRYCHITKO@FundacjaAP.org.pl<br>
+                    +48 660 409 142
+                    </address>
+                </p>
+                <p>
+                Jeśli masz do nas pytania napisz:<br />
+                    <address>
+                    hello@wthconf.pl
+                    </address>
+                </p>
+                <p>Odpowieź otrzymasz w przeciągu jednego<Br /> dnia roboczego :)</p>
+                </div>
+
+                <img src="images/modal-bg1.svg"  class="w-100 modal-img" />
+                <div class="bkg2"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="media-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - media</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                <h2>Kontakt dla mediów</h2>
+                <p>
+                Aleksandra PRYCHITKO<br />
+Koordynator Realizacji Projektu<br />
+Aleksandra.PRYCHITKO@FundacjaAP.org.pl<br />
++48 660 409 142
+                </p>
+                <h2>Pliki do pobrania</h2>
+                <p>
+                <a href="media/WTH_logotypy.zip">WTH_logotypy.zip</a><br>
+                <a href="media/WTH_banery.zip">WTH_banery.zip</a><br>
+                <a href="media/WTH_inf_prasowa.docx">WTH_inf_prasowa.docx</a>
+                </p>
+                
+                
+                
+                </div>
+
+                <img src="images/modal-bg1.svg"  class="w-100 modal-img" />
+                <div class="bkg2"></div>
+            </div>
+
+        </div>
+    </div>

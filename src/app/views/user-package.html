@@ -1,0 +1,527 @@
+﻿<!-- intro -->
+<section id="start" class="section section--konto">
+	<!-- container -->
+	<div class="container container--wrapper">
+		<div class="top">
+			<div class="top__reg">@konto użytkownika</div>
+		</div>
+	</div>
+	<!-- /container -->
+</section>
+<!-- /intro -->
+
+<!-- otargach -->
+<section id="otargach" class="section section--agenda">
+	<form role="form" name="convertForm" class="form-horizontal">
+		<!-- container -->
+		<div class="container container--wrapper">
+
+			<div class="section__title">Wybierz jeden z naszych 2 najbardziej komfortowych pakietów:</div>
+
+
+            <div class="imageGrid imageGrid--bigger">
+                <!-- Pakiet Standard -->
+                <div class="imageGrid__element">
+                    <div class="tile tile--blue">
+                        <div class="tile__wrapper">
+                            <div class="tile__type">Pakiet</div>
+                            <div class="tile__icon">
+                                <img class="tile__icon__element" src="src/img/list01.svg" alt="" />
+                            </div>
+                            <div class="tile__header">Standard</div>
+                            <label for="vip1" class="tile__price">{{packages['STD']}}</label>
+                            <div class="tile__priceType">zł</div>
+                            <div class="tile__button"><span class="bttn bttn--lightBlue">Wybierz bilet</span></div>
+
+                        </div>
+                        <input class="tile__check" name="pakiet" data-ng-model="userChoice.packageCode" ng-disabled="userSummary.packageCode == 'STD' || userSummary.packageCode == 'VIP-BR' || userSummary.packageCode == 'VIP-SR'" required id="vip0" value="STD" type="radio" />
+
+                        <div class="imageGrid__details jsMoreContainer">
+                            <div class="tile tile--details">
+                                <div class="tile__wrapper">
+                                    <div class="tile__list">
+                                        <div class="tile__list__element tile--warrning">
+                                            Dostępny do jej
+                                            wyczerpania lub do <strong>23.11</strong>
+                                        </div>
+                                        <div class="tile__list__element tile--whole">
+                                            Uczestnictwo w całym
+                                            wydarzeniu
+                                        </div>
+                                        <div class="tile__list__element tile--pizza">
+                                            Lunch w postaci pizzy
+                                        </div>
+                                        <div class="tile__list__element tile--shirt">
+                                            Giftbag z koszulką
+                                            wydarzenia
+                                        </div>
+                                        <div class="tile__list__element tile--prep">
+                                            Wstęp na oficjalne
+                                            pre-party i after-party
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="imageGrid__bttn">
+                        <a class="imageGrid__link jsTriggerMore" href="#" data-ng-click='$event.preventDefault();'>
+                            szczegóły
+                            <svg x="0px" y="0px" width="38.007px" height="72.312px" viewBox="0 0 38.007 72.312" enable-background="new 0 0 38.007 72.312" xml:space="preserve">
+                            <polygon fill="#FFFFFF" points="9.865,0 0,0 28.142,36.023 0.084,72.312 9.949,72.312 38.007,36.023 "></polygon>
+								</svg>
+                        </a>
+
+                    </div>
+                </div>
+                <!-- Pakiet Brązowy -->
+                <div class="imageGrid__element">
+                    <div class="tile tile--blue">
+                        <div class="tile__wrapper">
+                            <div class="tile__type">Pakiet</div>
+                            <div class="tile__icon">
+                                <img class="tile__icon__element" src="src/img/list1.svg" alt="" />
+                            </div>
+                            <div class="tile__header">VIP <strong>Brązowy</strong></div>
+                            <label for="vip1" class="tile__price">{{packages['VIP-BR']}}</label>
+                            <div class="tile__priceType">zł</div>
+                            <div class="tile__button"><span class="bttn bttn--lightBlue">Wybierz bilet</span></div>
+
+                        </div>
+                        <input class="tile__check" name="pakiet" data-ng-model="userChoice.packageCode" ng-disabled="userSummary.packageCode == 'VIP-BR' || userSummary.packageCode == 'VIP-SR'" required id="vip1" value="VIP-BR" type="radio" />
+
+                        <div class="imageGrid__details jsMoreContainer">
+                            <div class="tile tile--details">
+                                <div class="tile__wrapper">
+                                    <div class="tile__list">
+                                        <div class="tile__list__element tile--warrning">
+                                            Dostępny do jej
+                                            wyczerpania lub do <strong>16.11</strong>
+                                        </div>
+                                        <div class="tile__list__element tile--whole">
+                                            Uczestnictwo w całym
+                                            wydarzeniu
+                                        </div>
+                                        <div class="tile__list__element tile--shirt">
+                                            Giftbag z koszulką
+                                            wydarzenia
+                                        </div>
+                                        <div class="tile__list__element tile--prep">
+                                            Wstęp na oficjalne
+                                            pre-party i after-party
+                                        </div>
+                                        <div class="tile__list__element tile--vip">
+                                            Dostęp do najbardziej
+                                            komfortowych miejsc VIP
+                                            w salach konferencyjnych
+                                        </div>
+                                        <div class="tile__list__element tile--fulllunch">
+                                            Pełny lunch z cateringu
+                                        </div>
+                                        <div class="tile__list__element tile--strefa">Dostęp do strefy VIP</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="imageGrid__bttn">
+                        <a class="imageGrid__link jsTriggerMore" href="#" data-ng-click='$event.preventDefault();'>
+                            szczegóły
+                            <svg x="0px" y="0px" width="38.007px" height="72.312px" viewBox="0 0 38.007 72.312" enable-background="new 0 0 38.007 72.312" xml:space="preserve">
+                            <polygon fill="#FFFFFF" points="9.865,0 0,0 28.142,36.023 0.084,72.312 9.949,72.312 38.007,36.023 "></polygon>
+								</svg>
+                        </a>
+
+                    </div>
+                </div>
+                <!-- Pakiet Srebrny -->
+                <div class="imageGrid__element">
+                    <div class="tile tile--red tile--redSmall">
+                        <div class="tile__wrapper">
+                            <div class="tile__type">Pakiet</div>
+                            <div class="tile__icon">
+                                <img class="tile__icon__element" src="src/img/list2.svg" alt="" />
+                            </div>
+                            <div class="tile__header">Vip <strong>Srebrny</strong></div>
+                            <label for="vip2" class="tile__price">{{packages['VIP-SR']}}</label>
+                            <div class="tile__priceType">zł</div>
+                            <div class="tile__button"><span class="bttn bttn--red">Wybierz bilet</span></div>
+                        </div>
+                        <input class="tile__check" name="pakiet" data-ng-model="userChoice.packageCode" ng-disabled="userSummary.packageCode == 'VIP-SR'" required id="vip2" value="VIP-SR" type="radio" />
+
+                        <div class="imageGrid__details jsMoreContainer">
+                            <div class="tile tile--details">
+                                <div class="tile__wrapper">
+                                    <div class="tile__list">
+                                        <div class="tile__list__element tile--warrning">
+                                            Dostępny do jej
+                                            wyczerpania lub do <strong>16.11</strong>
+                                        </div>
+                                        <div class="tile__list__element tile--whole">
+                                            Uczestnictwo w całym
+                                            wydarzeniu
+                                        </div>
+                                        <div class="tile__list__element tile--shirt">
+                                            Giftbag z koszulką
+                                            wydarzenia
+                                        </div>
+                                        <div class="tile__list__element tile--prep">
+                                            Wstęp na oficjalne
+                                            pre-party i after-party
+                                        </div>
+                                        <div class="tile__list__element tile--vip">
+                                            Dostęp do najbardziej
+                                            komfortowych miejsc VIP
+                                            w salach konferencyjnych
+                                        </div>
+                                        <div class="tile__list__element tile--fulllunch">
+                                            Pełny lunch z cateringu
+                                        </div>
+                                        <div class="tile__list__element tile--strefa">Dostęp do strefy VIP</div>
+                                        <div class="tile__list__element tile--parkspot">1 miejsce parkingowe</div>
+                                        <div class="tile__list__element tile--drink">
+                                            3 napoje podczas after-party
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="imageGrid__bttn">
+                        <a class="imageGrid__link jsTriggerMore" href="#" data-ng-click='$event.preventDefault();'>
+                            szczegóły
+                            <svg x="0px" y="0px" width="38.007px" height="72.312px" viewBox="0 0 38.007 72.312" enable-background="new 0 0 38.007 72.312" xml:space="preserve">
+                            <polygon fill="#FFFFFF" points="9.865,0 0,0 28.142,36.023 0.084,72.312 9.949,72.312 38.007,36.023 "></polygon>
+								</svg>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+			<div class="columnTextGrid columnTextGrid--rabat">
+				<div class="agenda__header">
+					<p class="agenda__title">What the h@ck</p>
+					<a href="#" data-ng-click='$event.preventDefault();' class="agenda__close"><img src="src/img/agenda-close.png" alt="" /></a>
+				</div>
+				<div class="columnTextGrid__title">kod rabatowy</div>
+				<div class="columnTextGrid__content">
+					<div class="columnTextGrid__rabat">
+						<input class="columnTextGrid__rabat__input" type="text" placeholder="_ _ _ _ _ _ _ _" data-ng-model="couponCode" />
+					</div>
+					<div class="columnTextGrid__rabat" ng-show="loading">
+						<img src="img/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+					</div>
+					<div class="columnTextGrid__rabat" data-ng-hide="messageCpn == ''" ng-class="{'alert-danger': message_type == 'error', 'alert-success': message_type == 'success'}">
+						{{messageCpn}}
+					</div>
+					<button type="submit" class="columnTextGrid__submit bttn bttn--bigRed" ng-model="loading" ng-disabled="loading" data-ng-click="$event.preventDefault();applyCoupon()">Zastosuj</button>
+				</div>
+			</div>
+			<div class="section__heading">Podsumowanie</div>
+			<div class="summary">
+				<div class="summary__list" ng-if="userChoice.packageCode != ''">
+					<div class="summary__element"> <!-- wybór pakietu -->
+						<div class="summary__title">{{packageNames[userChoice.packageCode]}}</div>
+						<div class="summary__price">{{packagesOrg[userChoice.packageCode] | currency : ''}} zł</div>
+					</div>
+				</div>
+				<div class="summary__rabat" ng-if="agenda.couponCode != null"> <!-- info rabat -->
+					<div class="summary__title">Rabat [użyty kod: {{agenda.couponCode}}]</div>
+					<div class="summary__price"> {{getDiscount() | currency : ''}} zł</div>
+				</div>
+				<div class="summary__list" ng-repeat="d in agenda.selectedOptionalPkg">
+					<div class="summary__element"> <!-- repeat wybór opcji dodatkowych -->
+						<div class="summary__title">{{packageNamesOptional[d]}}</div>
+						<div class="summary__price">{{packagesOptional[d] | currency : ''}} zł</div>
+					</div>
+				</div>
+				<!--<div class="summary__final">
+                    <div class="summary__title">Netto</div>
+                    <div class="summary__price">{{getTotal() | currency : ''}} zł</div>
+                </div>-->
+				<div class="summary__final">
+					<div class="summary__title">Łącznie do zapłaty</div>
+					<div class="summary__price">{{getTotalGross() | currency : ''}} zł</div>
+				</div>
+			</div>
+			<br/>
+			<div class="section__submit" data-ng-hide="message == ''">
+				{{message}}
+			</div>	
+			<div class="section__submit">
+				<button type="submit" class="bttn bttn--bigRed" ng-model="loading" ng-disabled="loading" data-ng-click="convertForm.$valid && convertToVIP()">Zmień pakiet</button>
+			</div>			
+			<br/>
+			<div class="section__submit">
+				<a href="#" style="display: inline-block;margin: 0;" data-ng-click='$event.preventDefault();redirectToAccount()' class="btn btn-skip">Wróć bez zmiany pakietu</a>
+			</div>
+
+
+			<!--<div class="userData">-->
+					<!--<div class="userData__wrapper">		-->
+						<!--<div class="section__title">Wybierz pakiet</div>-->
+						<!--<div class="regForm__form">-->
+							<!--<div class="regForm__content">-->
+								<!--&lt;!&ndash; widok dla pakietu VIP &ndash;&gt;-->
+								<!--<div ng-if="userSummary.isFreePackage || (userSummary.packageCode != null && userSummary.packageCode.indexOf('VIP') == -1)">-->
+									<!--<div class="input input&#45;&#45;chekboxList" ng-if="userChoice.wantInvoice == 'true'">-->
+										<!--<div class="input__label">Chcę otrzymać fakturę:*</div>-->
+										<!--<div class="input__element input__element&#45;&#45;list">-->
+											<!--<div class="input input&#45;&#45;checkbox">-->
+												<!--<input id="invoiceYes" name="invoice" type="radio" data-ng-model="userChoice.wantInvoice" value="true" required>-->
+												<!--<label class="input__label" for="invoiceYes">tak</label>-->
+											<!--</div>-->
+											<!--<div class="input input&#45;&#45;checkbox">-->
+												<!--<input id="invoiceNo" name="invoice" type="radio" data-ng-model="userChoice.wantInvoice" value="false" required>-->
+												<!--<label class="input__label" for="invoiceNo">nie</label>-->
+											<!--</div>-->
+										<!--</div>-->
+									<!--</div>-->
+									<!--<div class="pro" ng-if="userChoice.wantInvoice == 'true'">-->
+										<!--<div class="input">-->
+											<!--<div class="input__label">&nbsp;</div>-->
+											<!--<div class="input__element">-->
+												<!--Dane do faktury-->
+											<!--</div>-->
+										<!--</div>-->
+										<!--<div class="input">-->
+											<!--<div class="input__label">Nazwa płatnika:*</div>-->
+											<!--<div class="input__element">-->
+												<!--<input data-ng-model="userChoice.payerName" maxlength="256" class="input__target" id="payerName" placeholder="Nazwa płatnika" required type="text">-->
+											<!--</div>-->
+										<!--</div>-->
+										<!--<div class="input">-->
+											<!--<div class="input__label">Adres płatnika:*</div>-->
+											<!--<div class="input__element">-->
+												<!--<input data-ng-model="userChoice.payerStreet" maxlength="256" class="input__target" id="payerStreet" placeholder="Adres płatnika" required type="text">-->
+											<!--</div>-->
+										<!--</div>-->
+										<!--<div class="input">-->
+											<!--<div class="input__label">Kod pocztowy płatnika:*</div>-->
+											<!--<div class="input__element">-->
+												<!--<input data-ng-model="userChoice.payerPostCode" maxlength="256" class="input__target" id="payerPostCode" placeholder="Kod pocztowy płatnika" required type="text">-->
+											<!--</div>-->
+										<!--</div>-->
+										<!--<div class="input">-->
+											<!--<div class="input__label">Miasto płatnika:*</div>-->
+											<!--<div class="input__element">-->
+												<!--<input data-ng-model="userChoice.payerCity" maxlength="256" class="input__target" id="payerCity" placeholder="Miasto płatnika" required type="text">-->
+											<!--</div>-->
+										<!--</div>-->
+										<!--<div class="input">-->
+											<!--<div class="input__label">NIP płatnika:</div>-->
+											<!--<div class="input__element">-->
+												<!--<input data-ng-model="userChoice.payerNip" maxlength="10" class="input__target" id="payerNip" placeholder="NIP płatnika (10 cyfr)" type="text">-->
+											<!--</div>-->
+										<!--</div>-->
+									<!--</div>-->
+								<!--</div>-->
+								<!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+
+								<!--<div class="imageGrid imageGrid&#45;&#45;bigger">-->
+									<!--&lt;!&ndash; Pakiet Brązowy &ndash;&gt;-->
+									<!--<div class="imageGrid__element">-->
+										<!--<div class="tile tile&#45;&#45;blue" ng-class="{'tile&#45;&#45;disabled': userSummary.packageCode == 'VIP-BR', 'tile&#45;&#45;disabled': userSummary.packageCode == 'VIP-SR'}">-->
+											<!--<div class="tile__wrapper">-->
+												<!--<div class="tile__type">Pakiet</div>-->
+												<!--<div class="tile__icon">-->
+													<!--<img class="tile__icon__element" src="src/img/list1.svg" alt="" />-->
+												<!--</div>-->
+												<!--<div class="tile__header">VIP <strong>Brązowy</strong></div>-->
+												<!--<label for="vip1" class="tile__price">{{packages['VIP-BR']}}</label>-->
+												<!--<div class="tile__priceType">zł/netto</div>-->
+												<!--<div class="tile__button"><span class="bttn bttn&#45;&#45;lightBlue">Wybierz bilet</span></div>-->
+
+											<!--</div>-->
+											<!--<input class="tile__check" name="pakiet" data-ng-model="userChoice.packageCode" ng-disabled="userSummary.packageCode == 'VIP-BR' || userSummary.packageCode == 'VIP-SR'" required id="vip1" value="VIP-BR" type="radio" />-->
+
+
+											<!--<div class="imageGrid__details jsMoreContainer">-->
+												<!--<div class="tile tile&#45;&#45;details">-->
+													<!--<div class="tile__wrapper">-->
+														<!--<div class="tile__list">-->
+															<!--<div class="tile__list__element tile&#45;&#45;warrning">Dostępna do jej-->
+																<!--wyczerpania lub do <strong>25.10</strong>-->
+															<!--</div>-->
+															<!--<div class="tile__list__element tile&#45;&#45;whole">Uczestnictwo w całym-->
+																<!--wydarzeniu-->
+															<!--</div>-->
+															<!--<div class="tile__list__element tile&#45;&#45;shirt">Giftbag z koszulką-->
+																<!--wydarzenia-->
+															<!--</div>-->
+															<!--<div class="tile__list__element tile&#45;&#45;prep">Wstęp na oficjalne-->
+																<!--pre-party i after-party</div>-->
+															<!--<div class="tile__list__element tile&#45;&#45;vip">Dostęp do najbardziej-->
+																<!--komfortowych miejsc VIP-->
+																<!--w salach konferencyjnych</div>-->
+															<!--<div class="tile__list__element tile&#45;&#45;fulllunch">Pełny lunch z cateringu-->
+															<!--</div>-->
+															<!--<div class="tile__list__element tile&#45;&#45;strefa">Dostęp do strefy VIP</div>-->
+														<!--</div>-->
+														<!--<div class="tile__button"><span class="bttn bttn&#45;&#45;blue">Wybierz bilet</span></div>-->
+													<!--</div>-->
+												<!--</div>-->
+											<!--</div>-->
+										<!--</div>-->
+										<!--<div class="imageGrid__bttn">-->
+											<!--<a class="imageGrid__link jsTriggerMore" href="#" data-ng-click='$event.preventDefault();'>szczegóły-->
+												<!--<svg x="0px" y="0px" width="38.007px" height="72.312px" viewBox="0 0 38.007 72.312" enable-background="new 0 0 38.007 72.312" xml:space="preserve">-->
+									<!--<polygon fill="#FFFFFF" points="9.865,0 0,0 28.142,36.023 0.084,72.312 9.949,72.312 38.007,36.023 "></polygon>-->
+								<!--</svg>-->
+											<!--</a>-->
+
+										<!--</div>-->
+									<!--</div>-->
+									<!--&lt;!&ndash; Pakiet Srebrny &ndash;&gt;-->
+									<!--<div class="imageGrid__element">-->
+										<!--<div class="tile tile&#45;&#45;red tile&#45;&#45;redSmall" ng-class="{'tile&#45;&#45;disabled': userSummary.packageCode == 'VIP-BR', 'tile&#45;&#45;disabled': userSummary.packageCode == 'VIP-SR'}">-->
+											<!--<div class="tile__wrapper">-->
+												<!--<div class="tile__type">Pakiet</div>-->
+												<!--<div class="tile__icon">-->
+													<!--<img class="tile__icon__element" src="src/img/list2.svg" alt="" />-->
+												<!--</div>-->
+												<!--<div class="tile__header">Vip <strong>Srebrny</strong></div>-->
+												<!--<label for="vip3" class="tile__price">{{packages['VIP-SR']}}</label>-->
+												<!--<div class="tile__priceType">zł/netto</div>-->
+												<!--<div class="tile__button"><span class="bttn bttn&#45;&#45;red">Wybierz bilet</span></div>-->
+											<!--</div>-->
+											<!--<input class="tile__check" name="pakiet" data-ng-model="userChoice.packageCode" ng-disabled="userSummary.packageCode == 'VIP-SR'" required id="vip2" value="VIP-SR" type="radio" />-->
+
+											<!--<div class="imageGrid__details jsMoreContainer"><div class="tile tile&#45;&#45;details">-->
+												<!--<div class="tile__wrapper">-->
+													<!--<div class="tile__list">-->
+														<!--<div class="tile__list__element tile&#45;&#45;warrning">Dostępna do jej-->
+															<!--wyczerpania lub do <strong>25.10</strong>-->
+														<!--</div>-->
+														<!--<div class="tile__list__element tile&#45;&#45;whole">Uczestnictwo w całym-->
+															<!--wydarzeniu-->
+														<!--</div>-->
+														<!--<div class="tile__list__element tile&#45;&#45;shirt">Giftbag z koszulką-->
+															<!--wydarzenia-->
+														<!--</div>-->
+														<!--<div class="tile__list__element tile&#45;&#45;prep">Wstęp na oficjalne-->
+															<!--pre-party i after-party</div>-->
+														<!--<div class="tile__list__element tile&#45;&#45;vip">Dostęp do najbardziej-->
+															<!--komfortowych miejsc VIP-->
+															<!--w salach konferencyjnych</div>-->
+														<!--<div class="tile__list__element tile&#45;&#45;fulllunch">Pełny lunch z cateringu-->
+														<!--</div>-->
+														<!--<div class="tile__list__element tile&#45;&#45;strefa">Dostęp do strefy VIP</div>-->
+														<!--<div class="tile__list__element tile&#45;&#45;parkspot">1 miejsce parkingowe</div>-->
+														<!--<div class="tile__list__element tile&#45;&#45;drink">3 napoje podczas after-party-->
+
+														<!--</div>-->
+													<!--</div>-->
+													<!--<div class="tile__button"><span class="bttn bttn&#45;&#45;blue">Wybierz bilet</span></div>-->
+												<!--</div>-->
+											<!--</div>-->
+											<!--</div>-->
+										<!--</div>-->
+										<!--<div class="imageGrid__bttn">-->
+											<!--<a class="imageGrid__link jsTriggerMore" href="#" data-ng-click='$event.preventDefault();'>szczegóły-->
+												<!--<svg x="0px" y="0px" width="38.007px" height="72.312px" viewBox="0 0 38.007 72.312" enable-background="new 0 0 38.007 72.312" xml:space="preserve">-->
+									<!--<polygon fill="#FFFFFF" points="9.865,0 0,0 28.142,36.023 0.084,72.312 9.949,72.312 38.007,36.023 "></polygon>-->
+								<!--</svg>-->
+											<!--</a>-->
+
+										<!--</div>-->
+									<!--</div>-->
+								<!--</div>-->
+
+								<!--<div class="pro" ng-if="(userSummary.isFreePackage || userSummary.vipCategoryName == null) && (userChoice.packageCode == 'VIP-SR' || userChoice.packageCode == 'VIP-SR')">-->
+									<!--<div class="input">-->
+										<!--<div class="input__label">Wybierz ścieżkę dla pakietu VIP:*</div>-->
+										<!--<div class="input__element">-->
+											<!--<select class="input__select" ng-model="selectedCategory" ng-change="changeCategory(selectedCategory)" ng-options="category.name for category in categories" placeholder="ścieżka" required class="select form-control" id="select" name="select"></select>-->
+										<!--</div>-->
+									<!--</div>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</div>-->
+					<!--</div>-->
+			<!--</div>-->
+			<!--<div class="userData" ng-if="userSummary.isFreePackage || userSummary.couponCode == null">-->
+				<!--<div class="userData__visible">-->
+					<!--<div class="sectionBar">-->
+						<!--<p class="sectionBar__title">What the h<span>@</span>ck - Kod rabatowy</p>-->
+						<!--<a href="#" data-ng-click="$event.preventDefault();" class="sectionBar__close">-->
+							<!--<img class="sectionBar__close__image" src="src/img/close-white.png" alt="">-->
+						<!--</a>-->
+					<!--</div>-->
+					<!--<div class="userData__wrapper">-->
+						<!--<div class="section__title">Podaj kod rabatowy jeśli posiadasz</div>-->
+						<!--&lt;!&ndash; container &ndash;&gt;-->
+						<!--<div class="container container&#45;&#45;wrapper">-->
+							<!--<iv class="columnTextGrid columnTextGrid&#45;&#45;rabat">-->
+								<!--<div class="columnTextGrid__title">kod rabatowy</div>-->
+								<!--<div class="columnTextGrid__content">-->
+									<!--<div class="columnTextGrid__rabat">-->
+										<!--<input class="columnTextGrid__rabat__input" type="text" placeholder="_ _ _ _ _ _ _ _" data-ng-model="couponCode"/>-->
+									<!--</div>-->
+									<!--<div ng-if="loading">-->
+										<!--<img src="img/tenor.gif" style="max-height: 80px;margin:40px auto 0" />-->
+									<!--</div>-->
+									<!--<button type="submit" class="columnTextGrid__submit bttn bttn&#45;&#45;bigRed" data-ng-click="$event.preventDefault();applyCoupon()">Zastosuj</button>-->
+									<!--<div ng-class="{'alert-danger': message_type == 'error', 'alert-success': message_type == 'success'}" data-ng-hide="messageCpn == ''" class="alert">-->
+										<!--{{messageCpn}}-->
+									<!--</div>-->
+								<!--</div>-->
+							<!--</iv>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--<div class="userData">-->
+				<!--<div class="userData__visible">-->
+					<!--<div class="sectionBar">-->
+						<!--<p class="sectionBar__title">What the h<span>@</span>ck - Podsumowanie</p>-->
+						<!--<a href="#" data-ng-click="$event.preventDefault();" class="sectionBar__close">-->
+							<!--<img class="sectionBar__close__image" src="src/img/close-white.png" alt="">-->
+						<!--</a>-->
+					<!--</div>-->
+					<!--<div class="userData__wrapper">-->
+						<!--<div class="section__title">Podsumowanie</div>-->
+						<!--&lt;!&ndash; container &ndash;&gt;-->
+						<!--<div class="container container&#45;&#45;full">-->
+							<!--<div class="summary">-->
+								<!--<div class="summary__list" ng-if="userChoice.packageCode != ''">-->
+									<!--<div class="summary__element"> &lt;!&ndash; wybór pakietu &ndash;&gt;-->
+										<!--<div class="summary__title">{{packageNames[userChoice.packageCode]}}</div>-->
+										<!--<div class="summary__price">{{packagesOrg[userChoice.packageCode]}} zł</div>-->
+									<!--</div>-->
+								<!--</div>-->
+								<!--<div class="summary__rabat" ng-if="userChoice.couponCode != null"> &lt;!&ndash; info rabat &ndash;&gt;-->
+									<!--<div class="summary__title">Rabat</div>-->
+									<!--<div class="summary__price"> {{packages[userChoice.packageCode]-packagesOrg[userChoice.packageCode]}} zł</div>-->
+								<!--</div>-->
+								<!--<div class="summary__final">-->
+									<!--<div class="summary__title">Netto</div>-->
+									<!--<div class="summary__price">{{getTotal()}} zł</div>-->
+								<!--</div>-->
+								<!--<div class="summary__final">-->
+									<!--<div class="summary__title">Brutto (23% VAT)</div>-->
+									<!--<div class="summary__price">{{getTotal() * 1.23}} zł</div>-->
+								<!--</div>-->
+							<!--</div><br><br/>-->
+							<!--<div class="section__submit" ng-show="loading">-->
+								<!--<img src="img/tenor.gif" style="max-height: 80px;margin:40px auto 0" />-->
+							<!--</div>-->
+							<!--<div class="section__submit" data-ng-hide="message == ''">-->
+								<!--{{message}}-->
+							<!--</div>-->
+							<!--<div class="section__submit">-->
+								<!--<button type="submit" class="bttn bttn&#45;&#45;bigRed" ng-model="loading" ng-disabled="loading" data-ng-click="convertForm.$valid && convertToVIP()">Zmień pakiet</button>-->
+							<!--</div>-->
+							<!--<div class="section__submit">-->
+								<!--<a href="#" data-ng-click='$event.preventDefault();redirectToAccount()' class="section__submit__button">Wróć bez zmiany pakietu</a>-->
+							<!--</div>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+		</div>
+	</form>
+</section>
+<!-- /otargach -->

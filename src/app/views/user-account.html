@@ -1,0 +1,453 @@
+﻿<!-- intro -->
+<section id="start" class="section section--konto">
+	<!-- container -->
+	<div class="container container--wrapper">
+		<div class="top">
+			<div class="top__reg">@konto użytkownika</div>
+		</div>
+	</div>
+	<!-- /container -->
+</section>
+<!-- /intro -->
+
+<!-- otargach -->
+<section id="otargach" class="section section--agenda">
+	<!-- container -->
+	<div class="container container--wrapper">
+		<div class="infoBox">
+			<div class="infoBox__wrapper">
+				<div class="infoBox__sidebar">
+					<img src="src/img/infobox-robot.svg" alt="" />
+				</div>
+				<div class="infoBox__content" ng-if="!userSummary.isOrgPackage">
+					<div class="infoBox__element" ng-if="!userSummary.isOrgPackage && !(!userSummary.isFreePackage && userSummary.packageCode != null && userSummary.packageCode.indexOf('VIP') > -1)">
+						Przejdź na pakiet VIP: Podnieś komfort swojego uczestnictwa
+					</div>
+					<div class="infoBox__element infoBox__element--gold" ng-if="!userSummary.isFreePackage && userSummary.packageCode != null && userSummary.packageCode.indexOf('VIP') > -1">
+						Jesteś VIPem, dziękujemy :)
+					</div>
+					<div class="infoBox__element" ng-if="!userSummary.isCvFormFulfilled">
+						Formularz CV: Przekaż swoje CV na ręce Partnerów wydarzenia i znajdź lepszą pracę
+					</div>
+					<div class="infoBox__element infoBox__element--green" ng-if="userSummary.isCvFormFulfilled">
+						Wypełniony formularz CV, dziękujemy
+					</div>
+					<div class="infoBox__element" ng-if="userSummary.cvFileName == null">
+						Plik CV: Przekaż swoje CV na ręce Partnerów wydarzenia i znajdź lepszą pracę
+					</div>
+					<div class="infoBox__element infoBox__element--green" ng-if="userSummary.cvFileName != null">
+						Załączono plik z CV, dziękujemy
+					</div>
+					<div class="infoBox__element" ng-if="userSummary.noOfRecommendations == 0">
+						Rekomendacje: Wysłano {{userSummary.noOfRecommendations}} rekomendacji :( 
+					</div>
+					<div class="infoBox__element infoBox__element--green" ng-if="userSummary.noOfRecommendations > 0">
+						Rekomendacje: Wysłano {{userSummary.noOfRecommendations}} rekomendacji, dziękujemy :)
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="vipBox" ng-if="!userSummary.isOrgPackage && (userSummary.isFreePackage || (userSummary.packageCode != null && userSummary.packageCode.indexOf('VIP') == -1))">
+			<div class="sectionBar">
+                <p class="sectionBar__title">What the h<span>@</span>ck - VIP</p>
+					<img class="sectionBar__close__image" src="src/img/close-white.png" alt="">
+			</div>
+			<div class="vipBox__content">
+				<h2 class="section__title">Podnieś komfort swojego uczestnictwa <br/>- przejdź na pakiet VIP</h2>
+				<p class="section__subtitle">Pakiety VIP to szereg korzyści, z których na prawdę warto skorzystać:</p>
+				<ul class="vipBox__list">
+					<li class="vipBox__element vipBox__element--1">Dostęp do najbardziej komfortowych miejsc VIP w salach konferencyjnych</li>
+					<li class="vipBox__element vipBox__element--1">Możliwość wejścia na dowolną inną prelekcję - nawet gdy miejsca na sali się skończą</li>
+					<li class="vipBox__element vipBox__element--2">Smaczny, dwudaniowy lunch z cateringu</li>
+					<li class="vipBox__element vipBox__element--4">Dostęp do strefy VIP</li>
+					<li class="vipBox__element vipBox__element--3">Miejce parkingowe (pakiet VIP Srebrny)</li>
+					<li class="vipBox__element vipBox__element--1">3 drinki podczas afterparty</li>
+				</ul>
+                <a href="#" data-ng-click='$event.preventDefault();redirectToConvertToVIP()' class="bttn--icon bttn--star">Konwertuj na VIP</a>
+			</div>
+		</div>
+
+	    <!-- <div ng-if="eventSettings.allowSeeMaterials">
+			<h2>Materiały z konferencji</h2>
+			<p>Coś Cię ominęło lub chcesz wrócić do tego co było na konferencji? Jeśli tak, zapraszamy do zapoznania się z materiałami z konferencji</p>
+			<button class="btn btn-primary" data-ng-click='$event.preventDefault();redirectToResources()'>
+				<span>Przejdź </span>
+			</button>
+			<br />
+		</div> -->
+		
+		<!-- cvFile--uploaded for uploaded view -->
+		<div class="cvFile" ng-if="!userSummary.isOrgPackage">
+			<div class="sectionBar" ng-class="{'sectionBar--red': userSummary.cvFileName == null}">
+				<p class="sectionBar__title">What the h<span>@</span>ck - Plik CV</p>
+					<img class="sectionBar__close__image" src="src/img/close-white.png" alt="">
+			</div>
+			<div class="cvFile__wrapper">
+				<div class="cvFile__content">
+					<div class="section__title">Plik CV: Przekaż swoje CV na ręce Partnerów wydarzenia i znajdź lepszą pracę</div>
+					<div class="cvFile__upload" ng-if="userSummary.cvFileName == null" >
+						<form role="form" name="uploadCvForm"><br/>
+						<div class="cvForm__text">Prześlij swoje CV na ręce wszystkich rekruterów uczestniczących w naszym wydarzeniu. Wypełnij formularz CV online. Aby zmaksymalizować swoje dotarcie do rekruterów - zachęcamy do przesłania obu form CV (plik i formularz online).</div>
+							<div class="uploadCV__input">
+								<div class="uploadCV__box"><p class="uploadCV__box__text">Przeciągnij plik tutaj</p></div>
+								<div class="uploadCV__tools">
+									<div class="uploadCV__tools__right">
+										<a href="#" class="uploadCV__button bttn bttn--smallGray">Wybierz plik</a>
+										<input type="text" class="uploadCV__input" value="Nie wybrano żadnego pliku">
+									</div>
+								</div>
+								<input id="userCV" name="userCV" type="file" required  class="uploadCV__input__file">
+							</div>
+							<div>
+								<div class="recomendations__list">
+									Wyrażam zgodę na przekazanie mojego zgłoszenia i dołączonych dokumentów wszystkim Wystawcom uczestniczącym w Konferencji What The Hack oraz przetwarzanie moich danych osobowych w celach rekrutacyjnych.
+									<a href="#" class="jsMoreMails"  data-ng-click='$event.preventDefault();'>wiecej ></a>
+								</div>
+								<div class="recomendations__list recomendations__hidden jsMoreMailsHidden">
+									Obowiązek informacyjny: Administratorem danych jest organizator - Fundacja Academic Partners (01-926 Warszawa, ul. Kwitnąca 6/46), dane zostaną przekazane organizacjom biorącym udział w Targach Pracy IT oraz sponsorom wydarzenia.<br /> Partnerami wydarzenia są:
+									<label ng-repeat="exh in exhList">&nbsp;{{exh}}{{$last ? '' : ', '}}</label><br/>
+									Wycofanie zgody jest możliwe poprzez wysłanie emaila na adres info@fundacjaap.org.pl, wycofanie zgody na przetwarzanie danych osobowych jest jednoznaczne z rezygnacją z udziału w rekrutacjach - jeśli zgody zostaną wycofane po przekazaniu danych Wystawcom, zostaną oni o tym automatycznie powiadomieni. Fundacja Academic Partners usunie wszystkie dane osobowe po zakończeniu prac związanych z projektem, zaś Wystawcy po zakończeniu procesów rekrutacji.
+								</div>
+							</div>
+							<div ng-if="loading">
+								<img src="img/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+							</div>
+							<div class="uploadCV__tools__left">
+								<a href="#" data-ng-click="$event.preventDefault();uploadCvForm.$valid && uploadUserCV()" class="bttn--smallRed bttn--smallRedCV">
+									Dodaj CV (plik) 
+								</a>
+							</div>
+							<div class="uploadCV__info" data-ng-hide="uploadMessage == ''">{{uploadMessage}}</div>
+						</form>
+					</div>
+					<div class="cvFile__list" ng-if="userSummary.cvFileName != null">
+						<div class="cvFile__list__element">Dziekujemy, Twoje CV zostalo przeslane <br/> do naszej bazy danych</div>
+						<div class="cvFile__list__element">Możesz usunąć swoje CV w dowolnym momencie <br/> lub zastąpić je nowym</div>
+						<div class="cvFile__remove">
+							<a href="#" data-ng-click="$event.preventDefault();removeUserCVFile()" class="cvFile__remove__button">
+								<img src="src/img/icon-delete.png" alt="" />
+							</a>
+							<div class="cvFile__name"><div>Przesłano następujący plik:</div>{{userSummary.cvFileName}}</div>
+						</div>
+					</div><br/>
+				</div>
+				<div class="cvFile__sidebar">
+					<img src="src/img/robot_plikCV.svg" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<div class="cvForm" ng-if="!userSummary.isOrgPackage">
+			<div class="sectionBar" ng-class="{'sectionBar--red': !userSummary.isCvFormFulfilled}">
+				<p class="sectionBar__title">What the h<span>@</span>ck - Formularz CV</p>
+					<img class="sectionBar__close__image" src="src/img/close-white.png" alt="">
+			</div>
+			<div class="cvForm__wrapper">
+				<div class="cvForm__content">
+					<div class="section__title">Formularz CV: Przekaż swoje CV na ręce Partnerów wydarzenia i znajdź lepszą pracę</div>
+					<!-- formStatus--green - green -->
+					<div class="formStatus" ng-class="{'formStatus--green': userSummary.isCvFormFulfilled}">
+						<div class="formStatus__text">{{userSummary.isCvFormFulfilled ? "Wypełniony, dziękujemy" : "Nie wypełniony"}}</div>
+					</div>
+					<div class="cvForm__text">Prześlij swoje CV na ręce wszystkich rekruterów uczestniczących w naszym wydarzeniu. Wypełnij formularz CV online. Aby zmaksymalizować swoje dotarcie do rekruterów - zachęcamy do przesłania obu form CV (plik i formularz online).</div>
+					<!-- /bttn--disabled disabled class -->
+					<a href="#" data-ng-click='$event.preventDefault();redirectToCvFormEdit()' class="bttn bttn--smallRed bttn--form" ng-class="{'bttn--disabled': !eventSettings.allowSendCV}">{{eventSettings.allowSendCV ? "Wypełnij formularz" : "Pokaż formularz"}}</a>
+				</div>
+				<div class="cvForm__sidebar">
+					<img src="src/img/robot_formCV.svg" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<div class="recomendations" ng-if="!userSummary.isOrgPackage">
+			<div class="sectionBar" ng-class="{'sectionBar--red': userSummary.noOfRecommendations == 0}">
+				<p class="sectionBar__title">What the h<span>@</span>ck - Rekomendacje</p>
+					<img class="sectionBar__close__image" src="src/img/close-white.png" alt="">
+			</div>
+			<div class="recomendations__wrapper">
+				<div class="recomendations__content">
+					<div class="section__title">Powiadom swoich znajomych o #WTH18</div>
+					<div class="recomendations__status">
+						<div class="recomendations__status__text">do tej pory wysłano <span>{{userSummary.noOfRecommendations}}</span> rekomendacji</div>
+					</div><br/>
+					<div ng-if="eventSettings.allowSendRecommendations">
+						<form role="form" name="informForm">
+							<div class="cvForm__text">
+								Osoby, których znajomi zarejestrują się i będą uczestniczyć w wydarzeniu mają szansę na wygranie <strong>Xboxa, 2 przejazdów Teslą i 2 zestawów okularów VR!</strong>
+							</div>
+							<ul class="letThemKnow__list">
+								<li class="letThemKnow__element"><img src="src/img/award1.svg" alt="" /> </li>
+								<li class="letThemKnow__element"><img src="src/img/award2.svg" alt="" /> </li>
+								<li class="letThemKnow__element"><img src="src/img/award3.svg" alt="" /> </li>
+							</ul>
+							<br/>
+							<div class="cvForm__text">
+								Wpisz tutaj e-maile Twoich znajomych oddzielone przecinkiem, spacją lub średnikiem (tylko e-maile w poprawnym formacie będą przyjęte)
+							</div>
+							<div class="recomendations__list">
+								<textarea ng-model="registerUserData.emails" required></textarea>
+							</div>
+							<div class="recomendations__list" data-ng-hide="informMessage == ''">
+								<div ng-bind-html="informMessage"></div>
+							</div>
+							<a href="#" data-ng-click='$event.preventDefault();informForm.$valid && sendRecommendations()' class="bttn bttn--smallRed bttn--polec">Wyślij</a>
+						</form>
+					</div>
+				</div>
+				<div class="recomendations__sidebar">
+					<img src="src/img/robot_rekom.svg" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<div class="cvForm cvForm--ticket">
+			<div class="sectionBar">
+				<p class="sectionBar__title">What the h<span>@</span>ck </p>
+				<img class="sectionBar__close__image" src="src/img/close-white.png" alt="">
+			</div>
+			<div class="cvForm__wrapper">
+				<div class="cvForm__content">
+					<div class="section__title">Bilet i Twoja agenda</div>
+					<div class="section__subtitle">Do dnia wydarzenia możesz zmienić swoje zapisy na wszystkie
+						wystąpienia podczas wydarzenia. </div>
+					<div class="error">Uwaga: Wybierając prelekcje rezerwujesz miejsce na sali. Zaznaczaj tylko te wystąpienia,
+						w których chcesz wziąć udział.</div>
+					<div class="buttonList">
+						<a href="#" ng-if="!userSummary.isOrgPackage && !userSummary.skipAgenda" data-ng-click="$event.preventDefault();redirectToLectures()" class="buttonList__link bttn bttn--smallRed bttn--app">{{eventSettings.allowRegistration?"Zmiana zapisów":"Pokaż zapisy"}}</a>
+						<a href="#" ng-if="userSummary.packageCode != null && !userSummary.isOrgPackage" data-ng-click="$event.preventDefault();getInvitation()" class="buttonList__link bttn bttn--smallRed bttn--ticket" >Pobierz zaproszenie ></a>
+						<a href="#" ng-if="userSummary.packageCode != null" data-ng-click="$event.preventDefault();sendInvitation()" class="buttonList__link bttn bttn--smallRed bttn--app" >Wyślij zaproszenie (i fakturę) ></a>
+						<a href="#" ng-if="!userSummary.isOrgPackage && !userSummary.skipAgenda" data-ng-click="$event.preventDefault();getCalendar()" class="buttonList__link bttn bttn--smallRed bttn--ticket" >Pobierz kalendarz w formacie ICS ></a>
+					</div>
+				</div>
+				<div class="cvForm__sidebar">
+					<img src="src/img/robot_ticket.svg" alt="" />
+				</div>
+			</div>
+		</div>
+
+
+		<div class="cvForm cvForm--materials" ng-if="eventSettings.allowSeeMaterials">
+			<div class="sectionBar">
+				<p class="sectionBar__title">What the h<span>@</span>ck </p>
+				<img class="sectionBar__close__image" src="src/img/close-white.png" alt="">
+			</div>
+			<div class="cvForm__wrapper">
+				<div class="cvForm__content">
+					<div class="section__title">Materiały z konferencji</div>
+					<div class="section__subtitle">Coś Cię ominęło lub chcesz wrócić do tego co było na konferencji?
+						Jeśli tak, zapraszamy do zapoznania się z materiałami z konferencji</div>
+					<div class="buttonList">
+<!-- http://bit.ly/2DiYx36 -->
+						<a href="https://drive.google.com/drive/folders/1BqJdLlYTeHvykCybxpq343YgJd3YF5eN" target="_blank" rel="nofollow" class="buttonList__link bttn bttn--smallRed" >Przejdź ></a>
+					</div>
+				</div><br/>
+				<div class="cvForm__sidebar">
+					<img src="src/img/robot_material.svg" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<div class="jsDelete userData">
+			<div class="userData__visible">
+				<div class="sectionBar">
+					<p class="sectionBar__title">What the h<span>@</span>ck - Twoje Dane</p>
+						<img class="sectionBar__close__image" src="src/img/close-white.png" alt="">
+				</div>
+				<div class="userData__wrapper">
+					<div class="section__title">Twoje dane, faktury i płatności</div>
+					<div class="userData__content">
+						<div class="cvForm__header"><b>Twoje dane</b></div>
+						<div class="userData__display">
+							<div class="userData__element">
+								<div class="userData__label">Imię / Nazwisko</div>
+								<div class="userData__value">{{userSummary.firstName}} {{userSummary.lastName}}</div>
+							</div>
+							<div class="userData__element">
+								<div class="userData__label">Pozycja / Wydział</div>
+								<div class="userData__value">{{userSummary.departmentJobPosition}}</div>
+							</div>
+							<div class="userData__element">
+								<div class="userData__label">Firma / Uczelnia</div>
+								<div class="userData__value">{{userSummary.schoolCompany}}</div>
+							</div>
+							<div class="userData__element">
+								<div class="userData__label">Email</div>
+								<div class="userData__value">{{userSummary.email}}</div>
+							</div>
+							<div class="userData__element">
+								<div class="userData__label">Telefon</div>
+								<div class="userData__value">{{userSummary.phoneNo}}</div>
+							</div>
+						</div>
+						<div class="userData__change">
+							<a href="#" data-ng-click='$event.preventDefault();redirectToUserEdit()' class="bttn bttn--smallBlue bttn--edit">Zmień swoje dane</a>
+							<a href="#" data-ng-click="redirectToChangePassword()" class="bttn bttn--smallRed">Zmień hasło</a>
+						</div>
+						<div ng-if="!userSummary.isFreePackage">
+							<div class="cvForm__header"><b>Twoje pakiety, opcje dodatkowe i status płatności</b></div>
+							<div class="userData__display" >
+								<div class="userData__element">
+									<div class="userData__label">Bieżący pakiet</div>
+									<div class="userData__value">{{userSummary.packageName}}</div>
+								</div>
+								<div class="userData__element" ng-if="userSummary.newPackageName != null">
+									<div class="userData__label">Wybrany pakiet</div>
+									<div class="userData__value">{{userSummary.newPackageName}}</div>
+								</div>
+								<div class="userData__element">
+									<div class="userData__label">Status płatności</div>
+									<div class="userData__value">{{userSummary.paymentStatus}}</div>
+								</div>
+								<div class="userData__element" ng-if="userSummary.vipCategoryName != null">
+									<div class="userData__label">Wybrana ścieżka z dedykowanymi miejscami</div>
+									<div class="userData__value">{{userSummary.vipCategoryName}}</div>
+								</div>
+								<div class="userData__element" ng-if="userSummary.newPackageName != null && userSummary.paymentLink == null">
+									<div class="userData__label">Link do płatności</div>
+									<div class="userData__value">Generujemy płatność, odśwież stronę za chwilę aby uzyskać link do płatności</div>
+								</div>
+								<div class="userData__element" ng-if="userSummary.paymentLink != null">
+									<div class="userData__label">Link do płatności</div>
+									<div class="userData__value"><a href="{{userSummary.paymentLink}}" target="_blank">Link do płatności</a></div>
+								</div>
+							</div>
+							<div class="userData__change" ng-if="!userSummary.isFreePackage && !userSummary.isOrgPackage">
+								<a href="#" data-ng-click='$event.preventDefault();redirectToConvertToVIP()' class="bttn bttn--smallBlue bttn--edit">Zmień pakiet</a>
+							</div>
+						</div>
+					</div>
+					<div class="userData__sidebar">
+						<img src="src/img/robot_dane.svg" alt="" />
+					</div>
+				</div>
+
+				<div class="userData__fvat">
+					<div ng-if="userSummary.wantInvoice">
+						<div class="cvForm__header"><b>Twoje faktury</b></div>
+						<div class="userData__display">
+						<div class="userData__element">
+							<div class="userData__label">Faktury</div>
+						</div>
+						<div class="userData__element">
+							<div class="userData__label">Nazwa płatnika</div>
+							<div class="userData__value">{{userSummary.payerName}}</div>
+						</div>
+						<div class="userData__element">
+							<div class="userData__label">Adres</div>
+							<div class="userData__value">
+								<div ng-if="userSummary.payerStreet != null">{{userSummary.payerStreet}}<br /></div>
+								{{userSummary.payerPostCode}} {{userSummary.payerCity}}
+							</div>
+						</div>
+						<div class="userData__element" ng-if="userSummary.payerNIP != null">
+							<div class="userData__label">NIP</div>
+							<div class="userData__value">{{userSummary.payerNIP}}</div>
+						</div>
+						<div class="userData__element" ng-if="invoices.length > 0">
+							<!-- <div class="userData__label">&nbsp;</div> -->
+							<div class="userData__value">
+								<table>
+									<thead>
+									<tr>
+										<th>Numer faktury</th>
+										<th>Data faktury</th>
+										<th>Wartość netto</th>
+										<th>Wartość brutto</th>
+										<th>Akcje</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr data-ng-repeat="invoice in invoices">
+										<td>{{ invoice.invoiceNumber }}</td>
+										<td>{{ invoice.invoiceDate.substring(0, 10) }}</td>
+										<td>{{ invoice.netWorth + invoice.netWorthOpt | currency : '' }} zł</td>
+										<td>{{ invoice.grossWorth + invoice.grossWorthOpt | currency : '' }} zł</td>
+										<td>
+											<input type="button" value="Pobierz" data="{{invoice.objectId}}" data-ng-click='getInvoice(invoice.objectId)' class="bttn bttn--smallRed bttn--invoice" />
+										</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="userData__display" ng-if="!userSummary.isFreePackage && !userSummary.wantInvoice">
+						<div class="userData__element">
+							<div class="userData__label">Faktury</div>
+						</div>
+						<div class="userData__element">
+							<div class="userData__value">Brak faktury do pobrania, gdyż nie wybrano opcji "chcę fakturę". <br/>Aby uzyskać fakturę, przejdź do opcji <a href="#" data-ng-click='$event.preventDefault();redirectToUserEdit()'>Zmień swoje dane</a>.</div>
+						</div>
+					</div>
+					<div class="userData__display" ng-if="packagesOpt.length > 0">
+						<div class="userData__element">
+							<div class="userData__value"><b>Wybrane pakiety dodatkowe</b></div>
+						</div>
+						<div class="userData__element" style="width: 100%;">
+							<!-- <div class="userData__label">&nbsp;</div> -->
+							<div class="userData__value" style="width: 100%;">
+								<table width="100%">
+									<thead>
+									<tr>
+										<th>Nazwa</th>
+										<th>Wartość brutto</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr data-ng-repeat="packageOpt in packagesOpt">
+										<td>{{ packageOpt.name }}</td>
+										<td>{{ packageOpt.quantity * packageOpt.priceGrossPLN | currency : '' }} zł</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="userData__buttons buttonList">
+					<a href="#" ng-if="userSummary.packageCode != null && !userSummary.isOrgPackage" data-ng-click="$event.preventDefault();getInvitation()" class="buttonList__link bttn bttn--smallRed bttn--ticket">Pobierz zaproszenie</a>
+					<a href="#" ng-if="userSummary.packageCode != null" data-ng-click="$event.preventDefault();sendInvitation()" class="buttonList__link bttn bttn--smallRed bttn--invoice">Wyślij zaproszenie (i fakturę)</a>
+					<a href="#" ng-if="!userSummary.isOrgPackage && !userSummary.skipAgenda" data-ng-click="$event.preventDefault();getCalendar()" class="buttonList__link bttn bttn--smallRed bttn--app">Pobierz kalendarz w formacie ICS</a>
+				</div>
+				<div class="userData__buttons">
+					<a href="#" ng-if="!userSummary.isOrgPackage && !userSummary.skipAgenda" data-ng-click="$event.preventDefault();redirectToLectures()" class="bttn bttn--smallRed bttn--app">{{eventSettings.allowRegistration?"Zmiana zapisów":"Pokaż zapisy"}}</a>
+					<a href="#" data-ng-click="$event.preventDefault();" class="jsShowDelete bttn bttn--delete">Usuń konto</a>
+				</div>
+			</div>
+			<div class="userData__hidden">
+				<div class="sectionBar sectionBar--dark">
+					<p class="sectionBar__title">What the h<span>@</span>ck - Usunęcie konta</p>
+						<img class="sectionBar__close__image" src="src/img/close-white.png" alt="">
+				</div>
+				<div class="userData__flex">
+					<div class="userData__content">
+						<div class="userData__title">Usunęcie konta</div>
+						<div class="userData__text">
+							Zgodnie z Ustawą o ochronie danych osobowych i RODO masz prawo do usunięcia swojego konta wraz ze wszystkimi swoimi danymi (w tym przesłanie CV i zdjęcia). Usunięcie danych jest bezpowrotne!
+							<span>UWAGA: Nie zostanie usunięta faktura z Twoimi danymi, gdyż jest to dokument fiskalny, który musimy przechowywać na podstawie obowiązującego porawa.</span>
+						</div>
+						<div class="userData__remove">
+							<a href="#" data-ng-click="$event.preventDefault();removeAccount()" class="bttn bttn--smallRed bttn--remove">Usuń konto</a>
+						</div>
+					</div>
+					<div class="userData__sidebar">
+						<img src="src/img/robot_delete.svg" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--
+			<div ng-if="!userSummary.isOrgPackage">
+				<h2>Spotkania z pracodawcą</h2>
+				<p>Chcesz umówić się na spotkanie z pracodawcą podczas trwania Giełdy Pracy IT? Podczas spotkania będziesz mieć szansę porozmawiać o możliwościach rekrutacyjnych a nawet odbyć wstępny etap rekrutacji!</p>
+				<button class="btn btn-primary" data-ng-click='$event.preventDefault();redirectToMeet()'>
+					<span>Zmiana zapisów </span>
+				</button>
+			</div>
+		-->
+	</div>
+</section>
+<!-- /otargach -->

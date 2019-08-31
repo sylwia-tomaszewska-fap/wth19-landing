@@ -1,0 +1,129 @@
+<nav id="fixed-menu">
+  <div class="container">
+    <div class="small-container">
+      <a href="#" data-ng-click="$event.preventdefault();redirecttologin()" class="login-button active">Zaloguj się</a>
+      <a href="#" data-ng-click="$event.preventdefault();redirecttoregistration()" class="register-button top">Zarejestruj się</a>
+      <div class="hamburger-container">
+        <div class="hamburger">
+          <svg version="1.1" id="warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewbox="0 0 36.4 26.1" style="enable-background:new 0 0 36.4 26.1;" xml:space="preserve" width="36px" height="26px">
+            <g>
+              <rect class="st0" fill="#fff" width="36.4" height="4.4"/>
+              <rect y="10.9" fill="#fff" class="st0" width="36.4" height="4.4"/>
+              <rect y="21.7" fill="#fff" class="st0" width="36.4" height="4.4"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="header" id="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 order-2 order-md-1">
+        <img src="images/wth-logo.svg" class="header-logo img-fluid" alt=""/>
+      </div>
+      <div class="col-md-6 order-1 order-md-2">
+        <div class="brackets brackets-red text-center">
+          <p class="mb-0">Sponsorzy:</p>
+          <ul class="nav mb-1">
+            <li class="nav-item">
+              <a href="#collaboration-modal" data-toggle="modal" class="nav-link">Call for Sponsors <span style="color:#e10b31"> | </span> Zostań sponsorem</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-12 col-md-8">
+        <div class="pcwindow">
+
+          <div class="pcwindow-header">
+            <p>II EDYCJA WTH</p>
+            <span class="pcwindow-close">&times;</span>
+          </div>
+
+          <div class="pcwindow-body">
+            <h3 class="mb-4">
+                            Najlepsi prelegenci, całe środowisko polskiego ITSec i&nbsp;wszyscy zainteresowani w&nbsp;jednym miejscu
+                        </h3>
+
+            <p class="mb-4">
+                            Sobota, <strong>14 grudnia 2019</strong>, Stadion Narodowy
+                        </p>
+            <div class="text-center">
+              <a href="#" data-ng-click="$event.preventdefault();redirecttoregistration()" class="btn btn-primary btn-lg">Zarejestruj się</a>
+            </div>
+
+            <div class="sitting-robot"></div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="col-12 col-md-4 ">
+        <div class="sittingrobot">
+          <img src="images/robot-hero.svg" alt="" class="img-fluid" width="430"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center justify-content-center align-items-center my-5 sponsors">
+      <div class="col-12 col-md-auto mx-2 mb-3 mb-md-0">
+        <p class="mb-0">
+          <small>[ Organizatorzy ]</small>
+        </p>
+      </div>
+      <div class="col-12 col-md-auto mx-2 mb-3 mb-md-0">
+        <img src="images/zts-logo.svg" width="110" alt="">
+      </div>
+      <div class="col-12 col-md-auto mx-2 mb-3 mb-md-0">
+        <img src="images/ap-logo.svg" width="160" alt="">
+      </div>
+    </div>
+
+    <div class="row justify-content-center align-items-center mt-4">
+      <div class="col-auto">
+        <div class="brackets brackets-red">
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="#collaboration-modal" class="nav-link" data-toggle="modal">
+                <img src="images/zostan-sponsorem.svg" width="30" alt="">
+                        Zostań Sponsorem / Partnerem</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="brackets brackets-red">
+
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="#collaboration-modal" class="nav-link" data-toggle="modal">
+                <img src="images/zostan-prelegentem.svg" width="20" alt="">
+                    Zostań Prelegentem</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="col-auto">
+        <div class="brackets brackets-red">
+
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="#volunteering-modal" class="nav-link" data-toggle="modal">
+                <img src="images/zostan-wolontariuszem.svg" width="19" alt="">
+                    Zostań Wolontariuszem</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

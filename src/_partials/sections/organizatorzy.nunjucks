@@ -1,0 +1,41 @@
+<section class="organizatorzy" id="organizatorzy">
+	<div class="container">
+		<div class="text-center">
+			<h1 class="section-heading" data-aos="headerbg">
+				<span>Organizatorzy</span>
+			</h1>
+			
+		</div>
+		
+        <div class="row algin-items-center justify-content-center mt-0 mt-md-5">
+            <div class="col-md-auto mb-3 mb-mb-0">
+                <div class="organizator organizator1">
+                    <a href="https://zaufanatrzeciastrona.pl/" target="_blank">
+                        <img src="images/ZTS-logo.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-auto mb-mb-0">
+                <div class="organizator organizator2">
+                    <a href="https://www.facebook.com/fundacjaap/" target="_blank">
+                        <img src="images/AP-logo.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5" id="zarejestrujsie">
+            <div class="col-md-10 mx-auto text-center">
+                <img src="images/crown.svg" class="w-100" alt="">
+
+                <a href="#" class="btn btn-primary btn-lg">Zarejestruj się</a>
+
+                <div class="links">
+                    <a data-toggle="modal" data-target="#recomend-modal" class="link arrow arrow--right">poleć znajomym <span></span></a>
+                    <a data-toggle="modal" data-target="#remind-modal" class="link arrow arrow--right">przypomnij później <span></span></a>
+                </div>
+
+            </div>
+        </div>
+	</div>
+</section>

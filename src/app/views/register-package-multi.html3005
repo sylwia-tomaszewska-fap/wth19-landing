@@ -1,0 +1,723 @@
+<script src="js/route.min.js" async></script>
+<form name="registerForm">
+	<section class="register-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-6">
+					<h1>Rejestracja</h1>
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="register-header-steps">
+						<h3>Krok</h3>
+						<div class="register-header-steps-container">
+							<div class="register-header-steps-item active">
+								<span>1</span>
+								<svg class="cube">
+									<use xlink:href="#cube"></use>
+								</svg>
+							</div>
+							<div class="register-header-steps-item">
+								<span>2</span>
+								<svg class="cube">
+									<use xlink:href="#cube"></use>
+								</svg>
+							</div>
+							<div class="register-header-steps-item">
+								<span>3</span>
+								<svg class="cube">
+									<use xlink:href="#cube"></use>
+								</svg>
+							</div>
+							<div class="register-header-steps-item">
+								<span>4</span>
+								<svg class="cube">
+									<use xlink:href="#cube"></use>
+								</svg>
+							</div>
+							<div class="register-header-steps-item">
+								<span>5</span>
+								<svg class="cube">
+									<use xlink:href="#cube"></use>
+								</svg>
+							</div>
+							<div class="register-header-steps-item">
+								<span>6</span>
+								<svg class="cube">
+									<use xlink:href="#cube"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="options-choice options-choice-multi">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="options-choice-header options-choice-header-icons text-left">
+						<h3>
+							<em class="hash">#</em>
+							<span>Wybierz najlepszy dla Ciebie pakiet:</span>
+						</h3>
+
+						<div class="box-3d black">
+							<div class="box-3d-content">
+								<p>
+									<svg class="icon">
+										<use xlink:href="#exclamation"></use>
+										</svg>
+									<strong>UWAGA:</strong> Na konferencji obowiązuje rezerwacja miejsc na sali (podobnie jak w teatrze) w podziale na poszczególne wystąpienia i typy wybranych biletów. Prośba o zapoznanie się z dostępnością miejsc przed dokonaniem zakupu grupowego.
+								</p>
+
+								<p>
+									<svg class="icon">
+										<use xlink:href="#contact-phone-mail"></use>
+										</svg>W razie pytań lub wątpliwości zapraszamy do kontaktu z Olą Prychitko <a href="tel:660409142">tel.660 409 142</a>, <a href="mailto:aleksandra.prychitko@fundacjaap.org.pl">email:&nbsp;aleksandra.prychitko@fundacjaap.org.pl</a> w celu zrealizowania zakupu </p>
+
+							</div>
+							<div class="box-3d-shadow-border"></div>
+							<div class="box-3d-decor-line"></div>
+						</div>
+
+
+
+					</div>
+				</div>
+			</div>
+			<div class="row choice-container align-items-end">
+				<div class="col-12 col-md-6 col-lg-4 justify-content-center justify-content-sm-end">
+					<div class="choice-item choice-item-black js-choice-item">
+						<div class="choice-item-flipper">
+							<div class="choice-item-front">
+								<div class="choice-item-top-line"></div>
+								<div class="choice-item-content">
+									<svg class="ticket">
+										<use xlink:href="#ticket"></use>
+									</svg>
+									<h4>STANDARD</h4>
+									<p>Uczestnictwo w całym wydarzeniu<br> (konferencja i targi) <br >
+o podstawowym komforcie</p>
+									<div class="choice-item-content-multi">
+										<div class="choice-item-content-checkbox">
+											<label>
+												<span class="checkbox-desc">
+													<strong>{{packages['STD']}}</strong>
+													<small> zł</small>
+												</span>
+											</label>
+										</div>
+										<div class="input-group">
+											<input data-ng-model="userChoice.selectedSTD" name="ticket-brown-amount" required type="text" maxlength="2" />
+											<div class="input-group-append">
+												<button data-ng-click='$event.preventDefault();stepUp("STD")'>+</button>
+												<button data-ng-click='$event.preventDefault();stepDown("STD")'>-</button>
+											</div>
+										</div>
+									</div>
+									<p><small><svg class="icon">
+										<use xlink:href="#exclamation-2"></use>
+									</svg>cena obowiązuje do 30/05 lub do wyczerpania puli</small></p>
+								</div>
+								<a href="#" class="choice-item-show-details js-choice-item-details-link">pokaż szczegóły &gt;</a>
+							</div>
+							<div class="choice-item-back">
+								<div class="choice-item-top-line"></div>
+								<div class="choice-item-content">
+									<div class="choice-item-list">
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#time"></use>
+											</svg>
+											<span>Cena obowiązuje do 30/05 lub do wyczerpania puli </span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#globe"></use>
+											</svg>
+											<span>Uczestnictwo w konferencji, o podstawowym komforcie (ważne: obowiązuje rezerwacja miejsc - krok 2 rejestracji)</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#booth"></use>
+											</svg>
+											<span>Uczestnictwo w Targach Data Science </span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#party-2"></use>
+											</svg>
+											<span>Uczestnictwo w preparty i afterparty</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#cup-2"></use>
+											</svg>
+											<span>Uczestnictwo w konkursach i dodatkowych atrakcjach</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#shirt"></use>
+											</svg>
+											<span>Giftbag z koszulką wydarzenia	</span>
+										</div>
+										<a href="#" class="white-link" data-ng-click='$event.preventDefault()' data-toggle="modal" data-target="#options-choice-modal">porównaj pakiety &gt;</a>
+									</div>
+									<!--<div class="input-group">
+										<input type="number" name="ticket-brown-amount" value="0" minlength="0">
+										<div class="input-group-append">
+											<button>+</button>
+											<button>-</button>
+										</div>
+									</div>-->
+								</div>
+								<a href="#" class="choice-item-show-details js-choice-item-details-hide-link">ukryj szczegóły &gt;</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-6 col-lg-4 justify-content-center justify-content-sm-center">
+					<div class="choice-item choice-item-pro-silver multi js-choice-item">
+						<div class="choice-item-flipper">
+							<div class="choice-item-front">
+								<div class="choice-item-top-line"></div>
+								<div class="choice-item-content">
+									<svg class="cup">
+										<use xlink:href="#cup"></use>
+									</svg>
+									<h4>VIP</h4>
+									<p>Uczestnictwo <br />o najwyższym komforcie</p>
+									<div class="choice-item-content-multi">
+										<div class="choice-item-content-checkbox">
+											<label>
+												<span class="checkbox-desc">
+													<strong>{{packages['VIP']}}</strong>
+													<small> zł</small>
+												</span>
+											</label>
+										</div>
+										<div class="input-group">
+											<input data-ng-model="userChoice.selectedVIP" name="ticket-brown-amount" required type="text" maxlength="2" />
+											<div class="input-group-append">
+												<button data-ng-click='$event.preventDefault();stepUp("VIP")'>+</button>
+												<button data-ng-click='$event.preventDefault();stepDown("VIP")'>-</button>
+											</div>
+										</div>
+									</div>
+									<p><small><svg class="icon">
+										<use xlink:href="#exclamation-5"></use>
+									</svg>cena obowiązuje do 30/05 lub do wyczerpania puli</small></p>
+								</div>
+								<a href="#" class="choice-item-show-details js-choice-item-details-link">pokaż szczegóły &gt;</a>
+							</div>
+							<div class="choice-item-back">
+								<div class="choice-item-top-line"></div>
+								<div class="choice-item-content">
+									<div class="choice-item-list">
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#exclamation-5"></use>
+											</svg>
+											<span>Cena obowiązuje do 30/05 lub do wyczerpania puli </span>
+										</div>
+
+										<div class="choice-item-list-item">
+											<span>Wszystko, co w bilecie PRO, dodatkowo:</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#parking"></use>
+											</svg>
+											<span>Miejsce parkingowe</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#party"></use>
+											</svg>
+											<span>3 koktajle podczas afterparty</span>
+										</div>
+										<a href="#" class="white-link" data-ng-click='$event.preventDefault()' data-toggle="modal" data-target="#options-choice-modal">porównaj pakiety &gt;</a>
+									</div>
+									<!--<div class="input-group">
+										<input type="number" name="ticket-brown-amount" value="0" minlength="0">
+										<div class="input-group-append">
+											<button>+</button>
+											<button>-</button>
+										</div>
+									</div>-->
+								</div>
+								<a href="#" class="choice-item-show-details js-choice-item-details-hide-link">ukryj szczegóły &gt;</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-6 col-lg-4 justify-content-center justify-content-sm-start" >
+					<div class="choice-item choice-item-pro-brown multi js-choice-item">
+						<div class="choice-item-flipper">
+							<div class="choice-item-front">
+								<div class="choice-item-top-line"></div>
+								<div class="choice-item-content">
+									<svg class="star">
+										<use xlink:href="#star"></use>
+									</svg>
+									<h4>Pro</h4>
+									<p>Uczestnictwo <br />o bardzo dobrym komforcie</p>
+									<div class="choice-item-content-multi">
+										<div class="choice-item-content-checkbox">
+											<label>
+												<span class="checkbox-desc">
+													<strong>{{packages['PRO']}}</strong>
+													<small> zł</small>
+												</span>
+											</label>
+										</div>
+										<div class="input-group">
+											<input data-ng-model="userChoice.selectedPRO" name="ticket-brown-amount" required type="text" maxlength="2" />
+											<div class="input-group-append">
+												<button data-ng-click='$event.preventDefault();stepUp("PRO")'>+</button>
+												<button data-ng-click='$event.preventDefault();stepDown("PRO")'>-</button>
+											</div>
+										</div>
+									</div>
+									<p><small><svg class="icon">
+										<use xlink:href="#exclamation-3"></use>
+									</svg>cena obowiązuje do 30/05 lub do wyczerpania puli</small></p>
+								</div>
+								<a href="#" class="choice-item-show-details js-choice-item-details-link">pokaż szczegóły &gt;</a>
+							</div>
+							<div class="choice-item-back">
+								<div class="choice-item-top-line"></div>
+								<div class="choice-item-content">
+									<div class="choice-item-list">
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#exclamation-3"></use>
+											</svg>
+											<span>Cena obowiązuje do 30/05 lub do wyczerpania puli </span>
+										</div>
+										<div class="choice-item-list-item">
+											<span>Wszystko, co w bilecie STANDARD, dodatkowo:</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#cinema"></use>
+											</svg>
+											<span>Możliwość wyboru prelekcji, na które skończyły się bilety Standard</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#comfort"></use>
+											</svg>
+											<span>Komfortowy udział w konferencji</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#seat-green"></use>
+											</svg>
+											<span>Dostęp do najlepszych i najwygodniejszych miejsc w salach konferencyjnych</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#podcast-green"></use>
+											</svg>
+											<span>Dostęp do podcastów z wystąpień na 3 największych ścieżkach</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#star-2"></use>
+											</svg>
+											<span>Dostęp do zamkniętej Strefy VIP</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#run"></use>
+											</svg>
+											<span>Możliwość ominięcia wszystkich kolejek</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#lunch"></use>
+											</svg>
+											<span>Pełny lunch z cateringu</span>
+										</div>
+										<a href="#" class="white-link" data-ng-click='$event.preventDefault()' data-toggle="modal" data-target="#options-choice-modal">porównaj pakiety &gt;</a>
+									</div>
+									<!--<div class="input-group">
+										<input type="number" name="ticket-brown-amount" value="0" minlength="0">
+										<div class="input-group-append">
+											<button>+</button>
+											<button>-</button>
+										</div>
+									</div>-->
+								</div>
+								<a href="#" class="choice-item-show-details js-choice-item-details-hide-link">ukryj szczegóły &gt;</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+			</div>
+		</div>
+	</section>
+	<section class="workshops additional-options">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h3>
+						<em class="hash">#</em>
+						<span>Uzupełnij pakiet opcjami dodatkowymi:</span>
+					</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="workshops-content">
+						<div class="workshop-item">
+							<div class="workshop-item-content">
+								<div class="workshop-item-content-img">
+									<div class="workshop-item-content-img-container">
+										<img src="images/reg/premier-classe.png" alt="">
+									</div>
+								</div>
+								<div class="workshop-item-content-text">
+									<h6>Nocleg w Hotelu Premierre Classe</h6>
+									<p>pokój Standard 1/2 os. - noc z 13/06 na 14/06</p>
+									<p>
+										<a href="https://www.premiereclasse.com/pl/hotels/premiere-classe-varsovie-warszawa" target="_blank" rel="noopener">Opis standardu</a>
+									</p>
+								</div>
+								<div class="workshop-item-content-price">
+									<h4>
+										<span>{{packagesOptional['OPC1']}}</span>
+										<small>ZŁ/OS.</small>
+									</h4>
+									<div class="input-group">
+										<input type="text" name="ticket-brown-amount" data-ng-model="userChoice.selectedOPC1" required maxlength="2">
+										<div class="input-group-append">
+											<button data-ng-click='$event.preventDefault();stepUp("OPC1")'>+</button>
+											<button data-ng-click='$event.preventDefault();stepDown("OPC1")'>-</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="workshop-item">
+							<div class="workshop-item-content">
+								<div class="workshop-item-content-img">
+									<div class="workshop-item-content-img-container">
+										<img src="images/reg/premier-classe.png" alt="">
+									</div>
+								</div>
+								<div class="workshop-item-content-text">
+									<h6>Nocleg w Hotelu Premierre Classe</h6>
+									<p>pokój Standard 1/2 os. - noc z 14/06 na 15/06</p>
+									<p>
+										<a href="https://www.premiereclasse.com/pl/hotels/premiere-classe-varsovie-warszawa" target="_blank" rel="noopener">Opis standardu</a>
+									</p>
+								</div>
+								<div class="workshop-item-content-price">
+									<h4>
+										<span>{{packagesOptional['OPC2']}}</span>
+										<small>ZŁ/OS.</small>
+									</h4>
+									<div class="input-group">
+										<input type="text" name="ticket-brown-amount" data-ng-model="userChoice.selectedOPC2" required maxlength="2">
+										<div class="input-group-append">
+											<button data-ng-click='$event.preventDefault();stepUp("OPC2")'>+</button>
+											<button data-ng-click='$event.preventDefault();stepDown("OPC2")'>-</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="workshop-item">
+							<div class="workshop-item-content">
+								<div class="workshop-item-content-img">
+									<div class="workshop-item-content-img-container">
+										<img src="images/reg/puro2.jpg" alt="">
+									</div>
+								</div>
+								<div class="workshop-item-content-text">
+									<h6>Nocleg w Hotelu Puro Warszawa Centrum</h6>
+									<p>pokój Standard 1/2 os. - noc z 13/06 na 14/06</p>
+									<p>
+										<a href="https://purohotel.pl/pl/warszawa" target="_blank" rel="noopener">Opis standardu</a>
+									</p>
+								</div>
+								<div class="workshop-item-content-price">
+									<h4>
+										<span>{{packagesOptional['OPC3']}}</span>
+										<small>ZŁ/OS.</small>
+									</h4>
+									<div class="input-group">
+										<input type="text" name="ticket-brown-amount" data-ng-model="userChoice.selectedOPC3" required maxlength="2">
+										<div class="input-group-append">
+											<button data-ng-click='$event.preventDefault();stepUp("OPC3")'>+</button>
+											<button data-ng-click='$event.preventDefault();stepDown("OPC3")'>-</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="workshop-item">
+							<div class="workshop-item-content">
+								<div class="workshop-item-content-img">
+									<div class="workshop-item-content-img-container">
+										<img src="images/reg/puro2.jpg" alt="">
+									</div>
+								</div>
+								<div class="workshop-item-content-text">
+									<h6>Nocleg w Hotelu Puro Warszawa Centrum</h6>
+									<p>pokój Standard 1/2 os. - noc z 14/06 na 15/06</p>
+									<p>
+										<a href="https://purohotel.pl/pl/warszawa" target="_blank" rel="noopener">Opis standardu</a>
+									</p>
+								</div>
+								<div class="workshop-item-content-price">
+									<h4>
+										<span>{{packagesOptional['OPC4']}}</span>
+										<small>ZŁ/OS.</small>
+									</h4>
+									<div class="input-group">
+										<input type="text" name="ticket-brown-amount" data-ng-model="userChoice.selectedOPC4" required maxlength="2">
+										<div class="input-group-append">
+											<button data-ng-click='$event.preventDefault();stepUp("OPC4")'>+</button>
+											<button data-ng-click='$event.preventDefault();stepDown("OPC4")'>-</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="workshops discount-code">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h3>
+						<em class="hash">#</em>
+						<span>Posiadasz kod rabatowy - wpisz go tutaj:</span>
+					</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="workshops-content">
+						<input type="text" name="discount-code" class="input-discount-code" maxlength="30" placeholder="––––––––––––"  data-ng-model="userChoice.couponCode">
+						<div ng-show="loading">
+							<img src="images/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+						</div>
+						<p data-ng-hide="message == ''" ng-class="{'error': message_type == 'error', 'success': message_type == 'success'}">{{message}}</p>
+						<button type="submit" class="btn btn-discount-code" ng-model="loading" ng-disabled="loading" data-ng-click="$event.preventDefault();applyCoupon()">
+							<span>Zastosuj</span>
+							<svg class="arrow">
+								<use xlink:href="#arrow"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="workshops additional-options">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h3>
+						<em class="hash">#</em>
+						<span>Wybierz swoją rolę:</span>
+					</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="workshops-content">
+						<div class="workshops-content-container">
+							<div class="workshops-content-col bigger">
+								<div class="workshops-checkbox">
+									<input type="radio" name="role" id="role-1" data-ng-model="userChoice.isParticipant" value="false">
+									<label for="role-1">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#radio-2-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#radio-2-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Jestem zamawiającym i nie będę uczestniczyć w konferencji </span>
+									</label>
+								</div>
+								<div class="workshops-checkbox">
+									<input type="radio" name="role" id="role-2" data-ng-model="userChoice.isParticipant" value="true">
+									<label for="role-2">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#radio-2-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#radio-2-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Jestem zamawiającym i będę uczestniczyć w konferencji </span>
+									</label>
+								</div>
+								<div class="workshops-select" ng-if="userChoice.isParticipant == 'true'">
+									<label for="role-option">Będę uczestniczyć w ramach pakietu:</label>
+									<select ng-model="userChoice.participantPackage" ng-options="pkg.name for pkg in packagesLst | filter:wherePkgFnc()" name="role-option" id="role-option" class="col-12 col-md-5 col-xl-4" required>
+									</select>
+								</div>
+							</div>
+							<div class="workshops-content-col">
+								<svg class="robo-decor">
+									<use xlink:href="#robo-decor"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="register-summary">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h3>
+						<em class="hash">#</em>
+						<span>Podsumowanie</span>
+					</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="box-3d">
+						<div class="box-3d-content">
+							<table>
+								<tr ng-if="userChoice.selectedSTD > 0">
+									<td>{{packageNames['STD']}}</td>
+									<td>{{packagesOrg['STD'] * userChoice.selectedSTD | currency : ''}} zł</td>
+								</tr>
+								<tr ng-if="userChoice.selectedPRO > 0">
+									<td>{{packageNames['PRO']}}</td>
+									<td>{{packagesOrg['PRO'] * userChoice.selectedPRO | currency : ''}} zł</td>
+								</tr>
+								<tr ng-if="userChoice.selectedVIP > 0">
+									<td>{{packageNames['VIP']}}</td>
+									<td>{{packagesOrg['VIP'] * userChoice.selectedVIP | currency : ''}} zł</td>
+								</tr>
+								<tr class="spacer">
+									<td colspan="2">
+										<div class="spacer-line"></div>
+									</td>
+								</tr>
+								<tr ng-if="agenda.couponCode != null">
+									<td>Rabat [użyty kod: {{agenda.couponCode}}]</td>
+									<td> {{getDiscount() | currency : ''}} zł</td>
+								</tr>
+								<tr class="spacer">
+									<td colspan="2">
+										<div class="spacer-line"></div>
+									</td>
+								</tr>
+								<tr ng-if="userChoice.selectedWAR1 > 0">
+									<td>{{packageNamesOptional['WAR1']}}</td>
+									<td>{{packagesOptional['WAR1'] * userChoice.selectedWAR1 | currency : ''}} zł</td>
+								</tr>
+								<tr ng-if="userChoice.selectedWAR2 > 0">
+									<td>{{packageNamesOptional['WAR2']}}</td>
+									<td>{{packagesOptional['WAR2'] * userChoice.selectedWAR2 | currency : ''}} zł</td>
+								</tr>
+								<tr ng-if="userChoice.selectedOPC1 > 0">
+									<td>{{packageNamesOptional['OPC1']}}</td>
+									<td>{{packagesOptional['OPC1'] * userChoice.selectedOPC1 | currency : ''}} zł</td>
+								</tr>
+								<tr ng-if="userChoice.selectedOPC2 > 0">
+									<td>{{packageNamesOptional['OPC2']}}</td>
+									<td>{{packagesOptional['OPC2'] * userChoice.selectedOPC2 | currency : ''}} zł</td>
+								</tr>
+								<tr ng-if="userChoice.selectedOPC3 > 0">
+									<td>{{packageNamesOptional['OPC3']}}</td>
+									<td>{{packagesOptional['OPC3'] * userChoice.selectedOPC3 | currency : ''}} zł</td>
+								</tr>
+								<tr ng-if="userChoice.selectedOPC4 > 0">
+									<td>{{packageNamesOptional['OPC4']}}</td>
+									<td>{{packagesOptional['OPC4'] * userChoice.selectedOPC4 | currency : ''}} zł</td>
+								</tr>
+								<tr>
+									<td>Razem do zapłaty (Brutto)</td>
+									<td>{{getTotalGross() | currency : ''}} zł</td>
+								</tr>
+							</table>
+						</div>
+						<div class="box-3d-shadow-border"></div>
+						<div class="box-3d-decor-line"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="box-3d errors" data-ng-hide="pkgMessage == ''">
+		<div class="box-3d-content">
+			<p>
+				<svg class="icon">
+					<use xlink:href="#exclamation-2"></use>
+					</svg>
+				<strong>{{pkgMessage}}</strong>
+			</p>
+		</div>
+		<div class="box-3d-shadow-border"></div>
+		<div class="box-3d-decor-line"></div>
+	</div>
+
+	<section class="next-step">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<button type="submit" class="btn btn-next-step" ng-model="loading" ng-disabled="loading" data-ng-click="redirectToNextStepVIP()">
+						<span>Przejdź dalej</span>
+						<svg class="arrow">
+							<use xlink:href="#arrow"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+</form>
+<div class="modal fade options-choice-modal" id="options-choice-modal" tabindex="-1" role="dialog" aria-labelledby="options-choice-modal" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<svg class="modal-close-icon">
+						<use xlink:href="#close-4"></use>
+					</svg>
+				</button>
+				<div class="options-choice-modal-content">
+					<div class="options-choice-modal-content-img">
+						<img src="./images/compare-options.svg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,288 @@
+<section class="why" id="dlaczegowarto">
+    <div class="container">
+        <div class="text-center">
+        <h1 class="section-heading">
+            <span>Dlaczego</span><span> warto</span>
+        </h1>
+        <p class="lead">What The H@ck to przede wszystkim:</p>
+        </div>
+
+        <div class="row why1 mb-5">
+            <div class="col-2 text-right">
+                <img src="images/num-1.svg" class="img-fluid" width="97" alt="">
+            </div>
+            <div class="col-10">
+                <h2>
+                    Dobrej jakości merytoryka
+                </h2>
+
+
+                
+{% set data = [
+    {
+        icon: 'check',
+        text: 'Jakość gwarantuje ZaufanaTrzeciaStrona.pl i 16-sto osobowa Rada Programowa'
+    },
+    {
+        icon: 'paths',
+        text: '10+ ścieżek tematycznych obejmujących wszystkie zagadnienia ITSec'
+    },
+    {
+        icon: 'lecturers',
+        text: 'Najlepsi prelegenci z różnych środowisk i branż: od praktyków z biznesu, 
+poprzez naukę, aż po dostawców'
+    },
+    {
+        icon: 'time',
+        text: 'Konkretne, 40 min. wystąpienia, tylko przydatna wiedza'
+    },
+    {
+        icon: 'mic',
+        text: 'Lightning talki prowadzone przez doświadczonych praktyków'
+    }] %}
+    {% for item in data %}
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-{{item.icon}}"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>{{item.text}}</p>
+                    </div>
+                </div>
+    {%endfor %}
+
+            </div>
+        </div>
+
+
+        <div class="row why2 mb-5">
+            <div class="col-2 col-md-4 text-right">
+                <img src="images/num-2.svg" class="img-fluid" width="97" alt="">
+            </div>
+            <div class="col-10 col-md-8">
+                <h2>
+                    Treści dla osób o różnym profilu 
+zainteresowań
+                </h2>
+
+
+            <div class="row">
+                
+            
+{% set data = [
+    {
+        icon: 'lock-gear',
+        text: 'Techniczni specjaliści ds. cyberbezpieczeństwa'
+    },
+    {
+        icon: 'lock',
+        text: 'Nietechniczni specjaliści ds. cyberbezpieczeństwa'
+    },
+    {
+        icon: 'spy',
+        text: 'Służby specjalne i administracja publiczna'
+    },
+    {
+        icon: 'code',
+        text: 'Architekci, programiści, Sys/DevOpsi'
+    },
+    {
+        icon: 'business-people',
+        text: 'Kadra kierownicza'
+    },
+    {
+        icon: 'star',
+        text: 'Wszyscy zainteresowani atakami, obroną, fuckupami i wnioskami z nich'
+    }] %}
+    {% for item in data %}
+    <div class="col-md-6">
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-{{item.icon}}"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>{{item.text}}</p>
+                    </div>
+                </div>
+                </div>
+    {%endfor %}
+                </div>        
+            </div>
+        </div>
+
+
+
+        <div class="row why3 mb-5">
+            <div class="col-2 text-right">
+                <img src="images/num-3.svg" class="img-fluid" width="97" alt="">
+            </div>
+            <div class="col-10">
+                <h2>
+                    Networking, networking... i networking ;)
+                </h2>
+
+
+
+
+
+                
+{% set data = [
+    {
+        icon: 'people',
+        text: 'Wszyscy, których chcesz spotkać w jednym miejscu'
+    },
+    {
+        icon: 'manager',
+        text: 'Roundtables i sesje consult the expert '
+    },
+    {
+        icon: 'business-people',
+        text: 'Dodatkowe spotkania dla kadry kierowniczej i specjalistycznej'
+    },
+    {
+        icon: 'drink',
+        text: 'Pre i after-party ze świetnymi drinkami ;)'
+    }] %}
+    {% for item in data %}
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-{{item.icon}}"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>{{item.text}}</p>
+                    </div>
+                </div>
+    {%endfor %}
+
+            </div>
+        </div>
+
+
+        <div class="row why4 mb-5">
+            <div class="col-2 col-md-3 text-right">
+                <img src="images/num-4.svg" class="img-fluid" width="97" alt="">
+            </div>
+            <div class="col-10 col-md-9">
+                <h2>
+                    Punkty do certyfikatów
+                </h2>
+
+                <p>Uczestnicząc w WTH otrzymasz <span class="text-primary">13 punktów</span> do następujących certyfikatów:</p>
+
+
+            <div class="row mb-4">
+                
+            
+{% set data = [
+    {
+        image: 'certyfikaty.svg'
+    }] %}
+
+    {% for item in data %}
+    <div class="col-12">
+        <img src="images/{{item.image}}" class="img-fluid w-100" alt="">            
+    </div>
+    {%endfor %}
+                </div>        
+            </div>
+        </div>
+
+
+    <div class="row why5 mb-5">
+            <div class="col-2 col-md-5 text-right">
+                <img src="images/num-5.svg" class="img-fluid" width="112" alt="">
+            </div>
+            <div class="col-10 col-md-7">
+                <h2>
+                    Giftbag i łatwość uczestnictwa
+                </h2>
+
+
+
+
+
+
+
+
+                
+{% set data = [
+    {
+        icon: 'briefcase',
+        text: 'Dla każdego giftbag z koszulką'
+    },
+    {
+        icon: 'clock-x',
+        text: 'Bardziej dogodny, sobotni termin'
+    },
+    {
+        icon: 'savings',
+        text: 'Przystępny koszt biletów'
+    },
+    {
+        icon: 'building',
+        text: 'Dostępna również opcja z noclegiem'
+    }] %}
+    {% for item in data %}
+                <div class="row ">
+                    <div class="col-auto">
+                        <i class="wth-{{item.icon}}"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>{{item.text}}</p>
+                    </div>
+                </div>
+    {%endfor %}
+
+            </div>
+        </div>
+
+
+
+        <div class="row why6">
+            <div class="col-2 text-right">
+                <img src="images/num-6.svg" class="img-fluid" width="112" alt="">
+            </div>
+            <div class="col-10">
+                <h2 class="mb-5">
+                    Wydarzenie polecają m.in.:
+                </h2>
+
+
+
+
+
+
+
+
+                
+{% set data = [
+    {image:'partnerzy/wcwat.svg',width:'360'},
+    {image:'partnerzy/pwweiti.svg',width:'285'},
+    {image:'partnerzy/isaca.svg',width:'130'},
+    {image:'partnerzy/issa.svg',width:'153'},
+    {image:'partnerzy/owasp.svg',width:'153'},
+    {image:'partnerzy/pti.svg',width:'180'},
+    {image:'partnerzy/piit.svg',width:'125'},
+    {image:'partnerzy/zbp.svg',width:'183'},
+    {image:'partnerzy/zts.svg',width:'143'},
+    {image:'partnerzy/niebezpiecznik.svg',width:'78'},
+    {image:'partnerzy/sekurak.svg',width:'94'}
+    ] %}
+
+    <div class="row justify-content-between">
+    {% for item in data %}
+    <div class="col-6 col-md-auto mx-md-2 mb-5 d-flex align-items-center justify-content-center">
+        <img src="images/{{item.image}}" class="img-fluid" width="{{item.width}}" alt="">            
+    </div>
+    {%endfor %}
+
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+
+
+</section>

@@ -1,0 +1,41 @@
+{% extends '_layouts/base.nunjucks' %}
+
+{% block content %}
+
+{% include '_partials/sections/header.nunjucks' %}
+
+{% include '_partials/sections/about.nunjucks' %}
+
+{% include '_partials/sections/why.nunjucks' %}
+
+{% include '_partials/sections/subjects.nunjucks' %}
+
+{% include '_partials/sections/prelegenci.nunjucks' %}
+
+{% include '_partials/sections/agenda.nunjucks' %}
+
+{% include '_partials/sections/imprezy.nunjucks' %}
+
+{% include '_partials/sections/konkursy.nunjucks' %}
+
+{% include '_partials/sections/sponsorzy.nunjucks' %}
+
+{% include '_partials/sections/partnerzy.nunjucks' %}
+
+{% include '_partials/sections/testimonials.nunjucks' %}
+
+{% include '_partials/sections/rada.nunjucks' %}
+
+{% include '_partials/sections/social.nunjucks' %}
+
+{% include '_partials/sections/miejsce.nunjucks' %}
+
+{% include '_partials/sections/organizatorzy.nunjucks' %}
+
+{% include '_partials/sections/patroni.nunjucks' %}
+
+{% include '_partials/sections/footer.nunjucks' %}
+
+{% include '_partials/sections/modale.nunjucks' %}
+
+{% endblock %}

@@ -1,0 +1,28 @@
+<section class="site-section">
+	<p class="wdi-title">Login</p>
+	<div class="wdi-box wdi-box--small wdi-box--purple">
+		<img class="wdi-box__robot" src="images/robot.svg" alt="Robot">
+		<form class="wdi-form wdi-form--login" name="usrForm">
+			<div class="wdi-form__group">
+				<span class="wdi-form__label">Email</span>
+				<input class="wdi-form__input" type="email" placeholder="Email" data-ng-model="loginData.email" required autofocus>
+			</div>
+			<div ng-if="loading">
+				<img src="images/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+			</div>
+			<div data-ng-hide="infoMessage == ''">
+				{{infoMessage}}
+			</div>
+			<div data-ng-hide="message == ''">
+				{{message}}
+			</div>
+			<div class="wdi-form__buttons-container wdi-form__buttons-container--centered">
+				<button class="wdi-button wdi-button--big" ng-model="loading" ng-disabled="loading" data-ng-click="usrForm.$valid && resetPassword()">
+					<span class="wdi-button__text">Reset your password</span>
+					<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+				</button>
+				<a class="wdi-form__link" href="#" data-ng-click="$event.preventDefault();redirectToLogin();">Return without reseting password</a>
+			</div>
+		</form>
+	</div>
+</section>

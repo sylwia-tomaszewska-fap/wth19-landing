@@ -1,0 +1,938 @@
+<script src="js/route.min.js" async></script>
+<form name="registerForm">
+	<section class="register-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-6">
+					<h1>Rejestracja</h1>
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="register-header-steps">
+						<h3>Krok</h3>
+						<div class="register-header-steps-container">
+							<div class="register-header-steps-item active">
+								<span>1</span>
+								<svg class="cube">
+									<use xlink:href="#cube"></use>
+								</svg>
+							</div>
+							<div class="register-header-steps-item">
+								<span>2</span>
+								<svg class="cube">
+									<use xlink:href="#cube"></use>
+								</svg>
+							</div>
+							<div class="register-header-steps-item">
+								<span>3</span>
+								<svg class="cube">
+									<use xlink:href="#cube"></use>
+								</svg>
+							</div>
+							<div class="register-header-steps-item">
+								<span>4</span>
+								<svg class="cube">
+									<use xlink:href="#cube"></use>
+								</svg>
+							</div>
+							<div class="register-header-steps-item">
+								<span>5</span>
+								<svg class="cube">
+									<use xlink:href="#cube"></use>
+								</svg>
+							</div>
+							<div class="register-header-steps-item">
+								<span>6</span>
+								<svg class="cube">
+									<use xlink:href="#cube"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="options-choice">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="options-choice-header">
+						<h3>
+							<em class="hash">#</em>
+							<span>Wybierz najlepszy dla Ciebie pakiet:</span>
+						</h3>
+						<h5>Chcesz zamówić więcej niż jeden pakiet? <a href="#" data-ng-click='$event.preventDefault();redirectToBuyMore()'>Zapraszamy tutaj&gt;</a></h5>
+						<!--a href="#" data-ng-click='$event.preventDefault()' data-toggle="modal" data-target="#options-choice-modal">Pokaż porównanie pakietów</a-->
+					</div>
+				</div>
+			</div>
+			<div class="row choice-container">
+				<div class="col-12 col-sm-6 col-lg-4">
+					<div class="choice-item choice-item-black js-choice-item">
+						<div class="choice-item-flipper">
+							<div class="choice-item-front">
+								<div class="choice-item-overlay" ng-if="userChoice.selected == 'STD' || userChoice.selected == 'STDSTU'">
+									<svg class="choice-item-check">
+										<use xlink:href="#choice-item-check"></use>
+									</svg>
+									<h6>Wybrano</h6>
+								</div>
+								<div class="choice-item-top-line"></div>
+								<div class="choice-item-content">
+									<svg class="ticket">
+										<use xlink:href="#ticket"></use>
+									</svg>
+									<h4>Standard</h4>
+									<p>Uczestnictwo w całym wydarzeniu <br />(konferencja i targi)<br /> o podstawowym komforcie</p>
+									<div class="choice-item-content-checkbox">
+										<input name="pakiet" data-ng-model="userChoice.selected" value="STD" required type="radio" id="standard-normalny-1" />
+										<label for="standard-normalny-1">
+											<span class="checkbox-img">
+												<span class="unchecked">
+													<svg class="checkbox-icon">
+														<use xlink:href="#radio-3-unchecked"></use>
+													</svg>
+												</span>
+												<span class="checked">
+													<svg class="checkbox-icon">
+														<use xlink:href="#radio-3-checked"></use>
+													</svg>
+												</span>
+											</span>
+											<span class="checkbox-desc">
+												<small>Normalny - </small>
+												<strong>{{packages['STD']}}</strong>
+												<small> zł</small>
+											</span>
+										</label>
+									</div>
+									<div class="choice-item-content-checkbox">
+										<input name="pakiet" data-ng-model="userChoice.selected" value="STDSTU" required type="radio" id="standard-student-2" />
+										<label for="standard-student-2">
+											<span class="checkbox-img">
+												<span class="unchecked">
+													<svg class="checkbox-icon">
+														<use xlink:href="#radio-3-unchecked"></use>
+													</svg>
+												</span>
+												<span class="checked">
+													<svg class="checkbox-icon">
+														<use xlink:href="#radio-3-checked"></use>
+													</svg>
+												</span>
+											</span>
+											<span class="checkbox-desc">
+												<small>Studencki - </small>
+												<strong>{{packages['STDSTU']}}</strong>
+												<small> zł</small>
+											</span>
+										</label>
+									</div>
+									<p><small><svg class="icon">
+										<use xlink:href="#exclamation-2"></use>
+									</svg>cena obowiązuje do 30/05 lub do wyczerpania puli</small></p>
+								</div>
+								<!--<input name="pakiet" hidden data-ng-model="userChoice.selected" value="STD" required type="radio" id="STD" />-->
+								<button class="btn btn-ticket" data-ng-click='checkPackage("STDXX")'>
+									<span>{{ userChoice.selected == 'STD' || userChoice.selected == 'STDSTU' ? "Usuń wybór" : "Wybierz bilet" }}</span>
+									<svg class="arrow">
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</button>
+								<a href="#" data-ng-click='$event.preventDefault();' class="choice-item-show-details js-choice-item-details-link">pokaż szczegóły &gt;</a>
+							</div>
+							<div class="choice-item-back">
+								<div class="choice-item-overlay" ng-if="userChoice.selected == 'STD' || userChoice.selected == 'STDSTU'">
+									<svg class="choice-item-check">
+										<use xlink:href="#choice-item-check"></use>
+									</svg>
+									<h6>Wybrano</h6>
+								</div>
+								<div class="choice-item-top-line"></div>
+								<div class="choice-item-content">
+									<div class="choice-item-list">
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#time"></use>
+											</svg>
+											<span>Cena obowiązuje do 30/05 lub do wyczerpania puli </span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#globe"></use>
+											</svg>
+											<span>Uczestnictwo w konferencji, o podstawowym komforcie (ważne: obowiązuje rezerwacja miejsc - krok 2 rejestracji)</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#booth"></use>
+											</svg>
+											<span>Uczestnictwo w Targach Data Science </span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#party-2"></use>
+											</svg>
+											<span>Uczestnictwo w preparty i afterparty</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#cup-2"></use>
+											</svg>
+											<span>Uczestnictwo w konkursach i dodatkowych atrakcjach</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#shirt"></use>
+											</svg>
+											<span>Giftbag z koszulką wydarzenia	</span>
+										</div>
+
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#exclamation-2"></use>
+											</svg>
+											<span class="small"><small>W przypadku Biletów Studenckich - zakup możliwy jedynie pod warunkiem posiadania ważnej legitymacji. Zakup może być dokonany przez osobę fizyczną nie prowadzącą działalności gospodarczej.</small></span>
+										</div>
+
+										<a href="#" data-ng-click='$event.preventDefault()' data-toggle="modal" data-target="#options-choice-modal">Sprawdź porównanie pakietów &gt;</a>
+									</div>
+								</div>
+								<button class="btn btn-ticket" data-ng-click='checkPackage("STDXX")'>
+									<span>{{ userChoice.selected == 'STD' || userChoice.selected == 'STDSTU' ? "Usuń wybór" : "Wybierz bilet" }}</span>
+									<svg class="arrow">
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</button>
+								<a href="#" data-ng-click='$event.preventDefault();' class="choice-item-show-details js-choice-item-details-hide-link">ukryj szczegóły &gt;</a>
+							</div>
+						</div>
+					</div>
+				</div>
+                <div class="col-12 col-sm-6 col-lg-4">
+					<div class="choice-item js-choice-item">
+						<div class="choice-item-flipper">
+							<div class="choice-item-front">
+								<div class="choice-item-overlay" ng-if="userChoice.selected == 'GPIT'">
+									<svg class="choice-item-check">
+										<use xlink:href="#choice-item-check"></use>
+									</svg>
+									<h6>Wybrano</h6>
+								</div>
+								<div class="choice-item-top-line"></div>
+								<div class="choice-item-content">
+									<img src="images/logo-targi-ds.svg" class="gielda-pracy" alt="">
+									<h4>Wstęp na <br />Targi Data Science</h4>
+									<p>Bezpłatne uczestnictwo <br />tylko w Targach Data Science (standach pracodawców i&nbsp;dostawców technologii i&nbsp;usług)</p>
+									<p class="price">
+										<strong>0</strong>
+										<small> zł</small>
+									</p>
+									<p><small><svg class="icon">
+										<use xlink:href="#exclamation"></use>
+									</svg>cena obowiązuje do 30/05 lub do wyczerpania puli</small></p>
+
+								</div>
+								<input name="pakiet" hidden data-ng-model="userChoice.selected" value="GPIT" required type="radio" id="GPIT" />
+								<button class="btn btn-ticket" data-ng-click='checkPackage("GPIT")'>
+									<span>{{ userChoice.selected == 'GPIT' ? "Usuń wybór" : "Wybierz bilet" }}</span>
+									<svg class="arrow">
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</button>
+								<a href="#" data-ng-click='$event.preventDefault();' class="choice-item-show-details js-choice-item-details-link">pokaż szczegóły &gt;</a>
+							</div>
+							<div class="choice-item-back">
+								<div class="choice-item-overlay" ng-if="userChoice.selected == 'GPIT'">
+									<svg class="choice-item-check">
+										<use xlink:href="#choice-item-check"></use>
+									</svg>
+									<h6>Wybrano</h6>
+								</div>
+								<div class="choice-item-top-line"></div>
+								<div class="choice-item-content">
+									<div class="choice-item-list">
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#booth-black"></use>
+											</svg>
+											<span>Uczestnictwo w Targach Data Science </span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#cv-black"></use>
+											</svg>
+											<span>Możliwość zostawienia CV wszystkim pracodawcom w ramach Targów Data Science</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#cup-2-black"></use>
+											</svg>
+											<span>Uczestnictwo w konkursach i dodatkowych atrakcjach</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#party-black"></use>
+											</svg>
+											<span>Uczestnictwo w preparty i afterparty</span>
+										</div>
+										<a href="#" data-ng-click='$event.preventDefault()' data-toggle="modal" data-target="#options-choice-modal">Sprawdź porównanie pakietów &gt;</a>
+									</div>
+								</div>
+								<button class="btn btn-ticket" data-ng-click='checkPackage("GPIT")'>
+									<span>{{ userChoice.selected == 'GPIT' ? "Usuń wybór" : "Wybierz bilet" }}</span>
+									<svg class="arrow">
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</button>
+								<a href="#" data-ng-click='$event.preventDefault();' class="choice-item-show-details js-choice-item-details-hide-link">ukryj szczegóły &gt;</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row choice-container">
+                <div class="col-12 col-sm-6 col-lg-4 justify-content-center justify-content-sm-end">
+					<div class="choice-item choice-item-pro-brown js-choice-item">
+						<div class="choice-item-flipper">
+							<div class="choice-item-front">
+								<div class="choice-item-overlay" ng-if="userChoice.selected == 'PRO'">
+									<svg class="choice-item-check">
+										<use xlink:href="#choice-item-check"></use>
+									</svg>
+									<h6>Wybrano</h6>
+								</div>
+								<div class="choice-item-top-line"></div>
+								<div class="choice-item-content">
+									<svg class="star">
+										<use xlink:href="#star"></use>
+									</svg>
+									<h4>Pro</h4>
+									<p>Uczestnictwo <br />o bardzo dobrym komforcie<br />+ dodatkowe elementy</p>
+									<!-- <div class="choice-item-content-checkbox">
+										<input name="pakiet" data-ng-model="userChoice.selected" value="PRO-BR-1" required type="radio" id="pro-brown-1" />
+										<label for="pro-brown-1">
+											<span class="checkbox-img">
+												<span class="unchecked">
+													<svg class="checkbox-icon">
+														<use xlink:href="#radio-unchecked"></use>
+													</svg>
+												</span>
+												<span class="checked">
+													<svg class="checkbox-icon">
+														<use xlink:href="#radio-checked"></use>
+													</svg>
+												</span>
+											</span>
+											<span class="checkbox-desc">
+												<small>1 dzień - </small>
+												<strong>{{packages['PRO-BR-1']}}</strong>
+												<small> zł</small>
+											</span>
+										</label>
+									</div> -->
+									<!-- <div class="choice-item-content-checkbox">
+										<input name="pakiet" data-ng-model="userChoice.selected" value="PRO-BR" required type="radio" id="pro-brown-2" />
+										<label for="pro-brown-2">
+											<span class="checkbox-img">
+												<span class="unchecked">
+													<svg class="checkbox-icon">
+														<use xlink:href="#radio-unchecked"></use>
+													</svg>
+												</span>
+												<span class="checked">
+													<svg class="checkbox-icon">
+														<use xlink:href="#radio-checked"></use>
+													</svg>
+												</span>
+											</span>
+											<span class="checkbox-desc">
+												<small>2 dni - </small>
+												<strong>{{packages['PRO-BR']}}</strong>
+												<small> zł</small>
+											</span>
+										</label>
+									</div> -->
+									<p class="price">
+										<strong>{{packages['PRO']}}</strong>
+										<small> zł</small>
+									</p>
+									<p><small><svg class="icon">
+										<use xlink:href="#exclamation-3"></use>
+									</svg>cena obowiązuje do 30/05 lub do wyczerpania puli</small></p>
+								</div>
+								<input name="pakiet" hidden data-ng-model="userChoice.selected" value="PRO" required type="radio" id="pro-brown-2" />
+								<button class="btn btn-ticket btn-ticket-white" data-ng-click='checkPackage("PRO")'>
+									<span>{{ userChoice.selected == 'PRO' ? "Usuń wybór" : "Wybierz bilet" }}</span>
+									<svg class="arrow">
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</button>
+								<a href="#" data-ng-click='$event.preventDefault();' class="choice-item-show-details js-choice-item-details-link">pokaż szczegóły &gt;</a>
+							</div>
+							<div class="choice-item-back">
+								<div class="choice-item-overlay" ng-if="userChoice.selected == 'PRO'">
+									<svg class="choice-item-check">
+										<use xlink:href="#choice-item-check"></use>
+									</svg>
+									<h6>Wybrano</h6>
+								</div>
+								<div class="choice-item-top-line"></div>
+								<div class="choice-item-content">
+									<div class="choice-item-list">
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#exclamation-3"></use>
+											</svg>
+											<span>Cena obowiązuje do 30/05 lub do wyczerpania puli </span>
+										</div>
+										<div class="choice-item-list-item">
+											<span>Wszystko, co w bilecie STANDARD, dodatkowo:</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#cinema"></use>
+											</svg>
+											<span>Możliwość wyboru prelekcji, na które skończyły się bilety Standard</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#comfort"></use>
+											</svg>
+											<span>Komfortowy udział w konferencji</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#seat-green"></use>
+											</svg>
+											<span>Dostęp do najlepszych i najwygodniejszych miejsc w salach konferencyjnych</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#podcast-green"></use>
+											</svg>
+											<span>Dostęp do podcastów z wystąpień na 3 największych ścieżkach</span>
+										</div>
+
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#star-2"></use>
+											</svg>
+											<span>Dostęp do zamkniętej Strefy VIP</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#run"></use>
+											</svg>
+											<span>Możliwość ominięcia wszystkich kolejek</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#lunch"></use>
+											</svg>
+											<span>Pełny lunch z cateringu</span>
+										</div>
+										<a href="#" data-ng-click='$event.preventDefault()' class="white-link" data-toggle="modal" data-target="#options-choice-modal">Sprawdź porównanie pakietów &gt;</a>
+									</div>
+								</div>
+								<button class="btn btn-ticket btn-ticket-white" data-ng-click='checkPackage("PRO")'>
+									<span>{{ userChoice.selected == 'PRO' ? "Usuń wybór" : "Wybierz bilet" }}</span>
+									<svg class="arrow">
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</button>
+								<a href="#" data-ng-click='$event.preventDefault();' class="choice-item-show-details js-choice-item-details-hide-link">ukryj szczegóły &gt;</a>
+							</div>
+						</div>
+					</div>
+				</div>
+                <div class="col-12 col-sm-6 col-lg-4">
+					<div class="choice-item choice-item-pro-silver js-choice-item">
+						<div class="choice-item-flipper">
+							<div class="choice-item-front">
+								<div class="choice-item-overlay" ng-if="userChoice.selected == 'VIP'">
+									<svg class="choice-item-check">
+										<use xlink:href="#choice-item-check"></use>
+									</svg>
+									<h6>Wybrano</h6>
+								</div>
+								<div class="choice-item-top-line"></div>
+								<div class="choice-item-content">
+									<svg class="cup">
+										<use xlink:href="#cup"></use>
+									</svg>
+									<h4>VIP</h4>
+									<p>Uczestnictwo <br />o najwyższym komforcie,<br /> + dodatkowe elementy</p>
+									<!-- <div class="choice-item-content-checkbox">
+										<input name="pakiet" data-ng-model="userChoice.selected" value="PRO-SR-1" required type="radio" id="pro-silver-1" />
+										<label for="pro-silver-1">
+											<span class="checkbox-img">
+												<span class="unchecked">
+													<svg class="checkbox-icon">
+														<use xlink:href="#radio-2-unchecked"></use>
+													</svg>
+												</span>
+												<span class="checked">
+													<svg class="checkbox-icon">
+														<use xlink:href="#radio-2-checked"></use>
+													</svg>
+												</span>
+											</span>
+											<span class="checkbox-desc">
+												<small>1 dzień - </small>
+												<strong>{{packages['PRO-SR-1']}}</strong>
+												<small> zł</small>
+											</span>
+										</label>
+									</div> -->
+									<!-- <div class="choice-item-content-checkbox">
+										<input name="pakiet" data-ng-model="userChoice.selected" value="PRO-SR" required type="radio" id="pro-silver-2" />
+										<label for="pro-silver-2">
+											<span class="checkbox-img">
+												<span class="unchecked">
+													<svg class="checkbox-icon">
+														<use xlink:href="#radio-2-unchecked"></use>
+													</svg>
+												</span>
+												<span class="checked">
+													<svg class="checkbox-icon">
+														<use xlink:href="#radio-2-checked"></use>
+													</svg>
+												</span>
+											</span>
+											<span class="checkbox-desc">
+												<small>2 dni - </small>
+												<strong>{{packages['PRO-SR']}}</strong>
+												<small> zł</small>
+											</span>
+										</label>
+									</div> -->
+									<p class="price">
+										<strong>{{packages['VIP']}}</strong>
+										<small> zł</small>
+									</p>
+									<p><small><svg class="icon">
+										<use xlink:href="#exclamation-5"></use>
+									</svg>cena obowiązuje do 30/05 lub do wyczerpania puli</small></p>
+								</div>
+								<input name="pakiet" hidden data-ng-model="userChoice.selected" value="VIP" required type="radio" id="pro-silver-2" />
+								<button class="btn btn-ticket btn-ticket-white" data-ng-click='checkPackage("VIP")'>
+									<span>{{ userChoice.selected == 'VIP' ? "Usuń wybór" : "Wybierz bilet" }}</span>
+									<svg class="arrow">
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</button>
+								<a href="#" data-ng-click='$event.preventDefault();' class="choice-item-show-details js-choice-item-details-link">pokaż szczegóły &gt;</a>
+							</div>
+							<div class="choice-item-back">
+								<div class="choice-item-overlay" ng-if="userChoice.selected == 'VIP'">
+									<svg class="choice-item-check">
+										<use xlink:href="#choice-item-check"></use>
+									</svg>
+									<h6>Wybrano</h6>
+								</div>
+								<div class="choice-item-top-line"></div>
+								<div class="choice-item-content">
+									<div class="choice-item-list">
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#exclamation-5"></use>
+											</svg>
+											<span>Cena obowiązuje do 30/05 lub do wyczerpania puli </span>
+										</div>
+
+										<div class="choice-item-list-item">
+											<span>Wszystko, co w bilecie PRO, dodatkowo:</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#parking"></use>
+											</svg>
+											<span>Miejsce parkingowe</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#party"></use>
+											</svg>
+											<span>3 koktajle podczas afterparty</span>
+										</div>
+										<a href="#" class="white-link" data-ng-click='$event.preventDefault()' data-toggle="modal" data-target="#options-choice-modal">Sprawdź porównanie pakietów &gt;</a>
+									</div>
+								</div>
+								<button class="btn btn-ticket btn-ticket-white" data-ng-click='checkPackage("VIP")'>
+									<span>{{ userChoice.selected == 'VIP' ? "Usuń wybór" : "Wybierz bilet" }}</span>
+									<svg class="arrow">
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</button>
+								<a href="#" data-ng-click='$event.preventDefault();' class="choice-item-show-details js-choice-item-details-hide-link">ukryj szczegóły &gt;</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-4 justify-content-center justify-content-sm-start">
+					<div class="choice-item choice-item-support-organization js-choice-item">
+						<div class="choice-item-flipper">
+							<div class="choice-item-front">
+								<div class="choice-item-overlay" ng-if="userChoice.selected == 'ORG'">
+									<svg class="choice-item-check">
+										<use xlink:href="#choice-item-check"></use>
+									</svg>
+									<h6>Wybrano</h6>
+								</div>
+								<div class="choice-item-top-line"></div>
+								<div class="choice-item-content">
+									<svg class="supporting-organization">
+										<use xlink:href="#supporting-organization"></use>
+									</svg>
+									<h4>Organizacja <br />wspierająca</h4>
+									<p>Zostań Partnerem wydarzenia <br />+ otrzymaj 1 bilet<br />VIP<br />  </p>
+									<p class="price">
+										<strong>{{getOrgPrice(packages['ORG'])}}</strong>
+										<small> zł</small>
+									</p>
+									<p><small><svg class="icon">
+										<use xlink:href="#exclamation-4"></use>
+									</svg>cena obowiązuje do 30/05 lub do wyczerpania puli</small></p>
+								</div>
+								<input name="pakiet" hidden data-ng-model="userChoice.selected" value="ORG" required type="radio" id="ORG" />
+								<button class="btn btn-ticket btn-ticket-white" data-ng-click='checkPackage("ORG")'>
+									<span>{{ userChoice.selected == 'ORG' ? "Usuń wybór" : "Wybierz bilet" }}</span>
+									<svg class="arrow">
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</button>
+								<a href="#" data-ng-click='$event.preventDefault();' class="choice-item-show-details js-choice-item-details-link">pokaż szczegóły &gt;</a>
+							</div>
+							<div class="choice-item-back">
+								<div class="choice-item-overlay" ng-if="userChoice.selected == 'ORG'">
+									<svg class="choice-item-check">
+										<use xlink:href="#choice-item-check"></use>
+									</svg>
+									<h6>Wybrano</h6>
+								</div>
+								<div class="choice-item-top-line"></div>
+								<div class="choice-item-content">
+									<div class="choice-item-list">
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#exclamation-4"></use>
+											</svg>
+											<span>Cena obowiązuje do 30/05 lub do wyczerpania puli </span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#ticket-2"></use>
+											</svg>
+											<span>1 wejściówka typu VIP</span>
+										</div>
+										<div class="choice-item-list-item">
+											<span>Pakiet Partnera DSS 2019, w tym:</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#www"></use>
+											</svg>
+											<span>Umieszczenie logotypu organizacji na stronie wydarzenia</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#business-card"></use>
+											</svg>
+											<span>Umieszczenie wizytówki organizacji na stronie wydarzenia</span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#id"></use>
+											</svg>
+											<span>Umieszczenie logotypu organizacji na identyfikatorach uczestników </span>
+										</div>
+										<div class="choice-item-list-item">
+											<svg class="icon">
+												<use xlink:href="#rollup"></use>
+											</svg>
+											<span>Umieszczenie logotypu organizacji na rollupach Partnerów </span>
+										</div>
+										<a href="#" data-ng-click='$event.preventDefault()' data-toggle="modal" data-target="#options-choice-modal">Sprawdź porównanie pakietów &gt;</a>
+									</div>
+								</div>
+								<button class="btn btn-ticket btn-ticket-white" data-ng-click='checkPackage("ORG")'>
+									<span>{{ userChoice.selected == 'ORG' ? "Usuń wybór" : "Wybierz bilet" }}</span>
+									<svg class="arrow">
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</button>
+								<a href="#" data-ng-click='$event.preventDefault();' class="choice-item-show-details js-choice-item-details-hide-link">ukryj szczegóły &gt;</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="workshops additional-options" ng-if="userChoice.selected != 'GPIT'">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h3>
+						<em class="hash">#</em>
+						<span>Uzupełnij pakiet opcjami dodatkowymi:</span>
+					</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="workshops-content">
+						<div class="workshop-item">
+							<div class="workshop-item-content">
+								<input id="opc1" hidden type="checkbox" checklist-model="agenda.selectedOptionalPkg" value="OPC1">
+								<div class="workshop-item-content-img">
+									<div class="workshop-item-content-img-container">
+										<img src="images/reg/premier-classe.png" alt="">
+									</div>
+								</div>
+								<div class="workshop-item-content-text">
+									<h6>Nocleg w Hotelu Premierre Classe</h6>
+									<p>pokój Standard 1/2 os. - noc z 13/06 na 14/06</p>
+									<p>
+										<a href="https://www.premiereclasse.com/pl/hotels/premiere-classe-varsovie-warszawa" target="_blank" rel="noopener">Opis standardu</a>
+									</p>
+								</div>
+								<div class="workshop-item-content-price">
+									<h4>
+										<span>{{packagesOptional['OPC1']}}</span>
+										<small>ZŁ/OS.</small>
+									</h4>
+									<button class="btn btn-workshop" ng-class="{'btn-remove': isCheckedPackageOpt('OPC1')}" data-ng-click='checkPackageOpt("OPC1")'>
+										<span>{{ !isCheckedPackageOpt("OPC1") ? "Dodaj do pakietu" : "Usuń z pakietu" }}</span>
+										<svg class="arrow">
+											<use xlink:href="#arrow"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="workshop-item">
+							<div class="workshop-item-content">
+								<div class="workshop-item-content-img">
+									<div class="workshop-item-content-img-container">
+										<input id="opc2" type="checkbox" checklist-model="agenda.selectedOptionalPkg" value="OPC2">
+										<img src="images/reg/premier-classe.png" alt="">
+									</div>
+								</div>
+								<div class="workshop-item-content-text">
+									<h6>Nocleg w Hotelu Premierre Classe</h6>
+									<p>pokój Standard 1/2 os. - noc z 14/06 na 15/06</p>
+									<p>
+										<a href="https://www.premiereclasse.com/pl/hotels/premiere-classe-varsovie-warszawa" target="_blank" rel="noopener">Opis standardu</a>
+									</p>
+								</div>
+								<div class="workshop-item-content-price">
+									<h4>
+										<span>{{packagesOptional['OPC2']}}</span>
+										<small>ZŁ/OS.</small>
+									</h4>
+									<button class="btn btn-workshop" ng-class="{'btn-remove': isCheckedPackageOpt('OPC2')}" data-ng-click='checkPackageOpt("OPC2")'>
+										<span>{{ !isCheckedPackageOpt("OPC2") ? "Dodaj do pakietu" : "Usuń z pakietu" }}</span>
+										<svg class="arrow">
+											<use xlink:href="#arrow"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="workshop-item">
+							<div class="workshop-item-content">
+								<div class="workshop-item-content-img">
+									<div class="workshop-item-content-img-container">
+										<input id="opc3" type="checkbox" checklist-model="agenda.selectedOptionalPkg" value="OPC3">
+										<img src="images/reg/puro2.jpg" alt="">
+									</div>
+								</div>
+								<div class="workshop-item-content-text">
+									<h6>Nocleg w Hotelu Puro Warszawa Centrum</h6>
+									<p>pokój Standard 1/2 os. - noc z 13/06 na 14/06</p>
+									<p>
+										<a href="https://purohotel.pl/pl/warszawa" target="_blank" rel="noopener">Opis standardu</a>
+									</p>
+								</div>
+								<div class="workshop-item-content-price">
+									<h4>
+										<span>{{packagesOptional['OPC3']}}</span>
+										<small>ZŁ/OS.</small>
+									</h4>
+									<button class="btn btn-workshop" ng-class="{'btn-remove': isCheckedPackageOpt('OPC3')}" data-ng-click='checkPackageOpt("OPC3")'>
+										<span>{{ !isCheckedPackageOpt("OPC3") ? "Dodaj do pakietu" : "Usuń z pakietu" }}</span>
+										<svg class="arrow">
+											<use xlink:href="#arrow"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="workshop-item">
+							<div class="workshop-item-content">
+								<div class="workshop-item-content-img">
+									<div class="workshop-item-content-img-container">
+										<input id="opc4" type="checkbox" checklist-model="agenda.selectedOptionalPkg" value="OPC4">
+										<img src="images/reg/puro2.jpg" alt="">
+									</div>
+								</div>
+								<div class="workshop-item-content-text">
+									<h6>Nocleg w Hotelu Puro Warszawa Centrum</h6>
+									<p>pokój Standard 1/2 os. - noc z 14/06 na 15/06</p>
+									<p>
+										<a href="https://purohotel.pl/pl/warszawa" target="_blank" rel="noopener">Opis standardu</a>
+									</p>
+								</div>
+								<div class="workshop-item-content-price">
+									<h4>
+										<span>{{packagesOptional['OPC4']}}</span>
+										<small>ZŁ/OS.</small>
+									</h4>
+									<button class="btn btn-workshop" ng-class="{'btn-remove': isCheckedPackageOpt('OPC4')}" data-ng-click='checkPackageOpt("OPC4")'>
+										<span>{{ !isCheckedPackageOpt("OPC4") ? "Dodaj do pakietu" : "Usuń z pakietu" }}</span>
+										<svg class="arrow">
+											<use xlink:href="#arrow"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="workshops discount-code" ng-if="userChoice.selected != 'GPIT'">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h3>
+						<em class="hash">#</em>
+						<span>Posiadasz kod rabatowy - wpisz go tutaj:</span>
+					</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="workshops-content">
+						<form name="couponForm">
+							<input type="text" name="discount-code" class="input-discount-code" maxlength="30" placeholder="––––––––––––"  data-ng-model="userChoice.couponCode">
+							<div ng-show="loading">
+								<img src="images/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+							</div>
+							<p data-ng-hide="message == ''" ng-class="{'error': message_type == 'error', 'success': message_type == 'success'}">{{message}}</p>
+							<button type="submit" class="btn btn-discount-code" ng-model="loading" ng-disabled="loading" data-ng-click="$event.preventDefault();applyCoupon()">
+								<span>Zastosuj</span>
+								<svg class="arrow">
+									<use xlink:href="#arrow"></use>
+								</svg>
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="register-summary" ng-if="userChoice.selected != 'GPIT'"> <!-- && userChoice.selected != 'STD'"> -->
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h3>
+						<em class="hash">#</em>
+						<span>Podsumowanie</span>
+					</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="box-3d">
+						<div class="box-3d-content">
+							<table>
+								<tr ng-if="userChoice.selected != '' && userChoice.selected != null">
+									<td>{{packageNames[userChoice.selected]}}</td>
+									<td>{{packagesOrg[userChoice.selected] | currency : ''}} zł</td>
+								</tr>
+								<tr ng-repeat="d in agenda.selectedOptionalPkg">
+									<td>{{packageNamesOptional[d]}}</td>
+									<td>{{packagesOptional[d] | currency : ''}} zł</td>
+								</tr>
+								<tr class="spacer">
+									<td colspan="2">
+										<div class="spacer-line"></div>
+									</td>
+								</tr>
+								<tr ng-if="agenda.couponCode != null && userChoice.selected != 'GPIT' && userChoice.selected != 'STD'">
+									<td>Rabat [użyty kod: {{agenda.couponCode}}]</td>
+									<td> {{getDiscount() | currency : ''}} zł</td>
+								</tr>
+								<tr class="spacer">
+									<td colspan="2">
+										<div class="spacer-line"></div>
+									</td>
+								</tr>
+								<tr class="dark">
+									<td>Razem do zapłaty</td>
+									<td>{{getTotalGross() | currency : ''}} zł</td>
+								</tr>
+								<tr ng-if="userChoice.selected != 'GPIT' && userChoice.selected != 'STDSTU'">
+									<td>Tytuł na dokumencie sprzedaży: Udział w Konferencji Data Science Summit 2019
+									</td><td></td>
+								</tr>
+							</table>
+						</div>
+						<div class="box-3d-shadow-border"></div>
+						<div class="box-3d-decor-line"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="box-3d errors" data-ng-hide="pkgMessage == ''">
+		<div class="box-3d-content">
+			<p>
+				<svg class="icon">
+					<use xlink:href="#exclamation-2"></use>
+					</svg>
+				<strong>{{pkgMessage}}</strong>
+			</p>
+		</div>
+		<div class="box-3d-shadow-border"></div>
+		<div class="box-3d-decor-line"></div>
+	</div>
+
+	<section class="next-step">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<button type="submit" class="btn btn-next-step" ng-model="loading" ng-disabled="loading" data-ng-click="redirectToNextStepVIP()"><!--data-ng-click="registerForm.$valid && redirectToNextStepVIP()">-->
+						<span>Przejdź dalej</span>
+						<svg class="arrow">
+							<use xlink:href="#arrow"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+</form>
+<div class="modal fade options-choice-modal" id="options-choice-modal" tabindex="-1" role="dialog" aria-labelledby="options-choice-modal" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<svg class="modal-close-icon">
+						<use xlink:href="#close-4"></use>
+					</svg>
+				</button>
+				<div class="options-choice-modal-content">
+					<div class="options-choice-modal-content-img">
+						<img src="./images/compare-options.svg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

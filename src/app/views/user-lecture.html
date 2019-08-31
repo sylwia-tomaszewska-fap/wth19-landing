@@ -1,0 +1,173 @@
+﻿<!-- intro -->
+<section id="start" class="section section--konto">
+	<!-- container -->
+	<div class="container container--wrapper">
+		<div class="top">
+			<div class="top__reg">@konto użytkownika</div>
+		</div>
+	</div>
+	<!-- /container -->
+</section>
+<!-- /intro -->
+
+<!-- otargach -->
+<section id="otargach" class="section section--agenda">
+	<form role="form" name="agendaForm" class="form-horizontal">
+		<!-- container -->
+		<div class="container container--wrapper">
+			<div class="userData">
+				<div class="userData__visible">
+					<div class="sectionBar">
+						<p class="sectionBar__title">What the h<span>@</span>ck - Agenda</p>
+						<a href="#" data-ng-click="$event.preventDefault();" class="sectionBar__close">
+							<img class="sectionBar__close__image" src="src/img/close-white.png" alt="">
+						</a>
+					</div>
+					<div class="userData__wrapper">
+						<div class="section__title">Wybierz w czym planujesz <span>wziąć udział</span></div>
+							<div id="agenda" style="background: transparent;padding-top: 1rem;">
+								<div id="agenda-tematyczna">
+									<div ng-repeat="d in prelekcje">
+										<!-- Day -->
+										<div ng-repeat="p in d.categories">
+											<!-- Categories -->
+											<a class="theme__container" data-ng-click='$event.preventDefault();' data-toggle="collapse" href="#{{d.calendarCode}}-{{p.objectId}}" role="button" aria-expanded="true" aria-controls="#{{d.calendarCode}}-{{p.objectId}}">
+												<div class="theme">
+													<div class="landscape" style="background-image: url({{p.categoryIcon}})"></div>
+													<div class="title">{{p.categoryName}}</div>
+													<div class="chevron"></div>
+												</div>
+											</a>
+											<div class="hourslist collapse show" id="{{d.calendarCode}}-{{p.objectId}}">
+												<div class="hourslist__item" ng-repeat="ps in p.lectures">
+													<div id="bar-{{ps.objectId}}">
+
+														<div class="hourslist__item__header" data-toggle="collapse" href="#{{ps.objectId}}" role="button" aria-expanded="false" aria-controls="#{{ps.objectId}}">
+
+															<div class="agenda__input__fill" ng-click="$event.stopPropagation();">
+																<div class="checkbox" ng-if="ps.isRegistered == true || (ps.allowRegister == true && (ps.maxCount == 0 || (ps.maxCount > 0 && ps.count<ps.maxCount) || (isPackageHasVipPlaces && ps.maxCountVIP > 0 && ps.countVIP<ps.maxCountVIP)))">
+																	<input class="styled-checkbox" type="checkbox" checklist-model="agenda.selected" checklist-value="ps.objectId" id="check{{ps.objectId}}">
+																	<label for="check{{ps.objectId}}"></label>
+																</div>
+															</div>
+
+															<div class="time"><span>{{ps.startDate}}</span><span> - </span><span>{{ps.endDate}}</span></div>
+                                                            <div class="name">
+                                                                <span class="noplace" ng-if="ps.status == 2">Brak miejsc</span>
+                                                                <span class="noplace" ng-if="ps.status == 1">Ostatnie miejsca</span>
+                                                                <span class="novip" ng-if="ps.statusVIP == 2">Brak miejsc VIP</span>
+                                                                <span class="novip" ng-if="ps.statusVIP == 1">Ostatnie miejsca VIP</span>
+                                                                {{ps.subject}}
+
+                                                                <div class="stars rating{{ps.difficultyLevel}}" ng-if="ps.difficultyLevel"><i></i><i></i><i></i></div>
+
+                                                                <p ng-repeat="plg in ps.lecturers">
+                                                                    <span class="p-name">{{plg.firstName}} {{plg.lastName}}</span><span ng-if="((plg.firstName || plg.lastName) && (plg.jobPosition || plg.organization))">, </span> {{plg.jobPosition}}
+                                                                    <span ng-if="plg.jobPosition && plg.organization">, </span>{{plg.organization}}
+                                                                </p>
+
+                                                            </div>
+															<div class="chevron"></div>
+														</div>
+													</div>
+													<div class="details collapse" id="{{ps.objectId}}">
+														<div class="details__body" ng-show='{{ps.subject != "Obiad"}}'>
+															<div class="person">
+																<div ng-repeat="plg in ps.lecturers" data-toggle="modal" data-target="#speaker-modal" ng-click="changePrelegent(plg)">
+																	<div class="photo">
+																		<img src="{{plg.imageUrl!=null ? plg.imageUrl : 'https://brandsome.it/content/img/brak_zdjecia.png'}}">
+																	</div>
+																	<div class="name">{{plg.firstName}} {{plg.lastName}}</div>
+																	<div class="function">{{plg.jobPosition}}<span ng-if="plg.jobPosition && plg.organization">, </span>{{plg.organization}}</div>
+																</div>
+															</div>
+
+															<div class="details__description">
+																<div class="details__description__header">
+																	Opis prezentacji
+																</div>
+																<div class="details__description__body">
+																	<p ng-bind-html="ps.shortDescription"></p>
+																	<div class="info">
+																		<p ng-if="ps.difficultyLevel"><span><strong>rekomendowany poziom wiedzy:</strong></span> <span class="stars rating{{ps.difficultyLevel}}"><i></i><i></i><i></i></span></p>
+																		<p><span><strong>język prezentacji:</strong></span> {{ps.isInEnglish?"angielski":"polski"}}</p>
+																		<p><span><strong>numer sali:</strong></span> {{ps.place}}</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container container--wrapper">
+			<div class="userData">
+				<div class="userData__visible">
+					<div class="sectionBar">
+						<p class="sectionBar__title">What the h<span>@</span>ck - Agenda</p>
+						<a href="#" data-ng-click="$event.preventDefault();" class="sectionBar__close">
+							<img class="sectionBar__close__image" src="src/img/close-white.png" alt="">
+						</a>
+					</div>
+					<div class="userData__wrapper">
+
+						<!-- BEGIN: SUMMARY -->
+
+						<div class="choosed" style="box-shadow: none;padding:0;border: 0;">
+							<p>Wybrane prezentacje</p>
+							<div class="choosed__element">
+								<!-- <div class="choosed__title">
+                                    <div class="agenda__heading">
+                                        <a href="#" class="agenda__single__link" >
+                                            <img class="agenda__icon" src="src/img/icon-agenda-w.png" alt="" />
+                                            <p class="agenda__single__title">Main Stage</p>
+                                            <div class="agenda__arrow" ></div>
+                                        </a>
+                                    </div>
+                                </div> -->
+								<div class="choosed__list">
+									<li class="agenda__line list__element" ng-repeat="ps in agenda.selected | orderBy : sortFnc">
+										<input class="agenda__checkbox" type="checkbox" checklist-model="agenda.selected" checklist-value="ps" id="checkLst{{ps}}">
+										<div class="agenda__hours">
+											<span>{{lectures[ps].startDate}} - {{lectures[ps].endDate}}</span>
+										</div>
+										<label for="checkLst{{ps}}" class="agenda__label">
+											{{lectures[ps].subject}}
+											<div ng-if="difficultyLevel != null" class="agenda__rating agenda__rating--white"
+												 data-rating="{{difficultyLevel}}"></div>
+										</label>
+										<!-- <div class="agenda__arrow" ></div> -->
+									</li>
+								</div>
+							</div>
+							<div class="section__submit" ng-show="loading">
+								<img src="img/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+							</div>
+							<div class="section__submit" data-ng-hide="message == ''" style="color:Red">
+								<div ng-bind-html="message"></div>
+							</div>
+						</div>
+						<!-- END: SUMMARY -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section__submit"  style="box-shadow: none;padding:0;border: 0;">
+			<div data-ng-hide="message == ''">
+				<div ng-bind-html="message"></div>
+			</div>
+			<button type="submit" class="bttn bttn--bigRed" ng-model="loading" ng-disabled="loading" data-ng-click="agendaForm.$valid && saveReservations()">Zapisz</button><br/>
+			<a href="#" data-ng-click='$event.preventDefault();redirectToAccount()' class="btn btn-skip">Wróć bez zapisywania</a>
+
+		</div>
+	</form>
+</section>

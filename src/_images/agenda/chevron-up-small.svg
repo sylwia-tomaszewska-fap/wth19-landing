@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.972 22.563">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #141b2e;
+        stroke: #141b2e;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="arrow-point-to-right" transform="matrix(-0.017, -1, 1, -0.017, 1.361, 21.338)">
+    <path id="Path_12" data-name="Path 12" class="cls-1" d="M19.011,19.01,4.136,33.884A2.422,2.422,0,1,1,.709,30.459L13.871,17.3.71,4.136A2.423,2.423,0,0,1,4.136.71L19.011,15.584a2.422,2.422,0,0,1,0,3.425Z" transform="translate(0 0)"/>
+  </g>
+</svg>

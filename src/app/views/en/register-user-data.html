@@ -1,0 +1,439 @@
+<script src="js/route.min.js" async></script>
+<section class="register-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-6">
+				<h1>Registration</h1>
+			</div>
+			<div class="col-12 col-md-6">
+				<div class="register-header-steps">
+					<h3>Step</h3>
+					<div class="register-header-steps-container">
+						<div class="register-header-steps-item">
+							<span>1</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item">
+							<span>2</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item active">
+							<span>3</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item">
+							<span>4</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item">
+							<span>5</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item">
+							<span>6</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="complete-data">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h3>
+					<em class="hash">#</em>
+					<span>Complete your data:</span>
+				</h3>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-12 col-lg-8">
+				<div class="form-box cv-online">
+					<form name="registerForm">
+						<div class="form-box-top-line"></div>
+						<div class="form-box-content">
+							<div class="form-box-part no-padding">
+								<div class="form-group row">
+									<label for="name" class="col-12 col-md-4">First name*</label>
+									<input data-ng-model="registerUserData.firstName" maxlength="100" required autofocus type="text" name="name" id="name" class="input-data col-12 col-md-5 col-xl-4" placeholder="Name">
+								</div>
+								<div class="form-group row">
+									<label for="surname" class="col-12 col-md-4">Last name*</label>
+									<input data-ng-model="registerUserData.lastName" maxlength="100" required type="text" name="surname" id="surname" class="input-data col-12 col-md-5 col-xl-4" placeholder="Last name">
+								</div>
+								<div class="form-group row">
+									<label for="mobile" class="col-12 col-md-4">Phone number*</label>
+									<input data-ng-model="registerUserData.phoneNo" maxlength="20" required type="tel" name="mobile" id="mobile" class="input-data col-12 col-md-5 col-xl-4" placeholder="Phone number">
+								</div>
+								<div class="form-group row">
+									<label for="email" class="col-12 col-md-4">Email*</label>
+									<input data-ng-model="registerUserData.email" maxlength="256" required type="email" name="email" id="email" class="input-data col-12 col-md-5 col-xl-4" placeholder="Email">
+								</div>
+								<div class="form-group row mb-0">
+									<label for="password" class="col-12 col-md-4">Password*</label>
+									<input data-ng-model="registerUserData.password" maxlength="20" required type="password" name="password" id="password" class="input-data col-12 col-md-5 col-xl-4" placeholder="Password">
+								</div>
+								<div class="form-group row">
+									<div class="col-12 col-md-4"></div>
+									<p class="help-block col-12 col-md-5 col-xl-4">Minimum 8 characters</p>
+								</div>
+								<div class="form-group row">
+									<label for="password_confirm" class="col-12 col-md-4">Re-type password*</label>
+									<input data-ng-model="registerUserData.confirmPassword" maxlength="20" required type="password" name="password_confirm" id="password_confirm" class="input-data col-12 col-md-5 col-xl-4" placeholder="Re-type password">
+								</div>
+								<div class="form-group row" ng-if="userPackageInfo.code != 'GPIT' && !userPackageInfo.isOrgPackage && !(userPackageInfo.isSetPackage && !userPackageInfo.isParticipant)">
+									<label for="shirt-size" class="col-12 col-md-4">Size and color of a shirt*:</label>
+									<select ng-model="registerUserData.tShirtChoice" required name="shirt-size" id="shirt-size" class="col-12 col-md-5 col-xl-4">
+										<option>S Black</option>
+										<option>M Black</option>
+										<option>L Black</option>
+										<option>XL Black</option>
+										<option>XXL Black</option>
+										<option>S White</option>
+										<option>M White</option>
+										<option>L White</option>
+										<option>XL White</option>
+										<option>XXL White</option>
+									</select>
+								</div>
+								<div class="form-group row">
+									<label class="col-12 col-md-4">I'm</label>
+									<div class="col-12 col-md-5 col-xl-4 col-no-padding col-between">
+										<div class="form-box-checkbox">
+											<input type="radio" name="iam" id="pro" data-ng-model="registerUserData.isGraduate" value="true" required>
+											<label for="pro">
+												<span class="checkbox-img">
+													<span class="unchecked">
+														<svg class="checkbox-icon">
+															<use xlink:href="#form-box-checkbox-unchecked"></use>
+														</svg>
+													</span>
+													<span class="checked">
+														<svg class="checkbox-icon">
+															<use xlink:href="#form-box-checkbox-checked"></use>
+														</svg>
+													</span>
+												</span>
+												<span class="checkbox-desc"> PRO </span>
+											</label>
+										</div>
+										<div class="form-box-checkbox">
+											<input type="radio" name="iam" id="student" data-ng-model="registerUserData.isGraduate" value="false" required>
+											<label for="student">
+												<span class="checkbox-img">
+													<span class="unchecked">
+														<svg class="checkbox-icon">
+															<use xlink:href="#form-box-checkbox-unchecked"></use>
+														</svg>
+													</span>
+													<span class="checked">
+														<svg class="checkbox-icon">
+															<use xlink:href="#form-box-checkbox-checked"></use>
+														</svg>
+													</span>
+												</span>
+												<span class="checkbox-desc"> Student </span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<!-- widok dla profesjonalisty -->
+								<div ng-if="registerUserData.isGraduate == 'true'">
+									<div class="form-group row">
+										<label for="job-position" class="col-12 col-md-4">Job position*</label>
+										<input data-ng-model="registerUserData.companyPosition" type="text" name="job-position" id="job-position" class="input-data col-12 col-md-5 col-xl-4" placeholder="Job position name">
+									</div>
+									<div class="form-group row">
+										<label for="company-name" class="col-12 col-md-4">Company name*</label>
+										<input data-ng-model="registerUserData.companyName" type="text" name="company-name" id="company-name" class="input-data col-12 col-md-5 col-xl-4" placeholder="Company name">
+									</div>
+								</div>
+								<!-- widok dla studenta -->
+								<div ng-if="registerUserData.isGraduate == 'false'">
+									<div class="form-group row">
+										<label for="college" class="col-12 col-md-4">College*</label>
+										<select ng-model="selectedSchool" ng-change="getDepartments(selectedSchool)" ng-options="school.name for school in schools" placeholder="Uczelnia" required name="college" id="college" class="col-12 col-md-5 col-xl-4">
+										</select>
+									</div>
+									<div class="form-group row" ng-if="selectedSchool.name == 'Inna'">
+										<label for="college-name" class="col-12 col-md-4">College name*</label>
+										<input type="text" data-ng-model="registerUserData.otherSchool" maxlength="150" required name="college-name" id="college-name" class="input-data col-12 col-md-5 col-xl-4" placeholder="Nazwa uczelni">
+									</div>
+									<div class="form-group row" ng-if="selectedSchool.name != 'Inna'">
+										<label for="department" class="col-12 col-md-4">Department*</label>
+										<select ng-model="selectedDepartment" ng-change="changeDepartment(selectedDepartment)" ng-options="department.name for department in departments" placeholder="Wydział" required name="department" id="department" class="col-12 col-md-5 col-xl-4">
+										</select>
+									</div>
+									<div class="form-group row" ng-if="selectedSchool.name == 'Inna' || deptOtherShow">
+										<label for="department-name" class="col-12 col-md-4">Department name*</label>
+										<input type="text"  data-ng-model="registerUserData.otherDepartment" maxlength="150" required name="department-name" id="department-name" class="input-data col-12 col-md-5 col-xl-4" placeholder="Nazwa wydziału">
+									</div>
+								</div>
+								<!-- widok dla pakietu VIP -->
+								<div ng-if="isPackageFree == false && isInvoiceAllowed == true">
+									<div class="form-group row">
+										<label class="col-12 col-md-4">I need an invoice</label>
+										<div class="col-12 col-md-5 col-xl-4 col-no-padding col-between">
+											<div class="form-box-checkbox">
+												<input type="radio" name="invoice" id="invoice-yes" data-ng-model="registerUserData.wantInvoice" value="true" required>
+												<label for="invoice-yes">
+													<span class="checkbox-img">
+														<span class="unchecked">
+															<svg class="checkbox-icon">
+																<use xlink:href="#form-box-checkbox-unchecked"></use>
+															</svg>
+														</span>
+														<span class="checked">
+															<svg class="checkbox-icon">
+																<use xlink:href="#form-box-checkbox-checked"></use>
+															</svg>
+														</span>
+													</span>
+													<span class="checkbox-desc"> Yes </span>
+												</label>
+											</div>
+											<div class="form-box-checkbox">
+												<input type="radio" name="invoice" id="invoice-no" data-ng-model="registerUserData.wantInvoice" value="false" required>
+												<label for="invoice-no">
+													<span class="checkbox-img">
+														<span class="unchecked">
+															<svg class="checkbox-icon">
+																<use xlink:href="#form-box-checkbox-unchecked"></use>
+															</svg>
+														</span>
+														<span class="checked">
+															<svg class="checkbox-icon">
+																<use xlink:href="#form-box-checkbox-checked"></use>
+															</svg>
+														</span>
+													</span>
+													<span class="checkbox-desc invoice-no-margin"> No </span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div ng-if="isPackageFree == false && isInvoiceAllowed == true && registerUserData.wantInvoice == 'true'">
+										<div class="form-group row">
+											<label for="invoice-company-name" class="col-12 col-md-4">Company name*</label>
+											<input type="text" data-ng-model="registerUserData.payerName" maxlength="256" required name="invoice-company-name" id="invoice-company-name" class="input-data col-12 col-md-5 col-xl-4" placeholder="Company name">
+										</div>
+										<div class="form-group row">
+											<label for="invoice-address" class="col-12 col-md-4">Address*</label>
+											<input type="text" data-ng-model="registerUserData.payerStreet" maxlength="256" required name="invoice-address" id="invoice-address" class="input-data col-12 col-md-5 col-xl-4" placeholder="Address">
+										</div>
+										<div class="form-group row">
+											<label for="invoice-postcode" class="col-12 col-md-4">Post code*</label>
+											<input type="text" data-ng-model="registerUserData.payerPostCode" maxlength="10" required name="invoice-postcode" id="invoice-postcode" class="input-data col-12 col-md-5 col-xl-4" placeholder="Post code">
+										</div>
+										<div class="form-group row">
+											<label for="invoice-city" class="col-12 col-md-4">City*</label>
+											<input type="text" data-ng-model="registerUserData.payerCity" maxlength="128" required name="invoice-city" id="invoice-city" class="input-data col-12 col-md-5 col-xl-4" placeholder="City">
+										</div>
+										<div class="form-group row">
+											<label for="invoice-country" class="col-12 col-md-4">Country</label>
+											<input type="text" data-ng-model="registerUserData.payerCountry" maxlength="40" name="invoice-country" id="invoice-country" class="input-data col-12 col-md-5 col-xl-4" placeholder="Conutry">
+										</div>
+										<div class="form-group row">
+											<label for="invoice-nip" class="col-12 col-md-4">VAT ID</label>
+											<input type="text" data-ng-model="registerUserData.payerNip" maxlength="12" name="invoice-nip" id="invoice-nip" class="input-data col-12 col-md-5 col-xl-4" placeholder="VAT ID (PL or EU)">
+										</div>
+										<div class="form-group row">
+											<label for="invoice-additional-info" class="col-12 col-md-4">Comments <small>(i.e. order no)</small></label>
+											<input type="text" data-ng-model="registerUserData.payerComments" maxlength="200" name="invoice-additional-info" id="invoice-additional-info" class="input-data col-12 col-md-5 col-xl-4" placeholder="Comments">
+										</div>
+									</div>
+								</div>
+								<div ng-if="isPackageFree == false && isInvoiceAllowed == false">
+									<div class="form-group row">
+										<div class="offset-0 col-12 offset-md-4 col-md-6 col-no-padding">
+											<p class="reg-accept text-left">In the package You have selected, the invoice can be issued only to a buyer, which can be only a physical person not owning a business organization.</p>
+										</div>
+									</div>
+								</div>
+								<!-------------------------------------------------->
+							</div>
+							<div class="form-box-part no-padding">
+								<div class="form-group row">
+									<div class="offset-0 col-12 offset-md-4 col-md-4 col-no-padding">
+										<p class="reg-accept text-left">By registering you accept <a href="user-content/regulamin.pdf" target="_blank"><br/>Event Regulations</a></p>
+									</div>
+								</div>
+							</div>
+							<div class="form-box-part no-padding">
+								<div class="form-box-checkbox form-box-checkbox-reg row">
+									<input ng-model="registerUserData.processAgreement" required type="checkbox" name="reg-1" id="reg-1">
+									<label for="reg-1" class="col-md-4">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+									</label>
+									<label for="reg-1" class="desc col-md-6">
+										<span> I agree to the processing of my personal data for registration and participation in the Data Science Summit event 
+											<a href="#" class="js-expand-text" data-ng-click='$event.preventDefault()'>expand &gt;</a><br/>
+											<span class="hide-area hidden">
+												Information obligation: The data controller is the organizer - Academic Partners Foundation (01-926 Warsaw, Kwitnąca 6/46 street). Withdrawal of consent is possible by sending an email to the address info@fundacjaap.org.pl, withdrawal of consent to the processing of personal data is synonymous with the resignation from participation in the conference. The data administrator will delete all personal data after completion of work related to the project.</span>
+										</span>
+									</label>
+								</div>
+								<div class="form-box-checkbox form-box-checkbox-reg row">
+									<input ng-model="registerUserData.marketingAgreement" type="checkbox" name="reg-2" id="reg-2">
+									<label for="reg-2" class="col-md-4">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+									</label>
+									<label for="reg-2" class="desc col-md-6">
+										<span> I consent to the processing of my personal data for the purposes of sending recruitment or marketing information from Exhibitors, Partners and the Organizer
+											<a href="#" class="js-expand-text" data-ng-click='$event.preventDefault()'>expand &gt;</a><br/>
+											<span class="hide-area hidden">
+												Information obligation: The data controller is the organizer - Academic Partners Foundation (01-926 Warsaw, Kwitnąca 6/46 street). Withdrawal of consent is possible by sending an email to the address info@fundacjaap.org.pl, withdrawal of consent to the processing of personal data is synonymous with the resignation from participation in the conference. The data administrator will delete all personal data after completion of work related to the project.
+											</span>
+										</span>
+										
+									</label>
+								</div>
+							</div>
+							<div class="form-box-part no-padding">
+								<div class="row">
+									<div class="col-12 col-md-4">&nbsp;</div>
+									<div class="col-12 col-md-4 col-no-padding legend">
+										<p class="text-left">* - Required field</p>
+									</div>
+								</div>
+								<div class="row" ng-show="loading">
+									<div class="col-12 col-md-4">&nbsp;</div>
+									<div class="col-12 col-md-4 col-no-padding legend">
+										<img src="images/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+									</div>
+								</div>
+								<!--<div class="row" data-ng-hide="message == ''">
+									<div class="col-12 col-md-4">&nbsp;</div>
+									<div class="col-12 col-md-4 col-no-padding legend">
+										<p class="text-left">{{message}}</p>
+									</div>
+								</div>-->
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<div class="box-3d errors" data-ng-hide="message == ''">
+		<div class="box-3d-content">
+			<p>
+				<svg class="icon">
+					<use xlink:href="#exclamation-2"></use>
+					</svg>
+				<strong ng-bind-html="message"></strong>
+			</p>
+		</div>
+		<div class="box-3d-shadow-border"></div>
+		<div class="box-3d-decor-line"></div>
+	</div>
+
+<section class="next-step">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<button type="submit" class="btn btn-next-step" data-ng-click="registerUser()" ng-model="loading" ng-disabled="loading">
+					<span>Move forward</span>
+					<svg class="arrow">
+						<use xlink:href="#arrow"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="modal fade agreement-modal" id="agreement-modal" tabindex="-1" role="dialog" aria-labelledby="agreement-modal">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<svg class="modal-close-icon">
+						<use xlink:href="#close-2"></use>
+					</svg>
+				</button>
+				<div class="agreement-modal-content">
+					<svg class="robo">
+						<use xlink:href="#robo"></use>
+					</svg>
+					<h3>We have not noted all <br /> consents to communicate with you <svg class="icon">
+						<use xlink:href="#sadface"></use>
+					</svg></h3>
+					<ul>
+						<li><svg class="icon">
+							<use xlink:href="#nocontact"></use>
+						</svg>This may cause difficulties in communicating with you in regards the event. </li>
+						<li><svg class="icon">
+							<use xlink:href="#nopricedrop"></use>
+						</svg>Thanks to all the consents, participation in the event is cheaper (thanks to our Sponsors, which can send you a message through us).</li>
+						<li><svg class="icon">
+							<use xlink:href="#noforward"></use>
+						</svg>We do not pass your data to any third parties (except if you consent to submit your CV - then we send your data once with your consent to all clearly listed organizations).</li>
+						<li><svg class="icon">
+							<use xlink:href="#notspammers"></use>
+						</svg>We do not spam - usually we do not send more than 1 email per month. Often even less.</li>
+						<li><svg class="icon">
+							<use xlink:href="#lawful"></use>
+						</svg>We comply with all applicable laws, including the right to withdraw any given consents.</li>
+					</ul>
+					<div ng-show="loading">
+						<img src="images/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+					</div>
+					<p><strong><br/>Are you sure to keep going?</strong></p>
+					<div class="agreement-modal-content-buttons">
+						<button class="btn btn-agreement-yes" data-ng-click="registerUserCond(false)" ng-model="loading" ng-disabled="loading">
+							<span>Yes</span>
+							<svg class="arrow">
+								<use xlink:href="#arrow"></use>
+							</svg>
+						</button>
+						<button class="btn btn-agreement-no" data-dismiss="modal" aria-label="Close"> <!-- data-ng-click="closeModal()"-->
+							<span>No, I will change my choice</span>
+							<svg class="arrow">
+								<use xlink:href="#arrow"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

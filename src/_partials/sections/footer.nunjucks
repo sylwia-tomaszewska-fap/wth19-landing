@@ -1,0 +1,311 @@
+<footer class="footer-wrapper">
+  <img src="images/robot-footer.svg" class="robot-footer" alt="">
+  <div class="footer-inner">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+      <symbol id="menu-arrow" viewBox="0 0 7.01 12">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: #e10b31;
+            }
+          </style>
+        </defs>
+        <title>link-arrow</title>
+        <g id="arrow" data-name="arrow"><path class="cls-1" d="M1.42,12,0,10.58,4.53,5.63.25,1.45,1.63,0,7,5.2V6Z"/></g>
+      </symbol>
+    </svg>
+
+    <nav id="footer">
+      <div class="robot-hand">
+        <img src="images/robot-hand.svg" class="robot-hand-img" alt="">
+      </div>
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-9 mx-auto">
+
+            <img class="wth-logo" src="images/wth-logo.svg" width="236" alt="What the h@ck logo">
+
+            <div class="row justify-content-between">
+
+              <div class="column px-3">
+                <h4>Najważniejsze</h4>
+                <ul>
+                  <li>
+                    <a href="#dlaczegowarto">
+                      <span>Dlaczego warto<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#tematyka">
+                      <span>Tematyka<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#agenda">
+                      <span>Agenda<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#prelegenci">
+                      <span>Prelegenci<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#lokalizacja">
+                      <span>Lokalizacja<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#afterparty">
+                      <span>Afterparty<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#konkursy">
+                      <span>Konkursy<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#opinieinnych">
+                      <span>Opinie innych<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="column px-3">
+                <h4>Zaangażuj się</h4>
+                <ul>
+                  <li>
+                    <a data-toggle="modal" href="#" data-target="#collaboration-modal">
+                      <span>Zostań Sponsorem / Partnerem<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a data-toggle="modal" href="#" data-target="#volunteering-modal">
+                      <span>Zostań Wolontariuszem<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a data-toggle="modal" href="#" data-target="#callforpapers-modal">
+                      <span>Zostań Prelegentem<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="column px-3">
+                <h4>Więcej</h4>
+                <ul>
+                  <li>
+                    <a href="#sponsorzy">
+                      <span>Sponsorzy<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#partnerzy">
+                      <span>Partnerzy<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#patroni">
+                      <span>Patroni<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#organizatorzy">
+                      <span>Organizatorzy<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#rada">
+                      <span>Rada Programowa<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a data-toggle="modal" data-target="#codeofconduct-modal" href="#">
+                      <span>Code of conduct<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a data-toggle="modal" data-target="#cookies-modal" href="#">
+                      <span>Polityka cookies<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <!-- <li><a data-toggle="modal" data-target="#privacypolicy-modal" href="#">Polityka prywatności</a></li> -->
+                  <li class="spacer"></li>
+                  <li>
+                    <a data-toggle="modal" data-target="#media-modal"href="#">
+                      <span>Dla mediów<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a data-toggle="modal" data-target="#contact-modal"href="#">
+                      <span>Kontakt<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="row mt-5">
+              <div class="col-md-6 social mb-4 mb-md-0">
+                <a href="https://www.facebook.com/wthconf/" target="_blank"><img class="logo" src="images/facebook.svg" width="32" alt="facebook logo"></a>
+
+                <a href="https://www.meetup.com/pl-PL/What-The-Hack-IT-Security/events/255553613/" target="_blank">
+                  <img class="logo" src="images/meetup.svg" width="66" alt="Meetup logo"></a>
+              </div>
+              <div class="col-md-6 hosting">
+                <div class="d-flex justify-content-center justify-content-md-end">
+                  <div class="mr-3">
+                    <a href="https://www.webio.pl/" target="_blank">Hosting&nbsp;by</a>
+                    <a href="https://www.webio.pl/" target="_blank"><img src="images/webio.svg" width="45" alt="Webio"></a>
+                  </div>
+                  <div>
+                    <a href="https://candf.com/" target="_blank">Dev&nbsp;support&nbsp;by</a>
+                    <a href="https://candf.com/" target="_blank"><img src="images/candf.svg" width="55"  alt="Candf"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <img class="logo" src="img/footer/instagram.png" alt="Instagram logo"> -->
+
+            <div class="copyright">
+
+              <div>© Copyright 2019 Fundacja Academic Partners i&nbsp;Inni. Wszelkie prawa zastrzeżone. W&nbsp;przypadku pytań - prosimy o kontakt na adres e-mail <a href="mailto:Hello@WTHconf.pl">Hello@WTHconf.pl</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+</footer>
+
+<a class="scroll-top scroll" href="#top"><div class="scroll-arrow"></div></a>
+<nav id="side-menu">
+
+  <div class="container">
+
+    <div class="row buttons buttons-row">
+      <a href="#" data-ng-click="$event.preventDefault();redirectToRegistration()" class="register-button">Zarejestruj się</a>
+      <a href="#" data-ng-click="$event.preventDefault();redirectToLogin()" class="login-button active">Zaloguj się</a>
+      <div class="close-button">&times;</div>
+    </div>
+
+    <div class="row menu">
+      <div class="menu-container col-md-12">
+        <div class="menu-main col-md-6">
+          <ul>
+            <li>
+              <a href="#dlaczegowarto">Dlaczego warto</a>
+            </li>
+            <li>
+              <a href="#tematyka">Tematyka</a>
+            </li>
+            <li>
+              <a href="#agenda">Agenda</a>
+            </li>
+            <li>
+              <a href="#prelegenci">Prelegenci</a>
+            </li>
+            <li>
+              <a href="#lokalizacja">Lokalizacja</a>
+            </li>
+            <li>
+              <a href="#afterparty">Afterparty</a>
+            </li>
+            <li>
+              <a href="#konkursy">Konkursy</a>
+            </li>
+            <li>
+              <a href="#opinieinnych">Opinie innych</a>
+            </li>
+          </ul>
+
+          <div class="links d-block d-md-none text-center">
+            <div class="links-inner">
+              <a data-toggle="modal" data-target="#recomend-modal">poleć </a> /
+                            <a data-toggle="modal" data-target="#remind-modal">przypomnij później</a>
+            </div>
+          </div>
+
+          <div class="social-buttons d-none d-md-block">
+            <a class="mr-3" href="https://www.facebook.com/wthconf/" target="_blank">
+              <img class="logo" src="images/facebook.svg" width="40" alt="facebook logo">
+            </a>
+            <a class="ml-3" href="https://www.meetup.com/pl-PL/What-The-Hack-IT-Security/events/255553613/" target="_blank">
+              <img class="logo" src="images/meetup.svg" width="95" alt="Meetup logo">
+            </a>
+            <!-- <img class="logo" src="img/footer/instagram.png" alt="Instagram logo"> -->
+
+          </div>
+        </div>
+
+        <div class="menu-more col-md-6 pl-md-5 pt-3 pt-md-0">
+          <div class="row">
+            <div class="col-6 col-md-12 order-2 order-md-1 d-flex flex-column">
+
+              <div>
+                <h4 class="mt-2 mt-md-0">Zaangażuj się</h4>
+                <ul>
+                  <li>
+                    <a data-toggle="modal" data-target="#collaboration-modal" href="#collaboration-modal">Zostań Sponsorem / Partnerem</a>
+                  </li>
+                  <li>
+                    <a data-toggle="modal" data-target="#volunteering-modal"  href="#volunteering-modal">Zostań Wolontariuszem</a>
+                  </li>
+                  <li>
+                    <a data-toggle="modal" data-target="#callforpapers-modal" href="#callforpapers-modal">Zostań Prelegentem</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="social-buttons d-flex d-md-none flex-grow-1 flex-column justify-content-end">
+                <div>
+                  <a class="" href="https://www.facebook.com/wthconf/" target="_blank">
+                    <img class="logo" src="images/facebook.svg" width="40" alt="facebook logo">
+                  </a>
+                  <a class="ml-1 ml-xs-2 ml-sm-3" href="https://www.meetup.com/pl-PL/What-The-Hack-IT-Security/events/255553613/" target="_blank">
+                    <img class="logo" src="images/meetup.svg" width="95" alt="Meetup logo">
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="col-6 col-md-12 order-1 order-md-2">
+
+              <h4 class="mt-2 mt-md-5">Więcej</h4>
+              <ul>
+                <li>
+                  <a href="#sponsorzy">Sponsorzy</a>
+                </li>
+                <li>
+                  <a href="#partnerzy">Partnerzy</a>
+                </li>
+                <li>
+                  <a href="#patroni">Patroni</a>
+                </li>
+                <li>
+                  <a href="#organizatorzy">Organizatorzy</a>
+                </li>
+                <li>
+                  <a href="#rada">Rada Programowa</a>
+                </li>
+                <li>
+                  <a data-toggle="modal" data-target="#codeofconduct-modal" href="#">Code of conduct</a>
+                </li>
+                <li>
+                  <a data-toggle="modal" data-target="#cookies-modal" href="#">Polityka cookies</a>
+                </li>
+                <!-- <li><a data-toggle="modal" data-target="#privacypolicy-modal" href="#">Polityka prywatności</a></li> -->
+                <li class="spacer"></li>
+                <li>
+                  <a data-toggle="modal" data-target="#media-modal" href="#media-modal" href="#">Dla mediów</a>
+                </li>
+                <li>
+                  <a data-toggle="modal" data-target="#contact-modal" href="#contact-modal" href="#">Kontakt </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="links d-none d-md-block">
+    <div class="links-inner">
+    <img src="images/flag.svg" width="25" alt="">
+      <a data-toggle="modal" data-target="#recomend-modal">poleć </a> /
+                            <a data-toggle="modal" data-target="#remind-modal">przypomnij później</a>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,158 @@
+<section class="subjects" id="tematyka">
+	<div class="container">
+		<div class="text-center">
+        <div class="row">
+                <div class="col-md-9 mx-auto">
+			<h1 class="section-heading" data-aos="headerbg">
+				<span>Tematyka</span>
+			</h1>
+            
+                    <p class="lead">
+                        Na wydarzeniu znajdziesz różnorodną tematykę obejmującą prawie
+                        cały obszar cyberbezpieczeństwa:
+                    </p>
+                </div>
+            </div>
+		</div>
+		<div class="pcwindow">
+			<div class="pcwindow-header">
+				<p>II EDYCJA WTH &gt; TEMATYKA</p>
+				<span class="pcwindow-close">&times;</span>
+			</div>
+
+			<div class="pcwindow-body">
+
+                <div class="row subjects-wrapper">
+                    <div class="col-md-6 text-left">
+                        
+
+
+
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i>
+                        <img src="images/teaming.svg" width="30" alt="">
+                        </i>
+                    </div>
+                    <div class="col">
+                        <p>Red Teaming / Blue Teaming</p>
+                    </div>
+                </div>
+
+
+                            {% set data = [
+    {
+        icon: 'analysis2',
+        text: 'Analiza incydentów'
+    },
+    {
+        icon: 'sec-operations',
+        text: 'Security Operations Center'
+    },
+    {
+        icon: 'security',
+        text: 'Architektura IT Security'
+    },
+    {
+        icon: 'managing',
+        text: 'Zarządzanie w obszarze bezpieczeństwa IT'
+    },
+    {
+        icon: 'fuckup',
+        text: 'Fuckupy / Wpadki z obszaru bezpieczeństwa IT'
+    }] %}
+    {% for item in data %}
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i class="wth-{{item.icon}}"></i>
+                    </div>
+                    <div class="col">
+                        <p>{{item.text}}</p>
+                    </div>
+                </div>
+    {%endfor %}
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-lock-check"></i>
+                    </div>
+                    <div class="col">
+                        <p class="mt-2">Bezpieczeństwo
+                            <ul>
+                                <li>hardware'u,</li>
+                                <li>software'u,</li>
+                                <li>technologii mobilnych,</li>
+                                <li>chmury,</li>
+                                <li>rozwiązań Microsoft,</li>
+                                <li>infrastruktury krytycznej,</li>
+                                <li>przemysłowe / SCADA / IoT,</li>
+                                <li>Blockchain / Cryptocurrencies,</li>
+                                <li>AI / ML / Big Data</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                        
+                    </div>
+                    <div class="col-md-6 text-left">
+                    {% set data = [
+    {
+        icon: 'lock-check',
+        text: 'Budowa / Rozwój / Architektura oprogramowania pod kątem bezpieczeństwa'
+    },
+    {
+        icon: 'target',
+        text: 'Bug hunting / Fuzzing / Exploiting'
+    },
+    {
+        icon: 'danger',
+        text: 'Złośliwe oprogramowanie'
+    },
+    {
+        icon: 'gear',
+        text: 'Inżynieria wsteczna'
+    },
+    {
+        icon: 'crime',
+        text: 'Cyberprzestępczość i informatyka śledcza'
+    },
+    {
+        icon: 'not-like',
+        text: 'Zwalczanie nadużyć'
+    },
+    {
+        icon: 'consultant',
+        text: 'Służby specjalne / Policja / Europol / Wojsko'
+    },
+    {
+        icon: 'avatar',
+        text: 'Ataki: DDoS, sieciowe, socjotechniczne'
+    },
+    {
+        icon: 'lock-check',
+        text: 'Audyt IT Security'
+    },
+    {
+        icon: 'lock-check',
+        text: 'Prawo a IT  Security'
+    },
+    {
+        icon: 'privacy',
+        text: 'Walka o prywatność i anonimowość w sieci'
+    }] %}
+    {% for item in data %}
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i class="wth-{{item.icon}}"></i>
+                    </div>
+                    <div class="col">
+                        <p>{{item.text}}</p>
+                    </div>
+                </div>
+    {%endfor %}
+                    </div>
+                </div>
+<img src="images/bomb.svg" alt="" class="bomba">
+			</div>
+		</div>
+	</div>
+</section>
