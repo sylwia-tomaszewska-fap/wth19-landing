@@ -217,6 +217,7 @@
           </div>
 
           <div class="social-buttons d-none d-md-block">
+
             <a class="mr-3" href="https://www.facebook.com/wthconf/" target="_blank">
               <img class="logo" src="images/facebook.svg" width="40" alt="facebook logo">
             </a>
@@ -247,13 +248,16 @@
                 </ul>
               </div>
               <div class="social-buttons d-flex d-md-none flex-grow-1 flex-column justify-content-end">
-                <div>
+                <div class="row justify-content-center">
+
                   <a class="" href="https://www.facebook.com/wthconf/" target="_blank">
                     <img class="logo" src="images/facebook.svg" width="40" alt="facebook logo">
                   </a>
-                  <a class="ml-1 ml-xs-2 ml-sm-3" href="https://www.meetup.com/pl-PL/What-The-Hack-IT-Security/events/255553613/" target="_blank">
+
+                  <a class="ml-2 ml-xs-2 ml-sm-3" href="https://www.meetup.com/pl-PL/What-The-Hack-IT-Security/events/255553613/" target="_blank">
                     <img class="logo" src="images/meetup.svg" width="95" alt="Meetup logo">
                   </a>
+
                 </div>
 
               </div>

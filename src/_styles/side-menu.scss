@@ -219,6 +219,7 @@
       font-size: 18px;
       text-transform: uppercase;
       font-weight: bold;
+      line-height: 1.2;
     }
     ul {
       li {
@@ -332,6 +333,9 @@
     }
     .social-buttons {
       width: 100%;
+      img{
+        height: 80%;
+      }
     }
   }
 }
