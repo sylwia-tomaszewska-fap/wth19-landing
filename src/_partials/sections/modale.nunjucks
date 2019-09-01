@@ -63,7 +63,7 @@
                             <input type="text" class="form-control" id="volPhone" placeholder="Telefon" maxlength="9" data-ng-model="modalData.phoneNo">
                         </div>
                         <p><small>Informujemy, że w przypadku wypełnienia i przesłania niniejszego formularza zgadzasz się na przetwarzanie Twoich danych osobowych jedynie w celach realizacji procesu zgłoszeń na wolontariusza konferencji. W pełni szanujemy Twoje prawa wynikające z właściwych ustaw o przetwarzaniu danych osobowych. Głównym organizatorem instytucjonalnym konferencji jest Fundacja Academic Partners, Aleje Jerozolimskie 181B, 02-222 Warszawa, email: info@fundacjaap.org.pl</small></p>
-                        
+
 
                             <div class="btn btn-primary" type="submit" id="modal_vol_submit" name="submit" data-ng-click="volForm.$valid && sendBecomeVolounteer()" data-toggle="modal" data-target="#thankyousingle-modal"> <!-- data-dismiss="modal"> -->
                                 Wyślij zgłoszenie
@@ -97,7 +97,7 @@
                         <div class="form-group col-12">
                             <input type="text" class="form-control" id="cfpPhone" placeholder="Telefon" maxlength="9" data-ng-model="modalData.phoneNo">
                         </div>
-                        
+
 
                             <div class="btn btn-primary" type="submit" id="modal_cfp_submit" name="submit" data-ng-click="cfpForm.$valid && sendBecomeLecturer()" data-toggle="modal" data-target="#thankyousingle-modal"> <!-- data-dismiss="modal"> -->
                                 Wyślij zgłoszenie
@@ -124,7 +124,7 @@
 
                     <div class="form">
 
-                        
+
 
                         <h2>Dziękujemy!</h2>
                         <div class="text-center">
@@ -156,9 +156,9 @@
 
                     <div class="form">
 
-                        
 
-                        
+
+
                         <div class="text-center">
                         <p>Pakiet Sponsora Głównego jest już niedostępny</p>
                             <div>
@@ -217,7 +217,7 @@
                             <!-- <img ng-src="{{activePrelegent.imageUrl}}" alt="{{activePrelegent.firstName}} {{activePrelegent.lastName}}"> -->
                             <div class="img-container" style="background-image:url({{activePrelegent.imageUrl}})"></div>
                             <div class="square"></div>
-                        
+
                         <div class="overlay"></div>
                             <div class="overlay"></div>
                         </div>
@@ -262,7 +262,7 @@
                                 <div class="img-container" style="background-image:url({{p.imageUrl}})"></div>
 
                                 <div class="square"></div>
-                        
+
                         <div class="overlay"></div>
                             </div>
                             <p>{{p.firstName}} {{p.lastName}}</p>
@@ -272,7 +272,7 @@
                     </div>
 {% endraw %}
 
-                    
+
 
                 </div>
             </div>
@@ -340,7 +340,7 @@
                         <img ng-src="{{activeExhibitor.logoUrl}}">
                     </div>
                     <div class="partner-group" ng-repeat="gr in activeExhibitor.groups">
-                    
+
                         <h2>{{gr.name}}</h2>
                         <div ng-repeat="fl in gr.fields">
                             <h3>
@@ -363,11 +363,11 @@
                     </div>
 
 
-                    <div class="btn btn-primary">
+                    <!--<div class="btn btn-primary">
                         Dowiedz się więcej
-                    </div>
+                    </div>-->
 
-                    
+
                 </div>
     {%endraw%}
     <img src="images/modal-left.svg"  class="modal-left-img" />
@@ -393,7 +393,7 @@
                         <div class="form-group col-12">
                             <textarea class="form-control" placeholder="numery telefonów" data-ng-model="recData.phoneNumbers"></textarea>
                         </div>
-                        
+
                         <div class="btn btn-primary" data-ng-click="recForm.$valid && recommendEvent()">
                             Zatwierdź
                         </div>
@@ -643,7 +643,7 @@
                 <div class="pcwindow__body">
 
                 <h2>Kontakt dla mediów</h2>
-                <p>
+                <p class="mb-4">
                 Aleksandra PRYCHITKO<br />
 Koordynator Realizacji Projektu<br />
 Aleksandra.PRYCHITKO@FundacjaAP.org.pl<br />
@@ -655,9 +655,9 @@ Aleksandra.PRYCHITKO@FundacjaAP.org.pl<br />
                 <a href="media/WTH_banery.zip">WTH_banery.zip</a><br>
                 <a href="media/WTH_inf_prasowa.docx">WTH_inf_prasowa.docx</a>
                 </p>
-                
-                
-                
+
+
+
                 </div>
 
                 <img src="images/modal-bg1.svg"  class="w-100 modal-img" />

@@ -14,13 +14,29 @@
 #agenda #agenda-godzinowa .hourslist .hourslist__item .hourslist__item__header {
   padding-bottom: 8px;
 }
-#agenda #agenda-godzinowa .hourslist .hourslist__item .hourslist__item__header .time {
+#agenda
+  #agenda-godzinowa
+  .hourslist
+  .hourslist__item
+  .hourslist__item__header
+  .time {
   display: none;
 }
-#agenda #agenda-godzinowa .hourslist .hourslist__item .hourslist__item__header .name {
+#agenda
+  #agenda-godzinowa
+  .hourslist
+  .hourslist__item
+  .hourslist__item__header
+  .name {
   margin-left: 15px;
 }
-#agenda #agenda-godzinowa .hourslist .hourslist__item .hourslist__item__header p img {
+#agenda
+  #agenda-godzinowa
+  .hourslist
+  .hourslist__item
+  .hourslist__item__header
+  p
+  img {
   height: 10px;
   position: relative;
   top: -2px;
@@ -43,7 +59,7 @@
   margin-bottom: 40px;
 }
 #agenda .pcwindow {
-  background-color: #1e1e1e;
+  background-color: #181818;
   border: none;
   height: auto;
 }
@@ -131,7 +147,7 @@
 }
 #agenda .theme__container {
   display: block;
-  background-color: #1e1e1e;
+  background-color: #181818;
   padding: 4px 8px;
   text-align: left;
   text-decoration: none;
@@ -216,12 +232,12 @@
   //   background: url(../img/agenda/chevron-up.svg) 0 0 no-repeat;
 }
 #agenda .hourslist {
-  background-color: #1e1e1e;
-  border-left: 4px solid #1e1e1e;
-  border-right: 4px solid #1e1e1e;
+  background-color: #181818;
+  border-left: 4px solid #181818;
+  border-right: 4px solid #181818;
   margin: 0 15px;
   text-align: left;
-  border-bottom: 4px solid #1e1e1e;
+  border-bottom: 4px solid #181818;
 }
 #agenda .hourslist .hourslist__item .hourslist__item__header {
   display: flex;
@@ -229,7 +245,10 @@
   align-items: center;
   cursor: pointer;
 }
-#agenda .hourslist .hourslist__item .hourslist__item__header[aria-expanded="true"] {
+#agenda
+  .hourslist
+  .hourslist__item
+  .hourslist__item__header[aria-expanded="true"] {
   font-weight: 900;
 }
 #agenda .hourslist .hourslist__item .hourslist__item__header .time {
@@ -271,16 +290,31 @@
   //   width: 22px;
   //   height: 17px;
 }
-#agenda .hourslist .hourslist__item .hourslist__item__header[aria-expanded="true"] {
+#agenda
+  .hourslist
+  .hourslist__item
+  .hourslist__item__header[aria-expanded="true"] {
   background-color: white;
 }
-#agenda .hourslist .hourslist__item .hourslist__item__header[aria-expanded="true"] .name {
+#agenda
+  .hourslist
+  .hourslist__item
+  .hourslist__item__header[aria-expanded="true"]
+  .name {
   color: #09112d;
 }
-#agenda .hourslist .hourslist__item .hourslist__item__header[aria-expanded="true"] p {
+#agenda
+  .hourslist
+  .hourslist__item
+  .hourslist__item__header[aria-expanded="true"]
+  p {
   display: none;
 }
-#agenda .hourslist .hourslist__item .hourslist__item__header[aria-expanded="true"] .chevron {
+#agenda
+  .hourslist
+  .hourslist__item
+  .hourslist__item__header[aria-expanded="true"]
+  .chevron {
   // background: url(../img/agenda/chevron-up-small.svg) 0 0 no-repeat;
   // margin-left: auto;
   // margin-right: 38px;
@@ -349,25 +383,50 @@
 #agenda .details .details__body .details__description {
   max-width: 70%;
 }
-#agenda .details .details__body .details__description .details__description__header {
+#agenda
+  .details
+  .details__body
+  .details__description
+  .details__description__header {
   text-align: left;
   color: #0000ff;
   font-size: 18px;
   font-weight: bold;
 }
-#agenda .details .details__body .details__description .details__description__body {
+#agenda
+  .details
+  .details__body
+  .details__description
+  .details__description__body {
   text-align: left;
   font-size: 17px;
 }
-#agenda .details .details__body .details__description .details__description__body .info {
+#agenda
+  .details
+  .details__body
+  .details__description
+  .details__description__body
+  .info {
   font-size: 18px;
   margin-top: 23px;
   margin-bottom: 38px;
 }
-#agenda .details .details__body .details__description .details__description__body .info p {
+#agenda
+  .details
+  .details__body
+  .details__description
+  .details__description__body
+  .info
+  p {
   margin-bottom: 0;
 }
-#agenda .details .details__body .details__description .details__description__body .info span {
+#agenda
+  .details
+  .details__body
+  .details__description
+  .details__description__body
+  .info
+  span {
   color: #0000ff;
   font-weight: 400;
 }
@@ -486,19 +545,41 @@
     max-width: 17%;
     flex-direction: column;
   }
-  #agenda .hourslist .hourslist__item .hourslist__item__header .time span:first-child {
+  #agenda
+    .hourslist
+    .hourslist__item
+    .hourslist__item__header
+    .time
+    span:first-child {
     line-height: 19px;
   }
 }
 
 @media (max-width: 480px) {
-  #agenda #agenda-godzinowa .hourslist .hourslist__item .details .details__body {
+  #agenda
+    #agenda-godzinowa
+    .hourslist
+    .hourslist__item
+    .details
+    .details__body {
     padding-top: 0;
   }
-  #agenda #agenda-godzinowa .hourslist .hourslist__item .details .details__body .person {
+  #agenda
+    #agenda-godzinowa
+    .hourslist
+    .hourslist__item
+    .details
+    .details__body
+    .person {
     padding-left: 23px;
   }
-  #agenda #agenda-godzinowa .hourslist .hourslist__item .details .details__body .details__description {
+  #agenda
+    #agenda-godzinowa
+    .hourslist
+    .hourslist__item
+    .details
+    .details__body
+    .details__description {
     margin: 0 23px;
   }
   #agenda .theme__container .theme .landscape {
@@ -516,7 +597,11 @@
     min-width: 28px;
     margin-right: 15px;
   }
-  #agenda .hourslist .hourslist__item .hourslist__item__header[aria-expanded="true"] .chevron {
+  #agenda
+    .hourslist
+    .hourslist__item
+    .hourslist__item__header[aria-expanded="true"]
+    .chevron {
     margin-right: 15px;
   }
   #agenda .details .details__body {
@@ -543,7 +628,12 @@
     margin-right: 8px;
     max-width: 100%;
   }
-  #agenda .details .details__body .details__description .details__description__body .info {
+  #agenda
+    .details
+    .details__body
+    .details__description
+    .details__description__body
+    .info {
     margin-bottom: 0;
   }
   #agenda .selector {

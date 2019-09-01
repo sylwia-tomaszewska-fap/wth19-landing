@@ -79,7 +79,7 @@
                       <span>Zostań Wolontariuszem<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
                   </li>
                   <li>
-                    <a data-toggle="modal" href="#" data-target="#callforpapers-modal">
+                    <a href="https://www.wthconf.pl/cfp" target="_blank" rel="noopener noreferrer">
                       <span>Zostań Prelegentem<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
                   </li>
                 </ul>
@@ -242,7 +242,7 @@
                     <a data-toggle="modal" data-target="#volunteering-modal"  href="#volunteering-modal">Zostań Wolontariuszem</a>
                   </li>
                   <li>
-                    <a data-toggle="modal" data-target="#callforpapers-modal" href="#callforpapers-modal">Zostań Prelegentem</a>
+                    <a href="https://www.wthconf.pl/cfp" target="_blank" rel="noopener noreferrer">Zostań Prelegentem</a>
                   </li>
                 </ul>
               </div>

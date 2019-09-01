@@ -1,5 +1,5 @@
 {
-  "name": "Targipracy",
+  "name": "wth19",
   "version": "0.0.1",
   "dependencies": {
     "bootstrap": "^4.3.1",
@@ -60,7 +60,7 @@
   "config": {
     "//": "Entry files",
     "host": "127.0.0.1",
-    "port": "3000",
+    "port": "8000",
     "baseUrl": "./",
     "directories": {
       "source": "src",

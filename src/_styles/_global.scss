@@ -4,7 +4,7 @@ html {
 
 body {
   cursor: default;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 p.lead {
@@ -18,6 +18,10 @@ section {
   @include media-breakpoint-down(md) {
     padding-top: 42px;
     padding-bottom: 42px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
@@ -97,7 +101,7 @@ a.link {
   line-height: 1em;
   padding-left: 5px;
   padding-right: 5px;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
   position: relative;
   span {
     position: relative;
@@ -105,33 +109,34 @@ a.link {
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 15px;
-  &:before {
-    position: absolute;
-    z-index: -1;
-    content: " ";
-    display: block;
-    background: #000099;
+    &:before {
+      position: absolute;
+      z-index: -1;
+      content: " ";
+      display: block;
+      background: #000099;
 
-    transition: all 1s ease;
-    transform-origin: top left;
+      transition: all 1s ease;
+      transform-origin: top left;
 
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0; 
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
   }
-}
 
   @include media-breakpoint-down(md) {
     font-size: rem-calc(52);
   }
   @include media-breakpoint-down(sm) {
     font-size: rem-calc(40);
+    padding-bottom: 15px;
   }
   @include media-breakpoint-down(xs) {
     font-size: rem-calc(38);
   }
-  @media(max-width:320px) {
+  @media (max-width: 320px) {
     font-size: rem-calc(20);
   }
   + h2,
@@ -149,10 +154,10 @@ a.link {
 section:nth-child(2n + 1) {
   .section-heading {
     span {
-    &:before {
-      background: #990033;
+      &:before {
+        background: #990033;
+      }
     }
-  }
   }
 }
 
@@ -375,8 +380,8 @@ ul.nav {
     text-indent: 100px;
     padding: 0;
     transition: all 0.2s ease;
-    @media(max-width:1350px) {
-      left:-20px;
+    @media (max-width: 1350px) {
+      left: -20px;
     }
     @include media-breakpoint-down(md) {
       display: none !important;
@@ -410,8 +415,8 @@ ul.nav {
     text-indent: 100px;
     padding: 0;
     transition: all 0.2s ease;
-    @media(max-width:1350px) {
-      right:-20px;
+    @media (max-width: 1350px) {
+      right: -20px;
     }
     @include media-breakpoint-down(md) {
       display: none !important;
@@ -444,14 +449,14 @@ ul.nav {
     justify-content: center;
     margin-bottom: 10px;
     border: 1px solid #aaacb2;
-    min-height:150px;
+    min-height: 150px;
   }
 }
 
 .modal-header {
   -webkit-box-align: center;
--ms-flex-align: center;
-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   img {
     cursor: pointer;
   }
@@ -459,7 +464,7 @@ align-items: center;
 
 .modal-content {
   &.pcwindow {
-    background: #1e1e1e;
+    background: #181818;
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -477,7 +482,6 @@ align-items: center;
       margin-bottom: 0;
       padding-left: 10px;
       padding-top: 2px;
-
     }
     img {
       width: 24px;
@@ -487,6 +491,9 @@ align-items: center;
     }
   }
   .pcwindow__body {
+    p {
+      margin-bottom: 20px;
+    }
     .mdn-bttns {
       display: flex;
       justify-content: space-around;
@@ -499,11 +506,11 @@ align-items: center;
     font-size: rem-calc(24);
     text-align: center;
     font-weight: bold;
-    margin-top: 20px;
+    line-height: 1.2;
     margin-bottom: 20px;
     text-transform: uppercase;
     @include media-breakpoint-down(md) {
-      line-height:1.2;
+      line-height: 1.2;
     }
   }
   p {
@@ -536,7 +543,7 @@ align-items: center;
   }
   small {
     font-size: rem-calc(10);
-    line-height: 1 !important;
+    line-height: 1.2 !important;
     display: block;
     text-align: left;
   }

@@ -12,6 +12,9 @@
     justify-content: flex-end;
     padding: 0 0.8rem;
     pointer-events: auto;
+    @include media-breakpoint-down(sm) {
+      height: 4rem;
+    }
     @include media-breakpoint-up(lg) {
       padding: 0;
     }
@@ -86,40 +89,46 @@
   width: 100%;
 
   left: 0;
-  background-color: #1e1e1e;
+  background-color: #181818;
   z-index: 900;
   transition: 0.5s cubic-bezier(0.86, 0, 0.07, 1);
   @include media-breakpoint-up(md) {
-    background: linear-gradient(to right, $red 0%, $red 50%, #111 50%, #111 100%);
+    background: linear-gradient(
+      to right,
+      $red 0%,
+      $red 50%,
+      #111 50%,
+      #111 100%
+    );
   }
-  @include media-breakpoint-up(md) {
-    &:before {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 193px;
-      height: 161px;
-      background: url(../images/menu-1.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      content: " ";
-      display: block;
-    }
+  // @include media-breakpoint-up(md) {
+  //   &:before {
+  //     position: absolute;
+  //     left: 0;
+  //     top: 0;
+  //     width: 193px;
+  //     height: 161px;
+  //     background: url(../images/menu-1.svg);
+  //     background-size: contain;
+  //     background-repeat: no-repeat;
+  //     content: " ";
+  //     display: block;
+  //   }
 
-    &:after {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 317px;
-      height: 97px;
+  //   &:after {
+  //     position: absolute;
+  //     left: 0;
+  //     bottom: 0;
+  //     width: 317px;
+  //     height: 97px;
 
-      background: url(../images/menu-2.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      content: " ";
-      display: block;
-    }
-  }
+  //     background: url(../images/menu-2.svg);
+  //     background-size: contain;
+  //     background-repeat: no-repeat;
+  //     content: " ";
+  //     display: block;
+  //   }
+  // }
 
   .links {
     @include media-breakpoint-up(md) {
@@ -139,10 +148,10 @@
     font-weight: bold;
     a {
       cursor: pointer;
-      transition:all .2s ease;
+      transition: all 0.2s ease;
 
       &:hover {
-        color:darken($red,10%);
+        color: darken($red, 10%);
       }
     }
   }
@@ -174,8 +183,9 @@
   .menu-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 90vh;
+    padding: 0;
     @media (min-width: 768px) {
       display: flex;
       flex-direction: row;
@@ -253,7 +263,7 @@
     }
     &.buttons {
       text-align: right;
-      margin-bottom: 2rem !important;
+      margin-bottom: 1rem !important;
     }
     .register-button {
       background: $red;
@@ -298,10 +308,10 @@
   .social-buttons {
     margin-bottom: 15px;
     a {
-      transition:all .2s ease;
+      transition: all 0.2s ease;
     }
     a:hover {
-      opacity: .75;
+      opacity: 0.75;
     }
   }
 }

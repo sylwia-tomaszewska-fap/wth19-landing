@@ -102,7 +102,7 @@
 
           <ul class="nav">
             <li class="nav-item">
-              <a href="#collaboration-modal" class="nav-link" data-toggle="modal">
+              <a href="https://www.wthconf.pl/cfp" target="_blank" rel="noopener noreferrer" class="nav-link">
                 <img src="images/zostan-prelegentem.svg" width="20" alt="">
                     Zostań Prelegentem</a>
             </li>

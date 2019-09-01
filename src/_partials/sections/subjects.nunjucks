@@ -6,7 +6,7 @@
 			<h1 class="section-heading" data-aos="headerbg">
 				<span>Tematyka</span>
 			</h1>
-            
+
                     <p class="lead">
                         Na wydarzeniu znajdziesz różnorodną tematykę obejmującą prawie
                         cały obszar cyberbezpieczeństwa:
@@ -24,7 +24,7 @@
 
                 <div class="row subjects-wrapper">
                     <div class="col-md-6 text-left">
-                        
+
 
 
 
@@ -91,13 +91,13 @@
                         </p>
                     </div>
                 </div>
-                        
+
                     </div>
                     <div class="col-md-6 text-left">
                     {% set data = [
     {
         icon: 'lock-check',
-        text: 'Budowa / Rozwój / Architektura oprogramowania pod kątem bezpieczeństwa'
+        text: 'Budowa / Rozwój / Architektura oprogramowania pod kątem bezpieczeństwa'
     },
     {
         icon: 'target',

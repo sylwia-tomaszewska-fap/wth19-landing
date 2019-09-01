@@ -7,7 +7,7 @@
         <p class="lead">What The H@ck to przede wszystkim:</p>
         </div>
 
-        <div class="row why1 mb-5">
+        <div class="row why1">
             <div class="col-2 text-right">
                 <img src="images/num-1.svg" class="img-fluid" width="97" alt="">
             </div>
@@ -17,7 +17,7 @@
                 </h2>
 
 
-                
+
 {% set data = [
     {
         icon: 'check',
@@ -29,7 +29,7 @@
     },
     {
         icon: 'lecturers',
-        text: 'Najlepsi prelegenci z różnych środowisk i branż: od praktyków z biznesu, 
+        text: 'Najlepsi prelegenci z różnych środowisk i branż: od praktyków z biznesu,
 poprzez naukę, aż po dostawców'
     },
     {
@@ -55,20 +55,20 @@ poprzez naukę, aż po dostawców'
         </div>
 
 
-        <div class="row why2 mb-5">
+        <div class="row why2">
             <div class="col-2 col-md-4 text-right">
                 <img src="images/num-2.svg" class="img-fluid" width="97" alt="">
             </div>
             <div class="col-10 col-md-8">
                 <h2>
-                    Treści dla osób o różnym profilu 
+                    Treści dla osób o różnym profilu
 zainteresowań
                 </h2>
 
 
             <div class="row">
-                
-            
+
+
 {% set data = [
     {
         icon: 'lock-gear',
@@ -106,13 +106,13 @@ zainteresowań
                 </div>
                 </div>
     {%endfor %}
-                </div>        
+                </div>
             </div>
         </div>
 
 
 
-        <div class="row why3 mb-5">
+        <div class="row why3">
             <div class="col-2 text-right">
                 <img src="images/num-3.svg" class="img-fluid" width="97" alt="">
             </div>
@@ -125,7 +125,7 @@ zainteresowań
 
 
 
-                
+
 {% set data = [
     {
         icon: 'people',
@@ -158,7 +158,7 @@ zainteresowań
         </div>
 
 
-        <div class="row why4 mb-5">
+        <div class="row why4">
             <div class="col-2 col-md-3 text-right">
                 <img src="images/num-4.svg" class="img-fluid" width="97" alt="">
             </div>
@@ -171,8 +171,8 @@ zainteresowań
 
 
             <div class="row mb-4">
-                
-            
+
+
 {% set data = [
     {
         image: 'certyfikaty.svg'
@@ -180,15 +180,15 @@ zainteresowań
 
     {% for item in data %}
     <div class="col-12">
-        <img src="images/{{item.image}}" class="img-fluid w-100" alt="">            
+        <img src="images/{{item.image}}" class="img-fluid w-100" alt="">
     </div>
     {%endfor %}
-                </div>        
+                </div>
             </div>
         </div>
 
 
-    <div class="row why5 mb-5">
+    <div class="row why5">
             <div class="col-2 col-md-5 text-right">
                 <img src="images/num-5.svg" class="img-fluid" width="112" alt="">
             </div>
@@ -204,7 +204,7 @@ zainteresowań
 
 
 
-                
+
 {% set data = [
     {
         icon: 'briefcase',
@@ -243,7 +243,7 @@ zainteresowań
                 <img src="images/num-6.svg" class="img-fluid" width="112" alt="">
             </div>
             <div class="col-10">
-                <h2 class="mb-5">
+                <h2 class="mb-4-5">
                     Wydarzenie polecają m.in.:
                 </h2>
 
@@ -254,25 +254,25 @@ zainteresowań
 
 
 
-                
+
 {% set data = [
-    {image:'partnerzy/wcwat.svg',width:'360'},
-    {image:'partnerzy/pwweiti.svg',width:'285'},
+    {image:'partnerzy/wcwat.svg',width:'310'},
+    {image:'partnerzy/pwweiti.svg',width:'290'},
     {image:'partnerzy/isaca.svg',width:'130'},
-    {image:'partnerzy/issa.svg',width:'153'},
+    {image:'partnerzy/issa.svg',width:'145'},
     {image:'partnerzy/owasp.svg',width:'153'},
-    {image:'partnerzy/pti.svg',width:'180'},
-    {image:'partnerzy/piit.svg',width:'125'},
+    {image:'partnerzy/pti.svg',width:'175'},
+    {image:'partnerzy/piit.svg',width:'105'},
     {image:'partnerzy/zbp.svg',width:'183'},
     {image:'partnerzy/zts.svg',width:'143'},
     {image:'partnerzy/niebezpiecznik.svg',width:'78'},
-    {image:'partnerzy/sekurak.svg',width:'94'}
+    {image:'partnerzy/sekurak.svg',width:'87'}
     ] %}
 
     <div class="row justify-content-between">
     {% for item in data %}
-    <div class="col-6 col-md-auto mx-md-2 mb-5 d-flex align-items-center justify-content-center">
-        <img src="images/{{item.image}}" class="img-fluid" width="{{item.width}}" alt="">            
+    <div class="col-6 col-md-auto mx-md-2 mb-4 d-flex align-items-center justify-content-center">
+        <img src="images/{{item.image}}" class="img-fluid" width="{{item.width}}" alt="">
     </div>
     {%endfor %}
 
