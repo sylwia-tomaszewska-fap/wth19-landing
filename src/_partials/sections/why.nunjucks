@@ -29,8 +29,7 @@
     },
     {
         icon: 'lecturers',
-        text: 'Najlepsi prelegenci z różnych środowisk i branż: od praktyków z biznesu,
-poprzez naukę, aż po dostawców'
+        text: 'Najlepsi prelegenci z różnych środowisk i branż: od pasjonatów, przez praktyków z biznesu aż po naukowców'
     },
     {
         icon: 'time',

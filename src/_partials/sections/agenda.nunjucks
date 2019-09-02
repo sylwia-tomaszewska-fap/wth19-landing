@@ -10,7 +10,7 @@
             </div>
 
             <p class="lead mt-4">
-                W zeszłym roku było to 10 ścieżek, blisko 100 wystąpień: 
+                W zeszłym roku było to 10 ścieżek, 64 wystąpienia:
             </p>
 
         <div class="agenda-past">
@@ -81,7 +81,7 @@
                     </div>
                     <div class="col text-left">
                         <p>Lightning talks: Fuckups, Use cases, How to get into security <span class="count"> [&nbsp;15-minutowe sesje&nbsp;]</span></p>
-                        
+
                     </div>
                 </div>
             </div>
