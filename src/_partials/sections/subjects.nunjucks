@@ -42,29 +42,29 @@
 
                             {% set data = [
     {
-        icon: 'analysis2',
+        icon: 'wth-analysis-2',
         text: 'Analiza incydentów'
     },
     {
-        icon: 'sec-operations',
+        icon: 'wth-sec-operations',
         text: 'Security Operations Center'
     },
     {
-        icon: 'security',
+        icon: 'wth-architecture',
         text: 'Architektura IT Security'
     },
     {
-        icon: 'managing',
+        icon: 'wth-managing',
         text: 'Zarządzanie w obszarze bezpieczeństwa IT'
     },
     {
-        icon: 'fuckup',
+        icon: 'wth-fuckup',
         text: 'Fuckupy / Wpadki z obszaru bezpieczeństwa IT'
     }] %}
     {% for item in data %}
                 <div class="row align-items-center">
                     <div class="col-auto">
-                        <i class="wth-{{item.icon}}"></i>
+                        <i class="icon-{{item.icon}}"></i>
                     </div>
                     <div class="col">
                         <p>{{item.text}}</p>
@@ -73,7 +73,7 @@
     {%endfor %}
                 <div class="row">
                     <div class="col-auto">
-                        <i class="wth-lock-check"></i>
+                        <i class="icon-wth-lock"></i>
                     </div>
                     <div class="col">
                         <p class="mt-2">Bezpieczeństwo
@@ -96,11 +96,11 @@
                     <div class="col-md-6 text-left">
                     {% set data = [
     {
-        icon: 'lock-check',
+        icon: 'build',
         text: 'Budowa / Rozwój / Architektura oprogramowania pod kątem bezpieczeństwa'
     },
     {
-        icon: 'target',
+        icon: 'bug',
         text: 'Bug hunting / Fuzzing / Exploiting'
     },
     {
@@ -108,7 +108,7 @@
         text: 'Złośliwe oprogramowanie'
     },
     {
-        icon: 'gear',
+        icon: 'gear-engineering',
         text: 'Inżynieria wsteczna'
     },
     {
@@ -116,23 +116,23 @@
         text: 'Cyberprzestępczość i informatyka śledcza'
     },
     {
-        icon: 'not-like',
+        icon: 'abuse',
         text: 'Zwalczanie nadużyć'
     },
     {
-        icon: 'consultant',
+        icon: 'police',
         text: 'Służby specjalne / Policja / Europol / Wojsko'
     },
     {
-        icon: 'avatar',
+        icon: 'thief',
         text: 'Ataki: DDoS, sieciowe, socjotechniczne'
     },
     {
-        icon: 'lock-check',
+        icon: 'audit',
         text: 'Audyt IT Security'
     },
     {
-        icon: 'lock-check',
+        icon: 'law',
         text: 'Prawo a IT  Security'
     },
     {
@@ -142,7 +142,7 @@
     {% for item in data %}
                 <div class="row align-items-center">
                     <div class="col-auto">
-                        <i class="wth-{{item.icon}}"></i>
+                        <i class="icon-wth-{{item.icon}}"></i>
                     </div>
                     <div class="col">
                         <p>{{item.text}}</p>

@@ -17,11 +17,11 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Saira:400,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="{{baseUrl}}styles/main.css"/>
-    <meta property="og:site_name" content="Konferencja What the H@ck - Zarejestruj się!">
-    <meta property="og:title" content="Konferencja What the H@ck - Zarejestruj się!"/>
-    <meta property="og:description" content="[Ostatnie wolne miejsca] Sobota, 14 grudnia, Warszawa. Najlepsi prelegenci, całe środowisko polskiego ITSec i wszyscy zainteresowani w jednym miejscu">
+    <meta property="og:site_name" content="Konferencja What The Hack - Zarejestruj się!">
+    <meta property="og:title" content="Konferencja What The Hack - Zarejestruj się!" />
+    <meta property="og:description" content="Sobota, 14/12. Najlepsi prelegenci, całe środowisko ITSec w jednym miejscu">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://wthconf.pl/images/fb.jpg">
+    <meta property="og:image" content="https://wthconf.pl/images/FB-cover-photo_v1.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
