@@ -1,10 +1,11 @@
 @font-face {
-  font-family: "wth-icons";
-  src: url("../font/wth-icons.eot?57266606");
-  src: url("../font/wth-icons.eot?57266606#iefix") format("embedded-opentype"),
-    url("../font/wth-icons.woff2?57266606") format("woff2"), url("../font/wth-icons.woff?57266606") format("woff"),
-    url("../font/wth-icons.ttf?57266606") format("truetype"),
-    url("../font/wth-icons.svg?57266606#wth-icons") format("svg");
+  font-family: "wth19";
+  src: url("../fonts/wth19.eot?88225468");
+  src: url("../fonts/wth19.eot?88225468#iefix") format("embedded-opentype"),
+    url("../fonts/wth19.woff2?88225468") format("woff2"),
+    url("../fonts/wth19.woff?88225468") format("woff"),
+    url("../fonts/wth19.ttf?88225468") format("truetype"),
+    url("../fonts/wth19.svg?88225468#wth19") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -13,15 +14,15 @@
 /*
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
-    font-family: 'wth-icons';
-    src: url('../font/wth-icons.svg?57266606#wth-icons') format('svg');
+    font-family: 'wth19';
+    src: url('../font/wth19.svg?88225468#wth19') format('svg');
   }
 }
 */
 
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: "wth-icons";
+[class^="wth19-"]:before,
+[class*=" wth19-"]:before {
+  font-family: "wth19";
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -55,54 +56,54 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.icon-wth-thief:before {
+.wth19-abuse:before {
   content: "\e800";
 } /* '' */
-.icon-wth-abuse:before {
+.wth19-analysis-2:before {
   content: "\e801";
 } /* '' */
-.icon-wth-analysis-2:before {
+.wth19-architecture:before {
   content: "\e802";
 } /* '' */
-.icon-wth-architecture:before {
+.wth19-audit:before {
   content: "\e803";
 } /* '' */
-.icon-wth-audit:before {
+.wth19-managing:before {
   content: "\e804";
 } /* '' */
-.icon-wth-build:before {
+.wth19-crime:before {
   content: "\e805";
 } /* '' */
-.icon-wth-bug:before {
+.wth19-danger:before {
   content: "\e806";
 } /* '' */
-.icon-wth-crime:before {
+.wth19-bug:before {
   content: "\e807";
 } /* '' */
-.icon-wth-danger:before {
+.wth19-fuckup:before {
   content: "\e808";
 } /* '' */
-.icon-wth-fuckup:before {
+.wth19-lock:before {
   content: "\e809";
 } /* '' */
-.icon-wth-gear-engineering:before {
+.wth19-law:before {
   content: "\e80a";
 } /* '' */
-.icon-wth-law:before {
+.wth19-police:before {
   content: "\e80b";
 } /* '' */
-.icon-wth-lock:before {
+.wth19-gear-engineering:before {
   content: "\e80c";
 } /* '' */
-.icon-wth-sec-operations:before {
+.wth19-privacy:before {
   content: "\e80d";
 } /* '' */
-.icon-wth-managing:before {
+.wth19-sec-operations:before {
   content: "\e80e";
 } /* '' */
-.icon-wth-police:before {
-  content: "\e80f";
-} /* '' */
-.icon-wth-privacy:before {
+.wth19-thief:before {
   content: "\e810";
 } /* '' */
+.wth19-build:before {
+  content: "\e811";
+} /* '' */

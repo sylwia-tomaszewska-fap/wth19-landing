@@ -31,7 +31,7 @@
                 <div class="row align-items-center">
                     <div class="col-auto">
                         <i>
-                        <img src="images/teaming.svg" width="30" alt="">
+                        <img src="images/teaming.svg" width="26" alt="">
                         </i>
                     </div>
                     <div class="col">
@@ -42,29 +42,29 @@
 
                             {% set data = [
     {
-        icon: 'wth-analysis-2',
+        icon: 'analysis-2',
         text: 'Analiza incydentów'
     },
     {
-        icon: 'wth-sec-operations',
+        icon: 'sec-operations',
         text: 'Security Operations Center'
     },
     {
-        icon: 'wth-architecture',
+        icon: 'architecture',
         text: 'Architektura IT Security'
     },
     {
-        icon: 'wth-managing',
+        icon: 'managing',
         text: 'Zarządzanie w obszarze bezpieczeństwa IT'
     },
     {
-        icon: 'wth-fuckup',
+        icon: 'fuckup',
         text: 'Fuckupy / Wpadki z obszaru bezpieczeństwa IT'
     }] %}
     {% for item in data %}
                 <div class="row align-items-center">
                     <div class="col-auto">
-                        <i class="icon-{{item.icon}}"></i>
+                        <i class="wth19-{{item.icon}}"></i>
                     </div>
                     <div class="col">
                         <p>{{item.text}}</p>
@@ -73,7 +73,7 @@
     {%endfor %}
                 <div class="row">
                     <div class="col-auto">
-                        <i class="icon-wth-lock"></i>
+                        <i class="wth19-lock"></i>
                     </div>
                     <div class="col">
                         <p class="mt-2">Bezpieczeństwo
@@ -97,7 +97,7 @@
                     {% set data = [
     {
         icon: 'build',
-        text: 'Budowa / Rozwój / Architektura oprogramowania pod kątem bezpieczeństwa'
+        text: 'Budowa / Rozwój / Architektura oprogramowania <br>pod kątem bezpieczeństwa'
     },
     {
         icon: 'bug',
@@ -142,7 +142,7 @@
     {% for item in data %}
                 <div class="row align-items-center">
                     <div class="col-auto">
-                        <i class="icon-wth-{{item.icon}}"></i>
+                        <i class="wth19-{{item.icon}}"></i>
                     </div>
                     <div class="col">
                         <p>{{item.text}}</p>

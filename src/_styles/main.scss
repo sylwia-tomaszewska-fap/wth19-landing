@@ -9,7 +9,7 @@
 // @import 'node_modules/font-awesome/scss/font-awesome';
 @import 'slick';
 @import 'wth';
-@import 'wth-icons';
+@import 'wth19';
 @import 'global';
 @import 'side-menu';
 @import 'agenda';
@@ -281,7 +281,8 @@ section.subjects {
     .subjects-wrapper {
         padding-top: 5px;
         .col-auto {
-            width: 70px;
+            width: 60px;
+                padding-right: 0;
             text-align: center;
             @include media-breakpoint-down(md) {
                 width: 40px;
@@ -295,12 +296,19 @@ section.subjects {
             width: 50px;
             text-align: center;
         }
-        i.wth-crime {
-            font-size: rem-calc(20);
-            margin-left: -7px;
+        i.wth19-crime {
+            font-size: rem-calc(26);
+            margin-left: -8px;
         }
-        i.wth-privacy {
-            margin-left: -5px;
+        i.wth19-managing {
+            margin-left: -4px;
+        }
+        i.wth19-build{
+           font-size: rem-calc(28);
+        }
+        i.wth19-danger{
+          font-size: rem-calc(24);
+              margin-left: -4px;
         }
         p {
             margin-bottom: 0;
