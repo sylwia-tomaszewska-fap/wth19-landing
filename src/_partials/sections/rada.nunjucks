@@ -83,6 +83,15 @@
                 </div>
 
                 <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p1">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/Przemek-Jaroszewski.jpg)"></div>
+                        
+                    </div>
+                    <p>Przemek <br/>JAROSZEWSKI</p>
+                    <p class="af">CERT Polska</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
                     <div class="radaprogramowa__photo p4">
                         <div class="img-container" style="background-image: url(images/radaprogramowa/MichalBijata.jpg)"></div>
                         

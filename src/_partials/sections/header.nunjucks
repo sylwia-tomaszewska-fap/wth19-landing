@@ -1,8 +1,8 @@
 <nav id="fixed-menu">
   <div class="container">
     <div class="small-container">
-      <a href="#" data-ng-click="$event.preventdefault();redirecttologin()" class="login-button active">Zaloguj się</a>
-      <a href="#" data-ng-click="$event.preventdefault();redirecttoregistration()" class="register-button top">Zarejestruj się</a>
+      <a href="https://wthconf.pl/user-login.html" class="login-button active">Zaloguj się</a>
+      <a href="#" data-ng-click="$event.preventDefault();redirectToRegistration()" class="register-button top">Zarejestruj się</a>
       <div class="hamburger-container">
         <div class="hamburger">
           <svg version="1.1" id="warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -52,10 +52,10 @@
                         </h3>
 
             <p class="mb-4">
-                            Sobota, <strong>14 grudnia 2019</strong>, Stadion Narodowy
+                            Sobota, <strong>14 grudnia 2019</strong>, PGE Narodowy
                         </p>
             <div class="text-center">
-              <a href="#" data-ng-click="$event.preventdefault();redirecttoregistration()" class="btn btn-primary btn-lg">Zarejestruj się</a>
+              <a href="#" data-ng-click="$event.preventDefault();redirectToRegistration()" class="btn btn-primary btn-lg">Zarejestruj się</a>
             </div>
 
             <div class="sitting-robot"></div>

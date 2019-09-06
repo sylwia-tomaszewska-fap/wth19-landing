@@ -27,8 +27,7 @@
         <div class="row mt-5" id="zarejestrujsie">
             <div class="col-md-10 mx-auto text-center">
                 <img src="images/crown.svg" class="w-100" alt="">
-
-                <a href="#" class="btn btn-primary btn-lg">Zarejestruj się</a>
+                <a href="#" data-ng-click="$event.preventDefault();redirectToRegistration()" class="btn btn-primary btn-lg">Zarejestruj się</a>
 
                 <div class="links">
                     <a data-toggle="modal" data-target="#recomend-modal" class="link arrow arrow--right">poleć znajomym <span></span></a>
