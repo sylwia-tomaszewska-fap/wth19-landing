@@ -89,6 +89,13 @@ a.link {
   }
 }
 
+.rwd-line {
+  display: inline;
+  @include media-breakpoint-up(xl) {
+    display: block;
+  }
+}
+
 .section-heading {
   font-size: rem-calc(76);
   text-transform: uppercase;

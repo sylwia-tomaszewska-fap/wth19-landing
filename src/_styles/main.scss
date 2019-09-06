@@ -442,7 +442,7 @@ section.prelegenci {
     p {
         font-size: rem-calc(21);
         margin-top: 5px;
-        margin-bottom: 0 !important;
+        margin-bottom: 0;
     }
     p.job {
         margin-top: 0;
@@ -452,6 +452,17 @@ section.prelegenci {
         font-weight: bold;
         color: #aaacb2;
     }
+}
+
+#allspeakers-modal{
+  .prelegent{
+    p{
+      margin-bottom: 0;
+    }
+    p.job{
+      margin-bottom: 20px;
+    }
+  }
 }
 
 section.agenda {

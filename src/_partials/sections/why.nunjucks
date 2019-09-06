@@ -29,7 +29,7 @@
     },
     {
         icon: 'lecturers',
-        text: 'Najlepsi prelegenci z różnych środowisk i branż: od pasjonatów, przez praktyków z biznesu aż po naukowców'
+        text: '<span class="rwd-line">Najlepsi prelegenci z różnych środowisk i branż: od pasjonatów, </span><span class="rwd-line">przez praktyków z biznesu aż po naukowców</span>'
     },
     {
         icon: 'time',
