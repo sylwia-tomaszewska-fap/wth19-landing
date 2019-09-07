@@ -426,8 +426,8 @@
                             przypomnieli Ci o nim w późniejszym terminie?
                         </p>
                         <div class="mdn-bttns">
-                            <a class="btn btn-primary" style="padding: 5px;" data-toggle="modal" data-target="#recomend-modal">Zarekomenduj znajomym</a>
-                            <a class="btn btn-primary" style="padding: 5px;" data-toggle="modal" data-target="#remind-modal">Przypomnij mi później</a></div>
+                            <a class="btn btn-primary" style="padding: 5px;" data-toggle="modal" data-target="#recomend-modal">Zarekomenduj znajomym ></a>
+                            <a class="btn btn-primary" style="padding: 5px;" data-toggle="modal" data-target="#remind-modal">Przypomnij mi później ></a></div>
                     </div>
                 </form>
             </div>
