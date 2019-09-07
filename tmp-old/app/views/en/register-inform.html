@@ -1,0 +1,136 @@
+<script src="js/route.min.js" async></script>
+<section class="register-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-6">
+				<h1>Registration</h1>
+			</div>
+			<div class="col-12 col-md-6">
+				<div class="register-header-steps">
+					<h3>Step</h3>
+					<div class="register-header-steps-container">
+						<div class="register-header-steps-item">
+							<span>1</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item">
+							<span>2</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item">
+							<span>3</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item">
+							<span>4</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item active">
+							<span>5</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item">
+							<span>6</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="register-contest">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="register-contest-header">Take part in the contest</h2>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-12 col-lg-10 col-xl-8">
+				<div class="register-contest-box">
+					<div class="register-contest-box-top-line"></div>
+					<div class="register-contest-box-content">
+						<div class="register-contest-box-content-col contest-icon-container">
+							<svg class="contest-icon">
+								<use xlink:href="#contest"></use>
+							</svg>
+						</div>
+						<div class="register-contest-box-content-col">
+							<h2>Tell your <br /> friends about DSS</h2>
+							<p>People, whose friends register and participate in the event, have a chance to win an Xbox, 3 sets of VR glasses and other complimentary prize!.</p>
+							<div class="register-contest-box-content-icons">
+								<svg class="contest-gamepad">
+									<use xlink:href="#contest-gamepad"></use>
+								</svg>
+								<svg class="contest-vr">
+									<use xlink:href="#contest-vr"></use>
+								</svg>
+								<svg class="contest-powerbank">
+									<use xlink:href="#contest-powerbank"></use>
+								</svg>
+								<svg class="contest-car">
+									<use xlink:href="#contest-car"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-12 col-lg-10 col-xl-8">
+				<div class="register-contest-box register-contest-box-message">
+					<div class="register-contest-box-top-line"></div>
+					<div class="register-contest-box-content">
+						<div class="register-contest-box-content-message">
+							<form name="informForm">
+								<p>Enter your friends' emails here <br /> (separated by comma / space / semicolon), <br /> who you would like to invite to the event:</p>
+								<textarea name="contest-message" placeholder="Enter emails" ng-model="registerUserData.emails" required></textarea>
+								<p class="error" ng-if="message != ''">{{message}}</p>
+								<div ng-show="loading">
+									<img src="images/tenor.gif" style="max-height: 80px;margin: 40px auto 0;">
+								</div>
+								<button type="submit" class="btn btn-contest" ng-model="loading" ng-disabled="loading" data-ng-click='$event.preventDefault();informForm.$valid && sendRecommendations()'>
+									<span>
+										<svg class="edit">
+											<use xlink:href="#edit"></use>
+										</svg> Send invitations </span>
+									<svg class="arrow">
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="next-step">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<button type="submit" class="btn btn-next-step" data-ng-click='$event.preventDefault();redirectToMeet()'>
+					<span>Move forward</span>
+					<svg class="arrow">
+						<use xlink:href="#arrow"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</section>

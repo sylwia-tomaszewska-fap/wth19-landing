@@ -1,0 +1,207 @@
+<section class="site-section">
+	<p class="wdi-title">Choose one of our 2 most comfortable packages</p>
+</section>
+<section class="site-section">
+	<div class="wdi-box wdi-box--green">
+		<div class="wdi-box__row">
+			<div class="wdi-box__column wdi-box__column--65">
+				<div class="box-content">
+					<span class="box-content__header">PRO package</span>
+					<div class="box-content-check box-content-check--green">
+						<span class="box-content-check__icon wdi-font wdi-font-close"></span>{{packages['PRO']}} zł
+					</div>
+					<div class="warning-box">
+						<span class="warning-box__icon wdi-font wdi-font-warning"></span>
+						<span class="warning-box__text">Ability to choose speeches for which standard tickets are sold out</span>
+					</div>
+					<div class="warning-box">
+						<span class="warning-box__icon wdi-font wdi-font-warning"></span>
+						<span class="warning-box__text">Access to most comfortable, dedicated place in the room on the speeches you have chosen,</span>
+					</div>
+					<div class="warning-box">
+						<span class="warning-box__icon wdi-font wdi-font-warning"></span>
+						<span class="warning-box__text">Ability to bypass all queues</span>
+					</div>
+					<div class="warning-box">
+						<span class="warning-box__icon wdi-font wdi-font-warning"></span>
+						<span class="warning-box__text">Full lunch</span>
+					</div>
+					<div class="warning-box">
+						<span class="warning-box__icon wdi-font wdi-font-warning"></span>
+						<span class="warning-box__text">Access to the closed VIP area</span>
+					</div>
+					<div class="warning-box">
+						<span class="warning-box__icon wdi-font wdi-font-warning"></span>
+						<span class="warning-box__text">The package is available only to individuals</span>
+					</div>
+				</div>
+				<div class="wdi-box__buttons">
+					<input name="pakiet" data-ng-model="userChoice.packageCode" value="PRO" required type="radio" id="pro-brown-2" hidden ng-disabled="userSummary.packageCode == 'PRO' || userSummary.packageCode == 'VIP'"/>
+					<button class="wdi-button" data-ng-click='checkPackage("PRO")'>
+						<span class="wdi-button__text">
+							<span class="wdi-font wdi-font-document"></span>
+							{{(userSummary.packageCode == 'PRO' || userSummary.packageCode == 'VIP') ? "Unavailable" : (userChoice.packageCode != "PRO" ? "Choose" : "Delete choice")}}
+						</span>
+						<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+					</button>
+				</div>
+			</div>
+			<div class="wdi-box__column">
+				<img class="wdi-box__cv-computer" src="images/robot2.svg" alt="Robot">
+			</div>
+		</div>
+	</div>
+</section>
+<section class="site-section">
+	<div class="wdi-box wdi-box--red">
+		<div class="wdi-box__row">
+			<div class="wdi-box__column wdi-box__column--65">
+				<div class="box-content">
+					<span class="box-content__header">VIP package</span>
+					<div class="box-content-check box-content-check--red">
+						<span class="box-content-check__icon wdi-font wdi-font-close"></span>{{packages['VIP']}} zł
+					</div>
+					<div class="warning-box">
+						<span class="warning-box__icon wdi-font wdi-font-warning"></span>
+						<span class="warning-box__text">Everything from PRO ticket</span>
+					</div>
+					<div class="warning-box">
+						<span class="warning-box__icon wdi-font wdi-font-warning"></span>
+						<span class="warning-box__text">Parking space</span>
+					</div>
+					<div class="warning-box">
+						<span class="warning-box__icon wdi-font wdi-font-warning"></span>
+						<span class="warning-box__text">Free coctails during the afterparty</span>
+					</div>
+					<div class="warning-box">
+						<span class="warning-box__icon wdi-font wdi-font-warning"></span>
+						<span class="warning-box__text">The package is available to everyone (individuals and organizations)</span>
+					</div>
+				</div>
+				<div class="wdi-box__buttons">
+					<input name="pakiet" data-ng-model="userChoice.packageCode" value="VIP" required type="radio" id="pro-silver-2" hidden  ng-disabled="userSummary.packageCode == 'VIP'" />
+					<button class="wdi-button" data-ng-click='checkPackage("VIP")'>
+						<span class="wdi-button__text">
+							<span class="wdi-font wdi-font-document"></span>
+							{{(userSummary.packageCode == 'VIP') ? "Unavailable" : (userChoice.packageCode != "VIP" ? "Choose" : "Delete choice")}}
+						</span>
+						<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+					</button>
+				</div>
+			</div>
+			<div class="wdi-box__column">
+				<img class="wdi-box__cv-computer" src="images/robot2.svg" alt="Robot">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="site-section">
+	<div class="wdi-box wdi-box--medium wdi-box--black">
+		<form class="wdi-form wdi-form--edit" name="convertForm">
+			<span class="box-content__header">You have a discount code - enter it here</span>
+				<form name="couponForm">
+					<div class="wdi-table">
+						<div class="wdi-table__row">
+							<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+								Rebate code:
+							</div>
+							<div class="wdi-table__column">
+								<input type="text" name="discount-code" class="wdi-form__input" maxlength="30" placeholder="––––––––––––"  data-ng-model="couponCode" autofocus>
+							</div>
+						</div>
+						<div class="wdi-table__row" ng-show="loading">
+							<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+								&nbsp;
+							</div>
+							<div class="wdi-table__column">
+								<img src="images/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+							</div>
+						</div>
+						<div class="wdi-table__row" data-ng-hide="messageCpn == ''" ng-class="{'error': message_type == 'error', 'success': message_type == 'success'}">
+							<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+								&nbsp;
+							</div>
+							<div class="wdi-table__column">
+								{{messageCpn}}
+							</div>
+						</div>
+					</div>
+					<div class="wdi-box__buttons">
+						<button class="wdi-button wdi-button--purple" data-ng-click='applyCoupon()' ng-model="loading" ng-disabled="loading">
+							<span class="wdi-button__text">
+								<span class="wdi-font wdi-font-pen"></span>
+								Apply
+							</span>
+							<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+						</button>
+					</div>
+				</form>
+			
+
+			<span class="box-content__header">Summary</span>
+			<div class="wdi-table">
+				<div class="wdi-table__row" ng-if="userChoice.packageCode != '' && userChoice.packageCode != null">
+					<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+						{{packageNames[userChoice.packageCode]}}
+					</div>
+					<div class="wdi-table__column">
+						{{packagesOrg[userChoice.packageCode] | currency : ''}} zł
+					</div>
+				</div>
+				<div class="wdi-table__row" ng-repeat="d in userChoice.selectedOptionalPkg">
+					<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+						{{packageNamesOptional[d]}}
+					</div>
+					<div class="wdi-table__column">
+						{{packagesOptional[d] | currency : ''}} zł
+					</div>
+				</div>
+				<div class="wdi-table__row" ng-if="userChoice.couponCode != null">
+					<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+						Discount<br/>[code: {{userChoice.couponCode}}]
+					</div>
+					<div class="wdi-table__column">
+						{{getDiscount() | currency : ''}} zł
+					</div>
+				</div>
+				<div class="wdi-table__row">
+					<div class="wdi-table__column wdi-table__column--left wdi-table__column--green">
+						Amount to pay
+					</div>
+					<div class="wdi-table__column">
+						{{getTotalGross() | currency : ''}} zł
+					</div>
+				</div>
+			</div>
+			<div class="wdi-form__group">
+				<div class="wdi-form__label">&nbsp;</div>
+				<span style="color:Green">
+					Note: After changing the package, a payment link will be available in your account. We will also send the link via e-mail. Please pay as soon as possible. The change of the package will take place only after the payment verification. No payment within 72 hours will cause the package change to be canceled.
+				</span>
+			</div>
+			<div class="wdi-form__group" data-ng-hide="message == ''">
+				<div class="wdi-form__label">&nbsp;</div>
+				<span style="color:Red">
+					{{message}}
+				</span>
+			</div>
+			<div class="wdi-form__group" ng-if="loading">
+				<div class="wdi-form__label">&nbsp;</div>
+				<img src="images/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+			</div>
+			<div class="wdi-form__buttons-container wdi-form__buttons-container--centered">
+				<button class="wdi-button" data-ng-click="convertForm.$valid && convertToVIP()" ng-model="loading" ng-disabled="loading">
+					<span class="wdi-button__text">
+						<span class="wdi-font wdi-font-pen"></span>
+						Change package
+					</span>
+					<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+				</button>
+				<div class="wdi-box__buttons wdi-box__buttons--pull-right">
+					<a href="#" data-ng-click='$event.preventDefault();redirectToAccount()' class="wdi-box__link">Return without changing package</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</section>

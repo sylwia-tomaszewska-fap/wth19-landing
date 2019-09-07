@@ -1,0 +1,295 @@
+﻿<!-- intro -->
+<section id="start" class="section section--intro">
+	<!-- container -->
+	<div class="container container--wrapper">
+		<div class="top">
+			<div class="top__reg">@rejestracja</div>
+			<div class="top__steps list" data-step="3">
+				<div class="top__steps__element"></div>
+			</div>
+		</div>
+	</div>
+	<!-- /container -->
+</section>
+<!-- /intro -->
+
+<!-- otargach -->
+<section id="otargach" class="section section--agenda">
+    <form role="form" name="registerForm">
+		<!-- container -->
+		<div class="container container--wrapper">
+			<div class="section__heading section__heading--left">Podaj swoje dane</div>
+			<div class="regForm__form">
+				<div class="agenda__header">
+					<p class="agenda__title">What the h<span>@</span>ck</p>
+					<span class="agenda__close"><img src="src/img/agenda-close.png" alt=""/></span>
+				</div>
+				<div class="regForm__content">
+					<div class="input">
+						<div class="input__label">Imię:*</div>
+						<div class="input__element">
+							<input data-ng-model="registerUserData.firstName" maxlength="100" class="input__target" id="name" placeholder="Imię" required autofocus type="text">
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">Nazwisko:*</div>
+						<div class="input__element">
+							<input data-ng-model="registerUserData.lastName" maxlength="100" class="input__target" id="surname" placeholder="Nazwisko" required type="text">
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">E-mail:*</div>
+						<div class="input__element">
+							<input data-ng-model="registerUserData.email" maxlength="256" class="input__target" id="email" placeholder="E-mail" required type="email">
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">Telefon kom.:*</div>
+						<div class="input__element">
+							<input data-ng-model="registerUserData.phoneNo" maxlength="9" class="input__target" id="mobile" placeholder="Telefon kom. (9 cyfr)" required type="text">
+						</div>
+					</div>
+					<div class="input input--password">
+						<div class="input__label">Hasło:*</div>
+						<div class="input__element">
+							<input data-ng-model="registerUserData.password" maxlength="20" class="input__target" id="password" placeholder="Hasło" required type="password">
+							<div class="input__info">minimum 8 znaków</div>
+						</div>
+					</div>
+					<div class="input input--password">
+						<div class="input__label">Powtórz hasło:*</div>
+						<div class="input__element">
+							<input data-ng-model="registerUserData.confirmPassword" maxlength="20" class="input__target" id="password_repeat" placeholder="Powtórz hasło" required type="password">
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">Wybierz rozmiar i kolor koszulki:</div>
+						<div class="input__element">
+							<select ng-model="registerUserData.tShirtChoice" placeholder="Wybierz rozmiar i kolor koszulki:" required class="input__target" id="selectTS" name="selectTS">
+								<option>S Granatowa</option>
+								<option>M Granatowa</option>
+								<option>L Granatowa</option>
+								<option>XL Granatowa</option>
+								<option>XXL Granatowa</option>
+								<option>S Biała</option>
+								<option>M Biała</option>
+								<option>L Biała</option>
+								<option>XL Biała</option>
+								<option>XXL Biała</option>
+							</select>
+						</div>
+					</div>
+					<div class="input input--chekboxList">
+						<div class="input__label">Jestem:*</div>
+						<div class="input__element input__element--list">
+							<div class="input input--checkbox">
+								<input name="checkbox" id="professional" type="radio" data-ng-model="registerUserData.isGraduate" value="true" required>
+								<label class="input__label" for="professional">profesjonalistą</label>
+							</div>
+							<div class="input input--checkbox">
+								<input name="checkbox" id="student" type="radio" data-ng-model="registerUserData.isGraduate" value="false" required>
+								<label class="input__label" for="student">studentem</label>
+							</div>
+						</div>
+					</div>
+					<!-- widok dla profesjonalisty -->
+					<div class="pro" ng-if="registerUserData.isGraduate == 'true'">
+						<div class="input">
+							<div class="input__label">Nazwa stanowiska:*</div>
+							<div class="input__element">
+								<input data-ng-model="registerUserData.companyPosition" maxlength="100" class="input__target" id="job" placeholder="Nazwa stanowiska" required type="text">
+							</div>
+						</div>
+						<div class="input">
+							<div class="input__label">Nazwa firmy:*</div>
+							<div class="input__element">
+								<input data-ng-model="registerUserData.companyName" maxlength="150" class="input__target" id="company" placeholder="Nazwa firmy" required type="text">
+							</div>
+						</div>
+					</div>
+					<!-- widok dla studenta -->
+					<div class="student" ng-if="registerUserData.isGraduate == 'false'">
+						<div class="input">
+							<div class="input__label">Uczelnia:*</div>
+							<div class="input__element">
+								<select ng-model="selectedSchool" ng-change="getDepartments(selectedSchool)" ng-options="school.name for school in schools" placeholder="Uczelnia" required class="input__target" id="select" name="select"></select>
+							</div>
+						</div>
+						<div class="input" ng-if="selectedSchool.name == 'Inna'">
+							<div class="input__label">Nazwa uczelni:*</div>
+							<div class="input__element">
+								<input data-ng-model="registerUserData.otherSchool" maxlength="150" class="input__target" id="school_name" placeholder="Uczelnia" required type="text">
+							</div>
+						</div>
+						<div class="input" ng-if="selectedSchool.name != 'Inna'">
+							<div class="input__label">Wydział:*</div>
+							<div class="input__element">
+								<select ng-model="selectedDepartment" ng-change="changeDepartment(selectedDepartment)" ng-options="department.name for department in departments" placeholder="Wydział" required class="input__target" id="selectW" name="selectW"></select>
+							</div>
+						</div>
+						<div class="input" ng-if="selectedSchool.name == 'Inna' || deptOtherShow">
+							<div class="input__label">Nazwa wydziału:*</div>
+							<div class="input__element">
+								<input data-ng-model="registerUserData.otherDepartment" maxlength="150" class="input__target" id="wydzial" placeholder="Nazwa wydziału" required type="text">
+							</div>
+						</div>
+					</div>
+					<!-- widok dla pakietu VIP -->
+					<div class="input input--chekboxList" ng-if="isPackageFree == false && isInvoiceAllowed == true">
+						<div class="input__label">Chcę otrzymać fakturę:*</div>
+						<div class="input__element input__element--list">
+							<div class="input input--checkbox">
+								<input id="invoiceYes" name="invoice" type="radio" data-ng-model="registerUserData.wantInvoice" value="true" required>
+								<label class="input__label" for="invoiceYes">tak</label>
+							</div>
+							<div class="input input--checkbox">
+								<input id="invoiceNo" name="invoice" type="radio" data-ng-model="registerUserData.wantInvoice" value="false" required>
+								<label class="input__label" for="invoiceNo">nie</label>
+							</div>
+						</div>
+					</div>
+					<div class="pro" ng-if="isPackageFree == false && isInvoiceAllowed == true && registerUserData.wantInvoice == 'true'">
+						<div class="input">
+							<div class="input__label">&nbsp;</div>
+							<div class="input__element">
+								<strong>Dane do faktury</strong>
+							</div>
+						</div>
+						<div class="input">
+							<div class="input__label">Nazwa rejestrowa:*</div>
+							<div class="input__element">
+								<input data-ng-model="registerUserData.payerName" maxlength="256" class="input__target" id="payerName" placeholder="Nazwa" required type="text">
+							</div>
+						</div>
+						<div class="input">
+							<div class="input__label">Adres:*</div>
+							<div class="input__element">
+								<input data-ng-model="registerUserData.payerStreet" maxlength="256" class="input__target" id="payerStreet" placeholder="Adres" required type="text">
+							</div>
+						</div>
+						<div class="input">
+							<div class="input__label">Kod pocztowy:*</div>
+							<div class="input__element">
+								<input data-ng-model="registerUserData.payerPostCode" maxlength="256" class="input__target" id="payerPostCode" placeholder="Kod pocztowy" required type="text">
+							</div>
+						</div>
+						<div class="input">
+							<div class="input__label">Miasto:*</div>
+							<div class="input__element">
+								<input data-ng-model="registerUserData.payerCity" maxlength="256" class="input__target" id="payerCity" placeholder="Miasto" required type="text">
+							</div>
+						</div>
+						<div class="input">
+							<div class="input__label">NIP:</div>
+							<div class="input__element">
+								<input data-ng-model="registerUserData.payerNip" maxlength="10" class="input__target" id="payerNip" placeholder="NIP (10 cyfr)" type="text">
+							</div>
+						</div>
+					</div>
+					<!-------------------------------------------------->
+					<br/>
+					<div class="regForm__element">
+						<div class="input input--chekboxList">
+							<div class="input__label">
+
+							</div>
+							<div class="input__element input__element--list">
+								<div class="input input--checkbox">
+									<p style="padding-left: 5px;font-size: 15px;">Dokonując rejestracji akceptujesz <br/><a href="./pub/WTH18-Regulamin_Użytkownika.pdf" target="_blank">Regulamin Konferencji</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="regForm__agreement" style="text-align: justify;">
+						<div class="input input--chekboxList">
+							<div class="input__label">
+								<input ng-model="registerUserData.processAgreement" name="checkbox" type="checkbox" id="zgoda1" required>
+							</div>
+							<div class="input__element input__element--list">
+								<div class="input input--checkbox">
+									<label class="input__label" for="zgoda1">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu rejestracji i uczestnictwa w konferencji What The Hack. <a href="#" class="jsShowMore" data-ng-click="$event.preventDefault();">rozwiń</a>
+										<div class="input__hidden jsShowMoreTekst">Obowiązek informacyjny: Administratorem danych jest organizator - Fundacja Academic Partners (01-926 Warszawa, ul. Kwitnąca 6/46). Wycofanie zgody jest możliwe poprzez wysłanie emaila na adres info@fundacjaap.org.pl, wycofanie zgody na przetwarzanie danych osobowych jest jednoznaczne z rezygnacją z udziału w konferencji. Administrator danych usunie wszystkie dane osobowe po zakończeniu prac związanych z projektem.</div>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="input input--chekboxList">
+							<div class="input__label">
+								<input ng-model="registerUserData.marketingAgreement" name="checkbox" type="checkbox" id="zgoda2">
+							</div>
+							<div class="input__element input__element--list">
+								<div class="input input--checkbox">
+									<label class="input__label" for="zgoda2">Wyrażam zgodę na przetwarzanie moich danych osobowych w celach przesłania informacji rekrutacyjnych bądź marketingowych od Wystawców, Partnerów i Organizatora.<a href="#" class="jsShowMore" data-ng-click="$event.preventDefault();">rozwiń</a>
+										<div class="input__hidden jsShowMoreTekst">Obowiązek informacyjny: Administratorem danych jest organizator - Fundacja Academic Partners (01-926 Warszawa, ul. Kwitnąca 6/46). Wycofanie zgody jest możliwe poprzez wysłanie emaila na adres info@fundacjaap.org.pl. Administrator danych usunie wszystkie dane osobowe po zakończeniu prac związanych z projektem.</div>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label"></div>
+						<div class="input__element">
+							<span>* - pole wymagane</span>
+						</div>
+					</div>
+					<div class="pro" ng-show="loading">
+						<div class="input">
+							<div class="input__label">&nbsp;</div>
+							<div class="input__element">
+								<img src="img/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+							</div>
+						</div>
+					</div>
+					<div class="pro" data-ng-hide="message == ''">
+						<div class="input">
+							<div class="input__label">&nbsp;</div>
+							<div class="input__element" style="color:Red">
+								{{message}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section__submit">
+				<button type="submit" class="section__submit__button" data-ng-click="registerForm.$valid && registerUser()" ng-model="loading" ng-disabled="loading">Przejdź dalej</button>
+			</div>
+		</div>		
+	</form>
+</section>
+<!-- /otargach -->
+
+<!-- [1] -->
+<div id="modal-maybe" class="modal modal--maybe">
+	<!-- [2] --><div class="agenda__header">
+	<p class="agenda__title">What the h@ck</p>
+	<a href="#" data-ng-click="$event.preventDefault();" class="agenda__close"><img src="src/img/agenda-close.png" alt=""></a>
+</div>
+	<div class="modal__wrapper" data-micromodal-close>
+		<div class="modalForm">
+			<div class="container container--small">
+				<div class="modalForm__header">
+					<div class="modal-body">
+						<div class="text-center">
+							<img src="src/img/robot.svg" class="img-responsive center-block" alt="">
+						</div>
+						<p>Nie odnotwaliśmy zaznaczenia wszystkich zgód na komunikację z Tobą :/</p>
+						<ul>
+							<li><span>Może to spowodować utrudnienia w komunikacji z Tobą w ramach wydarzenia. </span></li>
+							<li><span>Dzięki wszystkim zgodom uczestnictwo w wydarzeniu jest tańsze (bo nasi Sponsorzy, za naszym pośrednictwem, mogą wysłać Ci wiadomość).</span></li>
+							<li><span>Nie przekazujemy Twoich danych żadnym podmiotom zewnętrznym (jedynie poza sytuacją, kiedy zgodzisz się przesłać swoje CV - wtedy jednorazowo przekazujemy Twoje dane za Twoją zgodą wszystkim jasno wylistowanym organizacjom)</span></li>
+							<li><span>Nie spamujemy - zwykle nie wysyłamy więcej niż 1 email miesięcznie. Czesto nawet rzadziej.</span></li>
+							<li><span>Przestrzegamy wszelkich zasad obowiązującego prawa. W tym prawa do cofnięcia dowolnych zgód.</span></li>
+						</ul>
+						<br/>
+						<strong>Czy na pewno kontynuować?</strong>
+						<p></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-black btn-sm jsCloseMaybe" data-ng-click="registerUserCond(false)">Tak</button>
+						<button type="button" class="btn btn-dark jsCloseMaybe" data-ng-click="closeModal()">Nie, zmienię mój wybór</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

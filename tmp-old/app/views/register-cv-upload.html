@@ -1,0 +1,92 @@
+<!-- intro -->
+<section id="start" class="section section--intro">
+	<!-- container -->
+	<div class="container container--wrapper">
+		<div class="top">
+			<div class="top__reg">@rejestracja</div>
+			<div class="top__steps list" data-step="4">
+				<div class="top__steps__element"></div>
+			</div>
+		</div>
+	</div>
+	<!-- /container -->
+</section>
+<!-- /intro -->
+
+<!-- otargach -->
+<section id="otargach" class="section section--agenda">
+	<!-- container -->
+	<div class="container container--wrapper">
+        <form role="form" name="uploadCvForm">
+			<div class="section__heading">Znajdź lepszą pracę <br/><span>zostaw CV w formie pliku</span></div>
+			<!--<p class="section__subheading">zostaw CV w formie pliku</p>-->
+			<div class="joinDatabase">
+				<img src="src/img/cv1.svg" alt="">
+				<img src="src/img/cv2.svg" alt="">
+				<img src="src/img/cv3.svg" alt="">
+			</div>
+			<div class="uploadCV uploadCV--file">
+				<div class="agenda__header">
+					<p class="agenda__title">What the h<span>@</span>ck</p>
+					<span class="agenda__close"><img src="src/img/agenda-close.png" alt="" /></span>
+				</div>
+				<h2 class="uploadCV__heading">Plik CV</h2>
+				<div class="uploadCV__upload">
+					<p class="uploadCV__upload__text">Załącz plik ze swoim CV (max 5 MB, formaty: PDF, DOC, DOCX, PNG, JPG):</p>
+					<div class="uploadCV__input">
+						<div class="uploadCV__box"><p class="uploadCV__box__text">Przeciągnij plik tutaj</p></div>
+						<div class="uploadCV__tools">
+							<div class="uploadCV__tools__right">
+								<a href="#" class="uploadCV__button bttn bttn--smallGray">Wybierz plik</a>
+								<input id="userName" name="userName" type="text" class="uploadCV__input" value="Nie wybrano pliku" required />
+							</div>
+							<div class="uploadCV__tools__left">
+							</div>
+						</div>
+						<input id="userCV" name="userCV" type="file" class="uploadCV__input__file" value="" />
+					</div>
+					<div class="uploadCV__extra">
+						<p class="uploadCV__extra__heading">Wpisz technologie, lub nazwy stanowisk, obszary zatrudnienia, które by cię interesowały:</p>
+						<textarea data-ng-model="uploadData.interestedIn" name="informacje" class="uploadCV__textarea" required autofocus maxlength='500'></textarea>
+						<br>
+						<br>
+						<div class="">
+							Wyrażam zgodę na przekazanie mojego zgłoszenia i dołączonych dokumentów wszystkim Wystawcom uczestniczącym w konferencji What The Hack oraz przetwarzanie moich danych osobowych w celach rekrutacyjnych. <a href="#" class="jsShowMore" data-ng-click="$event.preventDefault();">rozwiń</a>
+							<div class="input__hidden jsShowMoreTekst">Obowiązek informacyjny: Administratorem danych jest organizator - Fundacja Academic Partners (01-926 Warszawa, ul. Kwitnąca 6/46), dane zostaną przekazane organizacjom biorącym udział w Giełdzie Pracy IT oraz sponsorom wydarzenia.<br /> Partnerami wydarzenia są:
+								<label ng-repeat="exh in exhList">&nbsp;{{exh}}{{$last ? '' : ', '}}</label><br />
+								Wycofanie zgody jest możliwe poprzez wysłanie emaila na adres info@fundacjaap.org.pl, wycofanie zgody na przetwarzanie danych osobowych jest jednoznaczne z rezygnacją z udziału w rekrutacjach - jeśli zgody zostaną wycofane po przekazaniu danych Wystawcom, zostaną oni o tym automatycznie powiadomieni. Fundacja Academic Partners usunie wszystkie dane osobowe po zakończeniu prac związanych z projektem, zaś Wystawcy po zakończeniu procesów rekrutacji.</div>
+						</div>
+					</div>
+					<p class="uploadCV__info" data-ng-hide="messageOk == ''" style="color:Green">{{messageOk}}</p>
+					<p class="uploadCV__info" data-ng-hide="message == ''" style="color:Red">{{message}}</p>
+					<div class="uploadCV__extra" ng-show="loading">
+						<img src="img/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+					</div>
+					<div class="uploadCV__submit">
+						<a href="#" class="bttn bttn--bigRed bttn--bigRedSave" ng-model="loading" ng-disabled="loading" data-ng-click="$event.preventDefault();saveAndMoveNext()">Zapisz </a>
+					</div>
+				</div>
+			</div>
+
+			<div class="zwieksz zwieksz--double" ng-if="!eventSettings.isUserFulfillCV">
+				<div class="agenda__header">
+					<p class="agenda__title">What the h<span>@</span>ck</p>
+					<span class="agenda__close"><img src="src/img/agenda-close.png" alt="" /></span>
+				</div>
+				<div class="zwieksz__content">
+					<div class="zwieksz__heading">Zwiększ swoje szanse</div>
+					<div class="zwieksz__subheading">wypełnij dodatkowo formularz cv online</div>
+					<a href="#" data-ng-click="$event.preventDefault();saveAndRedirectToForm()" ng-model="loading" ng-disabled="loading" class="bttn bttn--bigRed">Wypełnij formularz CV</a>
+				</div>
+			</div>
+			<div class="section__submit">
+				<button type="submit" data-ng-click='$event.preventDefault();redirectToInform()' ng-model="loading" ng-disabled="loading" class="section__submit__button">Przejdź dalej</button>
+			</div>
+			<div class="section__submit">
+				<a href="#" data-ng-click='$event.preventDefault();skipThisPage()' ng-model="loading" ng-disabled="loading">Pomiń</button>
+			</div>
+        </form>
+	</div>
+</section>
+<!-- /otargach -->
+

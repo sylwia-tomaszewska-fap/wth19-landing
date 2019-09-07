@@ -1,0 +1,161 @@
+<script src="js/route.min.js" async></script>
+<section class="register-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-6">
+				<h1>Registration</h1>
+			</div>
+			<div class="col-12 col-md-6">
+				<div class="register-header-steps">
+					<h3>Step</h3>
+					<div class="register-header-steps-container">
+						<div class="register-header-steps-item">
+							<span>1</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item">
+							<span>2</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item">
+							<span>3</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item active">
+							<span>4</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item">
+							<span>5</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item">
+							<span>6</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="candidate">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="candidate-header"> Join the candidates database<br /> Send a CV in a form of a file </h2>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-12 col-sm-6 col-lg-4">
+				<div class="candidate-item candidate-item-cv">
+					<svg class="candidate-item-icon cv-decor">
+						<use xlink:href="#cv-decor"></use>
+					</svg>
+					<p>Send your CV directly to the Data Science Job Fairs recruiters. All you have to do is to attach a CV file and / or complete a CV online form</p>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-lg-4">
+				<div class="candidate-item candidate-item-gift">
+					<svg class="candidate-item-icon gift-decor">
+						<use xlink:href="#gift-decor"></use>
+					</svg>
+					<p>Everyone who sends a CV and / or completes an online CV form has a chance to win an Xbox and a Tesla ride. Filling both types of CV doubles your chance!</p>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-lg-4">
+				<div class="candidate-item candidate-item-suitcase">
+					<svg class="candidate-item-icon suitcase-decor">
+						<use xlink:href="#suitcase-decor"></use>
+					</svg>
+					<p>So far, thanks to us, hundreds of people have found great jobs!</p>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-12 col-lg-8">
+				<div class="form-box cv-file">
+					<form name="uploadCvForm">
+						<div class="form-box-top-line"></div>
+						<div class="form-box-content">
+							<h2>CV file</h2>
+							<p>Attach the file with your CV (max 5 MB, available formats: PDF, DOC, DOCX, PNG, JPG):</p>
+							<!--
+							<div class="form-box-file"> Drop CV file here </div>
+							<p>or</p>-->
+							<div class="form-box-input-file">
+								<input type="file" name="cv-input-file" id="cv-input-file">
+								<label for="cv-input-file">
+									<span class="cv-input-file-button">Choose a file</span>
+									<span class="cv-input-file-path">no file has been selected</span>
+								</label>
+							</div>
+							<div class="textarea-container">
+								<label for="cv-positions">Enter technologies or job titles, or employment areas that interest you:</label>
+								<textarea name="cv-positions" id="cv-positions" data-ng-model="uploadData.interestedIn" required autofocus maxlength='500'></textarea>
+							</div>
+							<p class="error" data-ng-hide="messageOk == ''">{{messageOk}}</p>
+							<p class="error" data-ng-hide="message == ''">{{message}}</p>
+							<p class="agreement"> I consent to the processing of my application and attached documents to all Exhibitors participating in the Warsaw Information Technology Days event and the processing of personal data for recruitment purposes 
+								<a href="#" data-ng-click="$event.preventDefault()" class="js-expand-text">extend &gt;</a><br/>
+								<span class="hide-area hidden">
+									Information obligation: The data controller is the organizer - Academic Partners Foundation (01-926 Warsaw, Kwitnąca 6/46 street), data will be provided to organizations participating in the IT Jobs Fair and event sponsors. <br /> Partners of the event are:
+									<span ng-repeat="exh in exhList">&nbsp;{{exh}}{{$last ? '' : ', '}}</span><br />
+									Withdrawal of consent is possible by sending an email to the address info@fundacjaap.org.pl, withdrawal of consent to the processing of personal data is synonymous with the resignation from participation in recruitment - if consents will be withdrawn after submitting data to Exhibitors, they will be automatically notified. The Academic Partners Foundation will delete all personal data after completion of work related to the project, and the Exhibitor after the completion of the recruitment processes.
+								</span>
+							</p>
+							<div ng-show="loading">
+								<img src="images/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+							</div>
+							<button type="submit" class="btn btn-contest" ng-model="loading" ng-disabled="loading" data-ng-click="$event.preventDefault();saveAndMoveNext()">
+								<span>
+									<svg class="edit">
+										<use xlink:href="#edit"></use>
+									</svg> Save </span>
+								<svg class="arrow">
+									<use xlink:href="#arrow"></use>
+								</svg>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-12 col-lg-8" ng-if="!eventSettings.isUserFulfillCV">
+				<div class="candidate-box increase-chances">
+					<div class="candidate-box-top-line"></div>
+					<div class="candidate-box-content">
+						<div class="candidate-box-content-col">
+							<h5>Increase your chances</h5>
+							<p>Fill in the online CV form additionally</p>
+							<div class="candidate-box-buttons">
+								<a href="#" class="btn btn-payment" data-ng-click="$event.preventDefault();saveAndRedirectToForm()" ng-model="loading" ng-disabled="loading">
+									<span> Fill in the CV form </span>
+									<svg class="arrow">
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-lg-8">
+				<p class="skip"><a href="#" data-ng-click='$event.preventDefault();redirectToInform()' ng-model="loading" ng-disabled="loading">Skip</a></p>
+			</div>
+		</div>
+	</div>
+</section>

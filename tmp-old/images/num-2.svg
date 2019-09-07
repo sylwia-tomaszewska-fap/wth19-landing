@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.0" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="97px" height="193.501px"
+	 viewBox="0 0 97 193.501" enable-background="new 0 0 97 193.501" xml:space="preserve">
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  height="193.501" width="97" x="254.5" y="806.716" bottomLeftOrigin="true"></sliceSourceBounds>
+	</sfw>
+</metadata>
+<rect x="0.5" y="0.5" fill="#0000CC" width="32" height="32"/>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="0.5" y="1.5" width="32" height="32"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<polygon clip-path="url(#SVGID_2_)" fill="#000099" points="29.298,4.699 32.498,1.5 32.498,33.497 29.298,30.296 	"/>
+	<polygon clip-path="url(#SVGID_2_)" fill="#000099" points="29.298,30.296 32.498,33.497 0.5,33.497 3.701,30.296 	"/>
+	<polygon clip-path="url(#SVGID_2_)" fill="#0000FF" points="0.501,1.5 0.501,33.497 3.701,30.297 3.701,4.7 29.298,4.7 32.498,1.5 
+			"/>
+</g>
+<rect x="0.5" y="0.5" fill="none" stroke="#000000" stroke-miterlimit="10" width="32" height="32"/>
+<rect x="64.5" y="32.5" fill="#0000CC" width="32" height="32"/>
+<g>
+	<defs>
+		<rect id="SVGID_3_" x="64.5" y="33.5" width="32" height="32"/>
+	</defs>
+	<clipPath id="SVGID_4_">
+		<use xlink:href="#SVGID_3_"  overflow="visible"/>
+	</clipPath>
+	<polygon clip-path="url(#SVGID_4_)" fill="#000099" points="93.298,36.699 96.498,33.5 96.498,65.497 93.298,62.296 	"/>
+	<polygon clip-path="url(#SVGID_4_)" fill="#000099" points="93.298,62.296 96.498,65.497 64.5,65.497 67.701,62.296 	"/>
+	<polygon clip-path="url(#SVGID_4_)" fill="#0000FF" points="64.501,33.5 64.501,65.497 67.701,62.297 67.701,36.7 93.298,36.7 
+		96.498,33.5 	"/>
+</g>
+<rect x="64.5" y="32.5" fill="none" stroke="#000000" stroke-miterlimit="10" width="32" height="32"/>
+<rect x="64.5" y="64.5" fill="#0000CC" width="32" height="32"/>
+<g>
+	<defs>
+		<rect id="SVGID_5_" x="64.5" y="65.5" width="32" height="32"/>
+	</defs>
+	<clipPath id="SVGID_6_">
+		<use xlink:href="#SVGID_5_"  overflow="visible"/>
+	</clipPath>
+	<polygon clip-path="url(#SVGID_6_)" fill="#000099" points="93.298,68.699 96.498,65.5 96.498,97.497 93.298,94.296 	"/>
+	<polygon clip-path="url(#SVGID_6_)" fill="#000099" points="93.298,94.296 96.498,97.497 64.5,97.497 67.701,94.296 	"/>
+	<polygon clip-path="url(#SVGID_6_)" fill="#0000FF" points="64.501,65.5 64.501,97.497 67.701,94.297 67.701,68.7 93.298,68.7 
+		96.498,65.5 	"/>
+</g>
+<rect x="64.5" y="64.5" fill="none" stroke="#000000" stroke-miterlimit="10" width="32" height="32"/>
+<rect x="32.5" y="96.5" fill="#0000CC" width="32" height="32"/>
+<polygon fill="#000099" points="61.298,100.699 64.498,97.5 64.498,129.497 61.298,126.296 "/>
+<polygon fill="#000099" points="61.298,126.296 64.498,129.497 32.5,129.497 35.701,126.296 "/>
+<polygon fill="#0000FF" points="32.501,97.5 32.501,129.497 35.701,126.297 35.701,100.7 61.298,100.7 64.498,97.5 "/>
+<rect x="32.5" y="97.5" fill="none" width="32" height="32"/>
+<rect x="32.5" y="96.5" fill="none" stroke="#000000" stroke-miterlimit="10" width="32" height="32"/>
+<rect x="32.5" y="160.5" fill="#0000CC" width="32" height="32"/>
+<g>
+	<defs>
+		<rect id="SVGID_7_" x="32.5" y="161.501" width="32" height="32"/>
+	</defs>
+	<clipPath id="SVGID_8_">
+		<use xlink:href="#SVGID_7_"  overflow="visible"/>
+	</clipPath>
+	<polygon clip-path="url(#SVGID_8_)" fill="#000099" points="61.298,164.699 64.498,161.5 64.498,193.497 61.298,190.296 	"/>
+	<polygon clip-path="url(#SVGID_8_)" fill="#000099" points="61.298,190.296 64.498,193.497 32.5,193.497 35.701,190.296 	"/>
+	<polygon clip-path="url(#SVGID_8_)" fill="#0000FF" points="32.501,161.5 32.501,193.497 35.701,190.297 35.701,164.7 
+		61.298,164.7 64.498,161.5 	"/>
+</g>
+<rect x="32.5" y="160.5" fill="none" stroke="#000000" stroke-miterlimit="10" width="32" height="32"/>
+<rect x="64.5" y="160.5" fill="#0000CC" width="32" height="32"/>
+<g>
+	<defs>
+		<rect id="SVGID_9_" x="64.5" y="161.501" width="32" height="32"/>
+	</defs>
+	<clipPath id="SVGID_10_">
+		<use xlink:href="#SVGID_9_"  overflow="visible"/>
+	</clipPath>
+	<polygon clip-path="url(#SVGID_10_)" fill="#000099" points="93.298,164.699 96.498,161.5 96.498,193.497 93.298,190.296 	"/>
+	<polygon clip-path="url(#SVGID_10_)" fill="#000099" points="93.298,190.296 96.498,193.497 64.5,193.497 67.701,190.296 	"/>
+	<polygon clip-path="url(#SVGID_10_)" fill="#0000FF" points="64.501,161.5 64.501,193.497 67.701,190.297 67.701,164.7 
+		93.298,164.7 96.498,161.5 	"/>
+</g>
+<rect x="64.5" y="160.5" fill="none" stroke="#000000" stroke-miterlimit="10" width="32" height="32"/>
+<rect x="0.5" y="128.5" fill="#0000CC" width="32" height="32"/>
+<g>
+	<defs>
+		<rect id="SVGID_11_" x="0.5" y="129.501" width="32" height="32"/>
+	</defs>
+	<clipPath id="SVGID_12_">
+		<use xlink:href="#SVGID_11_"  overflow="visible"/>
+	</clipPath>
+	<polygon clip-path="url(#SVGID_12_)" fill="#000099" points="29.298,132.699 32.498,129.5 32.498,161.497 29.298,158.296 	"/>
+	<polygon clip-path="url(#SVGID_12_)" fill="#000099" points="29.298,158.296 32.498,161.497 0.5,161.497 3.701,158.296 	"/>
+	<polygon clip-path="url(#SVGID_12_)" fill="#0000FF" points="0.501,129.5 0.501,161.497 3.701,158.297 3.701,132.7 29.298,132.7 
+		32.498,129.5 	"/>
+</g>
+<rect x="0.5" y="128.5" fill="none" stroke="#000000" stroke-miterlimit="10" width="32" height="32"/>
+<rect x="32.5" y="0.5" fill="#0000CC" width="32" height="32"/>
+<polygon fill="#000099" points="61.298,4.699 64.498,1.5 64.498,33.497 61.298,30.296 "/>
+<polygon fill="#000099" points="61.298,30.296 64.498,33.497 32.5,33.497 35.701,30.296 "/>
+<polygon fill="#0000FF" points="32.501,1.5 32.501,33.497 35.701,30.297 35.701,4.7 61.298,4.7 64.498,1.5 "/>
+<rect x="32.5" y="1.5" fill="none" width="32" height="32"/>
+<rect x="32.5" y="0.5" fill="none" stroke="#000000" stroke-miterlimit="10" width="32" height="32"/>
+<rect x="64.5" y="0.5" fill="#0000CC" width="32" height="32"/>
+<g>
+	<defs>
+		<rect id="SVGID_13_" x="64.5" y="1.5" width="32" height="32"/>
+	</defs>
+	<clipPath id="SVGID_14_">
+		<use xlink:href="#SVGID_13_"  overflow="visible"/>
+	</clipPath>
+	<polygon clip-path="url(#SVGID_14_)" fill="#000099" points="93.298,4.699 96.498,1.5 96.498,33.497 93.298,30.296 	"/>
+	<polygon clip-path="url(#SVGID_14_)" fill="#000099" points="93.298,30.296 96.498,33.497 64.5,33.497 67.701,30.296 	"/>
+	<polygon clip-path="url(#SVGID_14_)" fill="#0000FF" points="64.501,1.5 64.501,33.497 67.701,30.297 67.701,4.7 93.298,4.7 
+		96.498,1.5 	"/>
+</g>
+<rect x="64.5" y="0.5" fill="none" stroke="#000000" stroke-miterlimit="10" width="32" height="32"/>
+<rect x="64.5" y="96.5" fill="#0000CC" width="32" height="32"/>
+<g>
+	<defs>
+		<rect id="SVGID_15_" x="64.5" y="97.5" width="32" height="32"/>
+	</defs>
+	<clipPath id="SVGID_16_">
+		<use xlink:href="#SVGID_15_"  overflow="visible"/>
+	</clipPath>
+	<polygon clip-path="url(#SVGID_16_)" fill="#000099" points="93.298,100.699 96.498,97.5 96.498,129.497 93.298,126.296 	"/>
+	<polygon clip-path="url(#SVGID_16_)" fill="#000099" points="93.298,126.296 96.498,129.497 64.5,129.497 67.701,126.296 	"/>
+	<polygon clip-path="url(#SVGID_16_)" fill="#0000FF" points="64.501,97.5 64.501,129.497 67.701,126.297 67.701,100.7 
+		93.298,100.7 96.498,97.5 	"/>
+</g>
+<rect x="64.5" y="96.5" fill="none" stroke="#000000" stroke-miterlimit="10" width="32" height="32"/>
+<rect x="0.5" y="96.5" fill="#0000CC" width="32" height="32"/>
+<g>
+	<defs>
+		<rect id="SVGID_17_" x="0.5" y="97.5" width="32" height="32"/>
+	</defs>
+	<clipPath id="SVGID_18_">
+		<use xlink:href="#SVGID_17_"  overflow="visible"/>
+	</clipPath>
+	<polygon clip-path="url(#SVGID_18_)" fill="#000099" points="29.298,100.699 32.498,97.5 32.498,129.497 29.298,126.296 	"/>
+	<polygon clip-path="url(#SVGID_18_)" fill="#000099" points="29.298,126.296 32.498,129.497 0.5,129.497 3.701,126.296 	"/>
+	<polygon clip-path="url(#SVGID_18_)" fill="#0000FF" points="0.501,97.5 0.501,129.497 3.701,126.297 3.701,100.7 29.298,100.7 
+		32.498,97.5 	"/>
+</g>
+<rect x="0.5" y="96.5" fill="none" stroke="#000000" stroke-miterlimit="10" width="32" height="32"/>
+<rect x="0.5" y="160.5" fill="#0000CC" width="32" height="32"/>
+<g>
+	<defs>
+		<rect id="SVGID_19_" x="0.5" y="161.501" width="32" height="32"/>
+	</defs>
+	<clipPath id="SVGID_20_">
+		<use xlink:href="#SVGID_19_"  overflow="visible"/>
+	</clipPath>
+	<polygon clip-path="url(#SVGID_20_)" fill="#000099" points="29.298,164.699 32.498,161.5 32.498,193.497 29.298,190.296 	"/>
+	<polygon clip-path="url(#SVGID_20_)" fill="#000099" points="29.298,190.296 32.498,193.497 0.5,193.497 3.701,190.296 	"/>
+	<polygon clip-path="url(#SVGID_20_)" fill="#0000FF" points="0.501,161.5 0.501,193.497 3.701,190.297 3.701,164.7 29.298,164.7 
+		32.498,161.5 	"/>
+</g>
+<rect x="0.5" y="160.5" fill="none" stroke="#000000" stroke-miterlimit="10" width="32" height="32"/>
+<g>
+	<path fill="#0000FF" d="M45.273,55.807c1.447-1.389,2.486-2.414,3.116-3.076s1.11-1.279,1.441-1.85s0.497-1.156,0.497-1.753
+		c0-0.475-0.149-0.851-0.448-1.129s-0.7-0.417-1.204-0.417c-0.305,0-0.595,0.035-0.87,0.105s-0.507,0.155-0.694,0.255
+		s-0.305,0.193-0.352,0.281c-0.234,0.422-0.352,0.653-0.352,0.694c0,0.006,0.003,0.009,0.009,0.009
+		c0.012-0.006,0.029-0.018,0.053-0.035s0.045-0.029,0.066-0.035s0.034,0.006,0.04,0.035l-0.097,0.176l-0.141-0.079L45,47.976
+		c0.434-0.697,0.965-1.232,1.595-1.604s1.334-0.558,2.114-0.558c0.668,0,1.269,0.139,1.802,0.417s0.951,0.667,1.252,1.165
+		s0.453,1.069,0.453,1.714c0,0.639-0.151,1.251-0.453,1.837s-0.697,1.154-1.187,1.705s-1.208,1.301-2.158,2.25l-0.721,0.712h3.665
+		c0.193,0,0.335-0.01,0.426-0.031s0.171-0.063,0.242-0.127h0.202v1.828h-6.961V55.807z"/>
+</g>
+<g>
+	<path fill="#0000FF" d="M45.273,86.803c1.447-1.389,2.486-2.414,3.116-3.076s1.11-1.279,1.441-1.85s0.497-1.156,0.497-1.753
+		c0-0.475-0.149-0.851-0.448-1.129s-0.7-0.417-1.204-0.417c-0.305,0-0.595,0.035-0.87,0.105s-0.507,0.155-0.694,0.255
+		s-0.305,0.193-0.352,0.281c-0.234,0.422-0.352,0.653-0.352,0.694c0,0.006,0.003,0.009,0.009,0.009
+		c0.012-0.006,0.029-0.018,0.053-0.035s0.045-0.029,0.066-0.035s0.034,0.006,0.04,0.035l-0.097,0.176l-0.141-0.079L45,78.972
+		c0.434-0.697,0.965-1.232,1.595-1.604s1.334-0.558,2.114-0.558c0.668,0,1.269,0.139,1.802,0.417s0.951,0.667,1.252,1.165
+		s0.453,1.069,0.453,1.714c0,0.639-0.151,1.251-0.453,1.837s-0.697,1.154-1.187,1.705s-1.208,1.301-2.158,2.25l-0.721,0.712h3.665
+		c0.193,0,0.335-0.01,0.426-0.031s0.171-0.063,0.242-0.127h0.202v1.828h-6.961V86.803z"/>
+</g>
+</svg>

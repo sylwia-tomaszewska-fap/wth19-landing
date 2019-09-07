@@ -1,0 +1,335 @@
+<section class="site-section">
+	<div class="wdi-box wdi-box--medium wdi-box--black">
+		<form class="wdi-form wdi-form--edit" name="cvForm">
+			<div id="interested">
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">I'm interested in:</span>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input data-ng-model="userCvData.interPractice" name="zainteresowany" id="zainteresowany-0" type="checkbox">
+						<label for="zainteresowany-0">Practice</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input data-ng-model="userCvData.interInternship" name="zainteresowany" id="zainteresowany-1" type="checkbox">
+						<label for="zainteresowany-1">Internship</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input data-ng-model="userCvData.interNonFTE" name="zainteresowany" id="zainteresowany-2" type="checkbox">
+						<label for="zainteresowany-2">Part-time work</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input data-ng-model="userCvData.interRemote" name="zainteresowany" id="zainteresowany-4" type="checkbox">
+						<label for="zainteresowany-4">Hourly work to be agreed, provided flexible working hours or remote work</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input data-ng-model="userCvData.interRemote2" name="zainteresowany" id="zainteresowany-5" type="checkbox">
+						<label for="zainteresowany-5">Remote work</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input data-ng-model="userCvData.interFTE" name="zainteresowany" id="zainteresowany-3" type="checkbox">
+						<label for="zainteresowany-3">Full-time work</label>
+					</div>
+				</div>
+			</div>
+			<div id="wantWork">
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">I would like to work in:</span>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input data-ng-model="workOption" required name="miejsce_pracy" id="miejsce-pracy-3" value="3" type="radio">
+						<label for="miejsce-pracy-3">Whole Poland and abroad - I'm flexible</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input data-ng-model="workOption" required name="miejsce_pracy" id="miejsce-pracy-0" value="0" type="radio">
+						<label for="miejsce-pracy-0">Whole Poland - I'm flexible</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input data-ng-model="workOption" required name="miejsce_pracy" id="miejsce-pracy-1" value="1" type="radio">
+						<label for="miejsce-pracy-1">Only</label>
+					</div>
+				</div>
+				<div class="wdi-form__group" ng-if="workOption == '1'">
+					<span class="wdi-form__label">&nbsp;</span>
+					<select id="wojewodztwo" name="wojewodztwo" data-ng-model="userCvData.workDistrictName" required class="wdi-form__input" style="padding: 0">
+						<option selected="selected" value="">&lt;choose&gt;</option>
+						<option value="Dolnośląskie">Lower Silesian voivodeship</option>
+						<option value="Kujawsko-pomorskie">Kuyavian-Pomeranian voivodeship</option>
+						<option value="Lubelskie">Lublin voivodeship</option>
+						<option value="Lubuskie">Lubusz voivodeship</option>
+						<option value="Łódzkie">Lodz voivodeship</option>
+						<option value="Małopolskie">Lesser Poland voivodeship</option>
+						<option value="Mazowieckie">Masovianvoivodeship</option>
+						<option value="Opolskie">Opole voivodeship</option>
+						<option value="Podkarpackie">Subcarpathian voivodeship</option>
+						<option value="Podlaskie">Podlaskie voivodeship</option>
+						<option value="Pomorskie">Pomeranian voivodeship</option>
+						<option value="Śląskie">Silesian voivodeship</option>
+						<option value="Świętokrzyskie">Świętokrzyskie voivodeship</option>
+						<option value="Warmińsko-mazurskie">Warmian-Masurian voivodeship</option>
+						<option value="Wielkopolskie">Greater Poland voivodeship</option>
+						<option value="Zachodniopomorskie">West Pomeranian voivodeship</option>
+					</select>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input data-ng-model="workOption" required name="miejsce_pracy" id="miejsce-pracy-2" value="2" type="radio">
+						<label for="miejsce-pracy-2">Only city (and around)</label>
+					</div>
+				</div>
+				<div class="wdi-form__group" ng-if="workOption == '2'">
+					<span class="wdi-form__label">&nbsp;</span>
+					<input class="wdi-form__input" type="text" data-ng-model="userCvData.workCityName" required maxlength="40" placeholder="City">
+				</div>
+			</div>
+			<div id="education">
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">I have*:</span>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input name="wyksztalcenie" data-ng-model="userCvData.educationLevel" required id="wyksztalcenie-0" value="0" type="radio">
+						<label for="wyksztalcenie-0">a high school education</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input name="wyksztalcenie" data-ng-model="userCvData.educationLevel" required id="wyksztalcenie-1" value="1" type="radio">
+						<label for="wyksztalcenie-1">higher education (during my studies)</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input name="wyksztalcenie" data-ng-model="userCvData.educationLevel" required id="wyksztalcenie-2" value="2" type="radio">
+						<label for="wyksztalcenie-2">a university degree (completed studies)</label>
+					</div>
+				</div>
+				<div ng-if="userCvData.educationLevel == '1' || userCvData.educationLevel == '2'">
+					<div class="wdi-form__group">
+						<span class="wdi-form__label">College*:</span>
+						<select ng-model="selectedSchool" ng-change="getDepartments(selectedSchool)" ng-options="school.name for school in schools" placeholder="College" required id="select" name="select" class="wdi-form__input" style="padding: 0"></select>
+					</div>
+					<div class="wdi-form__group" ng-if="selectedSchool.name == 'Inna'">
+						<span class="wdi-form__label">College name*:</span>
+						<input data-ng-model="userCvData.otherSchool" maxlength="150" class="wdi-form__input" id="school_name" placeholder="College name" required="" type="text">
+					</div>
+					<div class="wdi-form__group" ng-if="selectedSchool.name != 'Inna'">
+						<span class="wdi-form__label">Department*:</span>
+						<select ng-model="selectedDepartment" ng-change="changeDepartment(selectedDepartment)" ng-options="department.name for department in departments" placeholder="Department" required id="selectW" name="selectW" class="wdi-form__input" style="padding: 0"></select>
+					</div>
+					<div class="wdi-form__group" ng-if="selectedSchool.name == 'Inna' || deptOtherShow">
+						<span class="wdi-form__label">Department name*:</span>
+						<input class="wdi-form__input" data-ng-model="userCvData.otherDepartment" maxlength="150" id="wydzial" placeholder="Department name" required="" type="text">
+					</div>
+				</div>
+			</div>
+			<div id="interestArea">
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">Provide technologies or job titles, or areas of employment that interest you*:</span>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<textarea data-ng-model="userCvData.interestedIn" name="zainteresowany" class="wdi-form__textarea" maxlength='2000' required></textarea>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">I have professional experience*:</span>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<textarea data-ng-model="userCvData.experience" maxlength='2000' class="wdi-form__textarea" required></textarea>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">My skills (software languages and others)*:</span>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<textarea data-ng-model="userCvData.skills" maxlength='2000' class="wdi-form__textarea" required></textarea>
+				</div>	
+			</div>
+			<div id="languages">
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">Knowledge of foreign languages:</span>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">English*:</span>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input type="radio" data-ng-model="userCvData.languageEnglish" id="english-1" name="angielski" value="0">
+						<label for="english-1">Lack</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input type="radio" data-ng-model="userCvData.languageEnglish" id="english-2" name="angielski" value="1">
+						<label for="english-2">Basic</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input type="radio" data-ng-model="userCvData.languageEnglish" id="english-3" name="angielski" value="2">
+						<label for="english-3">Intermediate</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input type="radio" data-ng-model="userCvData.languageEnglish" id="english-4" name="angielski" value="3">
+						<label for="english-4">Advanced</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">German*:</span>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input type="radio" data-ng-model="userCvData.languageGerman" id="german-1" name="niemiecki" value="0">
+						<label for="german-1">Lack</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input type="radio" data-ng-model="userCvData.languageGerman" id="german-2" name="niemiecki" value="1">
+						<label for="german-2">Basic</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input type="radio" data-ng-model="userCvData.languageGerman" id="german-3" name="niemiecki" value="2">
+						<label for="german-3">Intermediate</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input type="radio" data-ng-model="userCvData.languageGerman" id="german-4" name="niemiecki" value="3">
+						<label for="german-4">Advanced</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">French*:</span>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input type="radio" data-ng-model="userCvData.languageFrench" id="french-1" name="francuski" value="0">
+						<label for="french-1">Lack</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input type="radio" data-ng-model="userCvData.languageFrench" id="french-2" name="francuski" value="1">
+						<label for="french-2">Basic</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input type="radio" data-ng-model="userCvData.languageFrench" id="french-3" name="francuski" value="2">
+						<label for="french-3">Intermediate</label>
+					</div>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<div style="font-size: 1.6rem;">
+						<input type="radio" data-ng-model="userCvData.languageFrench" id="french-4" name="francuski" value="3">
+						<label for="french-4">Advanced</label>
+					</div>
+				</div>
+			</div>
+			<div id="additional">
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">Additionally, I know the following languages (enter what and what is your level):</span>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<textarea data-ng-model="userCvData.languageAdditional" class="wdi-form__textarea" maxlength='2000'></textarea>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">Additional information:</span>
+				</div>
+				<div class="wdi-form__group">
+					<span class="wdi-form__label">&nbsp;</span>
+					<textarea data-ng-model="userCvData.additionalInfo" class="wdi-form__textarea" maxlength='2000'></textarea>
+				</div>
+			</div>
+			<div class="wdi-form__group">
+				<div class="wdi-form__label">&nbsp;</div>
+				<span>All fields marked with * are required</span>
+			</div>			
+			<div class="wdi-form__group">
+				<div class="wdi-form__label">&nbsp;</div>
+				<span>
+					I consent to the processing of my application and attached documents to all Exhibitors participating in the Data Science Summit event and the processing of personal data for recruitment purposes
+<br/>
+Information obligation: The data controller is the organizer - Academic Partners Foundation (01-926 Warsaw, Kwitnąca 6/46 street), data will be provided to organizations participating in Data Science Fair and event sponsors. <br /> Partners of the event are:
+					<span ng-repeat="exh in exhList">&nbsp;{{exh}}{{$last ? '' : ', '}}</span><br />
+					Withdrawal of consent is possible by sending an email to the address info@fundacjaap.org.pl, withdrawal of consent to the processing of personal data is synonymous with the resignation from participation in recruitment - if consents will be withdrawn after transferring data to Exhibitors, they will be automatically notified. The Academic Partners Foundation will delete all personal data after completion of work related to the project, and the Exhibitor after the completion of the recruitment processes.
+				</span>
+			</div>
+			<div class="wdi-form__group" data-ng-hide="message == ''">
+				<div class="wdi-form__label">&nbsp;</div>
+				<span style="color:Red">
+					{{message}}
+				</span>
+			</div>
+			<div class="wdi-form__group" data-ng-hide="message == ''">
+				<div class="wdi-form__label">&nbsp;</div>
+				<span style="color:Green">
+					{{messageOk}}
+				</span>
+			</div>
+			<div class="wdi-form__group" ng-if="loading">
+				<div class="wdi-form__label">&nbsp;</div>
+				<img src="images/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+			</div>
+			<div class="wdi-form__buttons-container wdi-form__buttons-container--centered">
+				<button class="wdi-button" data-ng-click="cvForm.$valid && uploadCvForm()" ng-model="loading" ng-disabled="loading">
+					<span class="wdi-button__text">
+						<span class="wdi-font wdi-font-pen"></span>
+						Save changes
+					</span>
+					<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+				</button>
+				<div class="wdi-box__buttons wdi-box__buttons--pull-right">
+					<a href="#" data-ng-click='$event.preventDefault();redirectToAccount()' class="wdi-box__link">Return without saving</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</section>

@@ -1,0 +1,71 @@
+<!-- intro -->
+<section id="start" class="section section--intro">
+	<!-- container -->
+	<div class="container container--wrapper">
+		<div class="top">
+			<div class="top__reg">@rejestracja</div>
+			<div class="top__steps list" data-step="6">
+				<div class="top__steps__element"></div>
+			</div>
+		</div>
+	</div>
+	<!-- /container -->
+</section>
+<!-- /intro -->
+
+<!-- otargach -->
+<section id="otargach" class="section section--agenda">
+	<!-- container -->
+	<div class="container container--wrapper">
+		<div class="finished">
+			<div class="agenda__header">
+				<p class="agenda__title">What the h@ck</p>
+				<span class="agenda__close"><img src="src/img/agenda-close.png" alt="" /></span>
+			</div>
+			<div class="finished__content">
+				<h2 class="finished__heading" ng-if="loading == false && userInfo.firstName != null">{{userInfo.firstName}}, dziękujemy za aktywację konta!</h2>
+				<h2 class="finished__heading" ng-if="loading == true">Weryfikujemy aktywację, prosimy o chwilę cierpliwości</h2>
+				<!-- brak płatności - pakiet bezpłatny -->
+				<div ng-if="userInfo.hasPayment == false">
+					<p>Konto w pełni aktywne. Wkrótce na podany adres e-mail dostaniesz zaproszenie.</p>
+				</div>
+				<!-- jest płatność - pakiet firmowy -->
+				<div ng-if="userInfo.isOrgPackage == true">
+					<p>Dziękujemy za rejestrację. Wkrótce się skontaktujemy i prześlemy szczegóły. W razie pytan zapraszamy na maila hello@dssconf.pl</p>
+				</div>
+				<!-- jest płatność - kod rabatowy wymaga zatwierdzenia -->
+				<div ng-if="userInfo.hasPayment == true && userInfo.isWaitingForCouponApproval == true">
+					<p>Oczekiwanie na akceptację kodu rabatowego przez organizatorów.</p>
+					<p>Podczas rejestracji podano kod rabatowy, którego użycie wymaga akceptacji po stronie organizatorów. Po akceptacji wygenerowany zostanie link do płatności.</p>
+				</div>
+				<!-- jest płatność - pobrano link do płatności -->
+				<div ng-if='loading == false && userInfo.hasPayment == true && userInfo.isWaitingForCouponApproval == false && paymentUrl != null && paymentUrl != "0"'>
+					<p>Prosimy o dokonanie płatności klikając w poniższy link, który dodatkowo prześlemy na Twój adres e-mail.</p>
+					<p>UWAGA: w przypadku braku dokonania płatności w ciągu 24h - Twoja rejestracja oraz wszystkie dane z nią związane zostaną usunięte.</p>
+					<a href="#" class="bttn bttn--bigRed bttn--bigRedPay" data-ng-click='$event.preventDefault();redirectToPayment()'>Dokonaj płatności</a>
+				</div>
+				<!-- jest płatność - brak linku do płatności -->
+				<div ng-if='loading == false && userInfo.hasPayment == true && userInfo.isWaitingForCouponApproval == false && paymentUrl == null'>
+					<p>Oczekiwanie na wygenerowanie płatności. Link do płatności prześlemy na Twój adres e-mail.</p>
+					<p>UWAGA: w przypadku braku dokonania płatności w ciągu 24h - Twoja rejestracja oraz wszystkie dane z nią związane zostaną usunięte.</p>
+				</div>
+				<!-- jest płatność - tyle że 0 zł, czyli brak płatności i faktury -->
+				<div ng-if='loading == false && userInfo.hasPayment == true && userInfo.isWaitingForCouponApproval == false && paymentUrl == "0"'>
+					<p>Konto w pełni aktywne. Wkrótce na podany adres e-mail dostaniesz zaproszenie.</p>
+				</div>
+				<div ng-if="loading">
+					<img src="img/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section__social">
+		<div class="section__social__element">
+			<a href="#" class="section__social__fb" data-ng-click='$event.preventDefault();redirectToFB()'>Polub nas na fb</a>
+		</div>
+		<div class="section__social__element">
+			<a href="#" class="section__social__meetup" data-ng-click='$event.preventDefault();redirectToMeetup()'>Polub nas na meetup</a>
+		</div>
+	</div>
+</section>
+<!-- /otargach -->

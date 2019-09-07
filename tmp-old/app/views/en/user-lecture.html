@@ -1,0 +1,397 @@
+<script src="js/route.min.js" async></script>
+<form name="agendaForm">
+	<section class="register-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-6">
+					<h1>User account</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="agenda">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="agenda-header">
+						<h3>
+							<em class="hash">#</em>
+							<span>Choose speeches in which you are planning to take part:</span>
+						</h3>
+						<p>ATTENTION: The following choice of speeches will result in reservation of seats in the room. You can make changes, as well as just go to another room during the event, subject to the availability of seats.</p>
+						<h6 ng-if="isCalendarRequired">Your package includes participation on one day of the conference. </h6>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-8" ng-if="isCalendarRequired">
+					<ul class="nav nav-pills" id="agenda-tab" role="tablist">
+						<li class="nav-item" ng-repeat="d in prelekcje">
+							<a class="nav-link" ng-class="{'active': d.calendarCode=='Day1'}" id="agenda-{{d.calendarCode}}-tab" data-toggle="pill" href="#agenda-{{d.calendarCode}}" data-ng-click='$event.preventDefault();chooseDay(d.calendarCode)' role="tab" aria-controls="agenda-{{d.calendarCode}}" aria-selected="{{d.calendarCode=='Day1'?'true':'false'}}"> {{d.calendarDay}} </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div ng-repeat="d in prelekcje | filter:whereDayFilter(agenda.calendarCode)">
+						<div id="accordion-{{d.calendarCode}}" class="accordion accordion-day">
+							<div class="card">
+								<div id="heading-{{d.calendarCode}}" class="card-header">
+									<a role="button" class="btn" data-toggle="collapse" data-target="#collapse-{{d.calendarCode}}" aria-expanded="true" aria-controls="collapse-{{d.calendarCode}}">
+										<h5>
+										<span>{{d.calendarDay}}</span>
+											<svg class="accordion-close">
+												<use xlink:href="#close"></use>
+											</svg>
+										</h5>
+									</a>
+								</div>
+								<div id="collapse-{{d.calendarCode}}" class="collapse show" aria-labelledby="heading-{{d.calendarCode}}" data-parent="#accordion-{{d.calendarCode}}">
+									<div class="card-body">
+										<div ng-repeat="p in d.categories">
+											<div id="topic-{{d.calendarCode}}-{{p.objectId}}" class="accordion accordion-topic">
+												<div class="card">
+													<div class="card-header" id="heading-topic-{{d.calendarCode}}-{{p.objectId}}">
+														<a role="button" class="btn" data-toggle="collapse" data-target="#collapse-topic-{{d.calendarCode}}-{{p.objectId}}" aria-expanded="true" aria-controls="collapse-topic-{{d.calendarCode}}-{{p.objectId}}">
+                                                            <h5>
+                                                                <span>
+                                                                    <img src="{{p.categoryIcon}}" class="accordion-topic-icon"> {{p.categoryName}} </span>
+                                                                <svg class="accordion-close">
+                                                                    <use xlink:href="#close"></use>
+                                                                </svg>
+                                                            </h5>
+														</a>
+													</div>
+													<div id="collapse-topic-{{d.calendarCode}}-{{p.objectId}}" class="collapse show" aria-labelledby="heading-topic-{{d.calendarCode}}-{{p.objectId}}" data-parent="#topic-{{d.calendarCode}}-{{p.objectId}}">
+														<div class="card-body">
+															<div id="topic-presentation-{{d.calendarCode}}-{{p.objectId}}" class="accordion accordion-presentation">
+																<div ng-repeat="ps in p.lectures">
+																	<div class="card">
+																		<div class="card-header" id="heading-{{ps.objectId}}">
+																			<h5 class="presentation">
+																				<div class="agenda-checkbox" ng-if="ps.allowRegister == true && (ps.maxCount == 0 || (ps.maxCount > 0 && ps.count<ps.maxCount) || (isPackageHasVipPlaces && ps.maxCountVIP > 0 && ps.countVIP<ps.maxCountVIP))">
+																					<input type="checkbox" name="check{{ps.objectId}}" checklist-model="agenda.selected" checklist-value="ps.objectId" id="check{{ps.objectId}}">
+																					<label for="check{{ps.objectId}}">
+																						<span class="checkbox-img">
+																							<span class="unchecked">
+																								<svg class="checkbox-icon">
+																									<use xlink:href="#checkbox-unchecked"></use>
+																								</svg>
+																							</span>
+																							<span class="checked">
+																								<svg class="checkbox-icon">
+																									<use xlink:href="#checkbox-x"></use>
+																								</svg>
+																							</span>
+																						</span>
+																					</label>
+																				</div>
+																				<div class="agenda-checkbox" ng-if="!(ps.allowRegister == true && (ps.maxCount == 0 || (ps.maxCount > 0 && ps.count<ps.maxCount) || (isPackageHasVipPlaces && ps.maxCountVIP > 0 && ps.countVIP<ps.maxCountVIP)))">
+																					<div class="hidden-checkbox"></div>
+																				</div>
+																				<div class="presentation-data">
+																					<div class="presentation-data-time">
+																						<span>{{ps.startDate}} - {{ps.endDate}}</span>
+																					</div>
+																					<div class="presentation-data-title-author">
+																						<div class="presentation-data-title">
+																							<span>{{ps.subject}}</span>
+																							<!--<span ng-if="ps.difficultyLevel != null">
+																								<svg class="level-star" ng-if="ps.difficultyLevel >= 1">
+																									<use xlink:href="#level-star-checked"></use>
+																								</svg>
+																								<svg class="level-star" ng-if="ps.difficultyLevel < 1">
+																									<use xlink:href="#level-star-unchecked"></use>
+																								</svg>
+																								<svg class="level-star" ng-if="ps.difficultyLevel >= 2">
+																									<use xlink:href="#level-star-checked"></use>
+																								</svg>
+																								<svg class="level-star" ng-if="ps.difficultyLevel < 2">
+																									<use xlink:href="#level-star-unchecked"></use>
+																								</svg>
+																								<svg class="level-star" ng-if="ps.difficultyLevel >= 3">
+																									<use xlink:href="#level-star-checked"></use>
+																								</svg>
+																								<svg class="level-star" ng-if="ps.difficultyLevel < 3">
+																									<use xlink:href="#level-star-unchecked"></use>
+																								</svg>
+																							</span>-->
+																							<span ng-if="ps.isInEnglish">
+																								<svg class="uk">
+																									<use xlink:href="#uk-1"></use>
+																								</svg>
+																							</span>
+																						</div>
+																						<div class="presentation-data-author">
+																							<div ng-repeat="plg in ps.lecturers">
+																								<strong>{{plg.firstName}} {{plg.lastName}}</strong><strong ng-if="((plg.firstName || plg.lastName) && (plg.jobPosition || plg.organization))">, </strong>
+																								<span>{{plg.jobPosition}}</span><span ng-if="plg.jobPosition && plg.organization">, {{plg.organization}}</span>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="presentation-last-pro" ng-if="ps.statusVIP == 1">
+																					<span>Last<br /><strong>PRO</strong><br />tickets</span>
+																				</div>
+																				<div class="presentation-last-pro" ng-if="ps.statusVIP == 2">
+																					<span>No<br /><strong>PRO</strong><br />tickets</span>
+																				</div>
+																				<div class="presentation-lack-of-seats" ng-if="ps.status == 1">
+																					<span>Last<br />tickets</span>
+																				</div>
+																				<div class="presentation-lack-of-seats" ng-if="ps.status == 2">
+																					<span>No<br />tickets</span>
+																				</div>
+																				<a role="button" class="btn collapsed" data-toggle="collapse" data-target="#collapse-{{ps.objectId}}" aria-expanded="true" aria-controls="collapse-{{ps.objectId}}">
+																					<svg class="accordion-close">
+																						<use xlink:href="#close-2"></use>
+																					</svg>
+																				</a>
+																			</h5>
+																		</div>
+																		<div id="collapse-{{ps.objectId}}" class="collapse" aria-labelledby="heading-{{ps.objectId}}" data-parent="#topic-presentation-{{d.calendarCode}}-{{p.objectId}}">
+																			<div class="card-body">
+																				<div class="presentation-content">
+																					<div class="presentation-content-authors">
+																						<div class="presentation-content-author" ng-repeat="plg in ps.lecturers">
+																							<div class="presentation-content-author-img">
+																								<div class="presentation-content-author-img-container">
+																									<img src="{{plg.imageUrl!=null ? plg.imageUrl : 'https://brandsome.it/content/img/brak_zdjecia.png'}}">
+																									<svg class="img-decor-1">
+																										<use xlink:href="#img-decor"></use>
+																									</svg>
+																									<svg class="img-decor-2">
+																										<use xlink:href="#img-decor"></use>
+																									</svg>
+																								</div>
+																							</div>
+																							<div class="presentation-content-author-data">
+																								<h6>{{plg.firstName}} {{plg.lastName}}</h6>
+																								<p>{{plg.jobPosition}}<br />{{plg.organization}}</p>
+																								<a href="#" data-ng-click='$event.preventDefault();changePrelegent(plg)' data-toggle="modal" data-target="#agenda-bio-modal">Bio &gt;</a>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="presentation-content-info" ng-if="ps.lectureType == 0">
+																						<p class="presentation-content-vertical"><strong>Description of the speech:</strong><span ng-bind-html="ps.shortDescription"></span></p>
+																						<p class="presentation-content-vertical"><strong>Tags:</strong><span>{{plg.tags}}</span></p>
+																						<!--<p>
+																							<strong>Rekomendowany poziom wiedzy:</strong>
+																							<span ng-if="ps.difficultyLevel != null">
+																								<svg class="level-star" ng-if="ps.difficultyLevel >= 1">
+																									<use xlink:href="#level-star-checked"></use>
+																								</svg>
+																								<svg class="level-star" ng-if="ps.difficultyLevel < 1">
+																									<use xlink:href="#level-star-unchecked"></use>
+																								</svg>
+																								<svg class="level-star" ng-if="ps.difficultyLevel >= 2">
+																									<use xlink:href="#level-star-checked"></use>
+																								</svg>
+																								<svg class="level-star" ng-if="ps.difficultyLevel < 2">
+																									<use xlink:href="#level-star-unchecked"></use>
+																								</svg>
+																								<svg class="level-star" ng-if="ps.difficultyLevel >= 3">
+																									<use xlink:href="#level-star-checked"></use>
+																								</svg>
+																								<svg class="level-star" ng-if="ps.difficultyLevel < 3">
+																									<use xlink:href="#level-star-unchecked"></use>
+																								</svg>
+																							</span>
+																						</p>-->
+																						<p><strong>Speech language:</strong> {{ps.isInEnglish?"angielski":"polski"}}</p>
+																						<p><strong>Location:</strong> {{ps.place}}</p>
+																						<p class="presentation-last-pro" ng-if="ps.statusVIP == 1">
+																							<span>Last <strong>PRO</strong> tickets</span>
+																						</p>
+																						<p class="presentation-last-pro" ng-if="ps.statusVIP == 2">
+																							<span>No <strong>PRO</strong> tickets</span>
+																						</p>
+																						<p class="presentation-lack-of-seats" ng-if="ps.status == 1">
+																							<span>Last tickets</span>
+																						</p>
+																						<p class="presentation-lack-of-seats" ng-if="ps.status == 2">
+																							<span>No tickets</span>
+																						</p>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center agenda-summary-header">
+				<div class="col">
+					<h3>
+						<em class="hash">#</em>
+						<span>Choosen speeches</span>
+					</h3>
+				</div>
+			</div>
+			<div class="row justify-content-center agenda-summary">
+				<div class="col-12 col-lg-10">
+					<div class="box-3d">
+						<div class="box-3d-content">
+							<div ng-repeat="d in prelekcje | filter:whereDayFilter(agenda.calendarCode)" class="agenda-summary-day"><!-- Day -->
+								<h5 class="agenda-summary-day-header"> {{d.calendarDay}} </h5>
+								<div class="agenda-summary-day-item"><!-- Category -->
+									<div class="agenda-summary-day-item-content"><!-- Lecture -->
+										<div ng-repeat="ps in agenda.selected | filter:whereDayFnc(d.calendarCode) | orderBy : sortFnc" class="agenda-checkbox">
+											<input type="checkbox" checklist-model="agenda.selected" checklist-value="ps" id="checkLst{{ps}}">
+											<label for="checkLst{{ps}}">
+												<span class="checkbox-img">
+													<span class="unchecked">
+														<svg class="checkbox-icon">
+															<use xlink:href="#checkbox-3-unchecked"></use>
+														</svg>
+													</span>
+													<span class="checked">
+														<svg class="checkbox-icon">
+															<use xlink:href="#checkbox-3-checked"></use>
+														</svg>
+													</span>
+												</span>
+												<span class="checkbox-desc">
+													<span>{{lectures[ps].startDate}} - {{lectures[ps].endDate}}</span>
+													<span>{{lectures[ps].subject}}</span>
+													<!--<span ng-if="lectures[ps].difficultyLevel != null">
+														<svg class="level-star" ng-if="lectures[ps].difficultyLevel >= 1">
+															<use xlink:href="#level-star-checked"></use>
+														</svg>
+														<svg class="level-star" ng-if="lectures[ps].difficultyLevel < 1">
+															<use xlink:href="#level-star-unchecked"></use>
+														</svg>
+														<svg class="level-star" ng-if="lectures[ps].difficultyLevel >= 2">
+															<use xlink:href="#level-star-checked"></use>
+														</svg>
+														<svg class="level-star" ng-if="lectures[ps].difficultyLevel < 2">
+															<use xlink:href="#level-star-unchecked"></use>
+														</svg>
+														<svg class="level-star" ng-if="lectures[ps].difficultyLevel >= 3">
+															<use xlink:href="#level-star-checked"></use>
+														</svg>
+														<svg class="level-star" ng-if="lectures[ps].difficultyLevel < 3">
+															<use xlink:href="#level-star-unchecked"></use>
+														</svg>
+													</span>-->
+													<span ng-if="lectures[ps].isInEnglish">
+														<svg class="uk">
+															<use xlink:href="#uk-2"></use>
+														</svg>
+													</span>
+												</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box-3d-shadow-border"></div>
+						<div class="box-3d-decor-line"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="next-step">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div ng-show="loading">
+						<img src="images/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+					</div>
+					<div data-ng-hide="message == ''" style="color:Red">
+						<div ng-bind-html="message"></div>
+					</div>
+					<button type="submit" class="btn btn-next-step" ng-model="loading" ng-disabled="loading" data-ng-click="agendaForm.$valid && saveReservations()">
+						<span>Save</span>
+						<svg class="arrow">
+							<use xlink:href="#arrow"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col">
+					<p class="skip"><a href="#" data-ng-click='$event.preventDefault();redirectToAccount()' ng-model="loading" ng-disabled="loading">Continue without sending</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+</form>
+<div class="modal fade" id="agenda-bio-modal" tabindex="-1" role="dialog" aria-labelledby="agenda-bio-modal" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<svg class="modal-close-icon">
+						<use xlink:href="#close-2"></use>
+					</svg>
+				</button>
+				<div class="agenda-bio-modal-content">
+					<div class="agenda-bio-modal-content-col">
+						<div class="agenda-bio-modal-img">
+							<div class="agenda-bio-modal-img-container">
+								<img src="{{activePrelegent.imageUrl!=null ? activePrelegent.imageUrl : 'https://brandsome.it/content/img/brak_zdjecia.png'}}">
+								<svg class="img-decor-1">
+									<use xlink:href="#img-decor"></use>
+								</svg>
+								<svg class="img-decor-2">
+									<use xlink:href="#img-decor"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="agenda-bio-modal-content-col">
+						<h4>{{activePrelegent.firstName}} {{activePrelegent.lastName}}</h4>
+						<h5>{{activePrelegent.jobPosition}}<br />{{activePrelegent.organization}}</h5>
+						<p ng-bind-html="activePrelegent.biography"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="agenda-reservation-modal" tabindex="-1" role="dialog" aria-labelledby="agenda-reservation-modal">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<svg class="modal-close-icon">
+						<use xlink:href="#close-2"></use>
+					</svg>
+				</button>
+				<div class="agenda-reservation-modal-content">
+					<div class="agenda-reservation-modal-content-text">
+						<svg class="reservation">
+							<use xlink:href="#reservation"></use>
+						</svg>
+						<h2>Reservation</h2>
+						<p>By selecting lectures you reserve a place in the hall! Only select the presentations you want to participate in. Persons with a reservation will have priority to enter the room. Persons without a reservation can take part in the lecture only if there are free seats in the room.</p>
+						<button class="btn btn-ok-modal" data-dismiss="modal" aria-label="Close">
+							<span>OK</span>
+							<svg class="arrow">
+								<use xlink:href="#arrow"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="agenda-reservation-modal-img">
+						<img src="./images/photo-audience.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

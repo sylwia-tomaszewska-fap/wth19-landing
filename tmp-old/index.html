@@ -1,0 +1,2690 @@
+
+
+  
+  
+  
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js" ng-app="mpApp">
+
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>What The Hack - Zarejestruj się</title>
+    <meta name="description" content="Wh@t the hack 2019 - zarejestruj się"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Saira:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css"/>
+    <meta property="og:site_name" content="Konferencja What The Hack - Zarejestruj się!">
+    <meta property="og:title" content="Konferencja What The Hack - Zarejestruj się!" />
+    <meta property="og:description" content="Sobota, 14/12. Najlepsi prelegenci, całe środowisko ITSec w jednym miejscu">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://wthconf.pl/images/FB-cover-photo_v1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="scripts/polyfills.js"></script>
+    <script src="scripts/sortPrelections.js?v=3"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-resource.min.js"></script>
+    <script src="app/scripts/angular-sanitize.js"></script>
+    <script src="app/scripts/checklist-model.js"></script>
+
+    <script src="app/appInd.js?v=1"></script>
+    <script src="app/controllers/indexController.js?v=9"></script>
+
+    
+
+  </head>
+  <body ng-controller="indexController">
+    <!--[if lt IE 11]>
+    <p class="browsehappy">
+      You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+    </p>
+    <![endif]-->
+
+    
+
+<nav id="fixed-menu">
+  <div class="container">
+    <div class="small-container">
+      <a href="https://wthconf.pl/user-login.html" class="login-button active">Zaloguj się</a>
+      <a href="#" data-ng-click="$event.preventDefault();redirectToRegistration()" class="register-button top">Zarejestruj się</a>
+      <div class="hamburger-container">
+        <div class="hamburger">
+          <svg version="1.1" id="warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewbox="0 0 36.4 26.1" style="enable-background:new 0 0 36.4 26.1;" xml:space="preserve" width="36px" height="26px">
+            <g>
+              <rect class="st0" fill="#fff" width="36.4" height="4.4"/>
+              <rect y="10.9" fill="#fff" class="st0" width="36.4" height="4.4"/>
+              <rect y="21.7" fill="#fff" class="st0" width="36.4" height="4.4"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="header" id="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 order-2 order-md-1">
+        <img src="images/wth-logo.svg" class="header-logo img-fluid" alt=""/>
+      </div>
+      <div class="col-md-6 order-1 order-md-2">
+        <div class="brackets brackets-red text-center">
+          <p class="mb-0">Sponsorzy:</p>
+          <ul class="nav mb-1">
+            <li class="nav-item">
+              <a href="#collaboration-modal" data-toggle="modal" class="nav-link">Call for Sponsors <span style="color:#e10b31"> | </span> Zostań sponsorem</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-12 col-md-8">
+        <div class="pcwindow">
+
+          <div class="pcwindow-header">
+            <p>II EDYCJA WTH</p>
+            <span class="pcwindow-close">&times;</span>
+          </div>
+
+          <div class="pcwindow-body">
+            <h3 class="mb-4">
+                            Najlepsi prelegenci, całe środowisko polskiego ITSec i&nbsp;wszyscy zainteresowani w&nbsp;jednym miejscu
+                        </h3>
+
+            <p class="mb-4">
+                            Sobota, <strong>14 grudnia 2019</strong>, PGE Narodowy
+                        </p>
+            <div class="text-center">
+              <a href="#" data-ng-click="$event.preventDefault();redirectToRegistration()" class="btn btn-primary btn-lg">Zarejestruj się</a>
+            </div>
+
+            <div class="sitting-robot"></div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="col-12 col-md-4 ">
+        <div class="sittingrobot">
+          <img src="images/robot-hero.svg" alt="" class="img-fluid" width="430"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center justify-content-center align-items-center my-5 sponsors">
+      <div class="col-12 col-md-auto mx-2 mb-3 mb-md-0">
+        <p class="mb-0">
+          <small>[ Organizatorzy ]</small>
+        </p>
+      </div>
+      <div class="col-12 col-md-auto mx-2 mb-3 mb-md-0">
+        <img src="images/zts-logo.svg" width="110" alt="">
+      </div>
+      <div class="col-12 col-md-auto mx-2 mb-3 mb-md-0">
+        <img src="images/ap-logo.svg" width="160" alt="">
+      </div>
+    </div>
+
+    <div class="row justify-content-center align-items-center mt-4">
+      <div class="col-auto">
+        <div class="brackets brackets-red">
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="#collaboration-modal" class="nav-link" data-toggle="modal">
+                <img src="images/zostan-sponsorem.svg" width="30" alt="">
+                        Zostań Sponsorem / Partnerem</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="brackets brackets-red">
+
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="https://www.wthconf.pl/cfp" target="_blank" rel="noopener noreferrer" class="nav-link">
+                <img src="images/zostan-prelegentem.svg" width="20" alt="">
+                    Zostań Prelegentem</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="col-auto">
+        <div class="brackets brackets-red">
+
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="#volunteering-modal" class="nav-link" data-toggle="modal">
+                <img src="images/zostan-wolontariuszem.svg" width="19" alt="">
+                    Zostań Wolontariuszem</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="about">
+    <div class="container">
+        <div class="text-center">
+            <img src="images/about-wth19.svg" class="img-fluid mx-auto" alt="" width="800">
+        </div>
+
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+            <div class="about-text-outer">
+                <img src="images/about-ornament-1.svg" class="d-none d-md-block" alt="">
+                <div class="about-text">
+                    <p>
+                    What The Hack to czołowa, niezależna,
+                    <strong>
+                        konferencja z szeroko pojętego obszaru
+                        bezpieczeństwa IT,
+                    </strong> przygotowana w taki sposób,
+                    aby wynieść z niej maksymalnie wiele.
+                    Wydarzeniu dodatkowo towarzyszą <strong>
+                        imprezy
+                        networkingowe, część ze standami
+                    </strong> Partnerów
+                    (dostawców technologii i rozwiązań) oraz jedyne
+                    w Polsce <strong>Targi Pracy IT Security.</strong>
+                    </p>
+                </div>
+                <img src="images/about-ornament-2.svg" class="d-none d-md-block" alt="">
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="why" id="dlaczegowarto">
+    <div class="container">
+        <div class="text-center">
+        <h1 class="section-heading">
+            <span>Dlaczego</span><span> warto</span>
+        </h1>
+        <p class="lead">What The H@ck to przede wszystkim:</p>
+        </div>
+
+        <div class="row why1">
+            <div class="col-2 text-right">
+                <img src="images/num-1.svg" class="img-fluid" width="97" alt="">
+            </div>
+            <div class="col-10">
+                <h2>
+                    Dobrej jakości merytoryka
+                </h2>
+
+
+
+
+    
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-check"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>Jakość gwarantuje ZaufanaTrzeciaStrona.pl i 16-sto osobowa Rada Programowa</p>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-paths"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>10+ ścieżek tematycznych obejmujących wszystkie zagadnienia ITSec</p>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-lecturers"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p><span class="rwd-line">Najlepsi prelegenci z różnych środowisk i branż: od pasjonatów, </span><span class="rwd-line">przez praktyków z biznesu aż po naukowców</span></p>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-time"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>Konkretne, 40 min. wystąpienia, tylko przydatna wiedza</p>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-mic"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>Lightning talki prowadzone przez doświadczonych praktyków</p>
+                    </div>
+                </div>
+    
+
+            </div>
+        </div>
+
+
+        <div class="row why2">
+            <div class="col-2 col-md-4 text-right">
+                <img src="images/num-2.svg" class="img-fluid" width="97" alt="">
+            </div>
+            <div class="col-10 col-md-8">
+                <h2>
+                    Treści dla osób o różnym profilu
+zainteresowań
+                </h2>
+
+
+            <div class="row">
+
+
+
+    
+    <div class="col-md-6">
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-lock-gear"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>Techniczni specjaliści ds. cyberbezpieczeństwa</p>
+                    </div>
+                </div>
+                </div>
+    
+    <div class="col-md-6">
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-lock"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>Nietechniczni specjaliści ds. cyberbezpieczeństwa</p>
+                    </div>
+                </div>
+                </div>
+    
+    <div class="col-md-6">
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-spy"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>Służby specjalne i administracja publiczna</p>
+                    </div>
+                </div>
+                </div>
+    
+    <div class="col-md-6">
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-code"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>Architekci, programiści, Sys/DevOpsi</p>
+                    </div>
+                </div>
+                </div>
+    
+    <div class="col-md-6">
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-business-people"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>Kadra kierownicza</p>
+                    </div>
+                </div>
+                </div>
+    
+    <div class="col-md-6">
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-star"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>Wszyscy zainteresowani atakami, obroną, fuckupami i wnioskami z nich</p>
+                    </div>
+                </div>
+                </div>
+    
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row why3">
+            <div class="col-2 text-right">
+                <img src="images/num-3.svg" class="img-fluid" width="97" alt="">
+            </div>
+            <div class="col-10">
+                <h2>
+                    Networking, networking... i networking ;)
+                </h2>
+
+
+
+
+
+
+
+    
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-people"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>Wszyscy, których chcesz spotkać w jednym miejscu</p>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-manager"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>Roundtables i sesje consult the expert </p>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-business-people"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>Dodatkowe spotkania dla kadry kierowniczej i specjalistycznej</p>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth-drink"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>Pre i after-party ze świetnymi drinkami ;)</p>
+                    </div>
+                </div>
+    
+
+            </div>
+        </div>
+
+
+        <div class="row why4">
+            <div class="col-2 col-md-3 text-right">
+                <img src="images/num-4.svg" class="img-fluid" width="97" alt="">
+            </div>
+            <div class="col-10 col-md-9">
+                <h2>
+                    Punkty do certyfikatów
+                </h2>
+
+                <p>Uczestnicząc w WTH otrzymasz <span class="text-primary">13 punktów</span> do następujących certyfikatów:</p>
+
+
+            <div class="row mb-4">
+
+
+
+
+    
+    <div class="col-12">
+        <img src="images/certyfikaty.svg" class="img-fluid w-100" alt="">
+    </div>
+    
+                </div>
+            </div>
+        </div>
+
+
+    <div class="row why5">
+            <div class="col-2 col-md-5 text-right">
+                <img src="images/num-5.svg" class="img-fluid" width="112" alt="">
+            </div>
+            <div class="col-10 col-md-7">
+                <h2>
+                    Giftbag i łatwość uczestnictwa
+                </h2>
+
+
+
+
+
+
+
+
+
+
+    
+                <div class="row ">
+                    <div class="col-auto">
+                        <i class="wth-briefcase"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>Dla każdego giftbag z koszulką</p>
+                    </div>
+                </div>
+    
+                <div class="row ">
+                    <div class="col-auto">
+                        <i class="wth-clock-x"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>Bardziej dogodny, sobotni termin</p>
+                    </div>
+                </div>
+    
+                <div class="row ">
+                    <div class="col-auto">
+                        <i class="wth-savings"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>Przystępny koszt biletów</p>
+                    </div>
+                </div>
+    
+                <div class="row ">
+                    <div class="col-auto">
+                        <i class="wth-building"></i>
+                    </div>
+                    <div class="col pl-0">
+                        <p>Dostępna również opcja z noclegiem</p>
+                    </div>
+                </div>
+    
+
+            </div>
+        </div>
+
+
+
+        <div class="row why6">
+            <div class="col-2 text-right">
+                <img src="images/num-6.svg" class="img-fluid" width="112" alt="">
+            </div>
+            <div class="col-10">
+                <h2 class="mb-4-5">
+                    Wydarzenie polecają m.in.:
+                </h2>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row justify-content-between">
+    
+    <div class="col-6 col-md-auto mx-md-2 mb-4 d-flex align-items-center justify-content-center">
+        <img src="images/partnerzy/wcwat.svg" class="img-fluid" width="310" alt="">
+    </div>
+    
+    <div class="col-6 col-md-auto mx-md-2 mb-4 d-flex align-items-center justify-content-center">
+        <img src="images/partnerzy/pwweiti.svg" class="img-fluid" width="290" alt="">
+    </div>
+    
+    <div class="col-6 col-md-auto mx-md-2 mb-4 d-flex align-items-center justify-content-center">
+        <img src="images/partnerzy/isaca.svg" class="img-fluid" width="130" alt="">
+    </div>
+    
+    <div class="col-6 col-md-auto mx-md-2 mb-4 d-flex align-items-center justify-content-center">
+        <img src="images/partnerzy/issa.svg" class="img-fluid" width="145" alt="">
+    </div>
+    
+    <div class="col-6 col-md-auto mx-md-2 mb-4 d-flex align-items-center justify-content-center">
+        <img src="images/partnerzy/owasp.svg" class="img-fluid" width="153" alt="">
+    </div>
+    
+    <div class="col-6 col-md-auto mx-md-2 mb-4 d-flex align-items-center justify-content-center">
+        <img src="images/partnerzy/pti.svg" class="img-fluid" width="175" alt="">
+    </div>
+    
+    <div class="col-6 col-md-auto mx-md-2 mb-4 d-flex align-items-center justify-content-center">
+        <img src="images/partnerzy/piit.svg" class="img-fluid" width="105" alt="">
+    </div>
+    
+    <div class="col-6 col-md-auto mx-md-2 mb-4 d-flex align-items-center justify-content-center">
+        <img src="images/partnerzy/zbp.svg" class="img-fluid" width="183" alt="">
+    </div>
+    
+    <div class="col-6 col-md-auto mx-md-2 mb-4 d-flex align-items-center justify-content-center">
+        <img src="images/partnerzy/zts.svg" class="img-fluid" width="143" alt="">
+    </div>
+    
+    <div class="col-6 col-md-auto mx-md-2 mb-4 d-flex align-items-center justify-content-center">
+        <img src="images/partnerzy/niebezpiecznik.svg" class="img-fluid" width="78" alt="">
+    </div>
+    
+    <div class="col-6 col-md-auto mx-md-2 mb-4 d-flex align-items-center justify-content-center">
+        <img src="images/partnerzy/sekurak.svg" class="img-fluid" width="87" alt="">
+    </div>
+    
+
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+
+
+</section>
+
+
+<section class="subjects" id="tematyka">
+	<div class="container">
+		<div class="text-center">
+        <div class="row">
+                <div class="col-md-9 mx-auto">
+			<h1 class="section-heading" data-aos="headerbg">
+				<span>Tematyka</span>
+			</h1>
+
+                    <p class="lead">
+                        Na wydarzeniu znajdziesz różnorodną tematykę obejmującą prawie
+                        cały obszar cyberbezpieczeństwa:
+                    </p>
+                </div>
+            </div>
+		</div>
+		<div class="pcwindow">
+			<div class="pcwindow-header">
+				<p>II EDYCJA WTH &gt; TEMATYKA</p>
+				<span class="pcwindow-close">&times;</span>
+			</div>
+
+			<div class="pcwindow-body">
+
+                <div class="row subjects-wrapper">
+                    <div class="col-md-6 text-left">
+
+
+
+
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i>
+                        <img src="images/teaming.svg" width="26" alt="">
+                        </i>
+                    </div>
+                    <div class="col">
+                        <p>Red Teaming / Blue Teaming</p>
+                    </div>
+                </div>
+
+
+                            
+    
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i class="wth19-analysis-2"></i>
+                    </div>
+                    <div class="col">
+                        <p>Analiza incydentów</p>
+                    </div>
+                </div>
+    
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i class="wth19-sec-operations"></i>
+                    </div>
+                    <div class="col">
+                        <p>Security Operations Center</p>
+                    </div>
+                </div>
+    
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i class="wth19-architecture"></i>
+                    </div>
+                    <div class="col">
+                        <p>Architektura IT Security</p>
+                    </div>
+                </div>
+    
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i class="wth19-managing"></i>
+                    </div>
+                    <div class="col">
+                        <p>Zarządzanie w obszarze bezpieczeństwa IT</p>
+                    </div>
+                </div>
+    
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i class="wth19-fuckup"></i>
+                    </div>
+                    <div class="col">
+                        <p>Fuckupy / Wpadki z obszaru bezpieczeństwa IT</p>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="wth19-lock"></i>
+                    </div>
+                    <div class="col">
+                        <p class="mt-2">Bezpieczeństwo
+                            <ul>
+                                <li>hardware'u,</li>
+                                <li>software'u,</li>
+                                <li>technologii mobilnych,</li>
+                                <li>chmury,</li>
+                                <li>rozwiązań Microsoft,</li>
+                                <li>infrastruktury krytycznej,</li>
+                                <li>przemysłowe / SCADA / IoT,</li>
+                                <li>Blockchain / Cryptocurrencies,</li>
+                                <li>AI / ML / Big Data</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+
+                    </div>
+                    <div class="col-md-6 text-left">
+                    
+    
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i class="wth19-build"></i>
+                    </div>
+                    <div class="col">
+                        <p>Budowa / Rozwój / Architektura oprogramowania <br>pod kątem bezpieczeństwa</p>
+                    </div>
+                </div>
+    
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i class="wth19-bug"></i>
+                    </div>
+                    <div class="col">
+                        <p>Bug hunting / Fuzzing / Exploiting</p>
+                    </div>
+                </div>
+    
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i class="wth19-danger"></i>
+                    </div>
+                    <div class="col">
+                        <p>Złośliwe oprogramowanie</p>
+                    </div>
+                </div>
+    
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i class="wth19-gear-engineering"></i>
+                    </div>
+                    <div class="col">
+                        <p>Inżynieria wsteczna</p>
+                    </div>
+                </div>
+    
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i class="wth19-crime"></i>
+                    </div>
+                    <div class="col">
+                        <p>Cyberprzestępczość i informatyka śledcza</p>
+                    </div>
+                </div>
+    
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i class="wth19-abuse"></i>
+                    </div>
+                    <div class="col">
+                        <p>Zwalczanie nadużyć</p>
+                    </div>
+                </div>
+    
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i class="wth19-police"></i>
+                    </div>
+                    <div class="col">
+                        <p>Służby specjalne / Policja / Europol / Wojsko</p>
+                    </div>
+                </div>
+    
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i class="wth19-thief"></i>
+                    </div>
+                    <div class="col">
+                        <p>Ataki: DDoS, sieciowe, socjotechniczne</p>
+                    </div>
+                </div>
+    
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i class="wth19-audit"></i>
+                    </div>
+                    <div class="col">
+                        <p>Audyt IT Security</p>
+                    </div>
+                </div>
+    
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i class="wth19-law"></i>
+                    </div>
+                    <div class="col">
+                        <p>Prawo a IT  Security</p>
+                    </div>
+                </div>
+    
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <i class="wth19-privacy"></i>
+                    </div>
+                    <div class="col">
+                        <p>Walka o prywatność i anonimowość w sieci</p>
+                    </div>
+                </div>
+    
+                    </div>
+                </div>
+<img src="images/bomb.svg" alt="" class="bomba">
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="prelegenci" id="prelegenci">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="section-heading" data-aos="headerbg"><span>PRELEGENCI</span></h1>
+                <p class="lead">Na wydarzeniu spotkasz najlepszych prelegentów z&nbsp;Polski i&nbsp;zagranicy,
+z&nbsp;różnych środowisk i&nbsp;branż: od praktyków z biznesu, poprzez naukę,
+aż&nbsp;po&nbsp;dostawców technologii lub rozwiązań. W zeszłym roku byli to:</p>
+            </div>
+
+            <div class="prelegenci-carousel slick">
+
+
+                
+                
+                <div class="prelegent" ng-repeat="p in prelegenci">
+                    <div class="prelegenci__photo p1" data-toggle="modal" data-target="#speaker-modal" ng-click="changePrelegent(p)">
+                        <div class="img-container" style="background-image: url({{p.imageUrl!=null ? p.imageUrl : 'https://brandsome.it/content/img/brak_zdjecia.png'}})"></div>
+                        <div class="square"></div>
+                        
+                        <div class="overlay"></div>
+                    </div>
+                    <p>{{p.firstName}} {{p.lastName}}</p>
+                    <p class="job">{{p.jobPosition}}<span ng-if="p.jobPosition && p.organization">, </span>{{p.organization}}</p>
+                </div>
+
+				<div class="prelegent">
+                    <div class="prelegenci__photo p1" data-toggle="modal" data-target="#allspeakers-modal" ng-click="loadAllLecturers()">
+                        <div class="img-container" style="background-image: url('https://brandsome.it/content/img/brak_zdjecia.png')"></div>
+                        <div class="square"></div>
+                        
+                        <div class="overlay"></div>
+                    </div>
+                    <p>Pokaż wszystkich prelegentów</p>
+                    <!-- <p class="job">{{p.jobPosition}}<span ng-if="p.jobPosition && p.organization">, </span>{{p.organization}}</p> -->
+                </div> 
+                
+               
+                
+            </div>
+
+        </div>
+        <div class="text-center">
+            <a class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#allspeakers-modal" ng-click="loadAllLecturers()">Poznaj wszystkich prelegentów</a>
+        </div>
+
+    </section>
+
+
+<section class="agenda" id="agenda">
+	<div class="container">
+		<div class="text-center">
+			<h1 class="section-heading" data-aos="headerbg"><span>AGENDA</span></h1>
+			<p class="lead">Przygotowujemy dla Was kilkunaście równoległych ścieżek tematycznych adresujących większość zainteresowań IT Sec. Oprócz prezentacji, damy Wam również przestrzeń do dyskusji i networkingu –&nbsp;roundtables, sesje consult the expert i spotkania kadry kierowniczej.</p>
+
+            <div class="brackets brackets-red">
+                <h3>Chcesz zostać prelegentem tegorocznej edycji?</h3>
+                <a href="https://www.wthconf.pl/cfp" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">Weź udział w Call for Papers</a>
+            </div>
+
+            <p class="lead mt-4">
+                W zeszłym roku było to 10 ścieżek, 64 wystąpienia:
+            </p>
+
+        <div class="agenda-past">
+            <div class="row">
+                
+    
+            <div class="col-md-4 py-4 dashes-bottom d-flex">
+                <div class="row dashes-right flex-grow-1">
+                    <div class="col-auto">
+                        <i class="wth-vip"></i>
+                    </div>
+                    <div class="col text-left">
+                        <p>Main stage</p>
+                        <p class="count">[&nbsp;10 wystąpień&nbsp;]</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4 py-4 dashes-bottom d-flex">
+                <div class="row dashes-right flex-grow-1">
+                    <div class="col-auto">
+                        <i class="wth-attack"></i>
+                    </div>
+                    <div class="col text-left">
+                        <p>Red & Blue Teaming (Attack & Defence)</p>
+                        <p class="count">[&nbsp;9 wystąpień&nbsp;]</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4 py-4 dashes-bottom d-flex">
+                <div class="row dashes-right flex-grow-1">
+                    <div class="col-auto">
+                        <i class="wth-atombomb"></i>
+                    </div>
+                    <div class="col text-left">
+                        <p>Cybercrime & Cyberwar powered by WCY WAT </p>
+                        <p class="count">[&nbsp;9 wystąpień&nbsp;]</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4 py-4 dashes-bottom d-flex">
+                <div class="row dashes-right flex-grow-1">
+                    <div class="col-auto">
+                        <i class="wth-audit"></i>
+                    </div>
+                    <div class="col text-left">
+                        <p>Risk, audit, privacy &&nbsp;compliance</p>
+                        <p class="count">[&nbsp;5 wystąpień&nbsp;]</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4 py-4 dashes-bottom d-flex">
+                <div class="row dashes-right flex-grow-1">
+                    <div class="col-auto">
+                        <i class="wth-save-lock"></i>
+                    </div>
+                    <div class="col text-left">
+                        <p>Secure Software Development & Architecture</p>
+                        <p class="count">[&nbsp;4 wystąpienia&nbsp;]</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4 py-4 dashes-bottom d-flex">
+                <div class="row dashes-right flex-grow-1">
+                    <div class="col-auto">
+                        <i class="wth-cpu"></i>
+                    </div>
+                    <div class="col text-left">
+                        <p>Hardware hacking /&nbsp;IoT&nbsp;/&nbsp;ICS powered by&nbsp;WEiTI PW</p>
+                        <p class="count">[&nbsp;9 wystąpień&nbsp;]</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4 py-4 dashes-bottom d-flex">
+                <div class="row dashes-right flex-grow-1">
+                    <div class="col-auto">
+                        <i class="wth-banking"></i>
+                    </div>
+                    <div class="col text-left">
+                        <p>Banking &&nbsp;Blockchain Security</p>
+                        <p class="count">[&nbsp;4 wystąpienia&nbsp;]</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4 py-4 dashes-bottom d-flex">
+                <div class="row dashes-right flex-grow-1">
+                    <div class="col-auto">
+                        <i class="wth-cloud"></i>
+                    </div>
+                    <div class="col text-left">
+                        <p>Cloud Security</p>
+                        <p class="count">[&nbsp;5 wystąpień&nbsp;]</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4 py-4 dashes-bottom d-flex">
+                <div class="row dashes-right flex-grow-1">
+                    <div class="col-auto">
+                        <i class="wth-bug2"></i>
+                    </div>
+                    <div class="col text-left">
+                        <p>Malware</p>
+                        <p class="count">[&nbsp;9 wystąpień&nbsp;]</p>
+                    </div>
+                </div>
+            </div>
+    
+    <div class="col-md-12 pt-4  d-flex">
+                <div class="row align-items-center flex-grow-1">
+                    <div class="col-auto">
+                        <i class="wth-lightning"></i>
+                    </div>
+                    <div class="col text-left">
+                        <p>Lightning talks: Fuckups, Use cases, How to get into security <span class="count"> [&nbsp;15-minutowe sesje&nbsp;]</span></p>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+
+</div>
+
+
+		</div>
+	</div>
+</section>
+
+
+
+<section class="imprezy" id="imprezy">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1 class="section-heading imprezy"><span data-aos="headerbg">IMPREZY</span> <br /> <span data-aos="headerbg">TOWARZYSZĄCE</span></h1>
+                
+            </div>
+
+
+        <div class="row align-items-center impreza">
+            <div class="col-md-6">
+                <h2 class="subheading">PRE I AFTER-PARTY</h2>
+                <p>Wieczorne preparty i afterparty będzie dobrą okazją do poznania prelegentów i innych osób ze środowiska</p>
+            </div>
+            <div class="col-md-6">
+                <img src="images/robot-party.svg" class="img-fluid w-100" alt="">
+            </div>
+        </div>
+
+        <div class="row align-items-center impreza">
+            <div class="col-md-7 order-md-2">
+                <h2 class="subheading">EXECUTIVES MEETUP</h2>
+                <p>Wydarzenie dedykowane liderom, kadrze kierowniczej, architektom i gościom specjalnym. Luźna atmosfera, wspierana wysokiej jakości koktajlami, pozwoli na kontynuowanie dyskusji i budowanie relacji.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="images/robot-executive-meetup.svg" class="img-fluid w-100" alt="">
+            </div>
+        </div>
+
+
+        </div>
+        
+
+    </section>
+
+
+<section class="konkursy" id="konkursy">
+    <div class="container">
+
+            <div class="text-center mb-lg-5">
+                <h1 class="section-heading mb-lg-5" data-aos="headerbg"><span>KONKURSY</span></h1>
+
+                <div class="row justify-content-center"><div class="col-md-8">
+                <p class="lead">
+                W WTH najważniejsza jest merytoryka, <br />ale dla urozmaicenia przygotowaliśmy kilka konkursów:
+                </p>
+                </div></div>
+            </div>
+
+        <div class="row align-items-end justify-content-center mb-5">
+            <div class="col-2 col-md-1 col-lg-auto">
+                <img src="images/flag.svg" width="45" alt="">
+            </div>
+            <div class="col-8 col-md-9 pl-md-0">
+                <p class="text-primary mb-0">Odwiedź stoiska naszych Sponsorów i Partnerów, <br />porozmawiaj z nimi, odbierz formularze konkursowe i wygraj:</p>
+            </div>
+            <div class="col-10">
+                <div class="row">
+                    <div class="col-md-4 d-flex">
+                        <div class="konkurs brackets brackets-red text-center w-100">
+                            <img src="images/dslr.png" class="img-fluid" width="112" alt="">
+                            <p class="konkurs-title">
+                                Lustrzanka cyfrowa
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex">
+                        <div class="konkurs brackets brackets-red text-center w-100">
+                            <img src="images/xbox.png" class="img-fluid" width="193" alt="">
+                            <p class="konkurs-title">
+                                Xbox
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex">
+                        <div class="konkurs brackets brackets-red text-center w-100">
+                            <img src="images/vr.png" class="img-fluid" width="140" alt="">
+                            <p class="konkurs-title">
+                                Google Home
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+
+        <div class="row align-items-end justify-content-center">
+            <div class="col-2 col-md-1 col-lg-auto">
+                <img src="images/flag.svg" width="45" alt="">
+            </div>
+            <div class="col-8 col-md-9 pl-md-0">
+                <p class="text-secondary mb-0">Zostaw CV podczas rejestracji i wygraj:</p>
+            </div>
+
+            <div class="col-10">
+                <div class="row">
+                    <div class="col-md-4 d-flex">
+                        <div class="konkurs brackets brackets-blue text-center w-100">
+                            <img src="images/dslr.png" class="img-fluid" width="112" alt="">
+                            <p class="konkurs-title">
+                                Lustrzanka cyfrowa
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex">
+                        <div class="konkurs brackets brackets-blue text-center w-100">
+                            <img src="images/xbox.png" class="img-fluid" width="193" alt="">
+                            <p class="konkurs-title">
+                                Xbox
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex">
+                        <div class="konkurs brackets brackets-blue text-center w-100">
+                            <img src="images/tesla.png" class="img-fluid" width="180" alt="">
+                            <p class="konkurs-title">
+                                Przejazd Ferrari<Br /> po torze wyścigowym
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</section>
+
+<section class="sponsorzy" id="sponsorzy">
+    <div class="container">
+
+            <div class="text-center mb-5">
+                <h1 class="section-heading" data-aos="headerbg"><span>SPONSORZY</span></h1>
+
+                
+                <p class="lead">
+                Sponsorami wydarzenia, tak jak poprzednio, będą liderzy obszaru IT Security.
+                </p>
+                
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6 pl-md-0 pr-md-5 mb-3 mb-md-5">
+                    <div class="sponsor sponsor1">
+                        <p>Pakiet Sponsora Głównego niedostępny</p>
+                        <a href="#pakiet-niedostepny-modal" data-toggle="modal" class="sponsor-modal link arrow arrow--right">więcej <span></span></a>
+                    </div>
+                </div>
+                <div class="col-md-6 pl-md-5 pr-md-0 mb-3 mb-md-5">
+                    <div class="sponsor sponsor1">
+                        <p>Pakiet Sponsora Głównego niedostępny</p>
+                        <a href="#pakiet-niedostepny-modal" data-toggle="modal" class="sponsor-modal link arrow arrow--right">więcej <span></span></a>
+                    </div>
+                </div>
+                <div class="col-md-5 mb-3 mb-md-5">
+                    <div class="sponsor sponsor2">
+                        <p>Call for Sponsors <br />Zostań Sponsorem</p>
+                        <a href="#collaboration-modal" data-toggle="modal" class="sponsor-modal link arrow arrow--right">wyślij zgłoszenie <span></span></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="sponsor sponsor3">
+                        <p>Call for Sponsors <br />Zostań Sponsorem</p>
+                        <a href="#collaboration-modal" data-toggle="modal" class="sponsor-modal link arrow arrow--right">wyślij zgłoszenie <span></span></a>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</section>
+
+<section class="partnerzy" id="partnerzy">
+
+        <div class="container">
+            <div class="text-center">
+                <h1 class="section-heading" data-aos="headerbg">
+                    <span>PARTNERZY</span>
+                </h1>
+                <p class="lead">
+                    Partnerami wspierającymi wydarzenie będą dostawcy rozwiązań oraz pracodawcy ITSec. W zeszłym roku wspierali nas:
+                </p>
+            </div>
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+    
+            
+
+            <div class="row">
+                <div class="partner col-md-6 d-flex" data-toggle="modal" data-target="#partner-modal" ng-repeat="exhibitor in exhibitors_full">
+                    <div class="brackets brackets-blue d-flex">
+                        <a href="#partner-modal" class="w-100" role="button" data-toggle="modal" ng-click="changeActiveExhibitor(exhibitor)">
+                            <img class="img-80" ng-src="{{exhibitor.logoUrl}}">
+                            <p>więcej ></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="partner col-md-6 d-flex" data-toggle="modal" data-target="#partner-modal" ng-repeat="exhibitor in exhibitors_basic">
+                    <div class="brackets brackets-blue d-flex">
+                        <a href="#partner-modal" class="w-100" role="button" data-toggle="modal" ng-click="changeActiveExhibitor(exhibitor)">
+                            <img class="img-80" ng-src="{{exhibitor.logoUrl}}">
+                            <p>więcej ></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="partner col-md-6 d-flex" data-toggle="modal" data-target="#partner-modal" ng-repeat="exhibitor in exhibitors_mark">
+                    <div class="brackets brackets-blue d-flex">
+                        <a href="#partner-modal" class="w-100" role="button" data-toggle="modal" ng-click="changeActiveExhibitor(exhibitor)">
+                            <img class="img-80" ng-src="{{exhibitor.logoUrl}}">
+                            <p>więcej ></p>
+                        </a>    
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+</div>
+        </div>
+    </section>
+
+<section class="testimonials" id="opinieinnych">
+	<div class="container">
+		<div class="text-center">
+			<h1 class="section-heading" data-aos="headerbg">
+				<span>Opinie</span><span> innych</span>
+			</h1>
+		</div>
+		<div class="pcwindow">
+			<div class="pcwindow-header">
+				<p>II EDYCJA WTH &gt; OPINIE</p>
+				<span class="pcwindow-close">&times;</span>
+			</div>
+
+			<div class="pcwindow-body">
+                <div class="slick testimonials-carousel">
+                
+    
+
+                    <div class="item pl-2">
+                        <div class="row m-0 w-100">
+                            <div class="col-7 px-1 px-md-5 d-flex flex-column justify-content-center">
+                                <h2 >„Be a type that suffers, when doing nothing interesting!“</h2>
+                                <p class="name">Paulina Januszkiewicz</p>
+                                <p class="position">CEO and Founder, CQURE</p>
+                            </div>
+                            <div class="col-5" style="background-image: url('../images/opinie/Paula.jpg'); background-position: center; background-size: cover;">
+                                
+                            </div>
+                        </div>
+                    </div>
+        
+
+                    <div class="item pl-2">
+                        <div class="row m-0 w-100">
+                            <div class="col-7 px-1 px-md-5 d-flex flex-column justify-content-center">
+                                <h2 >„Dziel się wiedzą, możesz na tym tylko zyskać.“</h2>
+                                <p class="name">Michał Sajdak</p>
+                                <p class="position">IT Security Consultant, Securitum</p>
+                            </div>
+                            <div class="col-5" style="background-image: url('../images/opinie/Michal.jpg'); background-position: center; background-size: cover;">
+                                
+                            </div>
+                        </div>
+                    </div>
+        
+
+                    <div class="item pl-2">
+                        <div class="row m-0 w-100">
+                            <div class="col-7 px-1 px-md-5 d-flex flex-column justify-content-center">
+                                <h2 >„Wysłuchałem setek wykładów by znaleźć najlepszych prelegentów i zebrać ich na WTH.“</h2>
+                                <p class="name">Adam Haertle</p>
+                                <p class="position">Chief Editor, ZaufanaTrzeciaStrona.pl</p>
+                            </div>
+                            <div class="col-5" style="background-image: url('../images/opinie/Adam.jpg'); background-position: center; background-size: cover;">
+                                
+                            </div>
+                        </div>
+                    </div>
+        
+
+                    <div class="item pl-2">
+                        <div class="row m-0 w-100">
+                            <div class="col-7 px-1 px-md-5 d-flex flex-column justify-content-center">
+                                <h2 >„a0b2a4af306136c8<br>ddf3e75cba286d54.“</h2>
+                                <p class="name">Piotr Konieczny</p>
+                                <p class="position">Chief Information Security Officer, Niebezpiecznik.pl</p>
+                            </div>
+                            <div class="col-5" style="background-image: url('../images/opinie/Piotr.jpg'); background-position: center; background-size: cover;">
+                                
+                            </div>
+                        </div>
+                    </div>
+        
+
+                    <div class="item pl-2">
+                        <div class="row m-0 w-100">
+                            <div class="col-7 px-1 px-md-5 d-flex flex-column justify-content-center">
+                                <h2 class="gynvael">„&lt;@Gynvael&gt; huh, Adam z z3s ma niezły rozmach<br>
+                                            &lt;@Gynvael&gt; dziewięć tracków, tego w Polsce jeszcze nie widziałem<br>
+                                                &lt;@Gynvael&gt; do tego tematy wyglądają solidnie“</h2>
+                                <p class="name">Gynvael</p>
+                                <p class="position">gynvael.coldwind//vx</p>
+                            </div>
+                            <div class="col-5" style="background-image: url('../images/opinie/Gynvael-02.jpg'); background-position: center; background-size: cover;">
+                                
+                            </div>
+                        </div>
+                    </div>
+        
+
+                    <div class="item pl-2">
+                        <div class="row m-0 w-100">
+                            <div class="col-7 px-1 px-md-5 d-flex flex-column justify-content-center">
+                                <h2 >„Dobra pizza, jeszcze fajniejszy giftbag, a nagrody w konkursach najfajniejsze :) Dobra karma.“</h2>
+                                <p class="name">Hacker Białowłosy</p>
+                                <p class="position">II życie, tym razem jako programista</p>
+                            </div>
+                            <div class="col-5" style="background-image: url('../images/opinie/kot.jpg'); background-position: center; background-size: cover;">
+                                
+                            </div>
+                        </div>
+                    </div>
+        
+
+
+                </div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="radaprogramowa" id="rada">
+
+        <div class="container">
+            <div class="text-center">
+                <h1 class="section-heading" data-aos="headerbg"><span>RADA</span><span> PROGRAMOWA</span></h1>
+                <p class="lead">
+                Radę programową wydarzenia tworzą przedstawiciele liczących się organizacji akademickich, technologicznych, biznesowych i społeczności.
+                </p>
+            </div>
+
+            <div class="row">
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p1">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/AdamHaertle.jpg)"></div>
+                        
+                    </div>
+                    <p>Adam <br/>HAERTLE</p>
+                    <p class="af">Chief Editor,<br>Zaufana Trzecia Strona</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p2">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/MiroslawMaj.jpg)"></div>
+                        
+                    </div>
+                    <p>Mirosław <br/>MAJ</p>
+                    <p class="af">CEO,<br>Cybersecurity Foundation</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p3">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/CezaryPiekarski.jpg)"></div>
+                        
+                    </div>
+                    <p>Cezary <br/>PIEKARSKI</p>
+                    <p class="af">Head of Security,<br>Bank Millennium</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p2">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/ArturJozefiak.jpeg)"></div>
+                        
+                    </div>
+                    <p>Artur <br/>JÓZEFIAK</p>
+                    <p class="af">Security Services Director<br>Senior Manager, Accenture</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p1">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/ArturByszko.jpg)"></div>
+                        
+                    </div>
+                    <p>Artur <br/>BYSZKO</p>
+                    <p class="af">CEO,<br>AFINE</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p2">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/MichalKurek.jpg)"></div>
+                        
+                    </div>
+                    <p>Michał <br/>KUREK</p>
+                    <p class="af">Partner, KPMG Poland,<br>Head of Cyber Security,<br>OWASP Poland Chapter Leader</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p3">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/MariuszChmielewski.jpg)"></div>
+                        
+                    </div>
+                    <p>Mariusz <br/>CHMIELEWSKI</p>
+                    <p class="af">Zastępca Dziekana <br>Wydziału Cybernetyki WAT</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p4">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/MarcinLudwiszewski.jpg)"></div>
+                        
+                    </div>
+                    <p>Marcin <br/>LUDWISZEWSKI</p>
+                    <p class="af">Cyber Security Director,<br>Deloitte Poland</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p1">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/Przemek-Jaroszewski.jpg)"></div>
+                        
+                    </div>
+                    <p>Przemek <br/>JAROSZEWSKI</p>
+                    <p class="af">CERT Polska</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p4">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/MichalBijata.jpg)"></div>
+                        
+                    </div>
+                    <p>Michał <br/>BIJATA</p>
+                    <p class="af">Fundacja Academic Partners</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p1">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/MichalBoruta.jpg)"></div>
+                        
+                    </div>
+                    <p>Michał <br/>BORUTA</p>
+                    <p class="af">Fundacja Academic Partners</p>
+                </div>
+
+                <div class="rp  col-6 col-sm-4 col-md-2">
+                    <div class="radaprogramowa__photo p2">
+                        <div class="img-container" style="background-image: url(images/radaprogramowa/PawelKordos.jpg)"></div>
+                        
+                    </div>
+                    <p>Paweł <br/>KORDOS</p>
+                    <p class="af">Fundacja Academic Partners</p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+<section class="social">
+
+  <div class="container">
+    <div class="text-center">
+      <h1 class="section-heading" data-aos="headerbg">
+                    <span>SOCIAL</span><span> MEDIA</span>
+                </h1>
+      <p class="lead">
+                    Dołącz do wydarzenia na Facebooku / Meetupie. Dodaj swoich znajomych i twórz z nami społeczność WTH.
+                </p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-9 mx-auto">
+
+        <div class="row mt-4">
+          <div class="col-md-7">
+            <a href="https://www.facebook.com/events/496643384179297/" class="social-post-fb" target="_blank">
+              <img src="images/FB_CONF.png" class="img-fluid" alt="">
+              <img src="images/robot-social-2.svg" class="robot-fb img-fluid mb-2" width="357" alt="">
+            </a>
+          </div>
+          <div class="col-md-5 text-right text-md-left">
+            <img src="images/robot-social-1.svg" class="img-fluid mb-2 mt-5 mt-md-0" width="296" alt="">
+            <a href="https://www.meetup.com/pl-PL/What-The-Hack-IT-Security/events/" target="_blank">
+              <img src="images/MEET_CONF.png" class="img-fluid" alt="">
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="miejsce" id="lokalizacja">
+  <div class="container">
+    <div class="text-center">
+      <h1 class="section-heading" data-aos="headerbg">
+				<span>Miejsce</span>
+			</h1>
+
+    </div>
+    <div class="pcwindow">
+      <div class="pcwindow-header">
+        <p>II EDYCJA WTH &gt; Miejsce</p>
+        <span class="pcwindow-close">&times;</span>
+      </div>
+
+      <div class="pcwindow-body">
+        <div class="map">
+          <a href="https://goo.gl/maps/2TweSLvTc9WnbTxZ8" target="_blank" rel="noopener" class="map-link">
+            <img src="images/mapa.png" alt="" class="img-fluid w-100">
+          </a>
+          <div class="map-box">
+            <h3>Stadion Narodowy</h3>
+            <p>al. Księcia Józefa<br/>Poniatowskiego 1<br/ >03-901 Warszawa</p>
+              <a href="https://goo.gl/maps/2TweSLvTc9WnbTxZ8" target="_blank" rel="noopener" class="btn btn-primary">Zobacz na Google Maps</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="organizatorzy" id="organizatorzy">
+	<div class="container">
+		<div class="text-center">
+			<h1 class="section-heading" data-aos="headerbg">
+				<span>Organizatorzy</span>
+			</h1>
+			
+		</div>
+		
+        <div class="row algin-items-center justify-content-center mt-0 mt-md-5">
+            <div class="col-md-auto mb-3 mb-mb-0">
+                <div class="organizator organizator1">
+                    <a href="https://zaufanatrzeciastrona.pl/" target="_blank">
+                        <img src="images/ZTS-logo.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-auto mb-mb-0">
+                <div class="organizator organizator2">
+                    <a href="https://www.facebook.com/fundacjaap/" target="_blank">
+                        <img src="images/AP-logo.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5" id="zarejestrujsie">
+            <div class="col-md-10 mx-auto text-center">
+                <img src="images/crown.svg" class="w-100" alt="">
+                <a href="#" data-ng-click="$event.preventDefault();redirectToRegistration()" class="btn btn-primary btn-lg">Zarejestruj się</a>
+
+                <div class="links">
+                    <a data-toggle="modal" data-target="#recomend-modal" class="link arrow arrow--right">poleć znajomym <span></span></a>
+                    <a data-toggle="modal" data-target="#remind-modal" class="link arrow arrow--right">przypomnij później <span></span></a>
+                </div>
+
+            </div>
+        </div>
+	</div>
+</section>
+
+<section class="patroni" id="patroni">
+	<div class="container">
+		<div class="text-center">
+			<h1 class="section-heading" data-aos="headerbg">
+				<span>Patroni</span>
+			</h1>
+
+            <p class="lead">W zeszłym roku Patronami Honorowymi byli:</p>
+			
+		</div>
+		<div class="pcwindow">
+			<div class="pcwindow-header">
+				<p>II EDYCJA WTH &gt; Patroni Honorowi</p>
+				<span class="pcwindow-close">&times;</span>
+			</div>
+
+			<div class="pcwindow-body"> 
+                
+                
+
+            
+                <div class="logoGrid row">
+                    <div class="col-6 col-sm-4 col-md-3 d-flex" ng-repeat="partner in partners | filter: { partnerTypeName: 'Honorowi' }">
+                    <div class="item w-100">
+                        <a href="{{partner.webSite}}" target="_blank">
+                            <img ng-src="{{partner.logoUrl}}" class="logoGrid__image img-fluid " alt="partner">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            
+
+                
+			</div>
+		</div>
+
+            <p class="lead">W zeszłym roku Patronami Honorowymi byli:</p>
+
+<div class="pcwindow">
+			<div class="pcwindow-header">
+				<p>II EDYCJA WTH &gt; Patroni Społecznościowi</p>
+				<span class="pcwindow-close">&times;</span>
+			</div>
+
+			<div class="pcwindow-body"> 
+                
+                
+
+            
+                <div class="logoGrid row">
+                    <div class="col-6 col-sm-4 col-md-3 d-flex" ng-repeat="partner in partners | filter: { partnerTypeName: 'Spolecznosciowi' }">
+                    <div class="item w-100">
+                        <a href="{{partner.webSite}}" target="_blank">
+                            <img ng-src="{{partner.logoUrl}}" class="logoGrid__image img-fluid" alt="partner">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            
+
+                
+			</div>
+		</div>
+
+        <p class="lead">W zeszłym roku Patronami Medialnymi byli:</p>
+
+<div class="pcwindow">
+			<div class="pcwindow-header">
+				<p>II EDYCJA WTH &gt; Patroni Medialni</p>
+				<span class="pcwindow-close">&times;</span>
+			</div>
+
+			<div class="pcwindow-body"> 
+                
+                
+
+            
+                <div class="logoGrid row">
+                    <div class="col-6 col-sm-4 col-md-3 d-flex" ng-repeat="partner in partners | filter: { partnerTypeName: 'Medialni' }">
+                    <div class="item w-100">
+                        <a href="{{partner.webSite}}" target="_blank">
+                            <img ng-src="{{partner.logoUrl}}" class="logoGrid__image img-fluid" alt="partner">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            
+
+                
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<footer class="footer-wrapper">
+  <img src="images/robot-footer.svg" class="robot-footer" alt="">
+  <div class="footer-inner">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+      <symbol id="menu-arrow" viewBox="0 0 7.01 12">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: #e10b31;
+            }
+          </style>
+        </defs>
+        <title>link-arrow</title>
+        <g id="arrow" data-name="arrow"><path class="cls-1" d="M1.42,12,0,10.58,4.53,5.63.25,1.45,1.63,0,7,5.2V6Z"/></g>
+      </symbol>
+    </svg>
+
+    <nav id="footer">
+      <div class="robot-hand">
+        <img src="images/robot-hand.svg" class="robot-hand-img" alt="">
+      </div>
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-9 mx-auto">
+
+            <img class="wth-logo" src="images/wth-logo.svg" width="236" alt="What the h@ck logo">
+
+            <div class="row justify-content-between">
+
+              <div class="column px-3">
+                <h4>Najważniejsze</h4>
+                <ul>
+                  <li>
+                    <a href="#dlaczegowarto">
+                      <span>Dlaczego warto<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#tematyka">
+                      <span>Tematyka<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#agenda">
+                      <span>Agenda<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#prelegenci">
+                      <span>Prelegenci<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#lokalizacja">
+                      <span>Lokalizacja<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#afterparty">
+                      <span>Afterparty<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#konkursy">
+                      <span>Konkursy<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#opinieinnych">
+                      <span>Opinie innych<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="column px-3">
+                <h4>Zaangażuj się</h4>
+                <ul>
+                  <li>
+                    <a data-toggle="modal" href="#" data-target="#collaboration-modal">
+                      <span>Zostań Sponsorem / Partnerem<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a data-toggle="modal" href="#" data-target="#volunteering-modal">
+                      <span>Zostań Wolontariuszem<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="https://www.wthconf.pl/cfp" target="_blank" rel="noopener noreferrer">
+                      <span>Zostań Prelegentem<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="column px-3">
+                <h4>Więcej</h4>
+                <ul>
+                  <li>
+                    <a href="#sponsorzy">
+                      <span>Sponsorzy<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#partnerzy">
+                      <span>Partnerzy<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#patroni">
+                      <span>Patroni<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#organizatorzy">
+                      <span>Organizatorzy<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a href="#rada">
+                      <span>Rada Programowa<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a data-toggle="modal" data-target="#codeofconduct-modal" href="#">
+                      <span>Code of conduct<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a data-toggle="modal" data-target="#cookies-modal" href="#">
+                      <span>Polityka cookies<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <!-- <li><a data-toggle="modal" data-target="#privacypolicy-modal" href="#">Polityka prywatności</a></li> -->
+                  <li class="spacer"></li>
+                  <li>
+                    <a data-toggle="modal" data-target="#media-modal"href="#">
+                      <span>Dla mediów<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                  <li>
+                    <a data-toggle="modal" data-target="#contact-modal"href="#">
+                      <span>Kontakt<svg class="footer-menu-icon"><use xlink:href="#menu-arrow"/></svg></span></a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="row mt-5">
+              <div class="col-md-6 social mb-4 mb-md-0">
+                <a href="https://www.facebook.com/wthconf/" target="_blank"><img class="logo" src="images/facebook.svg" width="32" alt="facebook logo"></a>
+
+                <a href="https://www.meetup.com/pl-PL/What-The-Hack-IT-Security/events/255553613/" target="_blank">
+                  <img class="logo" src="images/meetup.svg" width="66" alt="Meetup logo"></a>
+              </div>
+              <div class="col-md-6 hosting">
+                <div class="d-flex justify-content-center justify-content-md-end">
+                  <div class="mr-3">
+                    <a href="https://www.webio.pl/" target="_blank">Hosting&nbsp;by</a>
+                    <a href="https://www.webio.pl/" target="_blank"><img src="images/webio.svg" width="45" alt="Webio"></a>
+                  </div>
+                  <div>
+                    <a href="https://candf.com/" target="_blank">Dev&nbsp;support&nbsp;by</a>
+                    <a href="https://candf.com/" target="_blank"><img src="images/candf.svg" width="55"  alt="Candf"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <img class="logo" src="img/footer/instagram.png" alt="Instagram logo"> -->
+
+            <div class="copyright">
+
+              <div>© Copyright 2019 Fundacja Academic Partners i&nbsp;Inni. Wszelkie prawa zastrzeżone. W&nbsp;przypadku pytań - prosimy o kontakt na adres e-mail <a href="mailto:Hello@WTHconf.pl">Hello@WTHconf.pl</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+</footer>
+
+<a class="scroll-top scroll" href="#top"><div class="scroll-arrow"></div></a>
+<nav id="side-menu">
+
+  <div class="container">
+
+    <div class="row buttons buttons-row">
+      <a href="#" data-ng-click="$event.preventDefault();redirectToRegistration()" class="register-button">Zarejestruj się</a>
+      <a href="#" data-ng-click="$event.preventDefault();redirectToLogin()" class="login-button active">Zaloguj się</a>
+      <div class="close-button">&times;</div>
+    </div>
+
+    <div class="row menu">
+      <div class="menu-container col-md-12">
+        <div class="menu-main col-md-6">
+          <ul>
+            <li>
+              <a href="#dlaczegowarto">Dlaczego warto</a>
+            </li>
+            <li>
+              <a href="#tematyka">Tematyka</a>
+            </li>
+            <li>
+              <a href="#agenda">Agenda</a>
+            </li>
+            <li>
+              <a href="#prelegenci">Prelegenci</a>
+            </li>
+            <li>
+              <a href="#lokalizacja">Lokalizacja</a>
+            </li>
+            <li>
+              <a href="#afterparty">Afterparty</a>
+            </li>
+            <li>
+              <a href="#konkursy">Konkursy</a>
+            </li>
+            <li>
+              <a href="#opinieinnych">Opinie innych</a>
+            </li>
+          </ul>
+
+          <div class="links d-block d-md-none text-center">
+            <div class="links-inner">
+              <a data-toggle="modal" data-target="#recomend-modal">poleć </a> /
+                            <a data-toggle="modal" data-target="#remind-modal">przypomnij później</a>
+            </div>
+          </div>
+
+          <div class="social-buttons d-none d-md-block">
+
+            <a class="mr-3" href="https://www.facebook.com/wthconf/" target="_blank">
+              <img class="logo" src="images/facebook.svg" width="40" alt="facebook logo">
+            </a>
+            <a class="ml-3" href="https://www.meetup.com/pl-PL/What-The-Hack-IT-Security/events/255553613/" target="_blank">
+              <img class="logo" src="images/meetup.svg" width="95" alt="Meetup logo">
+            </a>
+            <!-- <img class="logo" src="img/footer/instagram.png" alt="Instagram logo"> -->
+
+          </div>
+        </div>
+
+        <div class="menu-more col-md-6 pl-md-5 pt-3 pt-md-0">
+          <div class="row">
+            <div class="col-6 col-md-12 order-2 order-md-1 d-flex flex-column">
+
+              <div>
+                <h4 class="mt-2 mt-md-0">Zaangażuj się</h4>
+                <ul>
+                  <li>
+                    <a data-toggle="modal" data-target="#collaboration-modal" href="#collaboration-modal">Zostań Sponsorem / Partnerem</a>
+                  </li>
+                  <li>
+                    <a data-toggle="modal" data-target="#volunteering-modal"  href="#volunteering-modal">Zostań Wolontariuszem</a>
+                  </li>
+                  <li>
+                    <a href="https://www.wthconf.pl/cfp" target="_blank" rel="noopener noreferrer">Zostań Prelegentem</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="social-buttons d-flex d-md-none flex-grow-1 flex-column justify-content-end">
+                <div class="row justify-content-center">
+
+                  <a class="" href="https://www.facebook.com/wthconf/" target="_blank">
+                    <img class="logo" src="images/facebook.svg" width="40" alt="facebook logo">
+                  </a>
+
+                  <a class="ml-2 ml-xs-2 ml-sm-3" href="https://www.meetup.com/pl-PL/What-The-Hack-IT-Security/events/255553613/" target="_blank">
+                    <img class="logo" src="images/meetup.svg" width="95" alt="Meetup logo">
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+            <div class="col-6 col-md-12 order-1 order-md-2">
+
+              <h4 class="mt-2 mt-md-5">Więcej</h4>
+              <ul>
+                <li>
+                  <a href="#sponsorzy">Sponsorzy</a>
+                </li>
+                <li>
+                  <a href="#partnerzy">Partnerzy</a>
+                </li>
+                <li>
+                  <a href="#patroni">Patroni</a>
+                </li>
+                <li>
+                  <a href="#organizatorzy">Organizatorzy</a>
+                </li>
+                <li>
+                  <a href="#rada">Rada Programowa</a>
+                </li>
+                <li>
+                  <a data-toggle="modal" data-target="#codeofconduct-modal" href="#">Code of conduct</a>
+                </li>
+                <li>
+                  <a data-toggle="modal" data-target="#cookies-modal" href="#">Polityka cookies</a>
+                </li>
+                <!-- <li><a data-toggle="modal" data-target="#privacypolicy-modal" href="#">Polityka prywatności</a></li> -->
+                <li class="spacer"></li>
+                <li>
+                  <a data-toggle="modal" data-target="#media-modal" href="#media-modal" href="#">Dla mediów</a>
+                </li>
+                <li>
+                  <a data-toggle="modal" data-target="#contact-modal" href="#contact-modal" href="#">Kontakt </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="links d-none d-md-block">
+    <div class="links-inner">
+    <img src="images/flag.svg" width="25" alt="">
+      <a data-toggle="modal" data-target="#recomend-modal">poleć </a> /
+                            <a data-toggle="modal" data-target="#remind-modal">przypomnij później</a>
+    </div>
+  </div>
+</nav>
+
+
+<div id="collaboration-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+            <div class="modal-content pcwindow">
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+                    <div class="form">
+                        <h2>Zapraszamy<br>do współpracy</h2>
+                        <p>Osobiście skontaktujemy się z Państwem w sprawie współpracy. Prosimy o wypełnienie danych.</p>
+                        <form id="partnerForm" name="partnerForm">
+                            <div class="form-group col-12 ">
+                            <input type="text" class="form-control" id="coopName" placeholder="Imię i nazwisko*" maxlength="200" data-ng-model="modalData.fullname" autofocus required>
+                            </div>
+                            <div class="form-group col-12 ">
+                            <input type="text" class="form-control" id="coopCompany" placeholder="Nazwa Firmy*" maxlength="150" data-ng-model="modalData.companyName" required>
+                            </div>
+                            <div class="form-group col-12 ">
+                            <input type="text" class="form-control" id="coopEmail" placeholder="Email*" maxlength="200" data-ng-model="modalData.email" required>
+                            </div>
+                            <div class="form-group col-12 ">
+                            <input type="text" class="form-control" id="coopPhone" placeholder="Telefon" maxlength="9" data-ng-model="modalData.phoneNo">
+                            </div>
+                            <div class="btn btn-primary" type="submit" id="modal_coop_submit" name="submit" data-ng-click="partnerForm.$valid && sendBecomeExhibitor()" data-toggle="modal" data-target="#thankyouplural-modal"> <!--data-dismiss="modal">-->
+                                Wyślij zgłoszenie
+                            </div>
+                        </form>
+                    </div>
+
+                    <p>
+                    Kontakt do organizatorów:<br />
+                    FUNDACJA ACADEMIC PARTNERS<br />
+                    tel: +48 660 409 142<br />
+                    email: hello@wthconf.pl<br />
+                    www.fundacjaap.org.pl
+                    </p>
+                </div>
+                <img src="images/modal-bg2.svg"  class="w-100 modal-img" />
+            </div>
+        </div>
+    </div>
+
+    <div id="volunteering-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+            <div class="modal-content pcwindow">
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+                    <div class="form">
+                        <h2>ZOSTAŃ WOLONTARIUSZEM<br /> PODCZAS WTH19</h2>
+                        <p class="text-center px-5">Zdobądź ciekawe doświadczenia, rozwijaj się, poznaj prelegentów, uczestnicz bezpłatnie w całym wydarzeniu i pomóż nam w przygotowaniu i / lub w  trakcie wydarzenia. Jeśli brzmi interesująco, zostaw swoje dane:</p>
+                        <form id="volForm" name="volForm">
+                        <div class="form-group col-12">
+                            <input type="text" class="form-control" id="volName" placeholder="Imię i nazwisko*" maxlength="200" data-ng-model="modalData.fullname" autofocus required>
+                        </div>
+                        <div class="form-group col-12">
+                            <input type="text" class="form-control" id="volEmail" placeholder="Email*" maxlength="200" data-ng-model="modalData.email" required>
+                        </div>
+                        <div class="form-group col-12">
+                            <input type="text" class="form-control" id="volPhone" placeholder="Telefon" maxlength="9" data-ng-model="modalData.phoneNo">
+                        </div>
+                        <p><small>Informujemy, że w przypadku wypełnienia i przesłania niniejszego formularza zgadzasz się na przetwarzanie Twoich danych osobowych jedynie w celach realizacji procesu zgłoszeń na wolontariusza konferencji. W pełni szanujemy Twoje prawa wynikające z właściwych ustaw o przetwarzaniu danych osobowych. Głównym organizatorem instytucjonalnym konferencji jest Fundacja Academic Partners, Aleje Jerozolimskie 181B, 02-222 Warszawa, email: info@fundacjaap.org.pl</small></p>
+
+
+                            <div class="btn btn-primary" type="submit" id="modal_vol_submit" name="submit" data-ng-click="volForm.$valid && sendBecomeVolounteer()" data-toggle="modal" data-target="#thankyousingle-modal"> <!-- data-dismiss="modal"> -->
+                                Wyślij zgłoszenie
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <img src="images/modal-bg2.svg"  class="w-100 modal-img" />
+            </div>
+        </div>
+    </div>
+
+    <div id="callforpapers-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+            <div class="modal-content pcwindow">
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+                    <div class="form">
+                        <h2>What The Hack 2019 Call for Papers</h2>
+                        <p>Jeśli chcesz wygłosić prezentację podczas WTH19 - zostaw nam swoje dane, skontaktujemy się z Tobą gdy otworzymy proces Call for Papers.</p>
+                        <form id="cfpForm" name="cfpForm">
+                        <div class="form-group col-12">
+                            <input type="text" class="form-control" id="cfpName" placeholder="Imię i nazwisko*" maxlength="200" data-ng-model="modalData.fullname" autofocus required>
+                        </div>
+                        <div class="form-group col-12">
+                            <input type="text" class="form-control" id="cfpEmail" placeholder="Email*" maxlength="200" data-ng-model="modalData.email" required>
+                        </div>
+                        <div class="form-group col-12">
+                            <input type="text" class="form-control" id="cfpPhone" placeholder="Telefon" maxlength="9" data-ng-model="modalData.phoneNo">
+                        </div>
+
+
+                            <div class="btn btn-primary" type="submit" id="modal_cfp_submit" name="submit" data-ng-click="cfpForm.$valid && sendBecomeLecturer()" data-toggle="modal" data-target="#thankyousingle-modal"> <!-- data-dismiss="modal"> -->
+                                Wyślij zgłoszenie
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="thankyouplural-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                    <div class="form">
+
+
+
+                        <h2>Dziękujemy!</h2>
+                        <div class="text-center">
+                        <p>Osobiście się z Państwem<br>skontaktujemy.</p>
+                            <div>
+                            <img src="images/happy.png" class="img-fluid" alt="Happy robot">
+                            </div>
+
+                        <a href="#" data-dismiss="modal" class="btn btn-secondary">OK</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="pakiet-niedostepny-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p></p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                    <div class="form">
+
+
+
+
+                        <div class="text-center">
+                        <p>Pakiet Sponsora Głównego jest już niedostępny</p>
+                            <div>
+                            <img src="images/sad.png" class="img-fluid" alt="Happy robot">
+                            </div>
+
+                        <a href="#" data-dismiss="modal" class="btn btn-secondary">OK</a>
+
+                        <img src="images/modal-bg2.svg"  class="w-100 modal-img" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="thankyousingle-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                    <img src="img/happyrobot.png" alt="Happy robot" class="happyrobot">
+
+                    <div class="form">
+                        <h2>Dziękujemy!</h2>
+                        <p>Osobiście się z Tobą<br>skontaktujemy.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="speaker-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+
+                <div class="pcwindow__body">
+
+                    <div class="person">
+
+                        <div class="person__photo">
+                            <!-- <img ng-src="{{activePrelegent.imageUrl}}" alt="{{activePrelegent.firstName}} {{activePrelegent.lastName}}"> -->
+                            <div class="img-container" style="background-image:url({{activePrelegent.imageUrl}})"></div>
+                            <div class="square"></div>
+
+                        <div class="overlay"></div>
+                            <div class="overlay"></div>
+                        </div>
+
+                        <div class="person__data">
+                            <div class="name">{{activePrelegent.firstName}} {{activePrelegent.lastName}}</div>
+                            <div class="title">{{activePrelegent.jobPosition}}<span ng-if="activePrelegent.jobPosition && activePrelegent.organization">, </span> {{activePrelegent.organization}}</div>
+                        </div>
+
+                    </div>
+
+                    <p class="description">{{activePrelegent.biography}}</p>
+
+
+                </div>
+                    <img src="images/modal-bg1.svg"  class="w-100 modal-img" />
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="allspeakers-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-xl">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                    <p class="lead text-center col-md-8 mx-auto mt-3 mb-4">
+                        Na naszym wydarzeniu spotkasz blisko 80 prelegentów, czołowych ekspertów i autorytetów środowiska ITSec.
+                    </p>
+
+                    <div class="row">
+                        <div class="prelegent column col-sm-6 col-md-3" ng-repeat="p in prelegenciAll">
+                            <div class="prelegenci__photo p1" data-toggle="modal" data-target="#speaker-modal" ng-click="changePrelegent(p)">
+                                <div class="img-container" style="background-image:url({{p.imageUrl}})"></div>
+
+                                <div class="square"></div>
+
+                        <div class="overlay"></div>
+                            </div>
+                            <p>{{p.firstName}} {{p.lastName}}</p>
+                            <p class="job">{{p.jobPosition}} {{p.organization}}</p>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sponsor-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-lg modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                    <div class="img-container">
+                        <img src="img/logotypy/accenture.svg">
+                    </div>
+
+                    <h2>Główny Sponsor</h2>
+
+                    <p>
+                        Accenture jest globalną firmą świadczącą profesjonalne usługi i rozwiązania w obszarach: Strategy, Consulting, Digital, Technology i Operations. Wspieramy transformacje biznesowe i technologiczne naszych klientów. To co nas wyróżnia to fakt, że dostarczamy rozwiązania w tzw. modelu end to end. Dzięki temu pracujemy z najlepszymi. Nasi Klienci to 89 firm z rankingu FORTUNE® Global 100 i ponad 3/4 z FORTUNE® Global 500 oraz instytucje rządowe z całego świata
+                    </p>
+
+                    <p>
+                        Więcej na:<br>
+                        <a href="http://pracaaccenture.pl" target="_blank">pracaaccenture.pl</a>
+                    </p>
+                    <div class="social-buttons">
+                        <!-- <img src="img/modals/meetup.svg" alt="Meetup">
+                        <img src="img/modals/fb.svg" alt="Facebook">
+                        <img src="img/modals/in.svg" alt="LinkedIn">
+                        <img src="img/modals/yt.svg" alt="YouTube"> -->
+
+                        <a href="https://www.facebook.com/AccentureKariera/" target="_blank">
+                            <img src="img/modals/fb.svg" alt="Facebook"></a>
+
+                        <a href="https://www.linkedin.com/company/accenture/" target="_blank">
+                            <img src="img/modals/in.svg" alt="LinkedIn"></a>
+                    </div>
+                </div>
+
+                <img src="images/modal-bg1.svg"  class="w-100 modal-img" />
+                <div class="bkg2"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="partner-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <!--p>What the h<span class="atsign">@</span>ck - Company name</p-->
+                    <p></p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+                    <div class="img-container">
+                        <img ng-src="{{activeExhibitor.logoUrl}}">
+                    </div>
+                    <div class="partner-group" ng-repeat="gr in activeExhibitor.groups">
+
+                        <h2>{{gr.name}}</h2>
+                        <div ng-repeat="fl in gr.fields">
+                            <h3>
+                            <img src="./images/partner-icons/employees.svg" style="height:18px;width:19px;" alt="" ng-if="fl.objectId == '6e3a1c9f-bad5-4aa6-be43-7d37b2fe01a1'" />
+                            <img src="./images/partner-icons/branze.svg" style="height:20px;width:20px;" alt="" ng-if="fl.objectId == '41b87cdd-f875-4b11-96e7-da6d39296eac'" />
+                            <img src="./images/partner-icons/opis.svg" style="height:20px;width:17px;" alt="" ng-if="fl.objectId == 'e38eeab8-9dde-4d4d-a9ef-1ccd14023ace'" />
+                            <!--img src="./images/partner-icons/dlaczego.svg" style="height:22px;width:22px;" alt="" ng-if="fl.objectId == '6e3a1c9f-bad5-4aa6-be43-7d37b2fe01a1'" /-->
+                            <img src="./images/partner-icons/etat.svg" style="height:22px;width:22px;" alt="" ng-if="fl.objectId == '32d3184d-2b3b-49bb-81f7-41e6d7da6ed9'" />
+                            <img src="./images/partner-icons/miasta.svg" style="height:24px;width:16px;margin-left:2px;" alt="" ng-if="fl.objectId == 'a4e4b6b0-5686-40d6-8239-3718c4c2f7eb'" />
+                            <img src="./images/partner-icons/profile.svg" style="height:22px;width:16px;" alt="" ng-if="fl.objectId == '3091d6d2-5464-47e3-9aed-47cd389c2f77'" />
+                            <img src="./images/partner-icons/oferta.svg" style="height:22px;width:22px;" alt="" ng-if="fl.objectId == '54007e70-6075-4258-abd6-72dd4e41723d'" />
+                            <img src="./images/partner-icons/dodatki.svg" style="height:22px;width:22px;" alt="" ng-if="fl.objectId == 'b0d6d1c1-bb8d-4b67-ae16-5d2c76b2172f'" />
+                            {{fl.name}}:</h3>
+                            <p ng-if="fl.typeId == 0">{{fl.valueStr}}</p>
+                            <p ng-if="fl.typeId == 1 || fl.typeId == 2" ng-bind-html="fl.valueStr"></p>
+                            <p ng-if="fl.typeId == 3">{{fl.valueInt}}</p>
+                            <p ng-if="fl.typeId == 4">{{fl.valueBool ? 'Tak' : 'Nie'}}</p>
+                            <p ng-if="fl.typeId == 5 || fl.typeId == 6"><a href="{{fl.typeId == 5 ? ('mailto:' + fl.valueStr) : fl.valueStr}}" target="_blank">{{fl.valueStr}}</a></p>
+                        </div>
+                    </div>
+
+
+                    <!--<div class="btn btn-primary">
+                        Dowiedz się więcej
+                    </div>-->
+
+
+                </div>
+    
+    <img src="images/modal-left.svg"  class="modal-left-img" />
+    <img src="images/modal-right.svg"  class="modal-right-img" />
+            </div>
+        </div>
+    </div>
+
+    <div id="recomend-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+                <form name="recForm" id="recForm">
+                    <div class="modal-header pcwindow__header">
+                        <p>What the h<span class="atsign">@</span>ck - poleć znajomym</p>
+                        <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                    </div>
+                    <div class="pcwindow__body">
+                        <p>Podaj adresy email lub telefony (9 cyfr) do osób, którym Chcesz nas zarekomendować. Oddziel je przecinkiem lub średnikiem.</p>
+                        <div class="form-group col-12">
+                            <textarea class="form-control" placeholder="e-maile" data-ng-model="recData.emails"></textarea>
+                        </div>
+                        <div class="form-group col-12">
+                            <textarea class="form-control" placeholder="numery telefonów" data-ng-model="recData.phoneNumbers"></textarea>
+                        </div>
+
+                        <div class="btn btn-primary" data-ng-click="recForm.$valid && recommendEvent()">
+                            Zatwierdź
+                        </div>
+                    </div>
+
+                    <div class="heads-left"></div>
+                    <div class="heads-right"></div>
+                    <div class="bkg-img"></div>
+
+                    <div class="confirmation" ng-if="recMessage != null">
+                        <div ng-bind-html="recMessage"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-modal" class="modal fade" role="dialog" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-md  modal-dialog-centered" id="recomend-modal">
+
+            <div class="modal-content pcwindow">
+                <form name="recForm"  class="ng-pristine ng-valid">
+                    <div class="modal-header pcwindow__header">
+                        <p>What the h<span class="atsign">@</span>ck - poleć znajomym</p>
+                        <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                    </div>
+                    <div class="pcwindow__body">
+                        
+                        <p>Dzięki za zainteresowanie naszym wydarzeniem:)
+                            Czy chcesz zarekomendować je komuś albo abyśmy
+                            przypomnieli Ci o nim w późniejszym terminie?
+                        </p>
+                        <div class="mdn-bttns">
+                            <a class="btn btn-primary" style="padding: 5px;" data-toggle="modal" data-target="#recomend-modal">Zarekomenduj znajomym</a>
+                            <a class="btn btn-primary" style="padding: 5px;" data-toggle="modal" data-target="#remind-modal">Przypomnij mi później</a></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <p id="toggleMobile" data-toggle="modal" data-target="#mobile-modal" style="display: none;"></p>
+    <div id="remind-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+                <form name="remindForm" id="remindForm">
+                    <div class="modal-header pcwindow__header">
+                        <p>What the h<span class="atsign">@</span>ck - przypomnij</p>
+                        <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                    </div>
+                    <div class="pcwindow__body">
+                        <p>Podaj swój adres email lub numer telefonu i wybierz kiedy powinniśmy Ci przypomnieć:</p>
+                        <div class="form-group col-12">
+                            <input type="text" class="form-control" name="email" placeholder="e-mail lub numer telefonu" required data-ng-model="reminderData.email">
+                        </div>
+                        
+
+                        <div class="btn btn-secondary" data-ng-click="remindForm.$valid && remaindMeLater()">
+                            Wyślij
+                        </div>
+                        <div class="bkg-img"></div>
+                    </div>
+
+                    <div class="crazy-left"></div>
+                    <div class="crazy-right"></div>
+
+                    <!-- <div class="confirmation">
+                    <div class="bkg-img"></div>
+                    Wysłano pomyślnie
+                </div> -->
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="reservationinfo-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-lg modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                    <div class="section-title">
+                        @rezerwacja
+                    </div>
+
+                    <h2>
+                        Wybierając prelekcje rezerwujesz miejsce na&nbsp;sali.*<br> Zaznacz tylko te prezentacje, w których chcesz wziąć udział.
+                    </h2>
+
+                    <p>*Osoby z rezerwacją będą miały pierwszeństwo wejścia na salę. W przypadku wolnych miejsc również osoby bez rezerwacji mogą uczestniczyć w prelekcji.</p>
+
+                </div>
+                <!-- <div class="resinfo-bkg-img"></div>    -->
+                <img src="img/modals/reservation-info-bkg.png" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+
+    <div id="codeofconduct-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-lg modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                    <h2>Code of conduct</h2>
+
+                    <p>
+                        <strong> What the H@ck - Kodeks postępowania dla konferencji </strong> </br></br>
+                        Konferencja What the H@ck jest przeznaczona i dostępna dla każdego bez względu na płeć, tożsamość, wygląd fizyczny. Jako organizatorzy nie zgadzamy się na nękanie uczestników wydarzeń w żadnej formie. </br></br>
+
+                        Bądź miły dla innych. Nie obrażaj innych uczestników. Zachowuj się profesjonalnie. Pamiętaj, że nękanie i seksistowskie, rasistowskie lub wykluczające dowcipy nie są właściwe i stosowne.</br></br>
+
+                        Uczestnicy wydarzenia naruszający te zasady mogą zostać ukarani lub wydaleni z imprezy według uznania organizatora imprezy.</br></br>
+
+                        Jeśli uczestnik jest nękany, organizatorzy wydarzenia mogą podjąć wszelkie działania, które uznają za stosowne, w tym ostrzec sprawcę a nawet wydalić go z konferencji. Jeśli jesteś prześladowany lub zauważysz, że ktoś jest prześladowany, natychmiast skontaktuj się z przedstawicielami organizatora.</br></br>
+
+                        Zabronione jest jakiekolkwiek rejestrowanie obrazu i dźwięku.</br>
+
+                        Personel wydarzenia zawsze służy wszelką pomocą.</br>
+
+                        Oczekujemy, że uczestnicy będą przestrzegać tych zasad na wszystkich imprezach w ramach konferencji.</br>
+
+                        Konktakt do organizatorów konferencji:hello@WTHconf.pl.
+                              </p>
+                </div>
+
+                <img src="images/modal-bg1.svg"  class="w-100 modal-img" />
+                <div class="bkg2"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="cookies-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-lg modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                    <h2>Polityka Cookies</h2>
+
+                    <p>
+                        Informujemy, iż w celu optymalizacji treści dostępnych w naszej stronie, dostosowania ich do indywidualnych potrzeb korzystamy z informacji zapisanych za pomocą plików cookies na urządzeniach końcowych użytkowników. Pliki cookies użytkownik może kontrolować
+                        za pomocą ustawień swojej przeglądarki internetowej. Dalsze korzystanie z naszej strony, bez zmiany ustawień przeglądarki internetowej oznacza, iż użytkownik akceptuje stosowanie plików cookies.
+                    </p>
+                </div>
+
+                <img src="images/modal-bg1.svg"  class="w-100 modal-img" />
+                <div class="bkg2"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="privacypolicy-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-lg modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - error</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                    <h2>Polityka prywatności</h2>
+
+                    <p>
+                        Accenture jest globalną firmą świadczącą profesjonalne usługi i rozwiązania w obszarach: Strategy, Consulting, Digital, Technology i Operations. Wspieramy transformacje biznesowe i technologiczne naszych klientów. To co nas wyróżnia to fakt, że dostarczamy
+                        rozwiązania w tzw. modelu end to end. Dzięki temu pracujemy z najlepszymi. Nasi Klienci to 89 firm z rankingu FORTUNE® Global 100 i ponad 3/4 z FORTUNE® Global 500 oraz instytucje rządowe z całego świata. Accenture jest globalną
+                        firmą świadczącą profesjonalne usługi i rozwiązania w obszarach: Strategy, Consulting, Digital, Technology i Operations. Wspieramy transformacje biznesowe i technologiczne naszych klientów.
+                    </p>
+                </div>
+
+                <img src="images/modal-bg1.svg"  class="w-100 modal-img" />
+                <div class="bkg2"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+     <div id="contact-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - contact</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                <h2>Kontakt</h2>
+                <p>
+                W przypadku chęci współpracy:<br />
+                    <address>
+                    Aleksandra PRYCHITKO<br>
+                    Koordynator PR<br>
+                    Aleksandra.PRYCHITKO@FundacjaAP.org.pl<br>
+                    +48 660 409 142
+                    </address>
+                </p>
+                <p>
+                Jeśli masz do nas pytania napisz:<br />
+                    <address>
+                    hello@wthconf.pl
+                    </address>
+                </p>
+                <p>Odpowieź otrzymasz w przeciągu jednego<Br /> dnia roboczego :)</p>
+                </div>
+
+                <img src="images/modal-bg1.svg"  class="w-100 modal-img" />
+                <div class="bkg2"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="media-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md  modal-dialog-centered">
+
+            <div class="modal-content pcwindow">
+
+                <div class="modal-header pcwindow__header">
+                    <p>What the h<span class="atsign">@</span>ck - media</p>
+                    <img src="images/closepcwindow.svg" alt="x" data-dismiss="modal">
+                </div>
+                <div class="pcwindow__body">
+
+                <h2>Kontakt dla mediów</h2>
+                <p class="mb-4">
+                Aleksandra PRYCHITKO<br />
+Koordynator Realizacji Projektu<br />
+Aleksandra.PRYCHITKO@FundacjaAP.org.pl<br />
++48 660 409 142
+                </p>
+                <h2>Pliki do pobrania</h2>
+                <p>
+                <a href="media/WTH_logotypy.zip">WTH_logotypy.zip</a><br>
+                <a href="media/WTH_banery.zip">WTH_banery.zip</a><br>
+                <a href="media/WTH_inf_prasowa.docx">WTH_inf_prasowa.docx</a>
+                </p>
+
+
+
+                </div>
+
+                <img src="images/modal-bg1.svg"  class="w-100 modal-img" />
+                <div class="bkg2"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/bootstrap.bundle.min.js"></script>
+    <script src="./scripts/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./scripts/app.js"></script>
+    
+  </body>
+</html>

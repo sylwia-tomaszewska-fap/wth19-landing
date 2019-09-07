@@ -1,0 +1,728 @@
+<script src="js/route.min.js" async></script>
+<section class="register-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-6">
+				<h1>Registration</h1>
+			</div>
+			<div class="col-12 col-md-6">
+				<div class="register-header-steps">
+					<h3>Step</h3>
+					<div class="register-header-steps-container">
+						<div class="register-header-steps-item">
+							<span>1</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item">
+							<span>2</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item">
+							<span>3</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item active">
+							<span>4</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item">
+							<span>5</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+						<div class="register-header-steps-item">
+							<span>6</span>
+							<svg class="cube">
+								<use xlink:href="#cube"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="candidate">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="candidate-header"> Join the candidate database <br /> Send your CV as a file </h2>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-12 col-sm-6 col-lg-4">
+				<div class="candidate-item candidate-item-cv">
+					<svg class="candidate-item-icon cv-decor">
+						<use xlink:href="#cv-decor"></use>
+					</svg>
+					<p>Send your CV directly to the Data Science Job Fairs recruiters. All you have to do is to attach a CV file and / or complete a CV online form</p>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-lg-4">
+				<div class="candidate-item candidate-item-gift">
+					<svg class="candidate-item-icon gift-decor">
+						<use xlink:href="#gift-decor"></use>
+					</svg>
+					<p>Everyone who sends a CV and / or completes an online CV form has a chance to win an Xbox and a Tesla ride. Filling both types of CV doubles your chance!</p>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-lg-4">
+				<div class="candidate-item candidate-item-suitcase">
+					<svg class="candidate-item-icon suitcase-decor">
+						<use xlink:href="#suitcase-decor"></use>
+					</svg>
+					<p>So far, thanks to us, hundreds of people have found a great job!</p>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-12 col-lg-8">
+				<div class="form-box cv-online">
+					<form name="cvForm">
+						<div class="form-box-top-line"></div>
+						<div class="form-box-content">
+							<div class="form-box-part">
+								<h6>I am interested in</h6>
+								<div class="form-box-checkbox">
+									<input type="checkbox" data-ng-model="userCvData.interPractice" name="zainteresowany" id="practice">
+									<label for="practice">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Practices </span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input type="checkbox" data-ng-model="userCvData.interInternship" name="zainteresowany" id="intern">
+									<label for="intern">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Internship </span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input type="checkbox" data-ng-model="userCvData.interNonFTE" name="zainteresowany" id="part-time">
+									<label for="part-time">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Part-time work </span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input type="checkbox" data-ng-model="userCvData.interRemote" name="zainteresowany" id="custom">
+									<label for="custom">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Hourly work to be agreed, provided flexible working hours or remote work </span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input type="checkbox" data-ng-model="userCvData.interRemote2" name="zainteresowany" id="remote">
+									<label for="remote">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Remote work</span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input type="checkbox" data-ng-model="userCvData.interFTE" name="zainteresowany" id="full-time">
+									<label for="full-time">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Full-time job </span>
+									</label>
+								</div>
+							</div>
+							<div class="form-box-part">
+								<h6>I would like to work in*:</h6>
+								<div class="form-box-checkbox">
+									<input data-ng-model="workOption" required name="miejsce_pracy" id="everywhere" value="3" type="radio">
+									<label for="everywhere">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> All over Poland and abroad - I'm flexible </span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input data-ng-model="workOption" required name="miejsce_pracy" id="poland" value="0" type="radio">
+									<label for="poland">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> All over Poland - I'm flexible </span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input data-ng-model="workOption" required name="miejsce_pracy" id="voivodeship" value="1" type="radio">
+									<label for="voivodeship">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc checkbox-desc-advanced">
+											<span>Only in the province:</span>
+											<select ng-if="workOption == '1'" name="voivodeship-select" data-ng-model="userCvData.workDistrictName" required>
+												<option selected="selected" value="">&lt;choose&gt;</option>
+												<option value="Dolnośląskie">Dolnośląskie</option>
+												<option value="Kujawsko-pomorskie">Kujawsko-pomorskie</option>
+												<option value="Lubelskie">Lubelskie</option>
+												<option value="Lubuskie">Lubuskie</option>
+												<option value="Łódzkie">Ł&#243;dzkie</option>
+												<option value="Małopolskie">Małopolskie</option>
+												<option value="Mazowieckie">Mazowieckie</option>
+												<option value="Opolskie">Opolskie</option>
+												<option value="Podkarpackie">Podkarpackie</option>
+												<option value="Podlaskie">Podlaskie</option>
+												<option value="Pomorskie">Pomorskie</option>
+												<option value="Śląskie">Śląskie</option>
+												<option value="Świętokrzyskie">Świętokrzyskie</option>
+												<option value="Warmińsko-mazurskie">Warmińsko-mazurskie</option>
+												<option value="Wielkopolskie">Wielkopolskie</option>
+												<option value="Zachodniopomorskie">Zachodniopomorskie</option>
+											</select>
+										</span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input data-ng-model="workOption" required name="miejsce_pracy" id="city" value="2" type="radio">
+									<label for="city">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc checkbox-desc-advanced">
+											<span>Only in the city and the surrounding area:</span>
+											<input ng-if="workOption == '2'" type="text" name="city-input" class="input-form-box" data-ng-model="userCvData.workCityName" required maxlength="40" placeholder="City">
+										</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-box-part">
+								<h6>My education level</h6>
+								<div class="form-box-checkbox">
+									<input name="wyksztalcenie" data-ng-model="userCvData.educationLevel" required id="edu-basic" value="0" type="radio">
+									<label for="edu-basic">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Basic </span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input name="wyksztalcenie" data-ng-model="userCvData.educationLevel" required id="studies" value="1" type="radio">
+									<label for="studies">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Higher (during studies) </span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input name="wyksztalcenie" data-ng-model="userCvData.educationLevel" required id="edu-higher" value="2" type="radio">
+									<label for="edu-higher">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Higher (completed studies) </span>
+									</label>
+								</div>
+							</div>
+							<div class="form-box-part" ng-if="userCvData.educationLevel == '1' || userCvData.educationLevel == '2'">
+								<div class="form-box-checkbox">
+									<div class="checkbox-desc separate">
+										<span>College*:</span>
+										<select ng-model="selectedSchool" ng-change="getDepartments(selectedSchool)" ng-options="school.name for school in schools" placeholder="Uczelnia" required id="select" name="select"></select>
+									</div>
+								</div>
+								<div class="form-box-checkbox" ng-if="selectedSchool.name == 'Inna'">
+									<div class="checkbox-desc separate">
+										<span>College name*:</span>
+										<input type="text" name="college-name" class="input-form-box" data-ng-model="userCvData.otherSchool" maxlength="150" required placeholder="College name">
+									</div>
+								</div>
+								<div class="form-box-checkbox" ng-if="selectedSchool.name != 'Inna'">
+									<div class="checkbox-desc separate">
+										<span>Department*:</span>
+										<select ng-model="selectedDepartment" ng-change="changeDepartment(selectedDepartment)" ng-options="department.name for department in departments" placeholder="Wydział" required id="selectW" name="selectW"></select>
+									</div>
+								</div>
+								<div class="form-box-checkbox" ng-if="selectedSchool.name == 'Inna' || deptOtherShow">
+									<div class="checkbox-desc separate">
+										<span>Department name*:</span>
+										<input type="text" name="department-name" class="input-form-box" data-ng-model="userCvData.otherDepartment" maxlength="150" required placeholder="Department name">
+									</div>
+								</div>
+							</div>
+							<!--<div class="form-box-part">
+								<h6><strong>Work areas:</strong></h6>
+							</div>-->
+							<div class="form-box-part">
+								<h6>Technologies or job titles, or areas of employment that interest you*:</h6>
+								<textarea data-ng-model="userCvData.interestedIn" maxlength='2000' class="textarea-small" required></textarea>
+							</div>
+							<div class="form-box-part">
+								<h6>Job experience*:</h6>
+								<textarea data-ng-model="userCvData.experience" maxlength='2000' class="textarea-small" required></textarea>
+							</div>
+							<div class="form-box-part">
+								<h6>Your skills (software languages and others)*:</h6>
+								<textarea data-ng-model="userCvData.skills" maxlength='2000' class="textarea-small" required></textarea>
+							</div>
+							<div class="form-box-part">
+								<h6><strong>Knowledge of foreign languages:</strong></h6>
+							</div>
+							<div class="form-box-part">
+								<h6>English*:</h6>
+								<div class="form-box-checkbox">
+									<input type="radio" data-ng-model="userCvData.languageEnglish" id="english-1" name="angielski" value="0">
+									<label for="english-1">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Lack </span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input type="radio" data-ng-model="userCvData.languageEnglish" id="english-2" name="angielski" value="1">
+									<label for="english-2">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Basic </span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input type="radio" data-ng-model="userCvData.languageEnglish" id="english-3" name="angielski" value="2">
+									<label for="english-3">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Intermediate </span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input type="radio" data-ng-model="userCvData.languageEnglish" id="english-4" name="angielski" value="3">
+									<label for="english-4">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Advanced </span>
+									</label>
+								</div>
+							</div>
+							<div class="form-box-part">
+								<h6>German*:</h6>
+								<div class="form-box-checkbox">
+									<input type="radio" data-ng-model="userCvData.languageGerman" id="german-1" name="niemiecki" value="0">
+									<label for="german-1">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Lack </span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input type="radio" data-ng-model="userCvData.languageGerman" id="german-2" name="niemiecki" value="1">
+									<label for="german-2">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Basic </span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input type="radio" data-ng-model="userCvData.languageGerman" id="german-3" name="niemiecki" value="2">
+									<label for="german-3">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Intermediate </span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input type="radio" data-ng-model="userCvData.languageGerman" id="german-4" name="niemiecki" value="3">
+									<label for="german-4">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Advanced </span>
+									</label>
+								</div>
+							</div>
+							<div class="form-box-part">
+								<h6>French*:</h6>
+								<div class="form-box-checkbox">
+									<input type="radio" data-ng-model="userCvData.languageFrench" id="french-1" name="francuski" value="0">
+									<label for="french-1">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Lack </span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input type="radio" data-ng-model="userCvData.languageFrench" id="french-2" name="francuski" value="1">
+									<label for="french-2">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Basic </span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input type="radio" data-ng-model="userCvData.languageFrench" id="french-3" name="francuski" value="2">
+									<label for="french-3">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Intermediate </span>
+									</label>
+								</div>
+								<div class="form-box-checkbox">
+									<input type="radio" data-ng-model="userCvData.languageFrench" id="french-4" name="francuski" value="3">
+									<label for="french-4">
+										<span class="checkbox-img">
+											<span class="unchecked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-unchecked"></use>
+												</svg>
+											</span>
+											<span class="checked">
+												<svg class="checkbox-icon">
+													<use xlink:href="#form-box-checkbox-checked"></use>
+												</svg>
+											</span>
+										</span>
+										<span class="checkbox-desc"> Advanced </span>
+									</label>
+								</div>
+							</div>
+							<div class="form-box-part">
+								<h6>Additionally, I know the following languages (enter what and what is your level):</h6>
+								<textarea data-ng-model="userCvData.languageAdditional" maxlength='2000'></textarea>
+							</div>
+							<div class="form-box-part">
+								<h6>Additional information:</h6>
+								<textarea data-ng-model="userCvData.additionalInfo" maxlength='2000'></textarea>
+							</div>
+							<div class="form-box-part">
+								<p class="error text-left">All fields marked with * are required</p>
+								<p class="agreement"> I consent to the processing of my application and attached documents to all Exhibitors participating in the Warsaw Information Technology Days event and the processing of personal data for recruitment purposes 
+									<a href="#" data-ng-click="$event.preventDefault()" class="js-expand-text">expand &gt;</a><br/>
+									<span class="hide-area hidden">
+										Information obligation: The data controller is the organizer - Academic Partners Foundation (01-926 Warsaw, Kwitnąca street 6/46), data will be provided to organizations participating in the IT Job Exchange and event sponsors. <br /> Partners of the event:
+										<span ng-repeat="exh in exhList">&nbsp;{{exh}}{{$last ? '' : ', '}}</span><br />
+										Withdrawal of consent is possible by sending an email to the address info@fundacjaap.org.pl, withdrawal of consent to the processing of personal data is synonymous with the resignation from participation in recruitment - if consents will be withdrawn after submitting data to Exhibitors, they will be automatically notified. The Academic Partners Foundation will delete all personal data after completion of work related to the project, and the Exhibitor after the completion of the recruitment processes.
+									</span>
+								</p>
+							</div>
+							<!--<div class="form-box-part" data-ng-hide="message == ''">
+								{{message}}
+							</div>-->
+							<div class="form-box-part" data-ng-hide="messageOk == ''" style="color:Green">
+								{{messageOk}}
+							</div>
+							<div class="form-box-part" ng-show="loading">
+								<img src="images/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+							</div>
+							<button type="submit" class="btn btn-contest-2" data-ng-click="uploadCvForm()">
+								<span> Save </span>
+								<svg class="arrow">
+									<use xlink:href="#arrow"></use>
+								</svg>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	<div class="box-3d errors" data-ng-hide="message == ''">
+		<div class="box-3d-content">
+			<p>
+				<svg class="icon">
+					<use xlink:href="#exclamation-2"></use>
+					</svg>
+				<strong ng-bind-html="message"></strong>
+			</p>
+		</div>
+		<div class="box-3d-shadow-border"></div>
+		<div class="box-3d-decor-line"></div>
+	</div>
+		
+		<div class="row justify-content-center" ng-if="!eventSettings.isUserUploadCV">
+			<div class="col-12 col-lg-8">
+				<div class="candidate-box increase-chances increase-chances-v3">
+					<div class="candidate-box-top-line"></div>
+					<div class="candidate-box-content">
+						<div class="candidate-box-content-col">
+							<h5>Increase your chance</h5>
+							<p>also send a CV as a file </p>
+							<div class="candidate-box-buttons">
+								<a href="#" class="btn btn-cv" data-ng-click='$event.preventDefault();redirectToUpload()'>
+									<span> Add CV file </span>
+									<svg class="arrow">
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="candidate-box-content-col cv-decor-col">
+							<svg class="cv-decor">
+								<use xlink:href="#cv-decor"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section class="next-step">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<button type="submit" class="btn btn-next-step btn-next-step-dark" data-ng-click='$event.preventDefault();redirectToInform()'>
+							<span>Move forward</span>
+							<svg class="arrow">
+								<use xlink:href="#arrow"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col">
+						<p class="skip"><a href="#" data-ng-click='$event.preventDefault();skipThisPage()' ng-model="loading" ng-disabled="loading">Skip</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</section>

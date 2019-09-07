@@ -1,0 +1,160 @@
+<script src="js/route.min.js" async></script>
+<form action="#">
+	<section class="register-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-6">
+					<h1>Registration</h1>
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="register-header-steps">
+						<h3>Step</h3>
+						<div class="register-header-steps-container">
+							<div class="register-header-steps-item">
+								<span>1</span>
+								<svg class="cube">
+									<use xlink:href="#cube"></use>
+								</svg>
+							</div>
+							<div class="register-header-steps-item">
+								<span>2</span>
+								<svg class="cube">
+									<use xlink:href="#cube"></use>
+								</svg>
+							</div>
+							<div class="register-header-steps-item">
+								<span>3</span>
+								<svg class="cube">
+									<use xlink:href="#cube"></use>
+								</svg>
+							</div>
+							<div class="register-header-steps-item">
+								<span>4</span>
+								<svg class="cube">
+									<use xlink:href="#cube"></use>
+								</svg>
+							</div>
+							<div class="register-header-steps-item">
+								<span>5</span>
+								<svg class="cube">
+									<use xlink:href="#cube"></use>
+								</svg>
+							</div>
+							<div class="register-header-steps-item active">
+								<span>6</span>
+								<svg class="cube">
+									<use xlink:href="#cube"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="register-success">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12 col-lg-8">
+					<div class="register-success-box">
+						<div class="register-success-box-top-line"></div>
+						<div class="register-success-box-content">
+							<div class="register-success-box-content-col">
+								<h2 ng-if="loading == false && userInfo.firstName != null">{{userInfo.firstName}}, thank you for activating your account!</h2>
+								<h2 ng-if="loading == treue">We verify activation, please be patient</h2>
+								
+								<!-- brak płatności - pakiet bezpłatny -->
+								<div ng-if="userInfo.hasPayment == false">
+									<h6>Account fully active. You will soon receive an invitation to the e-mail address provided.</h6>
+								</div>
+								<!-- jest płatność - pakiet firmowy -->
+								<div ng-if="userInfo.isOrgPackage == true">
+									<h6>Thank you for your registration. We will contact you shortly and send you the details. If you have any questions, please e-mail us hello@warszawskiedniinformatyki.pl</h6>
+								</div>
+								<!-- jest płatność - kod rabatowy wymaga zatwierdzenia -->
+								<div ng-if="userInfo.hasPayment == true && userInfo.isWaitingForCouponApproval == true">
+									<h6><strong>Waiting for the acceptance of the rebate code by the organizers.</strong><br/>
+									During the registration, a discount code was given, the use of which requires the approval of the organizers. After acceptance, a payment link will be generated.</h6>
+								</div>
+								<!-- jest płatność - pobrano link do płatności -->
+								<div ng-if='loading == false && userInfo.hasPayment == true && userInfo.isWaitingForCouponApproval == false && paymentUrl != null && paymentUrl != "0"'>
+									<h6><strong>Please make a payment by clicking the link below, which we will also send to your e-mail address.</strong><br/>
+									NOTE: if you do not make a payment within 24 hours - your registration and all data related to it will be deleted.</h6>
+									<a href="#" class="btn btn-payment-2" data-ng-click='$event.preventDefault();redirectToPayment()'>
+										<span>
+											<svg class="credit-cards">
+												<use xlink:href="#credit-cards"></use>
+											</svg> Make a payment </span>
+										<svg class="arrow">
+											<use xlink:href="#arrow"></use>
+										</svg>
+									</a>
+								</div>
+								<!-- jest płatność - brak linku do płatności -->
+								<div ng-if='loading == false && userInfo.hasPayment == true && userInfo.isWaitingForCouponApproval == false && paymentUrl == null'>
+									<h6><strong>Waiting for a payment to be generated. We'll send a payment link to your email address.</strong><br/>
+									NOTE: if you do not make a payment within 24 hours - your registration and all data related to it will be deleted.</h6>
+								</div>
+								<!-- jest płatność - tyle że 0 zł, czyli brak płatności i faktury -->
+								<div ng-if='loading == false && userInfo.hasPayment == true && userInfo.isWaitingForCouponApproval == false && paymentUrl == "0"'>
+									<h6>Account fully active. You will soon receive an invitation to the e-mail address provided.</h6>
+								</div>
+								<div ng-if="loading">
+									<img src="images/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+								</div>
+							</div>
+							<div class="register-success-box-content-col">
+								<svg class="check-decor">
+									<use xlink:href="#check-decor"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-12 col-lg-9">
+					<p>We inform you about changes in lectures, contests and additional prizes on our Facebook page. If you do not want to miss anything, like us and follow our profiles:</p>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-12 col-lg-8">
+					<section class="check-our-social-media">
+						<div class="check-our-social-media-content">
+							<a href="https://www.facebook.com/DSSConf/" class="btn btn-check-social">
+								<span>
+									<svg class="fb-inline">
+										<use xlink:href="#fb-inline"></use>
+									</svg> Like us on Facebook </span>
+								<svg class="arrow">
+									<use xlink:href="#arrow"></use>
+								</svg>
+							</a>
+							<a href="https://www.meetup.com/pl-PL/Data-Science-Warsaw/" class="btn btn-check-social">
+								<span>
+									<svg class="meetup-inline">
+										<use xlink:href="#meetup-inline"></use>
+									</svg> Follow us on Meetup </span>
+								<svg class="arrow">
+									<use xlink:href="#arrow"></use>
+								</svg>
+							</a>
+							<a href="https://www.instagram.com/dssconf/" class="btn btn-check-social">
+								<span>
+									<svg class="instagram-inline">
+										<use xlink:href="#instagram-inline"></use>
+									</svg> Follow us on Instagram </span>
+								<svg class="arrow">
+									<use xlink:href="#arrow"></use>
+								</svg>
+							</a>
+						</div>
+						<svg class="decor-1">
+							<use xlink:href="#decor-1"></use>
+						</svg>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

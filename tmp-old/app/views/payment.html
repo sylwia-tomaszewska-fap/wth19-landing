@@ -1,0 +1,42 @@
+<!-- intro -->
+<section id="start" class="section section--intro">
+	<!-- container -->
+	<div class="container container--wrapper">
+		<div class="top">
+			<div class="top__reg">@rejestracja</div>
+			<div class="top__steps list" data-step="6">
+				<div class="top__steps__element"></div>
+			</div>
+		</div>
+	</div>
+	<!-- /container -->
+</section>
+<!-- /intro -->
+
+<!-- otargach -->
+<section id="otargach" class="section section--agenda">
+	<!-- container -->
+	<div class="container container--wrapper">
+		<div class="letThemKnow">
+			<div class="agenda__header">
+				<p class="agenda__title">What the h<span>@</span>ck</p>
+				<span class="agenda__close"><img src="src/img/agenda-close.png" alt="" /></span>
+			</div>
+			<div class="regForm__emails">
+				<div class="letThemKnow__image">
+					<img src="src/img/wdi.jpg" alt="" class="letThemKnow__image__element" />
+				</div>
+				<p class="regForm__emails__text">Link do płatności</p>
+				<div style="color: #000000;margin: 5px 20px;" ng-if="message != ''" >{{message}}</div>
+				<div ng-show="loading">
+					<img src="img/tenor.gif" style="max-height: 80px;margin: 40px auto 0;">
+				</div>
+				<div class="regForm__send" ng-if="paymentUrl != ''">
+					<a href="#" class="bttn bttn--bigRed bttn--bigRedCV bttn--bigRedNote" ng-model="loading" ng-disabled="loading" data-ng-click='$event.preventDefault();goToPayment()'>Zapłać</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /otargach -->
+

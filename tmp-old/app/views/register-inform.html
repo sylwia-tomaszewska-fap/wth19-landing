@@ -1,0 +1,68 @@
+<!-- intro -->
+<section id="start" class="section section--intro">
+	<!-- container -->
+	<div class="container container--wrapper">
+		<div class="top">
+			<div class="top__reg">@rejestracja</div>
+			<div class="top__steps list" data-step="5">
+				<div class="top__steps__element"></div>
+			</div>
+		</div>
+	</div>
+	<!-- /container -->
+</section>
+<!-- /intro -->
+
+<!-- otargach -->
+<section id="otargach" class="section section--agenda">
+	<!-- container -->
+	<div class="container container--wrapper">
+		<form role="form" name="informForm">
+			<fieldset>
+				<div class="letThemKnow">
+					<div class="agenda__header">
+						<p class="agenda__title">What the h<span>@</span>ck</p>
+						<span class="agenda__close"><img src="src/img/agenda-close.png" alt="" /></span>
+					</div>
+					<div class="letThemKnow__wrapper">
+						<div class="letThemKnow__image">
+							<img src="src/img/wdi.jpg" alt="" class="letThemKnow__image__element" />
+						</div>
+						<div class="letThemKnow__content">
+							<h2 class="letThemKnow__content__heading">Powiadom swoich znajomych o #WTH18</h2>
+							<p class="letThemKnow__content__text">Osoby, których znajomi zarejestrują się i będą uczestniczyć w wydarzeniu mają szansę na wygranie Xboxa, 2 przejazdów Teslą i 2 zestawów okularów VR!</p>
+							<ul class="letThemKnow__list">
+								<li class="letThemKnow__element"><img src="src/img/award1.svg" alt="" /> </li>
+								<li class="letThemKnow__element"><img src="src/img/award2.svg" alt="" /> </li>
+								<li class="letThemKnow__element"><img src="src/img/award3.svg" alt="" /> </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="letThemKnow">
+					<div class="agenda__header">
+						<p class="agenda__title">What the h<span>@</span>ck</p>
+						<span class="agenda__close"><img src="src/img/agenda-close.png" alt="" /></span>
+					</div>
+					<div class="regForm__emails">
+						<p class="regForm__emails__text">Wpisz tutaj emaile Twoich znajomych oddzielone<br/> przecinkiem / spacją / średnikiem</p>
+						<textarea class="regForm__emails__textarea" placeholder="Podaj adres(y)" ng-model="registerUserData.emails" name="tbEmail" id="tbEmail" required></textarea>
+						<div style="color: #000000;margin: 5px 20px;" ng-if="message != ''" >{{message}}</div>
+		                <div ng-show="loading">
+							<img src="img/tenor.gif" style="max-height: 80px;margin: 40px auto 0;">
+						</div>
+						<div class="regForm__send">
+							<a href="#" class="bttn bttn--bigRed bttn--bigRedCV bttn--bigRedNote" ng-model="loading" ng-disabled="loading" data-ng-click='$event.preventDefault();informForm.$valid && sendRecommendations()'>Wyślij zaproszenia</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="section__submit">
+					<button type="submit" class="section__submit__button" data-ng-click='$event.preventDefault();redirectToMeet()'>Przejdź dalej</button>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</section>
+<!-- /otargach -->
+

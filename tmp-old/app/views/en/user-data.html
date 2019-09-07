@@ -1,0 +1,170 @@
+<section class="site-section">
+	<div class="wdi-box wdi-box--medium wdi-box--black">
+		<form class="wdi-form wdi-form--edit" name="registerForm">
+			<div class="wdi-form__group">
+				<span class="wdi-form__label">First name:*</span>
+				<input class="wdi-form__input" data-ng-model="registerUserData.firstName" maxlength="100" id="name" placeholder="First name" required autofocus type="text">
+			</div>
+			<div class="wdi-form__group">
+				<div class="wdi-form__label">Last name:*</div>
+				<input data-ng-model="registerUserData.lastName" maxlength="100" class="wdi-form__input" id="surname" placeholder="Last name" required type="text">
+			</div>
+			<div class="wdi-form__group" ng-if="registerUserData.packageIsFree">
+				<div class="wdi-form__label">E-mail:*</div>
+				<div style="font-size: 1.6rem;">
+					{{registerUserData.email}}
+				</div>
+			</div>
+			<div class="wdi-form__group" ng-if="!registerUserData.packageIsFree">
+				<div class="wdi-form__label">Email:*</div>
+				<input data-ng-model="registerUserData.email" maxlength="256" class="wdi-form__input" id="email" placeholder="Email" required type="email">
+			</div>
+			<div class="wdi-form__group">
+				<div class="wdi-form__label">Phone number:*</div>
+				<input data-ng-model="registerUserData.phoneNo" maxlength="20" class="wdi-form__input" id="mobile" placeholder="Phone number" required type="text">
+			</div>
+			<div class="wdi-form__group" ng-if="registerUserData.packageCode != 'GPIT' && !registerUserData.packageIsSet && !registerUserData.packageIsOrg">
+				<div class="wdi-form__label">Size and color of a shirt:</div>
+				<select ng-model="registerUserData.tShirtChoice" placeholder="Choose size and color:" required id="selectTS" name="selectTS" class="wdi-form__input" style="padding: 0">
+					<option disabled selected value> -- Choose size and color -- </option>
+				<option>S Black</option>
+										<option>M Black</option>
+										<option>L Black</option>
+										<option>XL Black</option>
+										<option>XXL Black</option>
+										<option>S White</option>
+										<option>M White</option>
+										<option>L White</option>
+										<option>XL White</option>
+										<option>XXL White</option>
+				</select>
+			</div>
+			<div class="wdi-form__group">
+				<div class="wdi-form__label">I'm:*</div>
+				<div style="font-size: 1.6rem;">
+					<input name="checkbox" id="student" type="radio" data-ng-model="isGraduate" value="false" required>
+					<label for="student">Student</label>
+					<input name="checkbox" id="professional" type="radio" data-ng-model="isGraduate" value="true" required>
+					<label for="professional">PRO</label>
+				</div>
+			</div>
+			<!-- widok dla profesjonalisty -->
+			<div ng-if="isGraduate == 'true'">
+				<div class="wdi-form__group">
+					<div class="wdi-form__label">Job position:*</div>
+					<input data-ng-model="registerUserData.companyPosition" maxlength="100" class="wdi-form__input" id="job" placeholder="Job position" required type="text">
+				</div>
+				<div class="wdi-form__group">
+					<div class="wdi-form__label">Company name:*</div>
+					<input data-ng-model="registerUserData.companyName" maxlength="150" class="wdi-form__input" id="company" placeholder="Company name" required type="text">
+				</div>
+			</div>
+			<!-- widok dla studenta -->
+			<div ng-if="isGraduate == 'false'">
+				<div class="wdi-form__group">
+					<div class="wdi-form__label">College:*</div>
+					<select ng-model="selectedSchool" ng-change="getDepartments(selectedSchool)" ng-options="school.name for school in schools" placeholder="College" required id="select" name="select" class="wdi-form__input" style="padding: 0"></select>
+				</div>
+				<div class="wdi-form__group" ng-if="selectedSchool.name == 'Inna'">
+					<div class="wdi-form__label">College name:*</div>
+					<input data-ng-model="registerUserData.otherSchool" maxlength="150" class="wdi-form__input" id="school_name" placeholder="College name" required type="text">
+				</div>
+				<div class="wdi-form__group" ng-if="selectedSchool.name != 'Inna'">
+					<div class="wdi-form__label">Department:*</div>
+					<select ng-model="selectedDepartment" ng-change="changeDepartment(selectedDepartment)" ng-options="department.name for department in departments" placeholder="Department" required id="selectW" name="selectW" class="wdi-form__input" style="padding: 0"></select>
+				</div>
+				<div class="wdi-form__group" ng-if="selectedSchool.name == 'Inna' || deptOtherShow">
+					<div class="wdi-form__label">Department name:*</div>
+					<input data-ng-model="registerUserData.otherDepartment" maxlength="150" class="wdi-form__input" id="wydzial" placeholder="Department name" required type="text">
+				</div>
+			</div>
+			<!-- widok dla pakietu VIP - edycja gdyby jednak chciał fakturę -->
+			<div ng-if="!registerUserData.isPackageFree">
+				<div class="wdi-form__group" ng-if="!wantedInvoice && registerUserData.isInvoiceAllowed">
+					<div class="wdi-form__label">I need an invoice:*</div>
+					<div style="font-size: 1.6rem;">
+						<input id="invoiceYes" name="invoice" type="radio" data-ng-model="wantInvoice" ng-change="changeInvoiceCheck(true)" value="true" required>
+						<label for="invoiceYes">yes</label>
+						<input id="invoiceNo" name="invoice" type="radio" data-ng-model="wantInvoice" ng-change="changeInvoiceCheck(false)" value="false" required>
+						<label for="invoiceNo">no</label>
+					</div>
+				</div>
+				<div ng-if="wantInvoice == true">
+					<div class="wdi-form__group">
+						<div class="wdi-form__label">Invoice data</div>
+					</div>
+					<div class="wdi-form__group">
+						<div class="wdi-form__label">Company name:*</div>
+						<input data-ng-model="registerUserData.payerName" maxlength="256" class="wdi-form__input" id="payerName" placeholder="Company name" required type="text">
+					</div>
+					<div class="wdi-form__group">
+						<div class="wdi-form__label">Address:*</div>
+						<input data-ng-model="registerUserData.payerStreet" maxlength="256" class="wdi-form__input" id="payerStreet" placeholder="Address" required type="text">
+					</div>
+					<div class="wdi-form__group">
+						<div class="wdi-form__label">Post code:*</div>
+						<input data-ng-model="registerUserData.payerPostCode" maxlength="256" class="wdi-form__input" id="payerPostCode" placeholder="Post code" required type="text">
+					</div>
+					<div class="wdi-form__group">
+						<div class="wdi-form__label">City:*</div>
+						<input data-ng-model="registerUserData.payerCity" maxlength="256" class="wdi-form__input" id="payerCity" placeholder="City" required type="text">
+					</div>
+					<div class="wdi-form__group">
+						<div class="wdi-form__label">VAT ID:</div>
+						<input data-ng-model="registerUserData.payerNip" maxlength="10" class="wdi-form__input" id="payerNip" placeholder="VAT ID" type="text">
+					</div>
+				</div>
+			</div>
+			<!-------------------------------------------------->
+			<div class="wdi-form__group">
+				<div class="wdi-form__label">&nbsp;</div>
+				<input ng-model="registerUserData.processAgreement" name="checkbox" type="checkbox" id="zgoda1" required>
+				<label for="zgoda1">
+					I agree to the processing of my personal data for registration and participation in the Data Science Summit event  <br/>
+					<div>Information obligation: The data controller is the organizer - Academic Partners Foundation (01-926 Warsaw, Kwitnąca 6/46 street). Withdrawal of consent is possible by sending an email to the address info@fundacjaap.org.pl, withdrawal of consent to the processing of personal data is synonymous with the resignation from participation in the conference. The data administrator will delete all personal data after completion of work related to the project.</div>
+				</label>
+			</div>
+			<div class="wdi-form__group">
+				<div class="wdi-form__label">&nbsp;</div>
+				<input ng-model="registerUserData.marketingAgreement" name="checkbox" type="checkbox" id="zgoda2">
+				<label for="zgoda2">
+					I consent to the processing of my personal data for the purposes of sending recruitment or marketing information from Exhibitors, Partners and the Organizer<br/>
+					<div>Information obligation: The data controller is the organizer - Academic Partners Foundation (01-926 Warsaw, Kwitnąca 6/46 street). Withdrawal of consent is possible by sending an email to the address info@fundacjaap.org.pl, withdrawal of consent to the processing of personal data is synonymous with the resignation from participation in the conference. The data administrator will delete all personal data after completion of work related to the project.</div>
+				</label>
+			</div>
+			<div class="wdi-form__group" ng-if="!registerUserData.isPackageFree && !wantedInvoice && registerUserData.isInvoiceAllowed">
+				<div class="wdi-form__label">&nbsp;</div>
+				<div style="font-size: 1.6rem;">
+					Note: the change to the invoice data applies only to the day of the event. From the day of the event, we provide the invoice only to the name and surname of the participant on the day of payment.
+				</div>
+			</div>
+			<div class="wdi-form__group">
+				<div class="wdi-form__label">&nbsp;</div>
+				<span>* - Required field</span>
+			</div>
+			<div class="wdi-form__group" data-ng-hide="message == ''">
+				<div class="wdi-form__label">&nbsp;</div>
+				<span style="color:Red">
+					{{message}}
+				</span>
+			</div>
+			<div class="wdi-form__group" ng-if="loading">
+				<div class="wdi-form__label">&nbsp;</div>
+				<img src="images/tenor.gif" style="max-height: 80px;margin:40px auto 0" />
+			</div>
+			<div class="wdi-form__buttons-container wdi-form__buttons-container--centered">
+				<button class="wdi-button" data-ng-click="registerForm.$valid && registerUser()" ng-model="loading" ng-disabled="loading">
+					<span class="wdi-button__text">
+						<span class="wdi-font wdi-font-pen"></span>
+						Save changes
+					</span>
+					<span class="wdi-font wdi-font-arrow-right wdi-button__icon"></span>
+				</button>
+				<div class="wdi-box__buttons wdi-box__buttons--pull-right">
+					<a href="#" data-ng-click='$event.preventDefault();redirectToAccount()' class="wdi-box__link">Return without saving</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</section>
+ 
