@@ -18,7 +18,7 @@
             <img src="images/mapa.png" alt="" class="img-fluid w-100">
           </a>
           <div class="map-box">
-            <h3>Stadion Narodowy</h3>
+            <h3>PGE Narodowy</h3>
             <p>al. Księcia Józefa<br/>Poniatowskiego 1<br/ >03-901 Warszawa</p>
               <a href="https://goo.gl/maps/2TweSLvTc9WnbTxZ8" target="_blank" rel="noopener" class="btn btn-primary">Zobacz na Google Maps</a>
             </div>
