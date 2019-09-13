@@ -1,5 +1,5 @@
 window.onload = function() {
   setTimeout(function() {
-    $("#loading").addClass("out");
+    $("#loading").addClass("hide");
   }, 5000);
 };

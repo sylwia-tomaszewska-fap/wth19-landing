@@ -2,7 +2,7 @@
 
 {% block content %}
 
-{% include '_partials/sections/preloading.nunjucks' %}
+{% include '_partials/sections/loading.nunjucks' %}
 
 {% include '_partials/sections/header.nunjucks' %}
 
