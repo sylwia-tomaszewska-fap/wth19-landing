@@ -33,7 +33,7 @@
   left: 50%;
   opacity: 0;
   transform: translateX(-50%);
-  animation: show 0.5s 6.5s forwards;
+  animation: show 0.5s 5s forwards;
   text-align: center;
   span {
     animation: load 1.4s infinite both;
@@ -64,12 +64,12 @@ svg[class*="pre-"],
 
 .bomb {
   opacity: 0;
-  animation: show 0s 6s forwards;
+  animation: show 0s 4.5s forwards;
 }
 
 @for $i from 1 through 13 {
   .pre-#{$i} {
-    animation: anim-#{$i} 6s forwards;
+    animation: anim-#{$i} 4.5s forwards;
   }
 }
 
