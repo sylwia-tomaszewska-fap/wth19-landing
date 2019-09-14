@@ -7,7 +7,7 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 // $fa-font-path: "../fonts";
 // @import 'node_modules/font-awesome/scss/font-awesome';
-@import "preloader";
+@import "loading";
 @import "slick";
 @import "wth";
 @import "wth19";
@@ -488,8 +488,7 @@ section.agenda {
     padding-left: 30px;
     padding-right: 30px;
     &:hover {
-      background-position: top 0 left 6px, top 0 right 6px, bottom 0 left 6px,
-        bottom 0 right 6px;
+      background-position: top 0 left 6px, top 0 right 6px, bottom 0 left 6px, bottom 0 right 6px;
       &:before {
         left: 5px;
       }

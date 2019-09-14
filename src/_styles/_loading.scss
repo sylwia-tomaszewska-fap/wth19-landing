@@ -1,215 +1,305 @@
+#svg-loading {
+  display: none;
+}
+
 #loading {
   position: fixed;
   height: 100vh;
   top: 0%;
   left: 0;
   right: 0;
-  z-index: 10000;
-  background: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-transition: top 1s cubic-bezier(0.86, 0, 0.07, 1);
+  z-index: 1000;
+  background: #e10b31;
   transition: top 1s cubic-bezier(0.86, 0, 0.07, 1);
-  &.out {
+  &.hide {
     top: -150%;
   }
 }
 
-path[class*="letter-"] {
-  animation-duration: 5s;
-  animation-delay: 2s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
+.loading-wrapper {
+  position: relative;
+  max-width: 320px;
+  max-height: 320px;
 }
 
-g[class*="hack-"],
-.sygnet {
-  path {
-    animation-duration: 5s;
-    animation-delay: 2s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-  }
-}
-
-.letter-w {
-  animation-name: anim-w;
-}
-.letter-h {
-  animation-name: anim-h;
-}
-.letter-a {
-  animation-name: anim-a;
-}
-.letter-t {
-  animation-name: anim-t;
-}
-.letter-t-2 {
-  animation-name: anim-t-2;
-}
-.letter-h-2 {
-  animation-name: anim-h-2;
-}
-.letter-e {
-  animation-name: anim-e;
-}
-.hack-1 {
-  path {
-    animation-name: anim-hack-1;
-  }
-}
-.hack-2 {
-  path {
-    animation-name: anim-hack-2;
-  }
-}
-.hack-3 {
-  path {
-    animation-name: anim-hack-3;
-  }
-}
-.sygnet {
-  path {
-    animation-name: anim-sygnet;
+.loading-wrapper-text {
+  color: #fff;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
+  animation: show 0.5s 6.5s forwards;
+  text-align: center;
+  span {
+    animation: load 1.4s infinite both;
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.4s;
+    }
   }
 }
 
-@keyframes anim-w {
-  9% {
-    fill: black;
-  }
-  10% {
-    fill: red;
-  }
-  12% {
-    fill: #000000;
+@media (max-width: 520px) {
+  .loading-wrapper-text {
+    font-size: 1rem;
   }
 }
-@keyframes anim-h {
-  9% {
-    fill: black;
-  }
-  10% {
-    fill: red;
-  }
-  12% {
-    fill: #000000;
+
+svg[class*="pre-"],
+.bomb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 320px;
+  transform: translate(-50%, -50%);
+}
+
+.bomb {
+  opacity: 0;
+  animation: show 0s 6s forwards;
+}
+
+@for $i from 1 through 13 {
+  .pre-#{$i} {
+    animation: anim-#{$i} 6s forwards;
   }
 }
-@keyframes anim-a {
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes load {
   0% {
-    fill: black;
+    opacity: 0.2;
   }
-  9% {
-    fill: black;
+  20% {
+    opacity: 1;
   }
-  10% {
-    fill: red;
-  }
-  12% {
-    fill: #000000;
+  80% {
+    opacity: 1;
   }
   100% {
-    fill: #000000;
+    opacity: 0.2;
   }
 }
-@keyframes anim-t {
+
+@keyframes anim-1 {
+  1% {
+    opacity: 1;
+  }
   9% {
-    fill: black;
+    opacity: 1;
   }
   10% {
-    fill: red;
+    opacity: 0;
   }
-  12% {
-    fill: #000000;
+  100% {
+    opacity: 0;
   }
 }
-@keyframes anim-t-2 {
+@keyframes anim-2 {
+  0%,
+  100% {
+    opacity: 0;
+  }
   9% {
-    fill: black;
+    opacity: 0;
   }
   10% {
-    fill: red;
+    opacity: 1;
   }
-  12% {
-    fill: #000000;
+  19% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
   }
 }
-@keyframes anim-h-2 {
-  9% {
-    fill: black;
+@keyframes anim-3 {
+  0%,
+  100% {
+    opacity: 0;
   }
-  10% {
-    fill: red;
+  19% {
+    opacity: 0;
   }
-  12% {
-    fill: #000000;
+  20% {
+    opacity: 1;
   }
-}
-@keyframes anim-e {
-  9% {
-    fill: black;
+  27% {
+    opacity: 1;
   }
-  10% {
-    fill: red;
-  }
-  12% {
-    fill: #000000;
+  28% {
+    opacity: 0;
   }
 }
-@keyframes anim-t-2 {
-  9% {
-    fill: black;
+@keyframes anim-4 {
+  0%,
+  100% {
+    opacity: 0;
   }
-  10% {
-    fill: red;
+  27% {
+    opacity: 0;
   }
-  12% {
-    fill: #000000;
+  28% {
+    opacity: 1;
   }
-}
-@keyframes anim-hack-1 {
-  9% {
-    fill: black;
+  35% {
+    opacity: 1;
   }
-  10% {
-    fill: red;
-  }
-  12% {
-    fill: #000000;
+  36% {
+    opacity: 0;
   }
 }
-@keyframes anim-hack-2 {
-  9% {
-    fill: black;
+@keyframes anim-5 {
+  0%,
+  100% {
+    opacity: 0;
   }
-  10% {
-    fill: red;
+  35% {
+    opacity: 0;
   }
-  12% {
-    fill: #000000;
+  36% {
+    opacity: 1;
   }
-}
-@keyframes anim-hack-3 {
-  9% {
-    fill: black;
+  43% {
+    opacity: 1;
   }
-  10% {
-    fill: red;
-  }
-  12% {
-    fill: #000000;
+  44% {
+    opacity: 0;
   }
 }
-@keyframes anim-sygnet {
-  9% {
-    fill: black;
+@keyframes anim-6 {
+  0%,
+  100% {
+    opacity: 0;
   }
-  10% {
-    fill: red;
+  43% {
+    opacity: 0;
   }
-  12% {
-    fill: #000000;
+  44% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 1;
+  }
+  52% {
+    opacity: 0;
+  }
+}
+@keyframes anim-7 {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 0;
+  }
+  52% {
+    opacity: 1;
+  }
+  59% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+}
+@keyframes anim-8 {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  59% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  67% {
+    opacity: 1;
+  }
+  68% {
+    opacity: 0;
+  }
+}
+@keyframes anim-9 {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  67% {
+    opacity: 0;
+  }
+  68% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  76% {
+    opacity: 0;
+  }
+}
+@keyframes anim-10 {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  76% {
+    opacity: 1;
+  }
+  83% {
+    opacity: 1;
+  }
+  84% {
+    opacity: 0;
+  }
+}
+@keyframes anim-11 {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  83% {
+    opacity: 0;
+  }
+  84% {
+    opacity: 1;
+  }
+  91% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 0;
+  }
+}
+@keyframes anim-12 {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  91% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
   }
 }

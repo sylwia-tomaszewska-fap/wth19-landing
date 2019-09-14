@@ -93,13 +93,7 @@
   z-index: 900;
   transition: 0.5s cubic-bezier(0.86, 0, 0.07, 1);
   @include media-breakpoint-up(md) {
-    background: linear-gradient(
-      to right,
-      $red 0%,
-      $red 50%,
-      #111 50%,
-      #111 100%
-    );
+    background: linear-gradient(to right, $red 0%, $red 50%, #111 50%, #111 100%);
   }
   // @include media-breakpoint-up(md) {
   //   &:before {
@@ -347,7 +341,6 @@
       justify-content: stretch;
       flex-wrap: nowrap;
       text-align: center;
-      font-size: 0.8rem;
       .register-button {
         flex-grow: 1;
       }
