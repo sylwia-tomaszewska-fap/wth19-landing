@@ -11,7 +11,7 @@
   "devDependencies": {
     "lodash": "~4.17.4",
     "foldero": "~0.1.1",
-    "minimist": "~1.2.0",
+    "minimist": "~1.2.6",
     "rimraf": "~2.6.1",
     "gulp-plumber": "~1.1.0",
     "gulp-changed": "~2.0.0",
