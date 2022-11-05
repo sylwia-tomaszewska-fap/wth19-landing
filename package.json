@@ -28,7 +28,7 @@
     "vinyl-source-stream": "~1.1.0",
     "vinyl-buffer": "~1.0.0",
     "gulp-util": "~3.0.8",
-    "gulp": "~3.9.1",
+    "gulp": "~4.0.2",
     "browser-sync": "~2.18.0",
     "nunjucks": "~3.0.0",
     "gulp-nunjucks-html": "~2.0.0",
